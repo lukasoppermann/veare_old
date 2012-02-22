@@ -7,3 +7,10 @@ After a total remake of the corporate design there is a need for a new version o
 - responsive design
 - mobile version with special content (adjusted for lower bandwidth)
 
+## Structure
+- Home
+- Portfolio
+- Blog
+- About
+- Labs
+- Contact
