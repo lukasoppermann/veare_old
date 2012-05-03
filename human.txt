@@ -5,7 +5,8 @@
 	From: Berlin, Germany
 
 /* THANKS */
-		
+	Elisa Heinig
+	Christoph Rauscher @christowski
 
 /* SITE */
 	Last update:2012/02/04
