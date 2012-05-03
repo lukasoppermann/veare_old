@@ -38,7 +38,7 @@ $config['retrieval_time'] = 7200; // 1 hour = 3600
 | by this app.
 |
 */
-$config['db_prefix'] = 'cms_';
+$config['db_prefix'] = 'client_';
 /*
 |--------------------------------------------------------------------------
 | Base Site URL

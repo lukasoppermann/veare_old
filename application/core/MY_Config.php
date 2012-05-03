@@ -85,33 +85,7 @@ class MY_Config extends CI_Config {
 			}
 		}
 		// -----------------------------------
-		// systems
-		$this->config['system'] = $config['system'];
-		// default system from DB
-		foreach($this->config['system']['system'] as $system)
-		{
-			if($system['default'] == 1)
-			{
-				$default_system = $system;
-			}
-			$system_names[$system['_id']] = $system['name'];
-		}
-		// get current system from URL
-		$current_system = $this->CI->fs_url->part(1, '', $default_system['name'], $system_names);
-		// assign current system to config
-		$this->config['system']['current']	= $this->config['system']['system'][array_search($current_system, $system_names)];
-		// system - cms
-		$this->config['system']['cms'] = $config['system']['cms'][key($config['system']['cms'])];
-		// push all system vars into base config
-		foreach($this->config['system']['cms'] as $key => $var)
-		{
-			$this->config[$key] = $var;	
-		}
-		// -----------------------------------
-		// users
-		$this->config['user'] = $config['user'];
-		// -----------------------------------
-		// users
+		// compression
 		$this->config['compression'] = $config['settings']['compression'];
 		unset($config['settings']['compression']);
 		// -----------------------------------
@@ -132,7 +106,7 @@ class MY_Config extends CI_Config {
 			$this->config['languages_id'][$lang['abbr']] 	= $lang['_id'];		
 		}
 		// set current lang
-		$this->CI->fs_url->part(2, 'lang_abbr', $this->config['languages_abbr'][key($this->config['languages_abbr'])], $this->config['languages_abbr']);	
+		$this->CI->fs_url->part(1, 'lang_abbr', $this->config['languages_abbr'][key($this->config['languages_abbr'])], $this->config['languages_abbr']);
 		$this->config['lang_id'] = 	$this->config['languages_id'][$this->config['lang_abbr']];
 		$this->config['languages']['current'] = $this->config['languages'][$this->config['lang_id']];
 		// -----------------------------------
