@@ -1,6 +1,12 @@
 # Project Files #
 #################
 *.tmproj
+*.psd
+*.ai
+*.orig
+_*/
+logs/
+log-
 
 # Packages #
 ############
