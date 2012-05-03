@@ -38,26 +38,12 @@
 |
 */
 
-$route['default_controller'] = "dashboard";
+$route['default_controller'] = "blog";
 $route['404_override'] = '';
 // Ajax
-$route['(\w+)/(\w{2})/ajax/?(.*)?'] = 'ajax/$3';
+$route['(\w{2})/blog/?(.*)?'] = 'blog/$2';
 // Dashboard
-$route['(\w+)/(\w{2})/dashboard/?(.*)?'] = 'dashboard';
-// Menu
-$route['(\w+)/(\w{2})/navigation/?(.*)?'] = "menu";
-// Content
-$route['(\w+)/(\w{2})/content/?(.*)?/?(.*)?'] = "content/index/$3";
-// Media
-$route['(\w+)/(\w{2})/media/?(.*)?'] = 'media';
-// User
-$route['(\w+)/(\w{2})/user/?(.*)?'] = 'user/$3';
-// Settings
-$route['(\w+)/(\w{2})/settings/?(.*)?'] = 'settings';
-// Profile
-$route['(\w+)/(\w{2})/profile/?(.*)?'] = 'profile';
-// if nothing else works
-$route['(\w+)/(\w{2})/?(.*)?'] = $route['default_controller']."/index/$3";
+$route['(\w{2})/?(.*)?'] = $route['default_controller']."/index/$2";
 $route['(.*)'] = $route['default_controller']."/index/$1";
 // -------------------------------------------------------------------------
 /* End of file routes.php */
