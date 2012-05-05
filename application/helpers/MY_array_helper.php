@@ -335,33 +335,36 @@ function empty_array($array)
  */	
 function index_array($array, $index, $multi = FALSE)
 {
-	// if multikey = TRUE
-	if($multi == TRUE)
+	if( is_array($array) )
 	{
-		// loop through array
-		foreach($array as $key => $value)
+		// if multikey = TRUE
+		if($multi == TRUE)
 		{
-			$new_array[$value[$index]][$key] = $value;		
+			// loop through array
+			foreach($array as $key => $value)
+			{
+				$new_array[$value[$index]][$key] = $value;		
+			}
 		}
-	}
-	// if unique keys expected
-	else
-	{
-		// loop through array
-		foreach($array as $key => $value)
+		// if unique keys expected
+		else
 		{
-			$new_array[$value[$index]] = $value;		
+			// loop through array
+			foreach($array as $key => $value)
+			{
+				$new_array[$value[$index]] = $value;		
+			}
 		}
-	}
-	// check if array exists
-	if( isset($new_array) && is_array($new_array) )
-	{
-		return $new_array;
-	}
-	else
-	{
-		// if array does not exists return empty array
-		return array(null);
+		// check if array exists
+		if( isset($new_array) && is_array($new_array) )
+		{
+			return $new_array;
+		}
+		else
+		{
+			// if array does not exists return empty array
+			return array(null);
+		}
 	}
 }
 // ------------------------------------------------------------------------
@@ -374,16 +377,19 @@ function index_array($array, $index, $multi = FALSE)
  * @param	string
  * @return	array
  */	
-function is_index_array($array, $index)
+function is_index_array($array = array(), $index = null)
 {
-	foreach($array as $key => $value)
+	if( is_array($array) )
 	{
-		if(isset($value[$index]))
+		foreach($array as $key => $value)
 		{
-			$new_array[$value[$index]] = $value;
+			if(isset($value[$index]))
+			{
+				$new_array[$value[$index]] = $value;
+			}
 		}
+		return $new_array;
 	}
-	return $new_array;
 }
 // ------------------------------------------------------------------------
 

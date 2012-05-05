@@ -41,6 +41,7 @@
 $route['default_controller'] = "blog";
 $route['404_override'] = '';
 // Ajax
+$route['(\w{2})/blog'] = 'blog';
 $route['(\w{2})/blog/?(.*)?'] = 'blog/$2';
 // Dashboard
 $route['(\w{2})/?(.*)?'] = $route['default_controller']."/index/$2";

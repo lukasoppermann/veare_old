@@ -6,13 +6,19 @@ class Blog extends MY_Controller {
 	function __construct() 
  	{
 		parent::__construct();
-		
+		// load assets
+		css_add('blog');
 	}
 	
 	function index()
 	{	
 		// load view
-		view('default', $this->data);
+		view('blog/index');
+	}
+	
+	function entry()
+	{
+		
 	}
 	
 }

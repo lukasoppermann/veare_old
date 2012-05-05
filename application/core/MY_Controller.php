@@ -33,17 +33,18 @@ class MY_Controller extends CI_Controller {
 		// --------------------------------------------------------------------
 		// Initialize Menus
 		// Main
-		foreach($this->config->item('menu') as $menu)
-		{
-			$this->data['menu'][$menu['name']] = $this->fs_navigation->tree(array(
-				'menu' => $menu['menu_id'], 
-				'id' => $menu['name'].'_menu', 
-				'class_lvl_0' => variable($menu['class']), 
-				'start_lvl' => variable($menu['start_lvl']), 
-				'lvl' => variable($menu['lvl']), 
-				'hide' => variable($menu['hide']))
-			);	
-		}
+		// foreach($this->config->item('menu') as $menu)
+		// {
+		// 	$this->data['menu'][$menu['name']] = $this->fs_navigation->tree(array(
+		// 		'db_table' => 'client_menu',
+		// 		'menu' => $menu['menu_id'], 
+		// 		'id' => $menu['name'].'_menu', 
+		// 		'class_lvl_0' => variable($menu['class']), 
+		// 		'start_lvl' => variable($menu['start_lvl']), 
+		// 		'lvl' => variable($menu['lvl']), 
+		// 		'hide' => variable($menu['hide']))
+		// 	);	
+		// }
 		// --------------------------------------------------------------------
 	}
 }
