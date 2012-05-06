@@ -40,10 +40,13 @@
 
 $route['default_controller'] = "blog";
 $route['404_override'] = '';
-// Ajax
+// Blog
 $route['(\w{2})/blog'] = 'blog';
 $route['(\w{2})/blog/?(.*)?'] = 'blog/$2';
-// Dashboard
+// Contact
+$route['(\w{2})/contact'] = 'contact';
+$route['(\w{2})/contact/?(.*)?'] = 'contact/$2';
+// Default
 $route['(\w{2})/?(.*)?'] = $route['default_controller']."/index/$2";
 $route['(.*)'] = $route['default_controller']."/index/$1";
 // -------------------------------------------------------------------------
