@@ -41,8 +41,8 @@
 $route['default_controller'] = "blog";
 $route['404_override'] = '';
 // Blog
-$route['(\w{2})/blog'] = 'blog';
-$route['(\w{2})/blog/?(.*)?'] = 'blog/$2';
+$route['(\w{2})/blog'] = 'blog/index';
+$route['(\w{2})/blog/?(.*)?'] = 'blog/entry/$2';
 // Contact
 $route['(\w{2})/contact'] = 'contact';
 $route['(\w{2})/contact/?(.*)?'] = 'contact/$2';

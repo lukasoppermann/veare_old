@@ -31,6 +31,27 @@ function base_url($slash = TRUE)
 }
 // ------------------------------------------------------------------------
 /**
+ * Current URL - returns the current URL with or without slash
+ *
+ *
+ * @access	public
+ * @return	string
+ */
+function current_url( $slash = TRUE )
+{
+	$CI =& get_instance();
+
+	if($slash == TRUE)
+	{
+		return $CI->config->site_url($CI->uri->uri_string()).'/';
+	}
+	else
+	{
+		return trim('/',$CI->config->site_url($CI->uri->uri_string()));
+	}
+}
+// ------------------------------------------------------------------------
+/**
  * active_url - returns the base_url with the default parts
  *
  * @param boolean

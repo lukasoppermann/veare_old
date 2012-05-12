@@ -7,6 +7,7 @@ echo meta();
 echo css('default', FALSE);
 echo title('All variables for title are missing | Form&amp;System');
 ?>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Bree+Serif' rel='stylesheet' type='text/css'>
 </head>
 <body<?=variable($body_id).variable($body_class); ?>>
 	<div id="sidebar_box" class="closed">
