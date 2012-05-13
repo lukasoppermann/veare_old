@@ -1,10 +1,12 @@
-<div id="featured" class="box-shadow">
-	<div id="featured_loader"></div>
-	<div class="title">
-		<div class="icon-box box-shadow"><span class="icon case"></span></div>
-		<h3 class="title-text box-shadow">Login security</h3>
+<div class="container">
+	<div class="featured drop-shadow curved curved-hz-1"> <!-- box-shadow -->
+		<div id="featured_loader"></div>
+		<div class="title">
+			<div class="icon-box box-shadow"><span class="icon case"></span></div>
+			<h3 class="title-text box-shadow">Login security</h3>
+		</div>
+		<img src="<?=base_url()?>/media/images/login.jpg" alt="" />
 	</div>
-	<img src="<?=base_url()?>/media/images/login.jpg" alt="" />
 </div>
 <div class="articles">
 	<!-- left column -->

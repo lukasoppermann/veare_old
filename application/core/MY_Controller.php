@@ -47,6 +47,10 @@ class MY_Controller extends CI_Controller {
 		// 	);	
 		// }
 		// --------------------------------------------------------------------
+		// page id
+		$url = explode('/',trim(str_replace(active_url(), '', current_url()),'/'));
+		$this->data['body_id'] = $url[0];
+		// --------------------------------------------------------------------
 	}
 }
 /* End of file MY_Controller.php */

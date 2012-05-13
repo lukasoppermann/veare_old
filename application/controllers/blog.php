@@ -34,6 +34,7 @@ class Blog extends MY_Controller {
 		// merge posts
 		$posts['articles_left'] = implode('',$posts['left']);
 		$posts['articles_right'] = implode('',$posts['right']);
+		$posts = array_merge($posts, $this->data);
 		// load view
 		view('blog/index', $posts);
 
@@ -45,6 +46,7 @@ class Blog extends MY_Controller {
 		$post = db_select( 'client_entries', array('type' => 2, 'permalink' => $permalink), array('json' => 'data', 'single' => TRUE));
 		// time difference
 		$post['date'] = time_ago(mysql_to_unix($post['date']));
+		$post = array_merge($post, $this->data);
 		// load view
 		view('blog/post', $post);
 	}

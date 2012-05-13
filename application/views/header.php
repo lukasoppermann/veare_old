@@ -9,7 +9,7 @@ echo title('All variables for title are missing | Form&amp;System');
 ?>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Bree+Serif' rel='stylesheet' type='text/css'>
 </head>
-<body<?=variable($body_id).variable($body_class); ?>>
+<body <?="id='".variable($body_id)."'"; ?>>
 	<div id="sidebar_box" class="closed">
 		<div id="sidebar" style="width: 70px;">
 			<a href="<?=base_url()?>en/blog/" id="logo">
@@ -26,7 +26,7 @@ echo title('All variables for title are missing | Form&amp;System');
 						<span class="text">Portfolio</span>
 				</a></li> -->
 				<li id="blog_link">
-					<a href="<?=base_url()?>en/blog/">
+					<a <?=($body_id == 'blog' ? "class='active'" : "")?> href="<?=base_url()?>en/blog/">
 					<span class="icon-container"><span class="icon blog"></span></span>
 					<!-- <span class="text">Blog</span> -->
 					</a>
@@ -40,7 +40,7 @@ echo title('All variables for title are missing | Form&amp;System');
 					<span class="text">Labs</span>
 					</a></li>	 -->
 				<li id="contact_link">
-					<a href="<?=base_url()?>en/contact/">
+					<a <?=($body_id == 'contact' ? "class='active'" : "")?> href="<?=base_url()?>en/contact/">
 					<span class="icon-container"><span class="icon mail"></span></span>
 					<!-- <span class="text">Contact</span> -->
 					</a>

@@ -21,9 +21,9 @@
 	position: relative;
 	float: left;
 	width: 100%;
-	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25), inset 0px -1px 0px 0px rgba(255,255,255,0.5);
-	-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25), inset 0px -1px 0px 0px rgba(255,255,255,0.5);
-	-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25), inset 0px -1px 0px 0px rgba(255,255,255,0.5);
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2), inset 0px -1px 0px 0px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2), inset 0px -1px 0px 0px rgba(255,255,255,0.5);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2), inset 0px -1px 0px 0px rgba(255,255,255,0.5);
 	transition-property: box-shadow, color;  
 	transition-duration: .4s;  
 	-webkit-transition-property: box-shadow, color;
@@ -31,14 +31,14 @@
 	-moz-transition-property: box-shadow, color;
 	-moz-transition-duration: .4s;
 	background-color: rgb(252,252,252);
-	background-image: -moz-linear-gradient(bottom, rgb(240,240,240), rgb(248,248,248) 30px, rgb(252,252,252));
-	background-image: -webkit-linear-gradient(bottom, rgb(240,240,240), rgb(248,248,248) 30px, rgb(252,252,252));
+	background-image: -moz-linear-gradient(bottom, rgb(244,244,244), rgb(248,248,248) 30px, rgb(252,252,252));
+	background-image: -webkit-linear-gradient(bottom, rgb(244,244,244), rgb(248,248,248) 30px, rgb(252,252,252));
 	border-radius: 2px;	
 }
 .widget-content:hover{
-	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5), inset 0px -1px 0px 0px rgba(255,255,255,0.5);;
-	-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5), inset 0px -1px 0px 0px rgba(255,255,255,0.5);;
-	-moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5), inset 0px -1px 0px 0px rgba(255,255,255,0.5);;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35), inset 0px -1px 0px 0px rgba(255,255,255,0.5);;
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35), inset 0px -1px 0px 0px rgba(255,255,255,0.5);;
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35), inset 0px -1px 0px 0px rgba(255,255,255,0.5);;
 	color: rgb(100,100,100);	
 }
 .widget-content h3{

@@ -16,7 +16,7 @@ class Contact extends MY_Controller {
 		css_add('contact');
 		js_add('jquery, contact');
 		// load view
-		view('custom/contact');
+		view('custom/contact', $this->data);
 	}
 	
 	function entry()
