@@ -50,6 +50,10 @@ class MY_Controller extends CI_Controller {
 		// page id
 		$url = explode('/',trim(str_replace(active_url(), '', current_url()),'/'));
 		$this->data['body_id'] = $url[0];
+		if( $this->data['body_id'] == 'http:')
+		{
+			$this->data['body_id'] = 'base';
+		}
 		// --------------------------------------------------------------------
 	}
 }

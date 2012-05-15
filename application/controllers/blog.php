@@ -47,6 +47,7 @@ class Blog extends MY_Controller {
 		// time difference
 		$post['date'] = time_ago(mysql_to_unix($post['date']));
 		$post = array_merge($post, $this->data);
+		$post['body_class'] = 'entry';
 		// load view
 		view('blog/post', $post);
 	}

@@ -5,6 +5,9 @@ $(function()
 	var _about 				= $('#about_author');
 	var _post_container 	= $('#post_container');
 	// -----------------------
+	//
+	$("body").height($(document).height());
+	// -----------------------
 	// 
 	_about.css( {'marginTop': -_about.outerHeight()+20} );
 	//

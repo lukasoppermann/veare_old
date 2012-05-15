@@ -204,7 +204,6 @@ div{
 /*------------------*/
 /* Sidebar */
 #sidebar_box{
-	min-height: 200px;
 	height: 100%;	
 	float: left;
 }
@@ -399,7 +398,8 @@ div{
 #stage{
 	float: left;
 	display: block;
-	width: 840px;
+	max-width: 1400px;
+	width: 100%;
 	padding: 20px;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
