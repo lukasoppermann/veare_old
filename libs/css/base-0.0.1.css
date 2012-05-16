@@ -21,6 +21,7 @@ html, body{
 	padding: 0;
 	margin: 0;
 	height: 100%;
+	min-width: 800px;
     font: normal 13px Helvetica, Arial, sans-serif;
 	color: rgb(75,75,75);
 }
@@ -590,6 +591,19 @@ div{
 	position: relative;	
 	display: block;
 	width: 100%;
+	margin-bottom: 20px;
+}
+.articles:before{
+	content: "";
+	position: absolute;
+	display: block;
+}
+.articles:before{
+	top: 15px;
+	left: -50px;
+	width: 30px;
+	height: 1px;
+	border-top: 1px solid rgb(230,230,230);
 }
 #articles_left{
 	float: left;
@@ -598,4 +612,53 @@ div{
 #articles_right{
 	float: right;
 	width: 48%;
+}
+/* ---------------------------------------------------------------- */
+/* line */
+#line{
+	position: absolute;
+	top: 0;
+	right: 0;	
+	height: 700px;
+	width: 300px;
+	overflow: hidden;
+}
+#grey_line{
+	height: 700px;
+	width: 700px;
+	top: -200px;
+	right: -120px;
+	border-left: 1px solid rgb(230,230,230);
+	transform: rotate(-25deg);
+	-moz-transform: rotate(-25deg);
+	-webkit-transform: rotate(-25deg);	
+}
+#orange_line{
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	top: 100px;
+	right: 109px;
+	border-left: 3px solid rgb(245,160,10);
+	transform: rotate(-25deg);
+	-moz-transform: rotate(-25deg);
+	-webkit-transform: rotate(-25deg);
+}
+.lines-text{
+	position: absolute;
+	color: rgb(245,160,10);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+#line_text_veare{
+	top: 130px;
+	left: 93px;
+}
+#line_text_two{
+	top: 147px;
+	left: 103px;
+}
+#line_text_three{
+	top: 164px;
+	left: 113px;
 }

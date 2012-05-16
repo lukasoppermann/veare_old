@@ -3,5 +3,5 @@
 	<div class="excerpt"><?=variable($excerpt)?></div>
 	<div class="content"><?=variable($text)?></div>
 	<div class="time"><?=$date?></div>
-	<div class="tags"><span>#programming</span><span>#php</span></div>
+	<div class="tags"><?=show_tags($tags)?></div>
 </div>

@@ -5,6 +5,6 @@
 		<p><?=variable($excerpt)?></p>
 		<!-- Additional Options -->
 		<div class="time"><?=$date?></div>
-		<div class="tags"><span>#programming</span><span>#php</span></div>
+		<div class="tags"><?=show_tags($tags, 3)?></div>
 	</div>
 </div>

@@ -22,8 +22,10 @@
 		<h3>Contact Information</h3>
 		<span class="company">veare</span>
 		<span class="slogan">web development</span>
-		<a class="mail">info@veare.net</a>
-		<a class="phone">+61 403 437 360</a>
+		<script type="text/javascript">document.write(
+"<n pynff=\"znvy\" uers=\"znvygb:yhxnf\100irn\056er\">yhxnf\100irn\056er<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+</script>
+		<a class="phone" href="tel:+61403437360">+61 403 437 360</a>
 		<p class="address">	
 			35 Brunswick St<br />
 			VIC 3065 Melbourne,<br />

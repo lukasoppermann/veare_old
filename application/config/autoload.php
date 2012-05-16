@@ -64,7 +64,7 @@ $autoload['libraries'] = array('fs_css', 'fs_js', 'database','fs_navigation','fs
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('fs_variable','number','array','fs_database','string','text','url','fs_config','fs_metadata', 'fs_view','form','date');
+$autoload['helper'] = array('fs_variable','number','array','fs_database','string','text','url','fs_config','fs_metadata', 'fs_view','form','date','content');
 
 /*
 | -------------------------------------------------------------------

@@ -40,13 +40,11 @@ $(function()
 		        {   
 					_email.val('');			
 					_msg.val('');
-					_email.parents('#email_form').prepend('<div class="message success" style="opacity:0"><p>Your Message has been sent successfully.</p></div><img id="airplane" src="../../media/layout/airplane.png" />'); 
+					_email.parents('#email_form').prepend('<div class="message success" style="opacity:0"><p>Your Message has been sent successfully.</p></div>'); 
 					
-					$('.message').css({'left':'50%','marginLeft':-($('.message').outerWidth()/2),'marginTop':100}).animate({'opacity':1},300);
-					$('#airplane').css({'opacity':0,'left':'50%','marginLeft':-($('.message').outerWidth()/2)}).animate({'opacity':1},300).delay(300).animate({'top':-($(window).height()/2),'left':$(window).width()+200,
-					'width':'0%', 'height':'0%'}, 1000, function(){
-						$('this').fadeOut(300).remove();
-		            	$('.message').fadeOut(300).remove();						
+					$('.message').css({'left':'50%','marginLeft':-($('.message').outerWidth()/2),'marginTop':100}).animate({'opacity':1},300).delay(1000).fadeOut(300, 	
+						function(){
+							$(this).remove();
 					});
 		        }
 		        else

@@ -1,5 +1,18 @@
 body{
+	min-width: 800px;
 	background-image: url(../../media/layout/contact_bg.jpg);
+}
+#line{
+	display: none;
+}
+.widget.column-one-three{
+	width: 250px;	
+}
+.widget.column-two-three{
+	width: 45%;
+	max-width: 700px;
+	margin-right: 6%;
+	margin-left: 100px;
 }
 #contact_header{
 	position: relative;
@@ -87,6 +100,7 @@ body{
 }
 #email{
 	font-size: 20px;
+	padding-right: 60px;
 }
 #message{
 	resize: none;
@@ -104,14 +118,6 @@ body{
 	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
 	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
 }
-#airplane{
-	position: absolute;
-	height: 200px;
-	width: 300px;
-	top: -50px;
-	margin-top: 100px;
-	z-index: 998;
-}
 .message.success p{
 	z-index: 2;
 }
@@ -124,6 +130,7 @@ body{
 }
 .contact .company, .contact .slogan, .contact .mail, .contact .phone{
 	display: block;
+	text-decoration: none;
 	padding: 3px 20px 0;
 }
 .contact .address{

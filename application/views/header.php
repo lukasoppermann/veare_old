@@ -10,6 +10,15 @@ echo title('All variables for title are missing | Form&amp;System');
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Bree+Serif' rel='stylesheet' type='text/css'>
 </head>
 <body <?="id='".variable($body_id)."'"; ?><?=" class='".variable($body_class)."'"; ?>>
+	<!-- line -->
+	<div id="line">
+		<div id="grey_line"></div>
+		<div id="orange_line"></div>
+		<span class="lines-text" id="line_text_veare">veare</span>
+		<span class="lines-text" id="line_text_two">Interaction</span>
+		<span class="lines-text" id="line_text_three">Design</span>
+	</div>
+	<!-- line end -->
 	<div id="wrapper">
 			<div id="sidebar" style="width: 70px;">
 				<a href="<?=base_url()?>en/blog/" id="logo">
