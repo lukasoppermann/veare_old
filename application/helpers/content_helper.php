@@ -24,7 +24,7 @@
 * - build tag system into db_data	
 *
 */
-function show_tags( $string = null, $limit = 5, $link = false )
+function show_tags( &$string = null, $limit = 5, $link = false )
 {
 	// check if tags are set
 	if( trim($string) != null )
@@ -34,15 +34,17 @@ function show_tags( $string = null, $limit = 5, $link = false )
 		// remove empty elements
 		$tags = array_values(array_filter($tags));
 		// check if limit is set, else set limit
-		if( $limit != null && $limit != false )
+		if( $limit == null || $limit == false )
 		{
 			$limit = count($tags);
 		}
 		// check if link is set
 		if( $link == false )
 		{
-			// while limit is not reached
-			for( $i = 0; $i < $limit-1; $i++ )
+			// count tags
+			$c = count($tags);
+			// while limit is not reached && not more than existing tag
+			for( $i = 0; $i < $limit && $i < $c; $i++ )
 			{
 				$tag = trim($tags[$i]);
 				$output[] = '<span class="tag-'.$tag.'">#'.$tag.'</span>';

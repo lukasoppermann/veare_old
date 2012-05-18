@@ -4,10 +4,14 @@
 <?
 echo favicon('favicon');
 echo meta();
-echo css('default', FALSE);
+echo css('default', TRUE);
 echo title('All variables for title are missing | Form&amp;System');
+if( variable($css) != null )
+{
+	echo '<style type="text/css" media="screen">'.$css."</style>";
+}
 ?>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body <?="id='".variable($body_id)."'"; ?><?=" class='".variable($body_class)."'"; ?>>
 	<!-- line -->
@@ -20,7 +24,7 @@ echo title('All variables for title are missing | Form&amp;System');
 	</div>
 	<!-- line end -->
 	<div id="wrapper">
-			<div id="sidebar" style="width: 70px;">
+			<div id="sidebar">
 				<a href="<?=base_url()?>en/blog/" id="logo">
 					<div class="hidden logo-big">
 						<img src="<?=base_url()?>/media/layout/logo.png" alt="veare - visionary design" />

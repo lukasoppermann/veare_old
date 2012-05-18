@@ -1,12 +1,13 @@
 $(function()
 {
-	$(document).ready( function() {
+	$(window).load( function() {
 		var body_height 	= $('body').height();
 		var stage_height 	= $('#stage').outerHeight();
 	
-		if( body_height < stage_height)
+		if($(document).height() > stage_height)
 		{
-			$('body').height(stage_height);
+			stage_height 	= $(document).height();
+			$('body, #stage').css('minHeight', stage_height);
 		}
 	});
 	

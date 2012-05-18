@@ -60,6 +60,22 @@ body{
 	-moz-border-radius-bottomleft: 0;
 	-webkit-border-top-left-radius: 0;
 	-moz-border-radius-topleft: 0;
+	color: rgb(125,125,125);
+    text-shadow: 0 1px 0 rgb(255,255,255);
+    -webkit-transition: border-color .218s;
+    -moz-transition: border .218s;
+    -o-transition: border-color .218s;
+    transition: border-color .218s;
+    background-color: rgb(240,240,240);
+	background-image: linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
+	background-image: -o-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
+	background-image: -moz-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
+	background-image: -webkit-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
+	background-image: -ms-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
+    border: solid 1px rgb(220,220,220);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
 }
 #email_form .email-field{
 	position: relative;		

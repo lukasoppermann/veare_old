@@ -6,9 +6,7 @@
 		</div>	
 	</div><?=!empty($dialog) ? $dialog : ''; ?>	
 </div>
-	<? 
-	echo js('default', FALSE); // somehow there is a compression problem
-	// echo copyright();
-	?>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<? echo js('default', TRUE); ?>
 </body>
 </html>

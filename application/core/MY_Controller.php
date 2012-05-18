@@ -30,7 +30,7 @@ class MY_Controller extends CI_Controller {
 		// load assets
 		css_add('base,menu');
 		js_add_lines('CI_BASE="'.base_url().'en/"', 'default');
-		js_add('jquery, base', 'default');
+		js_add('base', 'default');
 		// --------------------------------------------------------------------
 		// Initialize Menus
 		// Main
