@@ -29,6 +29,9 @@ $config['reset_attempts'] = 3600; // 1 hour = 3600
 $config['ip_lockout'] = 50; // should be >= attempts
 // attempts
 $config['retrieval_time'] = 7200; // 1 hour = 3600
+// 
+$config['short_url'] = TRUE; // activate short_url system
+$config['short_url_length'] = 30;
 /*
 |--------------------------------------------------------------------------
 | Database Prefix
@@ -39,6 +42,7 @@ $config['retrieval_time'] = 7200; // 1 hour = 3600
 |
 */
 $config['db_prefix'] = 'client_';
+$config['system']['current']['db_prefix'] = 'client_';
 /*
 |--------------------------------------------------------------------------
 | Base Site URL

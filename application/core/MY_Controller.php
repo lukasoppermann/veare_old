@@ -31,28 +31,20 @@ class MY_Controller extends CI_Controller {
 		css_add('base,menu');
 		js_add_lines('CI_BASE="'.base_url().'en/"', 'default');
 		js_add('base', 'default');
+		$test = $this->fs_url->shorten_url('http://www.veare.net/about.html', 'media');
 		// --------------------------------------------------------------------
 		// Initialize Menus
-		// Main
-		// foreach($this->config->item('menu') as $menu)
-		// {
-		// 	$this->data['menu'][$menu['name']] = $this->fs_navigation->tree(array(
-		// 		'db_table' => 'client_menu',
-		// 		'menu' => $menu['menu_id'], 
-		// 		'id' => $menu['name'].'_menu', 
-		// 		'class_lvl_0' => variable($menu['class']), 
-		// 		'start_lvl' => variable($menu['start_lvl']), 
-		// 		'lvl' => variable($menu['lvl']), 
-		// 		'hide' => variable($menu['hide']))
-		// 	);	
-		// }
+		$this->data['menu']['main'] = $this->fs_navigation->tree(array(
+			'menu' 					=> 1, 
+			'id' 					=> 'nav')
+		);
 		// --------------------------------------------------------------------
 		// page id
 		$url = explode('/',trim(str_replace(active_url(), '', current_url()),'/'));
 		$this->data['body_id'] = $url[0];
 		if( $this->data['body_id'] == 'http:')
 		{
-			$this->data['body_id'] = 'base';
+			$this->data['body_id'] = 'blog';
 		}
 		// --------------------------------------------------------------------
 	}

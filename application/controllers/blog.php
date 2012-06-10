@@ -14,7 +14,6 @@ class Blog extends MY_Controller {
 	
 	function index()
 	{	
-
 		// columns
 		$column[0] = 'left';
 		$column[1] = 'right';
@@ -32,16 +31,25 @@ class Blog extends MY_Controller {
 			$i = ($i == 1) ? 0 : 1;
 		}
 		// merge posts
-		$posts['articles_left'] = implode('',$posts['left']);
-		$posts['articles_right'] = implode('',$posts['right']);
-		$posts = array_merge($posts, $this->data);
+		if( isset($posts['left']) )
+		{
+			$posts['articles_left'] = implode('',$posts['left']);
+		}
+		if( isset($posts['right']) )
+		{
+			$posts['articles_right'] = implode('',$posts['right']);
+		}
+		if( isset($posts) )
+		{
+			$posts = array_merge($posts, $this->data);
+		}
 		// load view
 		view('blog/index', $posts);
 
 	}
 	
-	function entry( $permalink )
-	{		
+	function entry( $permalink = null )
+	{	
 		// get entries from database
 		$post = db_select( 'client_entries', array('type' => 2, 'permalink' => $permalink), array('json' => 'data', 'single' => TRUE));
 		// -----------------------------------

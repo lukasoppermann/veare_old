@@ -12,7 +12,7 @@
 </div>
 <div class="articles">
 	<!-- left column -->
-	<div id="articles_left"><?=$articles_left?></div>
+	<div id="articles_left"><?=variable($articles_left)?></div>
 	<!-- right column -->
-	<div id="articles_right"><?=$articles_right?></div>
+	<div id="articles_right"><?=variable($articles_right)?></div>
 </div>
