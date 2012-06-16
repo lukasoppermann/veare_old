@@ -97,10 +97,10 @@ function closetags($html)
 }
 // ------------------------------------------------------------------------
 /**
- * close all open xhtml tags at the end of the string
+ * convert string to alphanumeric string
  *
  * @param string
- * @param string
+ * @param array
  * @return string
  */
 function to_alphanum( $text, $add_chars = array(null) )

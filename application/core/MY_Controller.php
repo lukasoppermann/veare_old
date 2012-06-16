@@ -28,16 +28,20 @@ class MY_Controller extends CI_Controller {
 		Header("Pragma: no-cache" ); // HTTP/1.0
 		// --------------------------------------------------------------------	
 		// load assets
-		css_add('base,menu');
+		css_add(array('http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,300,600,400italic','base','menu'));
 		js_add_lines('CI_BASE="'.base_url().'en/"', 'default');
-		js_add('base', 'default');
+		js_add('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js, jquery.mediaquery, fs.resize, base', 'default');
 		$test = $this->fs_url->shorten_url('http://www.veare.net/about.html', 'media');
 		// --------------------------------------------------------------------
 		// Initialize Menus
 		$this->data['menu']['main'] = $this->fs_navigation->tree(array(
 			'menu' 					=> 1, 
-			'id' 					=> 'nav')
-		);
+			'id' 					=> 'nav',
+			'item_class' 			=> 'item',
+			'active_unset' 			=> array(1),
+			'item_before' 			=> '<span class="icon"></span><span class="text">',
+			'item_after' 			=> '</span>'
+		));
 		// --------------------------------------------------------------------
 		// page id
 		$url = explode('/',trim(str_replace(active_url(), '', current_url()),'/'));

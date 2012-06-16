@@ -1,5 +1,53 @@
 $(function()
 {
+	// -----------------------
+	// when everything is fully loaded
+	$(window).load( function() {
+		// draw map
+		var map, dragevent;
+		var dragfn = function(){
+			map.setCenter(52.546167, 13.415201);
+			map.setZoom(15);	
+		};
+		map = new GMaps({
+			div: '#veare_map',
+			lat: 52.546167,
+			lng: 13.415201,
+			disableDefaultUI: true,
+			dragstart: function(){
+				clearTimeout( dragevent );	
+			},
+			dragend: function()
+			{
+				dragevent = setTimeout( dragfn, 3000);
+			},
+			zoom_changed: function(){
+				clearTimeout( dragevent );
+				dragevent = setTimeout( dragfn, 3000);
+			}
+		});
+		
+		map.drawOverlay({
+			lat: 52.541167,
+			lng: 13.415201,
+			layer: 'overlayLayer',
+			content: '<div class="marker-wrapper"><div class="veare-contact"><div class="contact-wrapper"><h2 class="company">veare / intelligent design</h2>'+
+					'<div class="contact-details">'+
+					'<div class="contact-detail"><span class="type">P</span><span class="content"><a target="_blank" href="tel:004915771496644">015771496644</a></span></div>'+
+					'<div class="contact-detail"><span class="type">M</span><span class="content"><a target="_blank" href="mailto:mail@vea.re">mail@vea.re</a></span></div>'+
+					'<div class="contact-detail"><span class="type">T</span><span class="content"><a target="_blank" href="https://twitter.com/lukasoppermann">@vearenet</a></span></div>'+
+					'</div></div>'+
+					'<div class="veare-about"><h3 class="heading">the studio</h3><p class="content">'+
+					'veare is a berlin based studio with a focus on interface design & modern branding solutions.</p></div></div><div class="shadow"></div></div>'
+		});
+		// debounced resize event (fires once every 100ms)
+		$(window).fs_resize(function(){
+			map.refresh();
+			map.setCenter(map.getCenter().lat(), map.getCenter().lng());
+		});
+	});
+	// ---------------------------------------------------
+	// email	
 	$('#email_form').on('keydown', function()
 	{
 		//

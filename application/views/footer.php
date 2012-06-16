@@ -1,12 +1,18 @@
-				</div>
-			</div>
+			<div id="footer">
+			<?=copyright(array('from_year' => '2005', 'by' => 'Lukas Oppermann', 'copyright' => 'Copyright', 'url' => base_url().'contact'));?>
+			</div>	
 		</div>
-		<div id="footer">
-		
-		</div>	
-	</div><?=!empty($dialog) ? $dialog : ''; ?>	
+	</div>
+	<!-- line -->
+	<div id="line">
+		<div id="grey_line"></div>
+		<div id="orange_line"></div>
+		<span class="lines-text" id="line_text_veare">veare</span>
+		<span class="lines-text" id="line_text_two">Interaction</span>
+		<span class="lines-text" id="line_text_three">Design</span>
+	</div>
+<!-- wrapper end -->
 </div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<? echo js('default', TRUE); ?>
+<? echo js('default', FALSE); ?>
 </body>
 </html>

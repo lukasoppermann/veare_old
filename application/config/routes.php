@@ -43,6 +43,9 @@ $route['404_override'] = '';
 // Blog
 $route['(\w{2})/blog'] = 'blog/index';
 $route['(\w{2})/blog/?(.*)?'] = 'blog/entry/$2';
+// About
+$route['(\w{2})/about'] = 'about';
+$route['(\w{2})/about/?(.*)?'] = 'about/$2';
 // Contact
 $route['(\w{2})/contact'] = 'contact';
 $route['(\w{2})/contact/?(.*)?'] = 'contact/$2';

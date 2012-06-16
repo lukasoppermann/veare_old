@@ -14,7 +14,9 @@ class Contact extends MY_Controller {
 	{	
 		// load assets
 		css_add('contact');
-		js_add('jquery, contact');
+		js_add(array('http://maps.google.com/maps/api/js?sensor=true','jquery.gmaps','contact'));
+		//
+		$this->data['sidebar_class'] = 'shadow';
 		// load view
 		view('custom/contact', $this->data);
 	}

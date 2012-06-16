@@ -1,17 +1,13 @@
 html, body{
 	background-color: rgb(250,250,250);
-/*	background-image: url(../../media/layout/veare-noise.png),*/
-/*	background-image: url(../../media/layout/veare-line-interaction-design.png);*/
 	background-repeat: no-repeat;
 	background-position: top right;
 	display: block;
-	min-width: 1000px;
 }
 #wrapper{
 	float: left;
 	width: 100%;
 	height: 100%;
-	padding-left: 80px;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -34,46 +30,6 @@ html, body{
 	box-shadow: 1px 0px 1px 0px rgba(0,0,0,0.1);
 	-webkit-box-shadow: 1px 0px 1px 0px rgba(0,0,0,0.1);
 	-moz-box-shadow: 1px 0px 1px 0px rgba(0,0,0,0.1);
-}
-#sidebar{
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	z-index: 10;
-	width: 80px !important;
-	height: 100%;
-	background: rgb(243,243,243);
-	box-shadow: none;
-}
-#nav li a .icon{
-	top: 0px;
-	left: 25px !important;
-	display: block;
-	position: absolute;
-	opacity: 0.3;
-	-webkit-transition: opacity .3s;
-    -moz-transition: opacity .3s;
-    -o-transition: opacity .3s;
-    transition: opacity .3s;
-	z-index: 5;
-}
-#nav li a .icon-container{
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 80px;
-	height: 35px;
-	z-index: 4;	
-}
-#sidebar_bottom{
-	width: 160px;	
-	display: block;
-	position: absolute;
-	bottom: 10px;
-	padding: 10px 15px;
 }
 .vertical .button{
 	border: 1px solid transparent;
