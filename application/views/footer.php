@@ -13,6 +13,7 @@
 	</div>
 <!-- wrapper end -->
 </div>
+<?=$this->fs_google->fonts(array('PT Sans:400,700,400italic', 'Bree Serif'));?>
 <? echo js('default', FALSE); ?>
 </body>
 </html>

@@ -28,8 +28,8 @@ class MY_Controller extends CI_Controller {
 		Header("Pragma: no-cache" ); // HTTP/1.0
 		// --------------------------------------------------------------------	
 		// load assets
-		css_add(array('http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,300,600,400italic','base','menu'));
-		js_add_lines('CI_BASE="'.base_url().'en/"', 'default');
+		css_add(array('base','menu'));
+		js_add_lines('CI_BASE="'.base_url().'en/";', 'default', TRUE);
 		js_add('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js, jquery.mediaquery, fs.resize, base', 'default');
 		$test = $this->fs_url->shorten_url('http://www.veare.net/about.html', 'media');
 		// --------------------------------------------------------------------

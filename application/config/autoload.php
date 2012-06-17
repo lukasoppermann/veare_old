@@ -52,7 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('fs_css', 'fs_js', 'database','fs_navigation','fs_url');
+$autoload['libraries'] = array('fs_css', 'fs_js', 'database','fs_navigation','fs_url','fs_google');
 
 
 /*

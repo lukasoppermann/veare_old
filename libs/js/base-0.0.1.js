@@ -8,6 +8,7 @@ $(function()
 	$(window).fs_resize(function(){
 		// -----------------------
 		// define variables
+		var content_height 	= $('#content_wrapper').outerHeight();
 		if( content_height < $(document).height())
 		{
 			$('body, #stage, #content_wrapper').css('height', '100%');

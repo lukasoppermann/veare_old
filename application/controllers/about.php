@@ -6,17 +6,15 @@ class About extends MY_Controller {
 	function __construct() 
  	{
 		parent::__construct();
-		// load assets
-		css_add('widget');
 	}
 	
 	function index()
 	{	
 		// load assets
-		css_add('contact');
-		js_add('jquery, contact');
+		css_add('about');
+		js_add('about');
 		// add classes
-		$this->data['sidebar_class'] = ' side-shadow';
+		$this->data['sidebar_class'] = 'shadow';
 		
 		// load view
 		view('custom/about', $this->data);

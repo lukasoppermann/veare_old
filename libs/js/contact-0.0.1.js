@@ -38,7 +38,7 @@ $(function()
 					'<div class="contact-detail"><span class="type">T</span><span class="content"><a target="_blank" href="https://twitter.com/lukasoppermann">@vearenet</a></span></div>'+
 					'</div></div>'+
 					'<div class="veare-about"><h3 class="heading">the studio</h3><p class="content">'+
-					'veare is a berlin based studio with a focus on interface design & modern branding solutions.</p></div></div><div class="shadow"></div></div>'
+					'veare is a Berlin-based studio with a focus on interface design & modern branding solutions.</p></div></div><div class="shadow"></div></div>'
 		});
 		// debounced resize event (fires once every 100ms)
 		$(window).fs_resize(function(){
