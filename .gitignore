@@ -7,6 +7,10 @@
 _*/
 logs/
 log-
+0*_*/
+images/
+movies/
+files/
 
 # Packages #
 ############

@@ -36,6 +36,11 @@ a, span{
 	color: inherit;
 	display: inline-block;
 }
+p{ 
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
 a:hover{
 	cursor: pointer;
 }
@@ -521,8 +526,7 @@ div{
 	font-size: 12px;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
-	padding: 5px 40px 5px 15px;		
+	box-sizing: border-box;		
 	color: inherit;
 	font-family: "Verdana";
 }

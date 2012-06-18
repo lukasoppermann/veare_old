@@ -46,6 +46,9 @@ $route['(\w{2})/blog/?(.*)?'] = 'blog/entry/$2';
 // About
 $route['(\w{2})/about'] = 'about';
 $route['(\w{2})/about/?(.*)?'] = 'about/$2';
+// Labs
+$route['(\w{2})/labs'] = 'labs';
+$route['(\w{2})/labs/?(.*)?'] = 'labs/$2';
 // Contact
 $route['(\w{2})/contact'] = 'contact';
 $route['(\w{2})/contact/?(.*)?'] = 'contact/$2';
