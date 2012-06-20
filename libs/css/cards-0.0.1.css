@@ -1,0 +1,83 @@
+.card{
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 3px;
+	background: rgb(255,255,255);
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 0px 1px 0px rgba(0,0,0,0.15);
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 0px 1px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 0px 1px 0px rgba(0,0,0,0.15);
+	transition: all .4s ease;   
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+}
+.card:hover{
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25), 0px 0px 1px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25), 0px 0px 1px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25), 0px 0px 1px 0px rgba(0,0,0,0.25);
+}
+.card a{
+	text-decoration: none;
+}
+.card-content{
+	font-family: "PT Sans", Helvetica, Arial, Sans-serif;
+}
+.card-content .card-text{
+	font-size: 14px;
+	font-style: italic;
+}
+.card-content .card-headline{
+	font-size: 14px;
+	font-weight: 700;
+}
+.card-flip{
+	margin: 5px;
+	height: 300px;
+	width: 200px;
+	background: rgba(25,25,25,0.1);
+	float: left;
+	position: relative;
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	perspective: 600px;
+}
+.card-flip {
+	display: block;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;				    
+	-webkit-transition: all .5s cubic-bezier(.8,.1,.3,.9);
+	-moz-transition: all .5s cubic-bezier(.8,.1,.3,.9);
+	transition: all .5s cubic-bezier(.8,.1,.3,.9);
+}
+.card{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	opacity: 0.99;
+}
+.card-flip:hover .front {
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+.back {
+	background: rgb(245,160,10);
+	color: rgb(255,255,255);
+	-webkit-transform: rotateY( -180deg );
+	-moz-transform: rotateY( -180deg );
+	transform: rotateY( -180deg );
+}
+.card-flip:hover .back {
+	-webkit-transform: rotateY( 0deg );
+	-moz-transform: rotateY( 0deg );
+	transform: rotateY( 0deg );
+}
