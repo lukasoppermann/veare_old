@@ -8,6 +8,7 @@ _*/
 logs/
 log-
 0*_*/
+*cache*/
 images/
 movies/
 files/
