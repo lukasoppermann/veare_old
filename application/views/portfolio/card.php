@@ -1,20 +1,21 @@
-<div class="card-flip">
-	<div class="card front">
-		<a href="<?=base_url().'en/blog/'.$permalink?>">
+<a class="card-flip" href="<?=base_url().'en/blog/'.$permalink?>">
+	<div class="card front">	
 			<div class="card-content">
-				<div class="card-img">
-					<img src="" alt="test"/>
+				<div class="card-image">
+					<img src="<?=base_url()?>/media/images/lined-paper-thumb.jpg" alt="test"/>
 				</div>
 				<h3 class="card-headline"><?=$title?></h3>
-				<p class="card-text"><?=variable($excerpt)?></p>
+				<p class="card-text">
+				<?=variable($excerpt)?></p>
 			</div>
-		</a>
 	</div>
 	<div class="card back">
-		<a href="<?=base_url().'en/blog/'.$permalink?>">
+			<div class="card-back-title">
+				Open<br /> Case
+			</div>
 			<div class="card-content">
 				<h3 class="card-headline"><?=$title?></h3>
 			</div>
-		</a>
+			<div class="card-arrow"></div>
 	</div>
-</div>
+</a>

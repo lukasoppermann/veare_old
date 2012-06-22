@@ -20,11 +20,16 @@ class Portfolio extends MY_Controller {
 		{
 			// load into view
 			$entries[] = $this->load->view('portfolio/card', $card, TRUE);
+			// tags
+			if( in_array($tag_menu, ) )
+			{
+				
+			}
 		}
 		//
 		$this->data['content'] = implode('',$entries);
 		// load view
-		view('default', $this->data);
+		view('portfolio/portfolio', $this->data);
 	}
 // close class
 }

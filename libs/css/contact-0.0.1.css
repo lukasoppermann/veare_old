@@ -97,11 +97,11 @@
 }
 .veare-contact .company{
 	position: relative;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: 0.3px;
 	font-size: 14px;
 	margin: 20px 5px 20px 15px;
-	font-family: 'PT Sans', sans-serif, Arial;
+	font-family: 'Open Sans', sans-serif, Arial;
 }
 .veare-contact .company:before, .veare-contact .contact-details:before{
 	height: 2px;
@@ -116,11 +116,11 @@
 }
 .veare-contact .contact-details{
 	position: absolute;
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 14px;
 	bottom: 20px;
 	left: 15px;
-	font-family: 'PT Sans', sans-serif, Arial;	
+	font-family: 'Open Sans', sans-serif, Arial;	
 }
 .veare-contact .contact-detail{
 	position: relative;
@@ -140,7 +140,7 @@
 }
 .veare-about{
 	font-size: 14px;
-	font-family: 'PT Sans', sans-serif, Arial;		
+	font-family: 'Open Sans', sans-serif, Arial;		
 	font-weight: 400;
 	height: 125px;
 }

@@ -10,13 +10,17 @@ rgb(80,160,180)
 */
 /*------------------*/
 /* General */
+@font-face{ font-family: "Open Sans"; src: url('../../04_web/fonts/Open Sans/OpenSans-Regular.ttf'); }
+@font-face{ font-family: "Open Sans Bold"; src: url('../../04_web/fonts/Open Sans/OpenSans-Semibold.ttf'); } 
 html{
 	background-color: rgb(250,250,250);
 }
 html, body{
+	position: relative;
 	padding: 0;
 	margin: 0;
 	height: 100%;
+	width: 100%;
 	overflow: hidden;
     font: normal 13px Helvetica, Arial, sans-serif;
 	color: rgb(75,75,75);
@@ -107,29 +111,30 @@ div{
 /*------------------*/
 /* Layout */
 #wrapper{
+	display: block;	
+	position: relative;	
 	width: 100%;
 	height: 100%;
 }
 #stage{
+	display: block;	
 	position: relative;
 	float: left;
-	display: block;
-	overflow-y: auto;
 	height: 100%;
+	width: 100%;
 	width: -moz-calc(100% - 80px);
-	width: -webkit-calc(100% - 80px);
-	width: calc(100% - 80px);	
+	width: -webkit-calc(100% - 80px);	
 	margin: 0 0 0 80px;
-	z-index: 99;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+	background: transparent;
+	z-index: 50;
 }
 .nav-wide #stage{
 	margin-left: 180px;
 	width: -moz-calc(100% - 180px);
-	width: -webkit-calc(100% - 180px);
-	width: calc(100% - 180px);
+	width: -webkit-calc(100% - 180px);	
 }
 #content_wrapper{
 	float: left;
@@ -638,6 +643,7 @@ div{
 	height: 700px;
 	width: 300px;
 	overflow: hidden;
+	z-index: 49;
 }
 #grey_line{
 	height: 700px;
@@ -661,10 +667,17 @@ div{
 	-webkit-transform: rotate(-25deg);
 }
 .lines-text{
+	opacity: 1;
 	position: absolute;
+	right: auto;
 	color: rgb(245,160,10);
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
+	transition: all .4s;   
+	-webkit-transition: all .4s;
+	-moz-transition: all .4s;
+	-o-transition: all .4s;
+	-ms-transition: all .4s;
 }
 #line_text_veare{
 	top: 130px;
@@ -673,10 +686,20 @@ div{
 #line_text_two{
 	top: 147px;
 	left: 103px;
+	transition-delay: .2s;
+	-webkit-transition-delay: .2s;
+	-moz-transition-delay: .2s;
+	-o-transition-delay: .2s;
+	-ms-transition-delay: .2s;
 }
 #line_text_three{
 	top: 164px;
 	left: 113px;
+	transition-delay: .4s;
+	-webkit-transition-delay: .4s;
+	-moz-transition-delay: .4s;
+	-o-transition-delay: .4s;
+	-ms-transition-delay: .4s;
 }
 /* ---------------------------------------------------------------- */
 /* responsiveness */
@@ -695,13 +718,27 @@ body:after {
 	body:after { content: 'tablet'; }
 } 
 @media screen and (min-width: 1024px) { 
+	body:after { content: 'min-screen'; }
+}
+@media screen and (min-width: 1260px) { 
 	body:after { content: 'screen'; }
 }
 @media screen and (min-width: 1400px) { 
 	body:after { content: 'wide-screen'; }
 }
-
 body.mobile{
 	width: 640px;
 	height: 960px;
+}
+.wide-screen #content_wrapper, .screen #content_wrapper{
+	padding-right: 250px;
+}
+.min-screen .lines-text, .tablet .lines-text, .mobile .lines-text{
+	opacity: 0;
+	left: 200px !important;
+	transition: all .6 ease .5s;   
+	-webkit-transition: all .6 ease .5s;
+	-moz-transition: all .6 ease .5s;
+	-o-transition: all .6 ease .5s;
+	-ms-transition: all .6 ease .5s;
 }

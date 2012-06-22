@@ -63,10 +63,17 @@ $(function()
 			}
 		},
 		{
+			context: 'min-screen',
+			callback: function() {
+				_body.addClass('nav-wide min-screen').removeClass('mobile tablet screen wide-screen');
+				swap_logo( _body, _logo_inner );
+			}
+		},
+		{
 			context: 'screen',
 			callback: function() {
 				console.log('screen');
-				_body.addClass('nav-wide screen').removeClass('mobile tablet screen wide-screen');
+				_body.addClass('nav-wide screen').removeClass('mobile tablet wide-screen min-screen');
 				swap_logo( _body, _logo_inner );
 			}
 		},
@@ -74,7 +81,7 @@ $(function()
 			context: 'wide-screen',
 			callback: function() {
 				console.log('wide');
-				_body.addClass('nav-wide screen wide-screen').removeClass('mobile tablet screen wide-screen');
+				_body.addClass('nav-wide screen wide-screen').removeClass('mobile tablet min-screen');
 				swap_logo( _body, _logo_inner );
 			}
  		}
