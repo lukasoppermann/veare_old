@@ -11,7 +11,7 @@ $(function()
 		var content_height 	= $('#content_wrapper').outerHeight();
 		if( content_height < $(document).height())
 		{
-			$('body, #stage, #content_wrapper').css('height', '100%');
+			// $('body, #stage, #content_wrapper').css('height', '100%');
 		}
 		$('#content_wrapper').css('width', '100%');
 	});
@@ -51,21 +51,24 @@ $(function()
 		{
 			context: 'mobile',
 			callback: function() {
-				_body.addClass('mobile').removeClass('nav-wide tablet screen wide-screen');
+				console.log('mobile');
+				_body.addClass('mobile hide-line-text').removeClass('nav-wide tablet screen wide-screen');
 				swap_logo( _body, _logo_inner );
 			}
 		},
 		{
 			context: 'tablet',
 			callback: function() {
-				_body.addClass('tablet').removeClass('nav-wide mobile screen wide-screen');
+				console.log('tablet');
+				_body.addClass('tablet hide-line-text').removeClass('nav-wide mobile screen wide-screen');
 				swap_logo( _body, _logo_inner );
 			}
 		},
 		{
 			context: 'min-screen',
 			callback: function() {
-				_body.addClass('nav-wide min-screen').removeClass('mobile tablet screen wide-screen');
+				console.log('min-screen');
+				_body.addClass('nav-wide min-screen hide-line-text').removeClass('mobile tablet wide-screen');
 				swap_logo( _body, _logo_inner );
 			}
 		},
@@ -73,7 +76,7 @@ $(function()
 			context: 'screen',
 			callback: function() {
 				console.log('screen');
-				_body.addClass('nav-wide screen').removeClass('mobile tablet wide-screen min-screen');
+				_body.addClass('nav-wide screen').removeClass('mobile tablet wide-screen min-screen hide-line-text');
 				swap_logo( _body, _logo_inner );
 			}
 		},
@@ -81,7 +84,7 @@ $(function()
 			context: 'wide-screen',
 			callback: function() {
 				console.log('wide');
-				_body.addClass('nav-wide screen wide-screen').removeClass('mobile tablet min-screen');
+				_body.addClass('nav-wide screen wide-screen').removeClass('mobile tablet min-screen hide-line-text');
 				swap_logo( _body, _logo_inner );
 			}
  		}
@@ -96,7 +99,7 @@ $(function()
 		var content_height 	= $('#content_wrapper').outerHeight();
 		if( content_height < $(document).height())
 		{
-			$('body, #stage, #content_wrapper').css('minHeight', $(document).height());
+			// $('body, #stage, #content_wrapper').css('minHeight', $(document).height());
 		}
 		// -----------------------
 		// add animation to sidebar

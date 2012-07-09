@@ -1,3 +1,11 @@
+.cards{
+	position: relative;
+	float: left;
+	overflow: hidden;
+	padding: 40px 40px;
+	margin: -40px 0 0 -40px;
+	z-index: 10;
+}
 .card{
 	height: 100%;
 	width: 100%;
@@ -34,6 +42,14 @@
 	height: -moz-calc(100% - 10px);	
 	height: -webkit-calc(100% - 12px);
 	overflow: hidden;
+}
+.card-content .card-image{
+	font-size: 30px;
+	line-height: 36px;
+	text-align: right;
+	color: rgb(255,255,255);
+	font-family: "Open Sans Bold";
+	font-weight: normal;
 }
 .card-content .card-text{
 	font-size: 14px;

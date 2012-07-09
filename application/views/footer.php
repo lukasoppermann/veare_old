@@ -1,6 +1,6 @@
-			<div id="footer">
+			<!-- <div id="footer">
 			<?=copyright(array('from_year' => '2005', 'by' => 'Lukas Oppermann', 'copyright' => 'Copyright', 'url' => base_url().'contact'));?>
-			</div>	
+			</div>	 -->
 		</div>
 	</div>
 	<!-- line -->

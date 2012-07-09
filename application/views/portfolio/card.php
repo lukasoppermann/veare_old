@@ -1,8 +1,8 @@
-<a class="card-flip" href="<?=base_url().'en/blog/'.$permalink?>">
+<a class="card-flip" data-tag="<?=implode(' ',$tags)?>" href="<?=base_url().'en/portfolio/'.$permalink?>">
 	<div class="card front">	
 			<div class="card-content">
 				<div class="card-image">
-					<img src="<?=base_url()?>/media/images/lined-paper-thumb.jpg" alt="test"/>
+					<img src="<?=base_url()?>media/images/<?=variable($image['filename']).'-thumb_240_230.'.variable($image['ext'])?>" alt="<?=$title?>"/>
 				</div>
 				<h3 class="card-headline"><?=$title?></h3>
 				<p class="card-text">
