@@ -82,13 +82,17 @@ class Labs extends MY_Controller {
 	// Item
 	function item( $permalink = null )
 	{
+		// load assets
+		css_add('labs, slider');
+		// add class
+		$this->data['body_class'] = variable($this->data['body_class']).' item-view';
 		// get items from database
 		$item = db_select( 'client_entries', array('type' => 4, 'permalink' => $permalink), array('json' => 'data', 'single' => TRUE));
 		// load item if exists
 		if( $item != null )
 		{
 			$this->data = array_merge($this->data, $item);
-			view('portfolio/item', $this->data);
+			view('labs/item', $this->data);
 		}
 		else
 		{

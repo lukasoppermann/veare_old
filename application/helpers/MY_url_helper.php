@@ -71,6 +71,23 @@ function active_url($slash = TRUE)
 }
 // ------------------------------------------------------------------------
 /**
+ * slash - returns the given url / url segment with slashes
+ *
+ * @param boolean 
+ * @return string
+ */
+function slash($url = null)
+{
+	if($url != null)
+	{
+		// remove slashes from url
+		$url = trim($url, '/');
+		// add slashes to url
+		return '/'.$url.'/';
+	}
+}
+// ------------------------------------------------------------------------
+/**
  * page_url - returns the url to current page without variables
  *
  * @param boolean

@@ -12,6 +12,7 @@ rgb(80,160,180)
 /* General */
 @font-face{ font-family: "Open Sans"; src: url('../../04_web/fonts/Open Sans/OpenSans-Regular.ttf'); }
 @font-face{ font-family: "Open Sans Bold"; src: url('../../04_web/fonts/Open Sans/OpenSans-Semibold.ttf'); } 
+@font-face{ font-family: "Bree Serif"; src: url('../../04_web/fonts/Bree Serif/BreeSerif-Regular.ttf'); } 
 html{
 	background-color: rgb(250,250,250);
 }
@@ -304,6 +305,20 @@ div{
 	display: block;
 	height: 30px;
 	padding: 5px 0;
+}
+.item-view #nav .item.active.arrow:after{
+	content: "";
+	background: transparent;
+	height: 0;
+	width: 0;
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent rgb(255,255,255) transparent transparent;
+	display: block;
+	position: absolute;
+	left: auto;
+	right: 0px;
+	top: 15px;
 }
 .closed #nav li{
 	width: 55px;

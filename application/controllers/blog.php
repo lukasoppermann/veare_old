@@ -62,7 +62,7 @@ class Blog extends MY_Controller {
 		// time difference
 		$post['date'] = time_ago(mysql_to_unix($post['date']));
 		$post = array_merge($post, $this->data);
-		$post['body_class'] = 'entry';
+		$post['body_class'] = 'entry item-view';
 		// prepare pre in post
 		//replaces pre content with html entities
 		function pre_entities($matches)
