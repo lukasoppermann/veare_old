@@ -45,13 +45,13 @@ $route['(\w{2})/blog'] = 'blog/index';
 $route['(\w{2})/blog/?(.*)?'] = 'blog/entry/$2';
 // Portfolio
 $route['(\w{2})/portfolio'] = 'portfolio';
-$route['(\w{2})/portfolio/?(.*)?'] = 'portfolio/$2';
+$route['(\w{2})/portfolio/?(.*)?'] = 'portfolio/index/$2';
 // About
 $route['(\w{2})/about'] = 'about';
 $route['(\w{2})/about/?(.*)?'] = 'about/$2';
 // Labs
 $route['(\w{2})/labs'] = 'labs';
-$route['(\w{2})/labs/?(.*)?'] = 'labs/$2';
+$route['(\w{2})/labs/?(.*)?'] = 'labs/index/$2';
 // Contact
 $route['(\w{2})/contact'] = 'contact';
 $route['(\w{2})/contact/?(.*)?'] = 'contact/$2';

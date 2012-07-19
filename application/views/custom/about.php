@@ -1,6 +1,3 @@
-<div class="about-bg">	
-	<img class="about-bg-img" src="<?=base_url()?>media/images/bg_about.png" alt="about - veare"/>
-</div>
 <div class="center-wrapper">
 	<div class="veare-about animate">
 		<div class="header">

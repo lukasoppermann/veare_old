@@ -115,6 +115,9 @@ div{
 	position: relative;	
 	width: 100%;
 	height: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 #stage{
 	display: block;	
@@ -138,7 +141,6 @@ div{
 }
 #content_wrapper{
 	float: left;
-	width: 100%;
 	height: 100%;
 }
 /* Footer */
@@ -640,7 +642,7 @@ div{
 	position: absolute;
 	top: 0;
 	right: 0;	
-	height: 700px;
+	height: 100%;
 	width: 300px;
 	overflow: hidden;
 	z-index: 49;

@@ -8,25 +8,92 @@ class Labs extends MY_Controller {
 		parent::__construct();
 	}
 	
-	function index()
+	function index( $permalink = null )
+	{
+		if( $permalink == null )
+		{
+			$this->overview();
+		}
+		else
+		{
+			$this->item( $permalink );
+		}
+	}
+	// ------------------------
+	// Overview
+	function overview()
 	{	
 		// load assets
-		css_add('widget, labs');
-		js_add('labs');
+		css_add('cards, labs');
+		js_add('jquery.fs_filter, portfolio');
+		// define variables
+		$tag_menu = array();
 		// get entries from database
-		$labs = db_select( 'client_entries', array('type' => 2, 'status' => 1), array('limit' => 50, 'order' => 'date DESC', 'json' => 'data') );
-		// loop through posts
-		foreach($labs as $lab)
+		$cards = db_select( 'client_entries', array('type' => 4, 'status' => 1), array('limit' => 50, 'order' => 'date DESC', 'json' => 'data') );
+		// grab all image ids
+		$images = array();
+		foreach($cards as $card)
 		{
-			// time difference
-			$lab['date'] = time_ago(mysql_to_unix($lab['date']));
-			// load into view
-			$entries[] = $this->load->view('labs/labs_item', $lab, TRUE);
+			if( isset($card['card-image']) )
+			{
+				$images[$card['card-image']] = $card['card-image'];
+			}
 		}
+		// retrieve images from db
+		if( count($images) > 0 )
+		{
+			$images = db_select( 'files', array('status' => 1, 'id' => array($images)), array('json' => 'data', 'index' => 'id') );
+		}
+		// loop through posts
+		foreach($cards as $card)
+		{
+			$card['tags'] = explode(',',$card['tags']);
+			// add image
+			if( isset($card['card-image']) )
+			{
+				$card['image'] = $images[$card['card-image']];
+			}
+			// load into view
+			$entries[] = $this->load->view('labs/card', $card, TRUE);
+			// tags
+			foreach( $card['tags'] as $tag )
+			{
+				// prepare tag
+				$tag = trim($tag);
+				// add tag to menu if not existing
+				if( !array_key_exists($tag, $tag_menu) && $tag != null  )
+				{
+					$tag_menu[$tag] = '<li class="filter-item" data-value="'.$tag.'">#'.$tag.'<span class="close">×</span></li>';
+				}
+			}
+		}
+		// tag menu
+
+ 		$this->data['tag_menu'] = '<div class="filter-list">
+				<div class="group">
+					<ul id="tag_menu" data-filter="tag" class="filters tag">'.implode('',$tag_menu).'</ul>
+				</div></div>';
 		//
 		$this->data['content'] = implode('',$entries);
 		// load view
-		view('default', $this->data);
+		view('labs/index', $this->data);
+	}
+	// ------------------------
+	// Item
+	function item( $permalink = null )
+	{
+		// get items from database
+		$item = db_select( 'client_entries', array('type' => 4, 'permalink' => $permalink), array('json' => 'data', 'single' => TRUE));
+		// load item if exists
+		if( $item != null )
+		{
+			$this->data = array_merge($this->data, $item);
+			view('portfolio/item', $this->data);
+		}
+		else
+		{
+			$this->overview();
+		}
 	}
 // close class
 }

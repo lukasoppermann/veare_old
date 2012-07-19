@@ -8,7 +8,20 @@ class Portfolio extends MY_Controller {
 		parent::__construct();
 	}
 	
-	function index()
+	function index( $permalink = null )
+	{
+		if( $permalink == null )
+		{
+			$this->overview();
+		}
+		else
+		{
+			$this->item( $permalink );
+		}
+	}
+	// ------------------------
+	// Overview
+	function overview()
 	{	
 		// load assets
 		css_add('cards, portfolio');
@@ -60,7 +73,24 @@ class Portfolio extends MY_Controller {
 		//
 		$this->data['content'] = implode('',$entries);
 		// load view
-		view('portfolio/portfolio', $this->data);
+		view('portfolio/index', $this->data);
+	}
+	// ------------------------
+	// Item
+	function item( $permalink = null )
+	{
+		// get items from database
+		$item = db_select( 'client_entries', array('type' => 3, 'permalink' => $permalink), array('json' => 'data', 'single' => TRUE));
+		// load item if exists
+		if( $item != null )
+		{
+			$this->data = array_merge($this->data, $item);
+			view('portfolio/item', $this->data);
+		}
+		else
+		{
+			$this->overview();
+		}
 	}
 // close class
 }
