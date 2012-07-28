@@ -1,5 +1,5 @@
 <?=doctype('html5')."\n"; ?>
-<html lang="<?=config('lang_abbr')?>">
+<?=html('lang="'.config('lang_abbr').'"', '', false)?>
 <head>
 <?
 echo favicon('favicon');
