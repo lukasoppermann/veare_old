@@ -84,6 +84,7 @@ class Labs extends MY_Controller {
 	{
 		// load assets
 		css_add('labs, slider');
+		js_add('fs.slider');
 		// add class
 		$this->data['body_class'] = variable($this->data['body_class']).' item-view';
 		// get items from database

@@ -28,7 +28,7 @@ class MY_Controller extends CI_Controller {
 		Header("Pragma: no-cache" ); // HTTP/1.0
 		// --------------------------------------------------------------------	
 		// load assets
-		css_add(array('base','menu'));
+		css_add(array('base','menu','responsiveness','slogan_line','gui'));
 		js_add_lines('CI_BASE="'.base_url().'en/";', 'default', TRUE);
 		js_add('jquery');
 		js_add('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js, jquery.mediaquery, fs.resize, base', 'default');

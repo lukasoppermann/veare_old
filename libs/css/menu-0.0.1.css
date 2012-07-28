@@ -1,0 +1,179 @@
+/* Meta */
+#meta_nav{
+	float: left;
+	padding: 10px;
+}
+#meta_nav li{
+	padding: 0;
+	height: 25px;
+	width: 75px;
+	text-align: center;
+}
+#meta_nav li a{
+	width: 100%;
+	height: 15px;
+	padding: 6px 0 4px 0;
+	display: block;
+	text-decoration: none;
+}
+/* Nav */
+#nav{
+	float: left;
+	list-style: none;
+	width: 100%;	
+}
+#nav .item{
+	position: relative;
+	display: block;
+	height: 30px;
+	padding: 5px 0;
+	width: 100%;
+}
+/*.item-view #nav .item.active.arrow:after{
+	content: "";
+	background: transparent;
+	height: 0;
+	width: 0;
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent rgb(255,255,255) transparent transparent;
+	display: block;
+	position: absolute;
+	left: auto;
+	right: 0px;
+	top: 15px;
+}*/
+.closed #nav li{
+	width: 55px;
+}
+#nav .item .menu-item-link{
+	position: relative;
+	color: rgb(150,150,150);
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	padding: 12px 10px 8px 70px;
+	transition: all .4s;   
+	-webkit-transition: all .4s;
+	-moz-transition: all .4s;
+	-o-transition: all .4s;
+	-ms-transition: all .4s;	
+}
+#nav .item .menu-item-link .text{
+	display: block;
+	position: relative;
+	z-index: 3;
+	opacity: 1;
+	margin-left: -200px; 
+}
+.nav-wide #nav .item .menu-item-link .text{ margin-left: 0px; }
+#nav .item.active .menu-item-link, #nav .item .menu-item-link:hover{
+	color: rgb(90,90,90);	
+}
+#nav .item.active .icon, #nav .item:hover .icon{
+	top: 7px;
+	position: absolute;
+	opacity: 0.6;
+}
+#nav .item .icon{
+	display: block;
+	position: absolute;
+	top: 7px;
+	left: 25px;
+	height: 30px;
+	width: 30px;
+	opacity: 0.3;
+	transition: all .8s;   
+	-webkit-transition: all .8s;
+	-moz-transition: all .8s;
+	-o-transition: all .8s;
+	-ms-transition: all .8s;
+	z-index: 5;
+	background-image: url(../../media/layout/veare-icons.png);
+}
+#nav .item:after{
+	display: block;
+	position: absolute;
+	top: 7px;
+	left: 0px;
+	content: "";
+	height: 30px;
+	width: 70px;
+	z-index: 4;
+	background-image: -moz-linear-gradient(left, rgba(243,243,243,1.0) 0, rgba(243,243,243,1.0) 50px, rgba(243,243,243,0.0) 70px);
+	background-image: -webkit-linear-gradient(left, rgba(243,243,243,1.0) 0, rgba(243,243,243,1.0) 50px, rgba(243,243,243,0.0) 70px);
+}
+#sidebar_bottom{
+	width: 60px;	
+	display: block;
+	position: absolute;
+	bottom: 10px;
+	padding: 10px;
+}
+#follow_nav{
+	list-style: none;
+	display: block;
+	float: left;
+	width: 40px;
+	height: 120px;
+	margin: 0 auto;	
+	padding-left: 10px;
+
+}
+.nav-wide #sidebar_bottom{
+	width: 160px;	
+}
+.nav-wide #follow_nav{
+	width: 170px;
+	height: 30px;
+	padding-left: 0px;
+}
+#follow_nav li{
+	width: 40px;
+	height: 30px;
+	padding: 0;
+	float: left;
+}
+#follow_nav li a{
+	width: 100%;
+	height: 100%;
+	padding-top: 1px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+#follow_nav li .icon-small{
+	position: absolute;
+	left: 4px;
+	opacity: 0.4;	
+}
+#follow_nav li:hover .icon-small{
+	opacity: 0.6;	
+}
+/* nav icons */
+.portfolio .icon{ background-position: -150px 0px; }
+.blog .icon{ background-position: -150px -30px; }
+.about .icon{ background-position: -150px -60px; }
+.labs .icon{ background-position: -150px -90px; }
+.contact .icon{ background-position: -150px -120px; }
+/*------------------*/
+/* Icons */
+.icon, .icon-small{
+	margin-top: -2px;
+	background-image: url('../../media/layout/veare-icons.png');
+	width: 30px;
+	height: 30px;
+	display: block;
+}
+.icon-small{
+	width: 30px;
+	height: 30px;
+	padding: 0;
+}
+/* icons */
+.icon.case{ background-position: -150px 0; }
+.icon-small.mail{ background-position: -180px 0px; }
+.icon-small.twitter{ background-position: -180px -60px; }
+.icon-small.dribbble{ background-position: -180px -90px; }
+.icon-small.xing{ background-position: -180px -120px; }

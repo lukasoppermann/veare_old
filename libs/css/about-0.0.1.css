@@ -1,6 +1,15 @@
 #copyright, #line{
 	display: none;
 }
+#about{
+	background-image: url('../../media/images/about.png');
+	background-repeat: no-repeat;
+	background-position: 200px -20px;
+	z-index: 1;
+}
+#about #stage{
+	background-image: url('../../media/layout/noise.png');	
+}
 .veare-about{
 	z-index: 2;
 	width: 80%;
@@ -42,6 +51,7 @@
 }
 .veare-about .content{
 	width: 100%;
+	font-family: "Open Sans", Sans-serif, Arial;	
 }
 .veare-about .column{
 	width: 50%;
@@ -56,17 +66,22 @@
 	text-align: center;
 	height: 100%;
 	width: 100%;
-	width: -moz-calc(100% - 100px);
-	width: -webkit-calc(100% - 100px);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
 }
-.nav-wide .center-wrapper{
-	width: -moz-calc(100% - 200px);
-	width: -webkit-calc(100% - 200px);	
+.veare-about .excerpt{
+	font-family: "Open Sans", Sans-serif, Arial;
+	font-style: italic;
+	font-size: 120%;
+	line-height: 120%;
+	color: rgb(80,160,180);
+	margin-bottom: 10px;
 }
 .center-wrapper:before {
     content: '';
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    margin-right: -0.25em;
+    padding-right: -0.25em;
 }

@@ -4,17 +4,6 @@
 // define functions 
 $(function()
 {
-	// debounced resize event (fires once every 100ms)
-	$(window).fs_resize(function(){
-		// -----------------------
-		// define variables
-		var content_height 	= $('#content_wrapper').outerHeight();
-		if( content_height < $(document).height())
-		{
-			// $('body, #stage, #content_wrapper').css('height', '100%');
-		}
-		$('#content_wrapper').css('width', '100%');
-	});
 	// -----------------------
 	// logo change
 	var current = 'small';
@@ -92,17 +81,33 @@ $(function()
 	// Go!
 	MQ.init(queries);
 	// -----------------------
+	// define variables
+	var _content_wrapper = $('#content_wrapper');
+	var _stage = $('#stage');
+	var win_width = 0;
+	var total_width = 0;
+	// debounced resize event (fires once every 100ms)
+	$(window).fs_resize(function()
+	{
+		// total_width = win_width-$('#sidebar').width();
+		// 
+		// _stage.css({'height':'100%','width':total_width});
+		// _content_wrapper.css({'height':'100%','width':total_width});
+	});
+	// -----------------------
 	// when everything is fully loaded
-	$(window).load( function() {
-		// -----------------------
-		// define variables
-		var content_height 	= $('#content_wrapper').outerHeight();
-		if( content_height < $(document).height())
-		{
-			// $('body, #stage, #content_wrapper').css('minHeight', $(document).height());
-		}
-		// -----------------------
-		// add animation to sidebar
-		$('#sidebar, #follow_nav, .menu-item-link .text').addClass('animate');
+	$(window).load( function() 
+	{
+		$('#stage').height($('#wrapper').height());
+		// win_width = $(window).width();
+		// total_width = win_width-$('#sidebar').width();
+		// 
+		// $('html, body, #wrapper').css({'height':'100%','width':'100%'});
+		// 
+		// _stage.css({'height':'100%','width':total_width});
+		// _content_wrapper.css({'height':'100%','width':total_width});
+		// // -----------------------
+		// // add animation to sidebar
+		// $('#sidebar, #follow_nav, .menu-item-link .text').addClass('animate');
 	});
 });

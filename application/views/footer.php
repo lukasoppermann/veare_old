@@ -1,7 +1,3 @@
-			<!-- <div id="footer">
-			<?=copyright(array('from_year' => '2005', 'by' => 'Lukas Oppermann', 'copyright' => 'Copyright', 'url' => base_url().'contact'));?>
-			</div>	 -->
-		</div>
 	</div>
 	<!-- line -->
 	<div id="line">
@@ -11,8 +7,6 @@
 		<span class="lines-text" id="line_text_two">Interaction</span>
 		<span class="lines-text" id="line_text_three">Design</span>
 	</div>
-<!-- wrapper end -->
-</div>
 <?=$this->fs_google->fonts(array('Open Sans:400,600,700,400italic', 'Bree Serif'));?>
 <? echo js('default', FALSE); ?>
 </body>

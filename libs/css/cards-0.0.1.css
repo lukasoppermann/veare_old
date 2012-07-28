@@ -60,12 +60,15 @@
 	font-size: 14px;
 	font-style: italic;
 }
-.card-content .card-headline{
+.card-headline{
 	font-size: 14px;
 /*	font-weight: 600;*/
 	font-family: "Open Sans Bold";
 	font-weight: normal;
 	letter-spacing: .02em;
+}
+.card-back-content .card-headline{
+	color: rgb(255,255,255);
 }
 .card-back-title{
 	height: 230px;
