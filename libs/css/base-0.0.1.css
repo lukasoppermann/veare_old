@@ -161,19 +161,21 @@ div{
 	float: left;
 	width: 100%;
 	min-height: 100%;
-	width: -moz-calc(100% - 80px);
-	width: -webkit-calc(100% - 80px);	
-	margin: 0 0 0 80px;
-	padding: 0 240px 0 0;
+	padding: 0;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	z-index: 50;
 }
 .nav-wide #stage{
-	margin-left: 180px;
+	margin: 0 0 0 180px;
 	width: -moz-calc(100% - 180px);
 	width: -webkit-calc(100% - 180px);	
+}
+.nav-narrow #stage{
+	margin: 0 0 0 80px;
+	width: -moz-calc(100% - 80px);
+	width: -webkit-calc(100% - 80px);	
 }
 /*------------------*/
 /* Sidebar */

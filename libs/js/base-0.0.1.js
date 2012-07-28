@@ -41,7 +41,7 @@ $(function()
 			context: 'mobile',
 			callback: function() {
 				console.log('mobile');
-				_body.addClass('mobile hide-line-text').removeClass('nav-wide tablet screen wide-screen');
+				_body.addClass('mobile hide-line-text nav-narrow').removeClass('nav-wide tablet screen wide-screen');
 				swap_logo( _body, _logo_inner );
 			}
 		},
@@ -49,7 +49,7 @@ $(function()
 			context: 'tablet',
 			callback: function() {
 				console.log('tablet');
-				_body.addClass('tablet hide-line-text').removeClass('nav-wide mobile screen wide-screen');
+				_body.addClass('tablet hide-line-text nav-narrow').removeClass('nav-wide mobile screen wide-screen');
 				swap_logo( _body, _logo_inner );
 			}
 		},
@@ -57,7 +57,7 @@ $(function()
 			context: 'min-screen',
 			callback: function() {
 				console.log('min-screen');
-				_body.addClass('nav-wide min-screen hide-line-text').removeClass('mobile tablet wide-screen');
+				_body.addClass('nav-wide min-screen hide-line-text').removeClass('mobile tablet wide-screen nav-narrow');
 				swap_logo( _body, _logo_inner );
 			}
 		},
@@ -65,7 +65,7 @@ $(function()
 			context: 'screen',
 			callback: function() {
 				console.log('screen');
-				_body.addClass('nav-wide screen').removeClass('mobile tablet wide-screen min-screen hide-line-text');
+				_body.addClass('nav-wide screen').removeClass('mobile tablet wide-screen min-screen hide-line-text nav-narrow');
 				swap_logo( _body, _logo_inner );
 			}
 		},
@@ -73,7 +73,7 @@ $(function()
 			context: 'wide-screen',
 			callback: function() {
 				console.log('wide');
-				_body.addClass('nav-wide screen wide-screen').removeClass('mobile tablet min-screen hide-line-text');
+				_body.addClass('nav-wide screen wide-screen').removeClass('mobile tablet min-screen hide-line-text nav-narrow');
 				swap_logo( _body, _logo_inner );
 			}
  		}
@@ -82,7 +82,6 @@ $(function()
 	MQ.init(queries);
 	// -----------------------
 	// define variables
-	var _content_wrapper = $('#content_wrapper');
 	var _stage = $('#stage');
 	var win_width = 0;
 	var total_width = 0;
@@ -95,9 +94,14 @@ $(function()
 		// _content_wrapper.css({'height':'100%','width':total_width});
 	});
 	// -----------------------
+	// define variables
+	var _about = $('.veare-about');
+	_about.css({'left':'50%','marginTop':-_about.outerHeight()/2,'marginLeft':-_about.outerWidth()/2,'opacity':0});
+	// -----------------------
 	// when everything is fully loaded
 	$(window).load( function() 
 	{
+		_about.animate({'top':'52%','opacity':1}, 750, 'swing').animate({'top':'50%'}, 200, 'swing');
 		$('#stage').height($('#wrapper').height());
 		// win_width = $(window).width();
 		// total_width = win_width-$('#sidebar').width();

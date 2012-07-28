@@ -11,6 +11,7 @@ if( variable($css) != null )
 	echo '<style type="text/css" media="screen">'.$css."</style>";
 }
 ?>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 </head>
 <body <?="id='".variable($body_id)."'"; ?><?=" class='".variable($body_class)."'"; ?>>
 	<!--+++++++++++++++++++++++++ sidebar +++++++++++++++++++++++++-->

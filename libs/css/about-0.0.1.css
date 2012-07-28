@@ -8,22 +8,19 @@
 	z-index: 1;
 }
 #about #stage{
-	background-image: url('../../media/layout/noise.png');	
+	background-image: url('../../media/layout/noise.png');
 }
 .veare-about{
 	z-index: 2;
 	width: 80%;
-	min-width: 250px;
-	max-width: 700px;
+	width: 700px;
 	background: rgb(255,255,255);
 	border-radius: 3px;
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
 	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
 	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
-	display: inline-block;
-    vertical-align: middle;
-    text-align: left;
 	padding-bottom: 10px;
+	text-align: left;
 }
 .veare-about .header{
 	float: left;
@@ -54,21 +51,12 @@
 	font-family: "Open Sans", Sans-serif, Arial;	
 }
 .veare-about .column{
+	float: left;
 	width: 50%;
-	min-width: 240px;
-	max-width: 400px;
 	margin: 10px 0 0 0;
 }
 .veare-about .column p{
 	padding: 5px 15px;
-}
-.center-wrapper{
-	text-align: center;
-	height: 100%;
-	width: 100%;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
 }
 .veare-about .excerpt{
 	font-family: "Open Sans", Sans-serif, Arial;
@@ -78,10 +66,80 @@
 	color: rgb(80,160,180);
 	margin-bottom: 10px;
 }
-.center-wrapper:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    padding-right: -0.25em;
+/*------------------*/
+/* center box */
+#stage{
+	text-align: center;
+}
+#stage:before{
+	content: '';
+	display: inline-block;
+	height: 100%;
+	width: 5px;
+	vertical-align: middle;
+	z-index: 100;
+	margin-right: -0.25em;
+}
+.veare-about{
+	position: absolute;
+	top: -100%;
+	left: 10%;
+	display: inline-block;
+	vertical-align: middle;
+}
+@media screen and (max-width: 820px){
+	.veare-about{
+		left: 20px !important;
+		margin-left: auto !important;
+		width: -webkit-calc(100% - 40px);
+		width: -moz-calc(100% - 40px);
+	}
+}
+@media screen and (max-width: 540px){
+	.veare-about .column{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 360px){
+	.veare-about{
+		left: 0 !important;
+		margin: 0;
+		width: 100%;
+	}
+	#stage{
+		margin: 0 !important;
+		width: 100% !important;
+		background: transparent;
+	}
+	#sidebar_bottom{
+		display: none;
+	}
+	#sidebar{
+		height: 55px !important;
+		width: 100% !important;
+	}
+	#logo{
+		width: 70px;
+		height: 55px;
+		margin-top: 0;
+		padding-top: 5px;
+		overflow: hidden;
+	}
+	#nav{
+		width: auto;
+		height: 55px;
+	}
+	#nav .item{
+		height: 35px;
+		width: 60px;
+		overflow: hidden;
+		padding: 10px;
+		float: left;
+	}
+	#nav .item .text{
+		display: none !important;
+	}
+	#nav .item .menu-item-link{
+		height: 100%;
+	}
 }

@@ -29,20 +29,6 @@
 	padding: 5px 0;
 	width: 100%;
 }
-/*.item-view #nav .item.active.arrow:after{
-	content: "";
-	background: transparent;
-	height: 0;
-	width: 0;
-	border-width: 10px;
-	border-style: solid;
-	border-color: transparent rgb(255,255,255) transparent transparent;
-	display: block;
-	position: absolute;
-	left: auto;
-	right: 0px;
-	top: 15px;
-}*/
 .closed #nav li{
 	width: 55px;
 }
@@ -119,7 +105,6 @@
 	height: 120px;
 	margin: 0 auto;	
 	padding-left: 10px;
-
 }
 .nav-wide #sidebar_bottom{
 	width: 160px;	
