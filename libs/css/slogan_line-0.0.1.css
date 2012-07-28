@@ -1,0 +1,76 @@
+/* ---------------------------------------------------------------- */
+/* line */
+#line{
+	position: absolute;
+	top: 0;
+	right: 0;	
+	height: 100%;
+	width: 300px;
+	overflow: hidden;
+	z-index: 49;
+}
+#grey_line{
+	height: 700px;
+	width: 700px;
+	top: -200px;
+	right: -120px;
+	border-left: 1px solid rgb(230,230,230);
+	transform: rotate(-25deg);
+	-moz-transform: rotate(-25deg);
+	-webkit-transform: rotate(-25deg);	
+}
+#orange_line{
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	top: 100px;
+	right: 109px;
+	border-left: 3px solid rgb(245,160,10);
+	transform: rotate(-25deg);
+	-moz-transform: rotate(-25deg);
+	-webkit-transform: rotate(-25deg);
+}
+.lines-text{
+	opacity: 1;
+	position: absolute;
+	right: auto;
+	color: rgb(245,160,10);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	transition: all .4s;   
+	-webkit-transition: all .4s;
+	-moz-transition: all .4s;
+	-o-transition: all .4s;
+	-ms-transition: all .4s;
+}
+#line_text_veare{
+	top: 130px;
+	left: 93px;
+}
+#line_text_two{
+	top: 147px;
+	left: 103px;
+	transition-delay: .2s;
+	-webkit-transition-delay: .2s;
+	-moz-transition-delay: .2s;
+	-o-transition-delay: .2s;
+	-ms-transition-delay: .2s;
+}
+#line_text_three{
+	top: 164px;
+	left: 113px;
+	transition-delay: .4s;
+	-webkit-transition-delay: .4s;
+	-moz-transition-delay: .4s;
+	-o-transition-delay: .4s;
+	-ms-transition-delay: .4s;
+}
+.hide-line-text .lines-text, .hide-line-text .lines-text, .hide-line-text .lines-text{
+	opacity: 0;
+	left: 200px !important;
+	transition: all .6 ease .5s;   
+	-webkit-transition: all .6 ease .5s;
+	-moz-transition: all .6 ease .5s;
+	-o-transition: all .6 ease .5s;
+	-ms-transition: all .6 ease .5s;
+}

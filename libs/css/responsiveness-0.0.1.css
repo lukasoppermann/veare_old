@@ -1,0 +1,25 @@
+/* ---------------------------------------------------------------- */
+/* responsiveness */
+.animate{
+	transition: all .4s;   
+	-webkit-transition: all .4s;
+	-moz-transition: all .4s;
+	-o-transition: all .4s;
+	-ms-transition: all .4s;
+}
+body:after {
+    content: 'mobile';
+    display: none;
+}
+@media screen and (min-width: 640px) and (min-device-width: 640px) { 
+	body:after { content: 'tablet'; }
+} 
+@media screen and (min-width: 960px) and (min-device-width: 960px) { 
+	body:after { content: 'min-screen'; }
+}
+@media screen and (min-width: 1020px) { 
+	body:after { content: 'screen'; }
+}
+@media screen and (min-width: 1400px) { 
+	body:after { content: 'wide-screen'; }
+}
