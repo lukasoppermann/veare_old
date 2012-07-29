@@ -96,12 +96,18 @@ $(function()
 	// -----------------------
 	// define variables
 	var _about = $('.veare-about');
-	_about.css({'left':'50%','marginTop':-_about.outerHeight()/2,'marginLeft':-_about.outerWidth()/2,'opacity':0});
+	if(!_body.hasClass('mobile'))
+	{
+		_about.css({'left':'50%','marginTop':-_about.outerHeight()/2,'marginLeft':-_about.outerWidth()/2,'opacity':0});
+	}
 	// -----------------------
 	// when everything is fully loaded
 	$(window).load( function() 
 	{
-		_about.animate({'top':'52%','opacity':1}, 750, 'swing').animate({'top':'50%'}, 200, 'swing');
+		if(!_body.hasClass('mobile'))
+		{
+			_about.animate({'top':'52%','opacity':1}, 750, 'swing').animate({'top':'50%'}, 200, 'swing');
+		}
 		$('#stage').height($('#wrapper').height());
 		// win_width = $(window).width();
 		// total_width = win_width-$('#sidebar').width();
