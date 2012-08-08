@@ -156,215 +156,40 @@
 	font-weight: 700;
 }
 /*------------------------------------------------------------------*/
-
-.widget.column-one-three{
-	width: 250px;	
-}
-.widget.column-two-three{
-	width: 45%;
-	max-width: 700px;
-	margin-right: 6%;
-	margin-left: 100px;
-}
-#contact_header{
-	position: relative;
-	float: left;
-	padding: 0;
-	margin: 10px 0 20px 0;
-	overflow: hidden;
-	width: 800px;
-	height: 350px;
-	border-radius: 2px;	
-}
-#contact_header img{
-	float: right;
-}
-.contact h3{
-	font-size: 15px;
-}
-#email_form{
-	position: relative;
-}
-#email_form .form{
-	position: relative;
-	display: block;
-	width: 100%;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
-	padding: 6px 15px;
-	font-weight: bold;
-	color: rgb(125,125,125);
-}
-#email_form #submit{
-	position: absolute;
-	z-index: 2;
-	right: 0px;
-	top: 0px;
-	height: 100%;
-	padding: 12px;
-	line-height: 11px;
-	margin: 0;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
-	-webkit-border-bottom-left-radius: 0;
-	-moz-border-radius-bottomleft: 0;
-	-webkit-border-top-left-radius: 0;
-	-moz-border-radius-topleft: 0;
-	color: rgb(125,125,125);
-    text-shadow: 0 1px 0 rgb(255,255,255);
-    -webkit-transition: border-color .218s;
-    -moz-transition: border .218s;
-    -o-transition: border-color .218s;
-    transition: border-color .218s;
-    background-color: rgb(240,240,240);
-	background-image: linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
-	background-image: -o-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
-	background-image: -moz-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
-	background-image: -webkit-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
-	background-image: -ms-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
-    border: solid 1px rgb(220,220,220);
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-}
-#email_form .email-field{
-	position: relative;		
-	margin-bottom: 10px;	
-}
-#email, #message{
-	z-index: 1;
-	position: relative;	
-	padding: 6px 10px;
-	margin: 0;
-	border-radius: 3px;
-	width: 100%;
-	border: 1px solid rgb(200,200,200);
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
-	color: inherit;	
-	box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.15);
-	-webkit-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.15);
-	-moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.15);
-	transition-property: border, color, box-shadow;  
-	transition-duration: .4s;  
-	-webkit-transition-property: border, color, box-shadow;
-	-webkit-transition-duration: .4s;
-	-moz-transition-property: border, color, box-shadow;
-	-moz-transition-duration: .4s;		
-}
-#email:focus, #message:focus{
-	color: rgb(100,100,100);
-	outline: none;
-	box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.25), 0px 0px 5px 0px rgb(245,160,10);
-	-webkit-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.25), 0px 0px 5px 0px rgb(245,160,10);
-	-moz-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.25), 0px 0px 5px 0px rgb(245,160,10);	
-	border: 1px solid rgb(245,160,10);
-}
-#email:focus ~ #submit{
-    border-color: rgb(245,160,10);
-}
-#email{
-	font-size: 20px;
-	padding-right: 60px;
-}
-#message{
-	resize: none;
-	font-size: 15px;
-	height: 120px;
-	margin-bottom: 10px;	
-}
-.message{
-	position: absolute;
-	z-index: 999;
+/* mobile version */
+body.mobile{
 	background: rgb(255,255,255);
-	border-radius: 3px;
-	padding: 10px;
-	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
-	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
-	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
 }
-.message.success p{
-	z-index: 2;
-}
-.message.error{
-	color: rgb(100,0,0);
-	text-shadow: rgba(255,255,255,0.5) 1px 1px 0px;
-	background-color: rgb(240,0,0);
-	background-image: -moz-linear-gradient(top, rgb(240,0,0), rgb(150,0,0));
-	background-image: -webkit-linear-gradient(top, rgb(240,0,0), rgb(150,0,0));
-}
-.contact .company, .contact .slogan, .contact .mail, .contact .phone{
-	display: block;
-	text-decoration: none;
-	padding: 3px 20px 0;
-}
-.contact .address{
-	display: block;
-	padding: 10px 20px 5px;	
-}
-.contact .company{
-	color: rgb(245,160,10);
-	font-weight: bold;
-	padding: 5px 15px 0 20px;
-}
-.contact .slogan{
-	padding: 0 15px 5px 20px;
-}
-.contact .mail, .contact .phone{
-	color: rgb(170,170,170);
-}
-.contact .mail:hover, .contact .phone:hover{
-	color: rgb(245,160,10);
-	text-decoration: underline;
-}
-.social-list{
-	border-top: 1px dashed rgb(225,225,225);
-	padding: 10px 0;
-}
-.contact .social-list li{
+.mobile .veare-contact{
+	float: left;
 	position: relative;
-	padding: 7px 10px 7px 45px;
-	height: 16px;
-	border: none;
-	background: none;
-	cursor: pointer;
-	transition-property: color;  
-	transition-duration: .6s;  
-	-webkit-transition-property: color;
-	-webkit-transition-duration: .6s;
-	-moz-transition-property: color;
-	-moz-transition-duration: .6s;
-}
-.contact .social-list li:hover{
-	color: rgb(75,75,75);
-}
-.contact .social-list li.icon-small:hover:before{
-	opacity: 0.8;
-}
-.contact .social-list li.icon-small:before{
-	position: absolute;
-	left: 13px;
-	top: -2px;
 	display: block;
-	content: "";
-	width: 30px;
-	height: 30px;
-	opacity: 0.5;
-	background-image: url(../../media/layout/veare-icons.png);
-	transition-property: opacity;  
-	transition-duration: .6s;  
-	-webkit-transition-property: opacity;
-	-webkit-transition-duration: .6s;
-	-moz-transition-property: opacity;
-	-moz-transition-duration: .6s;
+	margin: 55px 0 0 0;
+	width: 100%;
+	border-radius: 0px;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
 }
-.contact .social-list li.icon-small.twitter:before{ background-position: -30px -30px; }
-.contact .social-list li.icon-small.dribbble:before{ background-position: -60px -30px; }
-.contact .social-list li.icon-small.xing:before{ background-position: -90px -30px; }
-.contact .social-list li.icon-small.facebook:before{ background-position: -120px -30px; }
-.contact .social-list li.icon-small.googleplus:before{ background-position: -150px -30px; }
-.contact .social-list li.icon-small.github:before{ background-position: -180px -30px; }
-.contact .social-list li.icon-small.vimeo:before{ background-position: -210px -30px; }
+.mobile.landscape .veare-contact{
+	margin: 0 0 0 80px;	
+}
+.mobile .veare-contact .contact-details, .mobile .veare-about .heading{
+	font-family: "Helvetica";
+	font-weight: bold;
+}
+.mobile .veare-about{
+	bottom: 0;
+	border-radius: 0px;
+	padding: 0px 0 0 0px;
+	z-index: 10;
+}
+.mobile .veare-contact .contact-wrapper{
+	height: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;		
+}
+.mobile .veare-contact:after, .mobile .veare-contact:before{
+	display: none;
+}

@@ -79,6 +79,10 @@ class Portfolio extends MY_Controller {
 	// Item
 	function item( $permalink = null )
 	{
+		// add assets
+		css_add('portfolio_item');
+		js_add('portfolio_item');
+		//
 		$this->data['body_class'] = variable($this->data['body_class']).' item-view';
 		// get items from database
 		$item = db_select( 'client_entries', array('type' => 3, 'permalink' => $permalink), array('json' => 'data', 'single' => TRUE));

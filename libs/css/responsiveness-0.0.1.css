@@ -8,13 +8,19 @@
 	-ms-transition: all .4s;
 }
 body:after {
-    content: 'mobile';
+    content: 'mobile-portrait';
     display: none;
 }
 @media screen and (max-width: 850px){
 	#stage{
 		padding-right: 0px !important;
 	}
+}
+@media screen and (max-width: 639px) and (orientation:portrait) { 
+	body:after { content: 'mobile-portrait'; }
+}
+@media screen and (max-width: 639px) and (orientation:landscape){
+	body:after { content: 'mobile-landscape'; }	
 }
 @media screen and (min-width: 640px) and (min-device-width: 640px) { 
 	body:after { content: 'tablet'; }
@@ -58,10 +64,57 @@ body:after {
 	}
 	#nav .item .menu-item-link .text{ margin-left: 0px; }
 }
-/* smar phone */
-@media screen and (max-width: 360px){
+/* smart phone */
+@media screen and (max-width: 480px){
+	#stage{
+		float: left;
+		margin: 0 !important;
+		width: 100% !important;
+		background: transparent !important;
+	}
+	#line{
+		display: none;
+	}
 	#sidebar_bottom{
 		display: none;
+	}
+	#footer{
+		z-index: 99;
+		overflow: hidden;
+		text-align: center;
+		width: 100%;
+		height: 50px;
+		background: rgba(0,0,0,0.15);
+		box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
+		-webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
+		-moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
+	}
+	#footer .follow-nav{
+		position: relative;
+		display: inline-block;
+		height: 50px;
+	}
+	#footer .follow-nav .item{
+		float: left;
+		width: 70px;
+		height: 50px;
+	}
+	#footer .follow-nav .item .link{
+		float: left;
+		width: 70px;
+		height: 50px;
+	}
+	#footer .follow-nav .item .link .icon-small{
+		margin: 10px 0 0 20px;
+	}
+	#nav .item.contact{
+		display: none;
+	}
+}
+/* smart phone portrait only */
+@media screen and (max-width: 360px){
+	#stage{
+		font-size: 120%;
 	}
 	#sidebar{
 		height: 55px !important;
@@ -106,30 +159,23 @@ body:after {
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;	
 	}
-	#nav .item.contact{
-		display: none;
+}
+/* smart phone landscape only */
+@media screen and (min-width: 361px) and (max-width: 480px){
+	#stage{
+		font-size: 160%;
 	}
-	#footer .follow-nav{
-		display: block;
-		float: left;
-		width: 100%;
-		height: 50px;
-		background: rgba(0,0,0,0.15);
-		box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
-		-webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
-		-moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
+	#logo{
+		width: 80px;
+		height: 70px;
+		margin: 0;
+		padding-top: 5px;
+		overflow: hidden;
 	}
-	#footer .follow-nav .item{
-		float: left;
-		width: 70px;
-		height: 50px;
-	}
-	#footer .follow-nav .item .link{
-		float: left;
-		width: 70px;
-		height: 50px;
-	}
-	#footer .follow-nav .item .link .icon-small{
-		margin: 10px 0 0 20px;
+	#footer{
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;	
+		padding-left: 80px;
 	}
 }

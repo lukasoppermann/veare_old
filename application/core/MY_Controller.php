@@ -28,10 +28,20 @@ class MY_Controller extends CI_Controller {
 		Header("Pragma: no-cache" ); // HTTP/1.0
 		// --------------------------------------------------------------------	
 		// load assets
-		css_add(array('base','menu','responsiveness','slogan_line','gui'));
-		js_add_lines('CI_BASE="'.base_url().'en/";', 'default', TRUE);
+		// development !!!!!!!!
 		js_add('jquery');
-		js_add('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js, jquery.mediaquery, fs.resize, base', 'default');
+		//
+		if( mobile() == true )
+		{
+			css_add(array('base','menu','responsiveness','gui'));
+			js_add('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js, jquery.mediaquery, mobile', 'default');	
+		}
+		else
+		{
+			css_add(array('base','menu','responsiveness','slogan_line','gui'));
+			js_add_lines('CI_BASE="'.base_url().'en/";', 'default', TRUE);
+			js_add('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js, jquery.mediaquery, fs.resize, base', 'default');	
+		}
 		// --------------------------------------------------------------------
 		// Initialize Menus
 		$this->data['menu']['main'] = $this->fs_navigation->tree(array(

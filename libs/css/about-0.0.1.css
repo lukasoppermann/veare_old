@@ -11,6 +11,7 @@
 	background-image: url('../../media/layout/noise.png');
 }
 .veare-about{
+	float: left;
 	z-index: 2;
 	width: 80%;
 	width: 700px;
@@ -82,7 +83,7 @@
 }
 .veare-about{
 	position: absolute;
-	top: -100%;
+	top: 20%;
 	left: 10%;
 	display: inline-block;
 	vertical-align: middle;
@@ -98,30 +99,58 @@
 @media screen and (max-width: 540px){
 	.veare-about .column{
 		width: 100%;
+		margin: 0;
+	}
+	.veare-about .excerpt{
+		margin-top: 10px;
 	}
 }
-@media screen and (max-width: 360px){
+@media screen and (max-width: 480px){
 	.veare-about{
 		top: 0;
 		left: 0 !important;
 		position: relative;
 		float: left;
-		margin: 30px 0 0 0 !important;
-		width: 100%;
+		margin: 0 0 50px 0px !important;
+		padding-left: 80px;
+		width: 100%;	
 		border-radius: 0px;
+		box-shadow: none;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;	
+	}
+	.veare-about .column{
+		padding-left: 10px;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;	
 	}
 	.veare-about .header{
-		padding-top: 20px;
 		border-radius: 0px;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.veare-about .header .headline-about{
+		width: -webkit-calc(100% - 25px);
+		width: -moz-calc(100% - 25px);
+		margin-left: 25px;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;	
 	}
 	#about{
 		background: rgb(250,250,250);
 	}
-	#stage{
-		float: left;
-		margin: 0 !important;
-		width: 100% !important;
-		background: transparent !important;
-		font-size: 120%;
+}
+@media screen and (max-width: 360px){
+	.veare-about{
+		padding: 0;
+		margin: 30px 0 50px 0 !important;
+		width: 100%;				
 	}
+	.veare-about .header{
+		padding-top: 20px;
+	}	
 }

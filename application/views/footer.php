@@ -17,7 +17,12 @@
 		</ul>
 	</div>
 	
-<?=$this->fs_google->fonts(array('Open Sans:400,600,700,400italic', 'Bree Serif'));?>
+<?
+	if(mobile() != true)
+	{
+		$this->fs_google->fonts(array('Open Sans:400,600,700,400italic', 'Bree Serif'));
+	}
+?>
 <? echo js('default', FALSE); ?>
 </body>
 </html>

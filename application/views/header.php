@@ -13,11 +13,11 @@ if( variable($css) != null )
 ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 </head>
-<body <?="id='".variable($body_id)."'"; ?><?=" class='".variable($body_class)."'"; ?>>
+<body <?="id='".variable($body_id)."'"; ?><?=" class='".(mobile() == true ? 'mobile ' : '').(ipad() == true ? 'tablet' : '').variable($body_class)."'"; ?>>
 	<!--+++++++++++++++++++++++++ sidebar +++++++++++++++++++++++++-->
 	<div id="sidebar" class="<?=variable($sidebar_class)?>">
 		<!-- logo -->
-		<a href="<?=base_url()?>en/portfolio/" id="logo">
+		<a href="<?=base_url()?>en/contact/" id="logo">
 			<div class="logo-inner logo-small">
 				<div class="logo-img">
 					<img src="<?=base_url()?>/media/layout/veare-icons.png" alt="veare - visionary design" />

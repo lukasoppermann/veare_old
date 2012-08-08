@@ -14,17 +14,19 @@ class Contact extends MY_Controller {
 	{	
 		// load assets
 		css_add('contact');
-		js_add(array('http://maps.google.com/maps/api/js?sensor=true','jquery.gmaps','contact'));
+		if(mobile() != true)
+		{
+			js_add(array('http://maps.google.com/maps/api/js?sensor=true','jquery.gmaps','contact'));
+		}
+		else
+		{
+			js_add('contact');
+		}
 		//
 		$this->data['sidebar_class'] = 'shadow';
 		$this->data['body_class'] = variable($this->data['body_class']).' no-line';
 		// load view
 		view('custom/contact', $this->data);
-	}
-	
-	function entry()
-	{
-		
 	}
 	
 	function send_email()
