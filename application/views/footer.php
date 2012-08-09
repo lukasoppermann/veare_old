@@ -1,4 +1,9 @@
+		</div>
+		<div class="left-column">
+			teste
+		</div>
 	</div>
+</div>	
 	<!-- line -->
 	<div id="line">
 		<div id="grey_line"></div>

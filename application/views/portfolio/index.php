@@ -1,4 +1,9 @@
 <?=variable($tag_menu)?>
-<div class="cards">
+<!-- <div class="cards">
 	<?=variable($content)?>
-</div>
+</div> -->
+<div class="column"></div>
+<div class="column"></div>
+<div class="column"></div>
+<div class="column"></div>
+<div class="column"></div>

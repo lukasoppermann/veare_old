@@ -30,16 +30,17 @@ class MY_Controller extends CI_Controller {
 		// load assets
 		// development !!!!!!!!
 		js_add('jquery');
+		// js_add('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
 		//
 		if( mobile() == true )
 		{
-			css_add(array('base','menu','responsiveness','gui'));
-			js_add('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js, jquery.mediaquery, mobile', 'default');	
+			css_add(array('base','menu','responsiveness','mobile'));
+			js_add('jquery.mediaquery, base, mobile', 'default');	
 		}
 		else
 		{
-			css_add(array('base','menu','responsiveness','slogan_line','gui'));
-			js_add_lines('CI_BASE="'.base_url().'en/";', 'default', TRUE);
+			// js_add_lines('CI_BASE="'.base_url().'en/";', 'default', TRUE);			
+			css_add(array('reset','base','layout','menu','responsiveness','slogan_line','gui'));
 			js_add('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js, jquery.mediaquery, fs.resize, base', 'default');	
 		}
 		// --------------------------------------------------------------------
@@ -52,14 +53,6 @@ class MY_Controller extends CI_Controller {
 			'item_before' 			=> '<span class="icon"></span><span class="text">',
 			'item_after' 			=> '</span>'
 		));
-		// --------------------------------------------------------------------
-		// page id
-		$url = explode('/',trim(str_replace(active_url(), '', current_url()),'/'));
-		$this->data['body_id'] = $url[0];
-		if( $this->data['body_id'] == 'http:')
-		{
-			$this->data['body_id'] = 'blog';
-		}
 		// --------------------------------------------------------------------
 	}
 }

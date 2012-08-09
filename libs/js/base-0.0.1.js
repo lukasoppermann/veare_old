@@ -5,17 +5,17 @@
 $(function()
 {
 	// -----------------------
+	var _body = $('body');
+	var _stage = $('#stage');	
+	var _logo_inner = $('#logo').find('.logo-inner');
+	// -----------------------
 	// query actions	
 	var query_actions = function( resolution )
 	{
-		var _stage = $('#stage');
 		$('html, body').height(_stage.height());
-		$('body').trigger('resolutionChange', resolution);
+		_body.trigger('resolutionChange', resolution);
 		_stage.width($(document).width());
 	};
-	// -----------------------
-	var _body = $('body');
-	var _logo_inner = $('#logo').find('.logo-inner');
 	// -----------------------
 	// create event
 	// fire event
@@ -66,13 +66,18 @@ $(function()
 	];
 	// Go!
 	MQ.init(queries);
-	$('body').on('resolutionChange', function(e, device){
-		console.log(device);
-	});
 	// -----------------------
 	// when everything is fully loaded
 	$(window).load( function() 
 	{
-		$('body').height($('#stage').height());
+		
+		if( _body.height() > _stage.height() )
+		{
+			_body.height($(window).height());
+		}
+		else
+		{
+			_body.height(_stage.height());			
+		}
 	});
 });

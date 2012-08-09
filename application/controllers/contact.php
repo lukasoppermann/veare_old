@@ -24,9 +24,11 @@ class Contact extends MY_Controller {
 		// mobile version
 		else
 		{
-			css_add('mobile.contact');
+			css_add('mobile.contact, widget');
+			js_add('mobile.contact');
 			// load view
-			view('custom/contact_mobile', $this->data);
+			$this->data['page'] = $this->load->view('custom/contact_mobile', $this->data, TRUE);
+			$this->load->view('template_mobile', $this->data);
 		}
 	}
 	

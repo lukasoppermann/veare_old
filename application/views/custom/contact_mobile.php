@@ -1,5 +1,4 @@
-<div id="veare_map"></div>
-<div class="veare-contact" style="display: none">
+<div class="veare-contact">
 	<div class="contact-wrapper">
 		<h2 class="company">veare / intelligent design</h2>
 		<div class="contact-details">

@@ -35,6 +35,8 @@ if( variable($css) != null )
 				<li><a class="hover-button last mail" href="mailto:mail@veare.net" target="_blank"><span class="icon-small mail"></span></a></li>
 			</ul>
 		</div>
-	</div>		
+	</div>
 	<!--+++++++++++++++++++++++++ sidebar end +++++++++++++++++++++++++-->
-	<div id="stage">
+	<div class="wrapper">
+		<div class="left-column-wrapper">		
+			<div id="stage">
