@@ -1,0 +1,26 @@
+.wrapper{
+	width: 100%;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	clear: both;
+}
+.left-column-wrapper{
+	width: 100%;
+	position: relative;
+	float: left;	
+}
+.left-column, #stage{
+	position: relative;
+	float: left;
+	overflow: hidden;
+}
+.left-column{
+	width: 180px;
+	background: red;	
+}
+.column{
+	float: left;
+	background: blue;
+	width: 25%;
+}
