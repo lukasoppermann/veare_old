@@ -1,181 +1,27 @@
 /* ---------------------------------------------------------------- */
 /* responsiveness */
-.animate{
-	transition: all .4s;   
-	-webkit-transition: all .4s;
-	-moz-transition: all .4s;
-	-o-transition: all .4s;
-	-ms-transition: all .4s;
+body.mobile{
+	font-size: 120%;
 }
 body:after {
     content: 'mobile-portrait';
     display: none;
 }
-@media screen and (max-width: 850px){
-	#stage{
-		padding-right: 0px !important;
-	}
-}
-@media screen and (max-width: 639px) and (orientation:portrait) { 
+@media screen and (max-width: 320px) and (orientation:portrait) { 
 	body:after { content: 'mobile-portrait'; }
 }
-@media screen and (max-width: 639px) and (orientation:landscape){
+@media screen and (min-width: 400px) and (orientation:landscape){
 	body:after { content: 'mobile-landscape'; }	
 }
-@media screen and (min-width: 640px) and (min-device-width: 640px) { 
+@media screen and (min-width: 540px){
+	body:after { content: 'tablet-small'; }	
+}
+@media screen and (min-width: 780px){ 
 	body:after { content: 'tablet'; }
 } 
-@media screen and (min-width: 960px) and (min-device-width: 960px) { 
-	body:after { content: 'min-screen'; }
-}
-@media screen and (min-width: 1020px) { 
+@media screen and (min-width: 1100px) { 
 	body:after { content: 'screen'; }
 }
 @media screen and (min-width: 1400px) { 
 	body:after { content: 'wide-screen'; }
-}
-/* set on load */
-@media screen and (min-width: 960px) and (min-device-width: 960px) { 
-	#stage{
-		margin-left: 180px;
-		width: -moz-calc(100% - 180px);
-		width: -webkit-calc(100% - 180px);
-	}
-	#sidebar{
-		width: 180px;
-	}
-	#logo .logo-inner{
-		width: 150px;
-		height: 120px;
-		background-position: 0px -113px;	
-	}
-	#logo .logo-inner.logo-small .logo-img{
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-	#sidebar_bottom{
-		width: 160px;	
-	}
-	#follow_nav{
-		width: 170px;
-		height: 30px;
-		padding-left: 0px;
-	}
-	#nav .item .menu-item-link .text{ margin-left: 0px; }
-}
-/* smart phone */
-@media screen and (max-width: 480px){
-	#stage{
-		float: left;
-		margin: 0 !important;
-		width: 100% !important;
-		background: transparent !important;
-	}
-	#line{
-		display: none;
-	}
-	#sidebar_bottom{
-		display: none;
-	}
-	#footer{
-		z-index: 99;
-		overflow: hidden;
-		text-align: center;
-		width: 100%;
-		height: 50px;
-		background: rgba(0,0,0,0.15);
-		box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
-		-webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
-		-moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
-	}
-	#footer .follow-nav{
-		position: relative;
-		display: inline-block;
-		height: 50px;
-	}
-	#footer .follow-nav .item{
-		float: left;
-		width: 70px;
-		height: 50px;
-	}
-	#footer .follow-nav .item .link{
-		float: left;
-		width: 70px;
-		height: 50px;
-	}
-	#footer .follow-nav .item .link .icon-small{
-		margin: 10px 0 0 20px;
-	}
-	#nav .item.contact{
-		display: none;
-	}
-}
-/* smart phone portrait only */
-@media screen and (max-width: 360px){
-	#stage{
-		font-size: 120%;
-	}
-	#sidebar{
-		height: 55px !important;
-		width: 100% !important;
-		box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.35);
-		-webkit-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.35);
-		-moz-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.35);
-	}
-	#logo{
-		width: 70px;
-		height: 55px;
-		margin-top: 0;
-		padding-top: 5px;
-		overflow: hidden;
-	}
-	#nav{
-		float: right;
-		margin-right: 25px;
-		width: auto;
-		height: 55px;
-	}
-	#nav .item{
-		padding: 0;
-		margin: 0;
-		height: 55px;
-		width: 50px;
-		overflow: hidden;
-		float: left;
-	}
-	#nav .item .text{
-		display: none !important;
-	}
-	#nav .item .icon{
-		left: 15px !important;
-		top: 13px !important;
-	}
-	#nav .item .menu-item-link{
-		height: 100%;
-		width: 100%;
-		padding: 7px 5px 8px 5px;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;	
-	}
-}
-/* smart phone landscape only */
-@media screen and (min-width: 361px) and (max-width: 480px){
-	#stage{
-		font-size: 160%;
-	}
-	#logo{
-		width: 80px;
-		height: 70px;
-		margin: 0;
-		padding-top: 5px;
-		overflow: hidden;
-	}
-	#footer{
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;	
-		padding-left: 80px;
-	}
 }

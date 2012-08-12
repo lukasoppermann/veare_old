@@ -8,7 +8,15 @@ Blue
 rgb(80,160,180)
 
 */
+/*------------------*/
+/* Fonts */
+@font-face{ font-family: "Open Sans"; src: url('../../04_web/fonts/Open Sans/OpenSans-Regular.ttf'); }
+@font-face{ font-family: "Open Sans Bold"; src: url('../../04_web/fonts/Open Sans/OpenSans-Semibold.ttf'); } 
+@font-face{ font-family: "Bree Serif"; src: url('../../04_web/fonts/Bree Serif/BreeSerif-Regular.ttf'); }
+/*------------------*/
+/* Logo */
 body{
+	position: relative;
 	color: rgb(75,75,75);
 	background: rgb(250,250,250);
 }
@@ -30,6 +38,13 @@ body{
 	-o-transition: all .0s;
 	-ms-transition: all .0s;
 }
+.mobile #logo{
+	width: 70px;
+	height: 55px;	
+	padding: 0 10px;
+	margin: 0 0 0 5px;	
+}
+.mobile.landscape #logo{ margin-bottom: 15px; }
 #logo .logo-inner{
 	overflow: hidden;
 	display: block;	
@@ -37,16 +52,17 @@ body{
 	background-repeat: no-repeat;
 	background-position: 0px 0px;	
 	background-image: url('../../media/layout/veare-icons.png');
+	margin-top: 5px;
 	width: 50px;
 	height: 50px;
 	background-position: -60px -234px;
 }
-#logo .logo-inner.logo-big{
+.nav-wide #logo .logo-inner{
 	width: 150px;
 	height: 120px;
 	background-position: 0px -113px;	
 }
-#logo .logo-inner.logo-small .logo-img{
+.nav-narrow #logo .logo-inner .logo-img{
 	position: absolute;
 	top: -240px;
 	left: 0;
@@ -58,7 +74,7 @@ body{
 	-o-transition: margin .318s;
 	transition: margin .318s;
 }
-#logo:hover .logo-img{
+.screen #logo:hover .logo-img{
 	margin-top: 2px;
 	-webkit-transition: margin .118s;
 	-moz-transition: margin .118s;
@@ -67,16 +83,13 @@ body{
 }
 /*------------------*/
 /* Layout */
-#sidebar{
-	opacity: 0.5;
-}
-#stage{
+/*#stage{
 	float: left;
 	width: 100%;
 	height: 100%;
 	z-index: 50;
 	background: green;
-}
+}*/
 /*.nav-wide #stage{
 	margin: 0 0 0 180px;
 	width: -moz-calc(100% - 180px);
@@ -87,36 +100,3 @@ body{
 	width: -moz-calc(100% - 80px);
 	width: -webkit-calc(100% - 80px);	
 }*/
-/*------------------*/
-/* Sidebar */
-#sidebar{
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	z-index: 100;
-	width: 80px;
-	height: 100%;
-	background: rgb(243,243,243);
-}
-#sidebar.shadow{
-	border: 0;
-	box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.35);
-	-webkit-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.35);
-	-moz-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.35);
-}
-.nav-wide #sidebar{
-	width: 180px;
-}
-/*------------------*/
-/* Footer */
-#footer{
-	display: block;
-	float: left;
-	width: 100%;
-	height: 50px;
-	margin-top: -50px;
-}
-#footer .follow-nav{
-	display: none;
-}

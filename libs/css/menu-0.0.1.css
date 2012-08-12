@@ -29,6 +29,20 @@
 	padding: 5px 0;
 	width: 100%;
 }
+.mobile.portrait #nav{
+	float: right;
+	width: auto;
+	height: 55px;
+	margin-right: 25px;
+}
+.mobile.portrait #nav .item, .mobile.portrait #nav .item .menu-item-link{
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+.mobile.portrait #nav .item .text{
+	display: none;
+}
 .closed #nav li{
 	width: 55px;
 }
@@ -114,13 +128,13 @@
 	height: 30px;
 	padding-left: 0px;
 }
-#follow_nav li{
+#follow_nav .item{
 	width: 40px;
 	height: 30px;
 	padding: 0;
 	float: left;
 }
-#follow_nav li a{
+#follow_nav .item a{
 	width: 100%;
 	height: 100%;
 	padding-top: 1px;
@@ -128,14 +142,40 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
 }
-#follow_nav li .icon-small{
+#follow_nav .icon-small{
 	position: absolute;
 	left: 4px;
 	opacity: 0.4;	
 }
-#follow_nav li:hover .icon-small{
+#follow_nav .item:hover .icon-small{
 	opacity: 0.6;	
 }
+#footer .follow-nav{
+	display: none;
+}
+.mobile #footer .follow-nav{
+	position: relative;	
+	float: left;
+	display: block;
+	width: 100%;
+	height: 50px;	
+}
+.mobile #footer .follow-nav .item{
+	width: 25%;
+	height: 50px;
+	display: block;
+	padding: 0;
+	float: left;
+	position: relative;
+}
+.mobile #footer .follow-nav .icon-small{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -15px 0 0 -15px;
+	opacity: 0.4;
+}
+/*------------------*/
 /* nav icons */
 .portfolio .icon{ background-position: -150px 0px; }
 .blog .icon{ background-position: -150px -30px; }
@@ -162,3 +202,9 @@
 .icon-small.twitter{ background-position: -180px -60px; }
 .icon-small.dribbble{ background-position: -180px -90px; }
 .icon-small.xing{ background-position: -180px -120px; }
+.icon-small.linkedin{ background-position: -180px -150px; }
+/* mobile */
+.mobile .icon-small.linkedin{ background-position: -240px 0px; }
+.mobile .icon-small.twitter{ background-position: -240px -30px; }
+.mobile .icon-small.dribbble{ background-position: -240px -60px; }
+.mobile .icon-small.xing{ background-position: -240px -90px; }
