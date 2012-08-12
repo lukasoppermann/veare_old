@@ -4,7 +4,7 @@
 <?
 echo favicon('favicon');
 echo meta();
-echo css('default', TRUE);
+echo css('default', FALSE);
 echo title(variable($meta_title, 'Welcome').' | vea.re – visionary design');
 if( variable($css) != null )
 {
@@ -13,7 +13,8 @@ if( variable($css) != null )
 ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 </head>
-<body <?="id='".variable($body_id)."'"; ?><?=" class='".(mobile() == true ? 'mobile ' : '').(ipad() == true ? 'tablet' : '').variable($body_class)."'"; ?>>
+<body> 
+	<!-- .(mobile() == true ? 'mobile ' : '').(ipad() == true ? 'tablet' : '') -->
 	<!--+++++++++++++++++++++++++ sidebar +++++++++++++++++++++++++-->
 	<div id="sidebar" class="<?=variable($sidebar_class)?>">
 		<!-- logo -->
@@ -29,10 +30,10 @@ if( variable($css) != null )
 		<!-- follow nav -->
 		<div id="sidebar_bottom">
 			<ul id="follow_nav">
-				<li><a class="hover-button first twitter" href="https://twitter.com/#!/vearenet" target="_blank"><span class="icon-small twitter"></span></a></li>
-				<li><a class="hover-button middle dribbble" href="http://dribbble.com/lukasoppermann" target="_blank"><span class="icon-small dribbble"></span></a></li>
-				<li><a class="hover-button middle xing" href="https://www.xing.com/profile/Lukas_Oppermann" target="_blank"><span class="icon-small xing"></span></a></li>
-				<li><a class="hover-button last mail" href="mailto:mail@veare.net" target="_blank"><span class="icon-small mail"></span></a></li>
+				<li class="item"><a class="hover-button twitter" href="https://twitter.com/#!/vearenet" target="_blank"><span class="icon-small twitter"></span></a></li>
+				<li class="item"><a class="hover-button dribbble" href="http://dribbble.com/lukasoppermann" target="_blank"><span class="icon-small dribbble"></span></a></li>
+				<li class="item"><a class="hover-button xing" href="https://www.xing.com/profile/Lukas_Oppermann" target="_blank"><span class="icon-small xing"></span></a></li>
+				<li class="item"><a class="hover-button linkedin" href="https://www.linkedin.com/in/lukasoppermann" target="_blank"><span class="icon-small linkedin"></span></a></li>
 			</ul>
 		</div>
 	</div>

@@ -29,20 +29,10 @@ class MY_Controller extends CI_Controller {
 		// --------------------------------------------------------------------	
 		// load assets
 		// development !!!!!!!!
-		js_add('jquery');
-		// js_add('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
-		//
-		if( mobile() == true )
-		{
-			css_add(array('base','menu','responsiveness','mobile'));
-			js_add('jquery.mediaquery, base, mobile', 'default');	
-		}
-		else
-		{
-			// js_add_lines('CI_BASE="'.base_url().'en/";', 'default', TRUE);			
-			css_add(array('reset','base','layout','menu','responsiveness','slogan_line','gui'));
-			js_add('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js, jquery.mediaquery, fs.resize, base', 'default');	
-		}
+		js_add('jquery-1.8.0.min');
+		//////////////
+		css_add(array('reset','base','layout','responsiveness','menu', 'gui')); // ,'slogan_line'
+		js_add('jquery.mediaquery, fs.resize, base', 'default');	
 		// --------------------------------------------------------------------
 		// Initialize Menus
 		$this->data['menu']['main'] = $this->fs_navigation->tree(array(

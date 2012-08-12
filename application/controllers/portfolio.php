@@ -48,7 +48,7 @@ class Portfolio extends MY_Controller {
 			// add image
 			if( isset($card['card-image']) )
 			{
-				$card['image'] = $images[$card['card-image']];
+				$card['images'] = $images[$card['card-image']][key($images[$card['card-image']])];
 			}
 			// load into view
 			$entries[] = $this->load->view('portfolio/card', $card, TRUE);

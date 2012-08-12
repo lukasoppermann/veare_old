@@ -10,14 +10,8 @@ class About extends MY_Controller {
 	
 	function index()
 	{	
-		// load assets
-		css_add('about');
-		js_add('about');
-		// add classes
-		$this->data['sidebar_class'] = 'shadow';
-		
 		// load view
-		view('custom/about', $this->data);
+		view('portfolio/index', $this->data);
 	}
 // close class
 }
