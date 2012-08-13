@@ -10,8 +10,9 @@ class About extends MY_Controller {
 	
 	function index()
 	{	
+		css_add('about');
 		// load view
-		view('portfolio/index', $this->data);
+		view('custom/about', $this->data);
 	}
 // close class
 }

@@ -1,20 +1,5 @@
-#copyright, #line{
-	display: none;
-}
-#about{
-	background-image: url('../../media/images/about.png');
-	background-repeat: no-repeat;
-	background-position: 200px -20px;
-	z-index: 1;
-}
-#about #stage{
-	background-image: url('../../media/layout/noise.png');
-}
 .veare-about{
-	float: left;
 	z-index: 2;
-	width: 80%;
-	width: 700px;
 	background: rgb(255,255,255);
 	border-radius: 3px;
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
@@ -36,7 +21,6 @@
 	color: rgb(255,255,255);
 	font-size: 24px;
 	font-family: "Open Sans", Sans-serif, Arial;
-	font-weight: 400;
 	margin: 20px 0 0 15px;
 }
 .veare-about .header .headline-about:before{
@@ -49,108 +33,29 @@
 }
 .veare-about .content{
 	width: 100%;
+	font-size: 110%;	
 	font-family: "Open Sans", Sans-serif, Arial;	
 }
-.veare-about .column{
+.veare-about .column-right, .veare-about .column-left{
 	float: left;
 	width: 50%;
 	margin: 10px 0 0 0;
 }
-.veare-about .column p{
+.mobile .veare-about .column-right, .mobile .veare-about .column-left{
+	width: 100%;
+}
+.veare-about .column-right p, .veare-about .column-left p{
 	padding: 5px 15px;
 }
 .veare-about .excerpt{
 	font-family: "Open Sans", Sans-serif, Arial;
 	font-style: italic;
-	font-size: 120%;
-	line-height: 120%;
+	font-size: 130%;
+	line-height: 130%;
 	color: rgb(80,160,180);
 	margin-bottom: 10px;
 }
-/*------------------*/
-/* center box */
-#stage{
-	text-align: center;
-}
-#stage:before{
-	content: '';
-	display: inline-block;
-	height: 100%;
-	width: 5px;
-	vertical-align: middle;
-	z-index: 100;
-	margin-right: -0.25em;
-}
-.veare-about{
-	position: absolute;
-	top: 20%;
-	left: 10%;
-	display: inline-block;
-	vertical-align: middle;
-}
-@media screen and (max-width: 820px){
-	.veare-about{
-		left: 20px !important;
-		margin-left: auto !important;
-		width: -webkit-calc(100% - 40px);
-		width: -moz-calc(100% - 40px);
-	}
-}
-@media screen and (max-width: 540px){
-	.veare-about .column{
-		width: 100%;
-		margin: 0;
-	}
-	.veare-about .excerpt{
-		margin-top: 10px;
-	}
-}
-@media screen and (max-width: 480px){
-	.veare-about{
-		top: 0;
-		left: 0 !important;
-		position: relative;
-		float: left;
-		margin: 0 0 50px 0px !important;
-		padding-left: 80px;
-		width: 100%;	
-		border-radius: 0px;
-		box-shadow: none;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;	
-	}
-	.veare-about .column{
-		padding-left: 10px;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;	
-	}
-	.veare-about .header{
-		border-radius: 0px;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	.veare-about .header .headline-about{
-		width: -webkit-calc(100% - 25px);
-		width: -moz-calc(100% - 25px);
-		margin-left: 25px;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;	
-	}
-	#about{
-		background: rgb(250,250,250);
-	}
-}
-@media screen and (max-width: 360px){
-	.veare-about{
-		padding: 0;
-		margin: 30px 0 50px 0 !important;
-		width: 100%;				
-	}
-	.veare-about .header{
-		padding-top: 20px;
-	}	
+h2.adaptive{
+	font-family: "Open Sans Bold", Sans-serif, Arial;
+	font-size: 200%;
 }

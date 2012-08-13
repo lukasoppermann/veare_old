@@ -73,7 +73,7 @@
 .column{
 	float: left;
 	position: relative;	
-	margin: 3% 0;
+	margin: 1% 0;
 }
 /* mobile */
 .mobile .column,
@@ -82,14 +82,12 @@
 .mobile .column-four,
 .mobile .column-five{
 	width: 96%;
-	margin-right: 2%;
-	margin-left: 2%;
+	margin: 4% 2%;
 }
 /* tablet small */
 .tablet.tablet-small .column{
 	width: 45%;
-	margin-right: 2.5%;
-	margin-left: 2.5%;
+	margin: 2% 2.5%;
 }
 .tablet.tablet-small .column-two,
 .tablet.tablet-small .column-three,
