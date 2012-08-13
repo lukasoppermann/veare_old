@@ -90,7 +90,6 @@
 	-o-transition: all .8s;
 	-ms-transition: all .8s;
 	z-index: 5;
-	background-image: url(../../media/layout/veare-icons.png);
 }
 #nav .item:after{
 	display: block;
@@ -186,7 +185,6 @@
 /* Icons */
 .icon, .icon-small{
 	margin-top: -2px;
-	background-image: url('../../media/layout/veare-icons.png');
 	width: 30px;
 	height: 30px;
 	display: block;

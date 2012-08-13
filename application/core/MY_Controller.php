@@ -29,7 +29,7 @@ class MY_Controller extends CI_Controller {
 		// --------------------------------------------------------------------	
 		// load assets
 		// development !!!!!!!!
-		js_add('jquery-1.8.0.min');
+		js_add('jquery');
 		//////////////
 		css_add(array('reset','base','layout','responsiveness','menu', 'gui')); // ,'slogan_line'
 		js_add('jquery.mediaquery, fs.resize, base', 'default');	
