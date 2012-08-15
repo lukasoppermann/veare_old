@@ -10,9 +10,7 @@
 				</div>
 		</div>
 		<div class="card back">
-				<div class="card-back-title">
-					Open<br /> Case
-				</div>
+				<div class="card-back-title">Open<br /> Case</div>
 				<div class="card-back-content">
 					<h3 class="card-headline"><?=$title?></h3>
 				</div>

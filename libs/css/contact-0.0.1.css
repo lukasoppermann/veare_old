@@ -15,6 +15,7 @@
 .veare-contact{
 	position: absolute;
 	display: block;
+	position: relative;
 	width: 240px;
 	height: 350px;
 	color: rgb(255,255,255);
@@ -100,9 +101,8 @@
 }
 .veare-contact .company{
 	position: relative;
-	font-weight: 600;
 	letter-spacing: 0.3px;
-	font-size: 14px;
+	font-size: 140%;
 	margin: 20px 5px 20px 15px;
 	font-family: 'Open Sans', sans-serif, Arial;
 }
@@ -120,17 +120,20 @@
 .veare-contact .contact-details{
 	position: absolute;
 	font-weight: 600;
-	font-size: 14px;
+	font-size: 120%;
 	bottom: 20px;
 	left: 15px;
+	width: 100%;
 	font-family: 'Open Sans', sans-serif, Arial;	
 }
 .veare-contact .contact-detail{
 	position: relative;
-	margin: 5px 0;
+	margin: 10px 0;
+	width: 100%;
 }
 .veare-contact .contact-detail .type{
-	width: 18px;
+	float: left;
+	width: 7%;
 }
 .veare-contact .contact-detail .content{
 	font-weight: 400;
@@ -142,37 +145,37 @@
 	text-decoration: underline;
 }
 .veare-about{
-	font-size: 14px;
 	font-family: 'Open Sans', sans-serif, Arial;		
 	font-weight: 400;
 	height: 125px;
 }
 .veare-about .content{
+	font-size: 120%;	
 	font-style: italic;
 	margin: 0 15px 20px;
 }
 .veare-about .heading{
+	font-size: 140%;
 	margin: 15px 15px 10px;	
 	font-weight: 700;
 }
+#veare_card{ display: none; }
 /*------------------------------------------------------------------*/
 /* mobile version */
-body.mobile{
-	background: rgb(255,255,255);
-}
+.mobile #veare_card{ display: block; }
+.mobile #veare_map{ display: none; }
+body.mobile{ background: rgb(255,255,255); }
 .mobile .veare-contact{
+	z-index: 10;
 	float: left;
 	position: relative;
 	display: block;
-	margin: 55px 0 0 0;
+	margin: 0;
 	width: 100%;
 	border-radius: 0px;
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
-}
-.mobile.landscape .veare-contact{
-	margin: 0 0 0 80px;	
 }
 .mobile .veare-contact .contact-details, .mobile .veare-about .heading{
 	font-family: "Helvetica";
@@ -181,7 +184,7 @@ body.mobile{
 .mobile .veare-about{
 	bottom: 0;
 	border-radius: 0px;
-	padding: 0px 0 0 0px;
+	padding: 0;
 	z-index: 10;
 }
 .mobile .veare-contact .contact-wrapper{
@@ -190,6 +193,4 @@ body.mobile{
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;		
 }
-.mobile .veare-contact:after, .mobile .veare-contact:before{
-	display: none;
-}
+.mobile .veare-contact:after, .mobile .veare-contact:before{ display: none; }

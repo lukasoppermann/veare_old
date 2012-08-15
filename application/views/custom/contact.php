@@ -1,5 +1,5 @@
 <div id="veare_map"></div>
-<div class="veare-contact" style="display: none">
+<div class="veare-contact column column-two" id="veare_card">
 	<div class="contact-wrapper">
 		<h2 class="company">veare / intelligent design</h2>
 		<div class="contact-details">

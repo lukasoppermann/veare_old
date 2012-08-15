@@ -10,9 +10,6 @@ class Contact extends MY_Controller {
 	
 	function index()
 	{	
-		// desktop version
-		if(mobile() != true)
-		{
 			css_add('contact');
 			js_add(array('http://maps.google.com/maps/api/js?sensor=true','jquery.gmaps','contact'));
 			//
@@ -20,16 +17,6 @@ class Contact extends MY_Controller {
 			$this->data['body_class'] = variable($this->data['body_class']).' no-line';
 			// load view
 			view('custom/contact', $this->data);
-		}
-		// mobile version
-		else
-		{
-			css_add('mobile.contact, widget');
-			js_add('mobile.contact');
-			// load view
-			$this->data['page'] = $this->load->view('custom/contact_mobile', $this->data, TRUE);
-			$this->load->view('template_mobile', $this->data);
-		}
 	}
 	
 	// function send_email()
