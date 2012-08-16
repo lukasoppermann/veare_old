@@ -2,20 +2,29 @@
 	display: none;
 }
 /*------------------------------------------------------------------*/
+/* web font */
+.wf-active .veare-about .content, 
+.wf-active .veare-contact .company, 
+.wf-active .veare-contact .contact-details{ 
+	font-family: 'Open Sans', sans-serif, Arial;
+	font-weight: normal;
+}
+.wf-active .veare-about .heading{
+	font-family: 'Open Sans Bold', sans-serif, Arial;	
+	font-weight: normal;
+}
+/*------------------------------------------------------------------*/
 /* MAP */
 #veare_map{
 	display: block;
 	height: 100%;
 	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
 	z-index: 0;
 }
 .veare-contact{
-	position: absolute;
 	display: block;
 	position: relative;
+	float: left;
 	width: 240px;
 	height: 350px;
 	color: rgb(255,255,255);
@@ -48,19 +57,23 @@
 	z-index: 99;
 }
 .veare-contact .contact-wrapper{
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 240px;
+	position: relative;
+	float: left;
+	height: 210px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .veare-about{
 	background: rgb(255,255,255);
 	color: rgb(75,75,75);
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	float: left;
+	height: 140px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
 }
 .marker-wrapper .shadow{
 	position: absolute;	
@@ -83,6 +96,7 @@
 	border-radius: 5px;
 }
 .marker-wrapper{ 
+	display: block;
 	margin: -355px 0 0 -95px;
 }
 .marker-wrapper .shadow:before{
@@ -102,9 +116,8 @@
 .veare-contact .company{
 	position: relative;
 	letter-spacing: 0.3px;
-	font-size: 140%;
-	margin: 20px 5px 20px 15px;
-	font-family: 'Open Sans', sans-serif, Arial;
+	font-size: 16px;
+	margin: 20px 5px 40px 15px;
 }
 .veare-contact .company:before, .veare-contact .contact-details:before{
 	height: 2px;
@@ -114,17 +127,19 @@
 	top: 0;
 	left: -1px;
 }
-.veare-contact .contact-details:before{
-	left: 0px;
-}
+.veare-contact .contact-details:before{ left: 15px; }
 .veare-contact .contact-details{
-	position: absolute;
-	font-weight: 600;
-	font-size: 120%;
-	bottom: 20px;
-	left: 15px;
+	font-size: 14px;
+	margin: 0;
 	width: 100%;
-	font-family: 'Open Sans', sans-serif, Arial;	
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	padding-left: 15px;
+	font-family: 'Helvetica', Arial, sans-serif;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
 }
 .veare-contact .contact-detail{
 	position: relative;
@@ -133,10 +148,7 @@
 }
 .veare-contact .contact-detail .type{
 	float: left;
-	width: 7%;
-}
-.veare-contact .contact-detail .content{
-	font-weight: 400;
+	width: 20px;
 }
 .veare-contact .contact-detail .content a{
 	text-decoration: none;
@@ -144,20 +156,17 @@
 .veare-contact .contact-detail .content a:hover{
 	text-decoration: underline;
 }
-.veare-about{
-	font-family: 'Open Sans', sans-serif, Arial;		
-	font-weight: 400;
-	height: 125px;
-}
 .veare-about .content{
-	font-size: 120%;	
+	font-size: 13px;	
 	font-style: italic;
 	margin: 0 15px 20px;
+	font-family: 'Helvetica', Arial, sans-serif;
 }
 .veare-about .heading{
-	font-size: 140%;
-	margin: 15px 15px 10px;	
-	font-weight: 700;
+	font-size: 15px;
+	margin: 15px 15px 10px;
+	font-weight: bold;
+	font-family: 'Helvetica', Arial, sans-serif;
 }
 #veare_card{ display: none; }
 /*------------------------------------------------------------------*/
@@ -172,25 +181,22 @@ body.mobile{ background: rgb(255,255,255); }
 	display: block;
 	margin: 0;
 	width: 100%;
+	height: auto;	
 	border-radius: 0px;
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 }
-.mobile .veare-contact .contact-details, .mobile .veare-about .heading{
-	font-family: "Helvetica";
-	font-weight: bold;
-}
+.mobile .veare-contact .company{ font-size: 140%; }
+.mobile .veare-contact .contact-details{ font-size: 120%; }
+.mobile .veare-contact .contact-detail .type{ width: 7%; }
 .mobile .veare-about{
-	bottom: 0;
+	float: left;
 	border-radius: 0px;
 	padding: 0;
 	z-index: 10;
 }
-.mobile .veare-contact .contact-wrapper{
-	height: 100%;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;		
-}
+.mobile .veare-about .heading{ font-size: 140%; }
+.mobile .veare-about .content{ font-size: 120%; }
+.mobile .veare-contact .contact-wrapper{ height: 260px; }
 .mobile .veare-contact:after, .mobile .veare-contact:before{ display: none; }

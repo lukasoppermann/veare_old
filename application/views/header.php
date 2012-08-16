@@ -13,7 +13,7 @@ if( variable($css) != null )
 ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 </head>
-<body> 
+<body<?(mobile() == true ? ' class="mobile portrait"' : '')?>> 
 	<!-- .(mobile() == true ? 'mobile ' : '').(ipad() == true ? 'tablet' : '') -->
 	<!--+++++++++++++++++++++++++ sidebar +++++++++++++++++++++++++-->
 	<div id="sidebar" class="<?=variable($sidebar_class)?>">
