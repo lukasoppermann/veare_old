@@ -15,7 +15,7 @@ $(function()
 		// console.log(resolution);
 		// console.log($(window).width());
 		// $('html, body').height(_stage.height());
-		// _body.trigger('resolutionChange', resolution);
+		_body.trigger('resolutionChange', resolution);
 		// _stage.width($(document).width());
 	};
 	// -----------------------
