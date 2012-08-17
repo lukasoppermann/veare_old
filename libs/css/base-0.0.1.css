@@ -59,7 +59,7 @@ body{
 	height: 120px;
 	background-position: 0px -113px;	
 }
-.nav-narrow #logo .logo-inner .logo-img, #logo .logo-inner .logo-img{
+.nav-narrow #logo .logo-inner .logo-img{
 	position: absolute;
 	top: -240px;
 	left: 0;
