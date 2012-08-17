@@ -84,11 +84,11 @@
 	height: 30px;
 	width: 30px;
 	opacity: 0.3;
-	transition: all .8s;   
-	-webkit-transition: all .8s;
-	-moz-transition: all .8s;
-	-o-transition: all .8s;
-	-ms-transition: all .8s;
+	transition: opacity .8s;   
+	-webkit-transition: opacity .8s;
+	-moz-transition: opacity .8s;
+	-o-transition: opacity .8s;
+	-ms-transition: opacity .8s;
 	z-index: 5;
 }
 #nav .item:after{
