@@ -13,9 +13,25 @@ rgb(80,160,180)
 @font-face{ font-family: "Open Sans"; src: url('../../04_web/fonts/Open Sans/OpenSans-Regular.ttf'); }
 @font-face{ font-family: "Open Sans Bold"; src: url('../../04_web/fonts/Open Sans/OpenSans-Semibold.ttf'); } 
 @font-face{ font-family: "Bree Serif"; src: url('../../04_web/fonts/Bree Serif/BreeSerif-Regular.ttf'); }
+.open_sans, .column{
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+.open_sans_bold{
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	font-weight: normal;
+}
+.wf-active .open_sans, .wf-active .column{
+	font-family: "Open Sans", Arial, Sans-serif;
+	font-weight: normal;
+}
+.wf-active .open_sans_bold{
+	font-family: "Open Sans Bold", Arial, Sans-serif;
+	font-weight: normal;	
+}
 /*------------------*/
 /* general */
 body{
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
 	position: relative;
 	color: rgb(75,75,75);
 	background: rgb(250,250,250);

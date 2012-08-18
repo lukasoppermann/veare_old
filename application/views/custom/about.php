@@ -1,7 +1,7 @@
-<article class="article">
+<article class="article open_sans">
 	<section>
 		<div class="type column column-five">About veare</div>
-		<h1 class="main-headline column column-five">Visionary Design</h1>
+		<h1 class="main-headline column column-five open_sans_bold">Visionary Design</h1>
 		<div class="column column-three">
 			<p class="excerpt">veare is a Berlin-based interface design studio with a focus on modern branding & intelligent design solutions.</p>
 		</div>
@@ -17,19 +17,19 @@
 		</div>
 	</section>
 	<section>
-		<h2 class="column column-five adaptive">Intelligent Design</h2>
+		<h2 class="column column-five open_sans_bold">Intelligent Design</h2>
 		<div class="column column-three-two">
 			<p>By designing flexible corporate identities with a strong emphasis on digital I deliver a modern branding solutions which adapt as media and devices change.</p>
 			<p>A passion for usability, simplicity, performance and well delivered content is what makes my projects successful. Working with a network of freelancers keeps veare flexible to adapt to your project, budget and schedule.</p>
 		</div>
 	</section>
 	<section>
-		<h2 class="column column-five adaptive">Modern Branding</h2>
-		<h3>Vision</h3>
+		<h2 class="column column-five adaptive open_sans_bold">Modern Branding</h2>
+		<h3 >Vision</h3>
 		<p>Every good project starts with a vision. A glimpse of the future with no restrictions. A starting point of all that could be achieved.</p>
 	</section>
 	<section>
-		<h2 class="column column-five adaptive">Web- & Interface Design</h2>
+		<h2 class="column column-five adaptive open_sans_bold">Web- & Interface Design</h2>
 		<h3>Vision</h3>
 		<p>Every good project starts with a vision. A glimpse of the future with no restrictions. A starting point of all that could be achieved.</p>
 	</section>
