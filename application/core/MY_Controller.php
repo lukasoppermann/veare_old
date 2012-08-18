@@ -15,7 +15,6 @@ class MY_Controller extends CI_Controller {
 	function __construct() 
  	{
 		parent::__construct();
-		//
 		// get config from db
 		$this->config->set_config_from_db();
 		// set charset
