@@ -8,10 +8,10 @@
 	<div class="column column-two">
 		<p>veare stands for good design and state-of-the-art development with a focus on user experience.</p>
 		<p>By starting with a precise vision and from the point of absolute reduction, adding complexity only where needed I create performant and usable products.</p>
+		<p>Adapted the brand experience as well as the product experience to the fast changing digital world.</p>
 	</div>
-	<div class="column column-two"><p>Not only the product experience but also the brand experience has to be adapted to the fast changing digital world. I create flexible corporate identities with a strong emphasis on digital as a modern branding solution.</p>
-		<p>A passion for usability, simplicity, performance and well delivered content is what makes my projects successful.</p>
-		<p>By building on a network of freelancers veare stays flexible and can adapt to your project, budget and schedule.</p>
+	<div class="column column-two"><p>By designing flexible corporate identities with a strong emphasis on digital I deliver a modern branding solutions which adapt as media and devices change.</p>
+		<p>A passion for usability, simplicity, performance and well delivered content is what makes my projects successful. Working with a network of freelancers keeps veare flexible to adapt to your project, budget and schedule.</p>
 	</div>
 </div>
 <h2 class="column column-five adaptive">Intelligent design</h2>
