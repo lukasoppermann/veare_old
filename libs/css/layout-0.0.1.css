@@ -120,7 +120,7 @@
 	margin-right: 1%;
 	margin-left: 1%;
 }
-.wide-screen .column-two{ width: 38%; }
+.wide-screen .column-two, .wide-screen [class*="column-two"]{ width: 38%; }
 .wide-screen .column-three, .wide-screen [class*="column-three"]{ width: 58%; }
 .wide-screen .column-four{ width: 78%; }
 .wide-screen .column-five{ width: 98%; }
@@ -131,4 +131,23 @@
 	background: red !important;
 	border: 1px solid red;
 	display: none;
+}
+/*------------------*/
+/* content */
+.main-headline{
+	font-size: 600%;
+	display: block;
+	margin: 0 0 50px 0;	
+	font-size: 600%;
+	font-family: "Open Sans Bold";
+	font-weight: normal;
+	line-height: 100%;
+	color: rgb(80,80,80);
+}
+.article{
+	font-size: 130%;
+	font-family: "Open Sans";
+	font-weight: normal;
+	max-width: 1000px;
+	margin: 0 0 50px 50px;		
 }
