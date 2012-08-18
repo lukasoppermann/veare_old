@@ -1,25 +1,25 @@
-#about{
-	max-width: 1000px;
-}
 .excerpt{
-	font-family: "Open Sans", Sans-serif, Arial;
+	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
 	font-style: italic;
 	font-size: 180%;
 	line-height: 130%;
 	color: rgb(80,160,180);
 	margin-bottom: 10px;
 }
+.mobile .excerpt{ font-size: 150%; }
 .type{
 	display: block;
-	margin-top: 40px !important;
+	margin-top: 0px !important;
 	margin-bottom: 0px !important;	
 	font-size: 200%;
 	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
 	color: rgb(180,180,180);
 }
+.mobile .type{ font-size: 180%; }
 .column p{ margin-bottom: 1%; }
-
-
+section{
+	margin-top: 5%;
+}
 
 
 
