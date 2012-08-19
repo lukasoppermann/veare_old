@@ -11,6 +11,7 @@ class About extends MY_Controller {
 	function index()
 	{	
 		css_add('about');
+		js_add('about');
 		// load view
 		view('custom/about', $this->data);
 	}

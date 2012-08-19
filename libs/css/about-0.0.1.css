@@ -18,10 +18,11 @@
 .mobile .type{ font-size: 180%; }
 .column p{ margin-bottom: 1%; }
 section{
-	margin-top: 5%;
+	margin-top: 7%;
 }
-
-
+.quote .quote-box{
+	margin: 0 10px 0 0;
+}
 
 
 
