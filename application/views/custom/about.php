@@ -40,7 +40,7 @@
 		<div class="column column-two-three-two content">
 			<h2 class="open_sans_bold sub-headline">Web- & Interface Design</h2>
 			<p>By designing flexible corporate identities with a strong emphasis on digital I deliver a modern branding solutions which adapt as media and devices change.</p>
-			<p>A passion for usability, simplicity, performance and well delivered content is what makes my projects successful. Working with a network of freelancers keeps veare flexible to adapt to your project, budget and schedule.</p>
+			<p>A test passion for usability, simplicity, performance and well delivered content is what makes my projects successful. Working with a network of freelancers keeps veare flexible to adapt to your project, budget and schedule.</p>
 		</div>
 	</section>
 
