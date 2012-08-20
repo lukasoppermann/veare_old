@@ -139,6 +139,7 @@
 /* content */
 .main-headline{
 	display: block;
+	float: left;
 	margin: 0 0 50px 0;
 	font-size: 600%;
 	font-family: "Open Sans Bold", Helvetica, Arial, Sans-serif;
@@ -156,6 +157,8 @@
 	color: rgb(80,80,80);
 }
 .article{
+	position: relative;
+	float: left;
 	font-size: 120%;
 	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
 	font-weight: normal;

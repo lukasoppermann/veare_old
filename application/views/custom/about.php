@@ -1,7 +1,7 @@
 <article class="article open_sans">
 	<section>
 		<div class="type column column-five">About veare</div>
-		<h1 class="main-headline column column-five open_sans_bold">Visionary Design</h1>
+		<div class="column column-five"><h1 class="main-headline open_sans_bold">Visionary Design</h1></div>
 		<div class="column column-three-three-two">
 			<p class="excerpt">veare is a Berlin-based interface design studio with a focus on modern branding & intelligent design solutions.</p>
 		</div>
@@ -18,9 +18,11 @@
 			</div>
 		</div>
 	</section>
-	<section class="column-five rearrange-quote">
-		<div class="column column-two-one-two quote"><blockquote class="quote-box">A design approach focusing on the specific not the generic.</blockquote></div>
-		<div class="column column-two-three-two content">
+	<section class="column-five rearrange" data-rearrange="screen">
+		<div class="column column-two-three-two quote"><blockquote class="quote-box">A design approach focusing on the specific not the generic.</blockquote></div>
+		<!-- <div class="column column-two-one-two quote"><blockquote class="quote-box">A design approach focusing on the specific not the generic.</blockquote></div> -->
+		<!-- <div class="column column-two-three-two content"> -->
+		<div class="column column-two content">
 			<h2 class="open_sans_bold sub-headline">Intelligent Design</h2>
 			<p>By designing flexible corporate identities with a strong emphasis on digital I deliver a modern branding solutions which adapt as media and devices change.</p>
 			<p>A passion for usability, simplicity, performance and well delivered content is what makes my projects successful.</p>
