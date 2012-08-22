@@ -18,8 +18,8 @@
 			</div>
 		</div>
 	</section>
-	<section class="column-five rearrange" data-rearrange="screen">
-		<div class="column column-two-one-two quote"><blockquote class="quote-box">A design approach focusing on the specific not the generic.</blockquote></div>
+	<section class="column-five rearrange section-two" data-rearrange="screen">
+		<div class="column column-two-one-two quote"><blockquote class="quote-box">A design approach focusing on the specific not the generic.”</blockquote></div>
 		<div class="column column-two-three-two content">
 			<h2 class="open_sans_bold sub-headline">Intelligent Design</h2>
 			<p>The worflow I am following is the workflow of intelligent design. The idea is to do informed design based on a design & future vision on the one hand and a data-based user analysis. This means that for each project the focus might be shifted. Some clients want state-of-the-art products that can facinate their modern and upt to date users, while users need to focus more on information and support for legacy browsers, because their users do not have an interest or the technology to support the modern web. By making informed design descisions the users experience will not be lowered for legacy support that is not needed, but will also not exclude users from accessing information.</p>
@@ -33,7 +33,7 @@
 		</div>
 		<div class="column column-two-one-two quote"><blockquote class="quote-box">By letting go of total control a corporate identity can succeed in every environment.</blockquote></div>
 	</section>
-	<section class="column-five rearrange-quote">
+	<section class="column-five rearrange" data-rearrange="screen">
 		<div class="column column-two-one-two quote"><blockquote class="quote-box">By letting go of total control a corporate identity can succeed in every environment.</blockquote></div>
 		<div class="column column-two-three-two content">
 			<h2 class="open_sans_bold sub-headline">Web- & Interface Design</h2>

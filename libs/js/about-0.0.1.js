@@ -35,24 +35,13 @@ _body.fs_resize(function(){
 	}
 	else
 	{
-		$('.quote-box').css({'fontSize':'140%'});		
+		$('.quote-box').css({'fontSize':''});		
 	}
-	// -------------------------
-	// adjust quote css
-	$('.quote').each(function()
-	{
-		if( !_body.hasClass('mobile') && !_body.hasClass('tablet-small') )
-		{
-			$(this).find('.quote-box').animate({'minHeight':$(this).siblings('.content').height()-75});
-		}
-		else
-		{
-			$(this).find('.quote-box').animate({'minHeight':''});
-		}
-	});
 });
+//------------------------------------
+var _window = $(window);
 // on load
-$(window).load( function() {
+_window.load( function() {	
 	if( $('#stage').width()-110 < $('.main-headline').width() )
 	{
 
@@ -63,6 +52,19 @@ $(window).load( function() {
 	}
 	else
 	{
-		$('.quote-box').css({'fontSize':'140%'});		
+		$('.quote-box').css({'fontSize':''});		
+	}
+});
+//------------------------------------
+
+_window.on('scroll', function(){
+	var _section_two = $('.section-two');
+	if(!_section_two.hasClass('active') && _window.scrollTop() >= '500' && _window.scrollTop() <= '750')
+	{
+		_section_two.addClass('active');
+	}
+	else if(_section_two.hasClass('active') && (_window.scrollTop() < '500' || _window.scrollTop() > '750'))
+	{
+		_section_two.removeClass('active');		
 	}
 });

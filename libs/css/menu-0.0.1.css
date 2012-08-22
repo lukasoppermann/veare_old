@@ -41,7 +41,7 @@
 	height: 50px;
 }
 .mobile.portrait #nav .item .text{
-	display: none;
+	display: block;
 }
 .closed #nav li{
 	width: 55px;

@@ -165,15 +165,26 @@
 	margin: 0 0 50px 50px;		
 }
 .quote-box{
-	color: rgb(255,255,255);
-	padding: 25px 25px 50px 40px;
-	font-size: 140%;
-	line-height: 130%;
+	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
+	padding: 25px 25px 25px 40px;
+	font-size: 170%;
+	line-height: 140%;
+	color: rgb(80,160,180);
+	background: transparent;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
-	background: rgb(245,160,10);
+	transition: background .4s ease;   
+	-webkit-transition: background .4s ease;
+	-moz-transition: background .4s ease;
+	-o-transition: background .4s ease;
+	-ms-transition: background .4s ease;
 }
+/*.active .quote-box{
+	color: rgb(255,255,255);
+
+	background: rgb(245,160,10);
+}*/
 .quote-box:before{
 	content: "“";
 	display: block;
