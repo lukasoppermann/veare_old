@@ -13,6 +13,10 @@ images/
 movies/
 files/
 
+# Excludes for this project #
+######################
+libs/js/jquery-1.8.0.js
+
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
