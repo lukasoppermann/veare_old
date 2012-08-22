@@ -1,5 +1,6 @@
 // on reslution change
-$('body').on('resolutionChange', function(e, resolution){
+var _body = $('body');
+_body.on('resolutionChange', function(e, resolution){
 	// define variables
 	var _rearrange = $('.rearrange');
 	// rearrange elements
@@ -12,7 +13,6 @@ $('body').on('resolutionChange', function(e, resolution){
 
 			_this.find('.content').insertBefore(_this.find('.quote'));
 		});
-		
 	}
 	else
 	{
@@ -24,7 +24,7 @@ $('body').on('resolutionChange', function(e, resolution){
 	}
 });
 // on resize
-$('body').fs_resize(function(){
+_body.fs_resize(function(){
 	if( $('#stage').innerWidth() < $('.main-headline').width() )
 	{
 		alert($('#stage').innerWidth());
@@ -37,6 +37,19 @@ $('body').fs_resize(function(){
 	{
 		$('.quote-box').css({'fontSize':'140%'});		
 	}
+	// -------------------------
+	// adjust quote css
+	$('.quote').each(function()
+	{
+		if( !_body.hasClass('mobile') && !_body.hasClass('tablet-small') )
+		{
+			$(this).find('.quote-box').animate({'minHeight':$(this).siblings('.content').height()-75});
+		}
+		else
+		{
+			$(this).find('.quote-box').animate({'minHeight':''});
+		}
+	});
 });
 // on load
 $(window).load( function() {
