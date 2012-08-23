@@ -54,6 +54,10 @@ section:after{
 	-o-transition: all .5s ease;
 	-ms-transition: all .5s ease;
 }
+section.section-three.active:after{
+	left: -1.5%;
+	width: 43%;	
+}
 .quote{
 	float: left;
 	display: block;
@@ -64,10 +68,55 @@ section:after{
 	position: relative;
 	display: block;
 	float: left;
+	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
+	padding: 25px 25px 25px 40px;
+	font-size: 170%;
+	line-height: 140%;
+	color: rgb(150,150,150);
+	background: transparent;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	transition: background .4s ease;   
+	-webkit-transition: background .4s ease;
+	-moz-transition: background .4s ease;
+	-o-transition: background .4s ease;
+	-ms-transition: background .4s ease;
 }
-
-
-
+.active .quote .quote-box{
+	color: rgb(80,160,180);	
+}
+.quote-box:before{
+	content: "“";
+	display: block;
+	position: absolute;
+	margin-right: 10px;
+	font-size: 180%;
+	left: 20px;
+}
+.about-icon{
+	position: absolute;
+	top: 200px;
+	display: block;
+	z-index: 10;
+	height: 150px;
+	width: 150px;
+	background: rgb(80,160,180);
+	border-radius: 150px;
+	transition: all .6s ease;   
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	-o-transition: all .6s ease;
+	-ms-transition: all .6s ease;
+}
+.about-icon.modern-branding{
+	right: 0;
+	top: 100%;
+	margin-top: -75px;
+}
+.active .about-icon{
+	background: rgb(245,160,10);
+}
 .veare-about{
 	z-index: 2;
 	background: rgb(255,255,255);

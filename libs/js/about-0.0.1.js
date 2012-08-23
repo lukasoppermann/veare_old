@@ -59,6 +59,8 @@ _window.load( function() {
 
 _window.on('scroll', function(){
 	var _section_two = $('.section-two');
+	var _section_three = $('.section-three');
+	var _section_four = $('.section-four');		
 	if(!_section_two.hasClass('active') && _window.scrollTop() >= '500' && _window.scrollTop() <= '750')
 	{
 		_section_two.addClass('active');
@@ -66,5 +68,23 @@ _window.on('scroll', function(){
 	else if(_section_two.hasClass('active') && (_window.scrollTop() < '500' || _window.scrollTop() > '750'))
 	{
 		_section_two.removeClass('active');		
+	}
+	
+	if(!_section_three.hasClass('active') && _window.scrollTop() >= '750' && _window.scrollTop() <= '1150')
+	{
+		_section_three.addClass('active');
+	}
+	else if(_section_three.hasClass('active') && (_window.scrollTop() < '750' || _window.scrollTop() > '1150'))
+	{
+		_section_three.removeClass('active');		
+	}
+	
+	if(!_section_four.hasClass('active') && _window.scrollTop() >= '1150')
+	{
+		_section_four.addClass('active');
+	}
+	else if(_section_four.hasClass('active') && (_window.scrollTop() < '1150'))
+	{
+		_section_four.removeClass('active');		
 	}
 });

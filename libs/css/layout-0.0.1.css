@@ -164,35 +164,6 @@
 	font-weight: normal;
 	margin: 0 0 50px 50px;		
 }
-.quote-box{
-	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
-	padding: 25px 25px 25px 40px;
-	font-size: 170%;
-	line-height: 140%;
-	color: rgb(80,160,180);
-	background: transparent;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
-	transition: background .4s ease;   
-	-webkit-transition: background .4s ease;
-	-moz-transition: background .4s ease;
-	-o-transition: background .4s ease;
-	-ms-transition: background .4s ease;
-}
-/*.active .quote-box{
-	color: rgb(255,255,255);
-
-	background: rgb(245,160,10);
-}*/
-.quote-box:before{
-	content: "“";
-	display: block;
-	position: absolute;
-	margin-right: 10px;
-	font-size: 180%;
-	left: 20px;
-}
 section{
 	position: relative;
 	float: left;
