@@ -101,7 +101,7 @@ section.section-three.active:after{
 	z-index: 10;
 	height: 150px;
 	width: 150px;
-	background: rgb(80,160,180);
+	background-color: rgb(80,160,180);
 	border-radius: 150px;
 	transition: all .6s ease;   
 	-webkit-transition: all .6s ease;
@@ -109,13 +109,29 @@ section.section-three.active:after{
 	-o-transition: all .6s ease;
 	-ms-transition: all .6s ease;
 }
+.about-icon.vision .icon{
+	position: absolute;
+	top: 45px;
+	left: 15px;
+	width: 120px;
+	height: 80px;
+	background-position: -270px -80px;
+}
+.about-icon.intelligent-design .icon{
+	position: absolute;
+	top: 45px;
+	left: 15px;
+	width: 120px;
+	height: 80px;
+	background-position: -270px 0px;
+}
 .about-icon.modern-branding{
 	right: 0;
 	top: 100%;
 	margin-top: -75px;
 }
 .active .about-icon{
-	background: rgb(245,160,10);
+	background-color: rgb(245,160,10);
 }
 .veare-about{
 	z-index: 2;
@@ -155,6 +171,11 @@ section.section-three.active:after{
 	font-size: 110%;	
 	font-family: "Open Sans", Sans-serif, Arial;	
 }
+.content .text{
+	display: block;
+	position: relative;
+	z-index: 10;
+}
 .veare-about .column-right, .veare-about .column-left{
 	float: left;
 	width: 50%;
@@ -177,4 +198,14 @@ section.section-three.active:after{
 h2.adaptive{
 	font-family: "Open Sans Bold", Sans-serif, Arial;
 	font-size: 200%;
+}
+.active-bg{
+	position: absolute;
+	top: -30px;
+	left: -30px;
+	display: block;
+	height: 100px;
+	width: 100px;
+	background: red;
+	z-index: 1;
 }
