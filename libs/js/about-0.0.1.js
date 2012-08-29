@@ -98,7 +98,7 @@ _window.load( function() {
 	// create active bgs
 	$('.active-bg.right').each(function(){
 		var _this = $(this);
-		_this.css({'width':$('.active-bg').parents('.column').width()+60+($('#stage').width()-$('.active-bg').position().left), 'height':$('.active-bg').parents('.column').height()+60});
+		_this.css({'marginLeft':$(window).width(),'width':$('.active-bg').parents('.column').width()+60+($('#stage').width()-$('.active-bg').position().left), 'height':$('.active-bg').parents('.column').height()+60});
 	});
 	$('.active-bg.left').each(function(){
 		var _this = $(this);

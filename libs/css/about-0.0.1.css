@@ -21,11 +21,6 @@ section{
 	z-index: 2;	
 	margin-top: 7%;
 	padding: 20px 0;
-	transition: background .4s ease;   
-	-webkit-transition: background .4s ease;
-	-moz-transition: background .4s ease;
-	-o-transition: background .4s ease;
-	-ms-transition: background .4s ease;
 }
 section .column{
 	z-index: 3;
@@ -178,23 +173,23 @@ h2.adaptive{
 	display: block;
 	height: 100px;
 	width: 100px;
-	background: transparent;
+	background: rgb(245,245,245);
+	opacity: 0;
 	z-index: 1;
-	transition: all .5s ease;   
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-o-transition: all .5s ease;
-	-ms-transition: all .5s ease;
+	transition: margin, opacity .5s ease;   
+	-webkit-transition: margin, opacity .5s ease;
+	-moz-transition: margin, opacity .5s ease;
+	-o-transition: margin, opacity .5s ease;
+	-ms-transition: margin, opacity .5s ease;
 }
 .active .active-bg{
-	background: rgb(245,245,245);
-	transition: all .5s ease;   
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-o-transition: all .5s ease;
-	-ms-transition: all .5s ease;
+	opacity: 1;	
+	transition: margin .5s ease;
+	-moz-transition: margin .5s ease;
+	-webkit-transition: margin .5s ease;
+	-o-transition: margin .5s ease;
+	-ms-transition: margin .5s ease;
 }
 .active-bg.left{ margin-left: -100%; }
-.active-bg.right{ margin-right: -100%; }
-.active .active-bg.left{ margin-left: 0; }
-.active .active-bg.right{ margin-right: 0; }
+.active-bg.right{ margin-left: 150%; }
+.active .active-bg.left, .active .active-bg.right{ margin-left: 0 !important; }
