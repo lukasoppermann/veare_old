@@ -93,24 +93,21 @@
 	margin: 4% 2%;
 }
 /* tablet small */
-.tablet.tablet-small .column, .tablet.tablet-small .column-three-two-one{
+.tablet-small .column{
 	width: 45%;
 	margin: 2% 2.5%;
 }
-.tablet.tablet-small .column-two,
-.tablet.tablet-small .column-three,
-.tablet.tablet-small .column-four,
-.tablet.tablet-small .column-five,
-.tablet.tablet-small .column-two-one-two,
-.tablet.tablet-small .column-two-three-two,
-.tablet.tablet-small .column-three-three-two{ width: 95%; }
+.tablet-small .column-two,
+.tablet-small .column-three,
+.tablet-small .column-four,
+.tablet-small .column-five{ width: 95%; }
 /* tablet */
-.tablet .column, .tablet [class*="column-three-two-one"]{
+.tablet .column, .tablet .column.tablet-one{
 	width: 30%;
 	margin-right: 1.5%;
 	margin-left: 1.5%;
 }
-.tablet .column-two, .tablet .column-three-two, .tablet [class*="column-three-three-two"], .tablet .column-two-three-two{ width: 63%; }
+.tablet .column-two, .tablet .column.tablet-two{ width: 63%; }
 .tablet .column-three,
 .tablet .column-four,
 .tablet .column-five{ width: 97%; }

@@ -56,6 +56,15 @@ _body.fs_resize(function(){
 	{
 		$('.quote-box').css({'fontSize':''});		
 	}
+	// create active bgs
+	$('.active-bg.right').each(function(){
+		var _this = $(this);
+		_this.css({'width':_this.parents('.column').width()+60+($('#stage').width()-_this.position().left), 'height':_this.parents('.column').height()+60});
+	});
+	$('.active-bg.left').each(function(){
+		var _this = $(this);
+		_this.css({'width':_this.parents('.column').width()+60, 'height':_this.parents('.column').height()+60});
+	});
 });
 //------------------------------------
 // on load
@@ -91,8 +100,10 @@ _window.load( function() {
 		var _this = $(this);
 		_this.css({'width':$('.active-bg').parents('.column').width()+60+($('#stage').width()-$('.active-bg').position().left), 'height':$('.active-bg').parents('.column').height()+60});
 	});
-	
-	
+	$('.active-bg.left').each(function(){
+		var _this = $(this);
+		_this.css({'width':_this.parents('.column').width()+60, 'height':_this.parents('.column').height()+60});
+	});
 });
 //------------------------------------
 var scrollTop = _window.scrollTop();
@@ -105,8 +116,8 @@ _window.on('scroll', function(){
 	{
 		//
 		// if( scrollTop > top - (window_height/2) && scrollTop+25 < top)
-		if( (activatables[index].bottom >= scrollTop) && (activatables[index].top <= scrollBottom)
-		&& (activatables[index].bottom <= scrollBottom) &&  (activatables[index].top >= scrollTop) )
+		if( (activatables[index].bottom >= scrollTop+(_window.height()*0.1)) && (activatables[index].top <= scrollBottom-(_window.height()*0.1))
+		&& (activatables[index].bottom <= scrollBottom-(_window.height()*0.1)) &&  (activatables[index].top >= scrollTop+(_window.height()*0.1)) )
 		{
 			// $('.activatable.active').removeClass('active');
 			activatables[index].selector.addClass('active');

@@ -30,34 +30,6 @@ section{
 section .column{
 	z-index: 3;
 }
-section.active{
-/*	background: rgb(245,245,245);*/
-}
-section.active:after{
-	left: 37.5%;
-	opacity: 1;
-}
-section:after{
-	opacity: 0;
-	content: "";
-	position: absolute;
-	top: 0;
-	left: -120%;
-	display: block;
-	width: 70%;
-	height: 100%;
-	background: rgb(245,245,245);
-	z-index: 1;
-	transition: all .5s ease;   
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-o-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-}
-section.section-three.active:after{
-	left: -1.5%;
-	width: 43%;	
-}
 .quote{
 	float: left;
 	display: block;
@@ -206,6 +178,23 @@ h2.adaptive{
 	display: block;
 	height: 100px;
 	width: 100px;
-	background: red;
+	background: transparent;
 	z-index: 1;
+	transition: all .5s ease;   
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
 }
+.active .active-bg{
+	background: rgb(245,245,245);
+	transition: all .5s ease;   
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+}
+.active-bg.left{ margin-left: -100%; }
+.active-bg.right{ margin-right: -100%; }
+.active .active-bg.left{ margin-left: 0; }
+.active .active-bg.right{ margin-right: 0; }

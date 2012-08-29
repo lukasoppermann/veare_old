@@ -41,7 +41,7 @@ $(function()
 			context: 'tablet-small',
 			callback: function() {
 				query_actions('tablet-small');
-				_body.addClass('tablet-small tablet hide-line-text nav-narrow').removeClass('nav-wide mobile screen wide-screen');
+				_body.addClass('tablet-small hide-line-text nav-narrow').removeClass('nav-wide tablet mobile screen wide-screen');
 			}
 		},
 		{
