@@ -20,15 +20,14 @@
 	</section>
 	<section class="column-five rearrange section-two activatable" data-rearrange="screen">
 		<div class="column column-two tablet-one quote left">
-			<blockquote class="quote-box">You have to know where you want to be in one year, or even ten.”</blockquote>
+			<blockquote class="quote-box">You have to know where you want to be in one year, or even ten years.”</blockquote>
 			<div class="vision about-icon"><div class="veare-sprite icon"></div></div>
 		</div>
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Vision</h2>
-				<p>Every creative process should start with a vision. An idea to strive towards. You have to know where you want to be in one year, or even ten. This vision does not have to be 100% realisable, but it should stay within the realm of realism.</p>
-				<p>A vision should cover all levels of a project, the core idea, the design, the communication, the business aspect and whatever else is part of your business. This will be our guide throughout the project.
-				</p>
+				<p>Every creative process should start with a vision. An idea to strive towards. This idea does not have to be 100% realisable, but it should stay within the realm of realism.</p>
+				<p>A vision builds on your business philosophy, creating a direction for the future of your business. It should cover all levels of a project, the core idea, the design, the communication, the business aspect and whatever else is part of your business. This will be our guide throughout the project.</p>
 			</div>
 			<div class="active-bg right"></div>
 		</div>

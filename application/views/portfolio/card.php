@@ -3,7 +3,7 @@
 		<div class="card front">	
 				<div class="card-content">
 					<div class="card-image">
-						<img src="<?=base_url()?>media/images/<?=variable($images['filename']).'-thumb_300_240.'.variable($images['ext'])?>" alt="<?=$title?>"/>
+						<img src="<?=base_url()?>media/images/<?=variable($images['filename']).'-thumb_300_240.'.variable($images['ext'])?>" alt="<?=$title?>" />
 					</div>
 					<h3 class="card-headline"><?=$title?></h3>
 					<p class="card-text"><?=variable($excerpt)?></p>

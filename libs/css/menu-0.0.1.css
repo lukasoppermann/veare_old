@@ -100,8 +100,8 @@
 	height: 30px;
 	width: 70px;
 	z-index: 4;
-	background-image: -moz-linear-gradient(left, rgba(243,243,243,1.0) 0, rgba(243,243,243,1.0) 50px, rgba(243,243,243,0.0) 70px);
-	background-image: -webkit-linear-gradient(left, rgba(243,243,243,1.0) 0, rgba(243,243,243,1.0) 50px, rgba(243,243,243,0.0) 70px);
+/*	background-image: -moz-linear-gradient(left, rgba(243,243,243,1.0) 0, rgba(243,243,243,1.0) 50px, rgba(243,243,243,0.0) 70px);
+	background-image: -webkit-linear-gradient(left, rgba(243,243,243,1.0) 0, rgba(243,243,243,1.0) 50px, rgba(243,243,243,0.0) 70px);*/
 }
 #sidebar_bottom{
 	width: 60px;	

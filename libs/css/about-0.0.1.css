@@ -84,46 +84,23 @@ section{
 }
 .about-icon .icon{
 	background-position: -270px -80px;
-}
-.about-icon.vision .icon{
 	position: absolute;
-	top: 45px;
+	top: 15px;
 	left: 15px;
 	width: 120px;
-	height: 80px;
-	background-position: -270px 0px;
+	height: 120px;
 }
-.about-icon.intelligent-design .icon{
-	position: absolute;
-	top: 45px;
-	left: 15px;
-	width: 120px;
-	height: 80px;
-	background-position: -270px 0px;
-}
+.about-icon.vision .icon{ background-position: -270px 0px; }
+.about-icon.intelligent-design .icon{ background-position: -390px 0px; }
+.about-icon.modern-branding .icon{ background-position: -270px -120px; }
+.about-icon.interface-design .icon{ background-position: -390px -120px; }
 .about-icon.intelligent-design, .about-icon.interface-design{
 	float: right;
 	margin-left: 25px;
 }
-.about-icon.interface-design .icon{
-	position: absolute;
-	top: 35px;
-	left: 40px;
-	width: 70px;
-	height: 90px;
-	background-position: -400px 0px;
-}
 .about-icon.modern-branding{
 	float: right;
 	margin-right: 25px;
-}
-.about-icon.intelligent-design .icon{
-	position: absolute;
-	top: 5px;
-	left: 15px;
-	width: 120px;
-	height: 120px;
-	background-position: -270px -180px;
 }
 .active .about-icon{
 	background-color: rgb(245,160,10);
