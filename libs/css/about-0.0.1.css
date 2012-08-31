@@ -50,6 +50,8 @@ section .column{
 	-o-transition: background .4s ease;
 	-ms-transition: background .4s ease;
 }
+.quote.left .quote-box{
+}
 .active .quote .quote-box{
 	color: rgb(80,160,180);	
 }

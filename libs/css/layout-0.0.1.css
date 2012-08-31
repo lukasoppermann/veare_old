@@ -107,6 +107,10 @@
 	margin-right: 1.5%;
 	margin-left: 1.5%;
 }
+.tablet .column.tablet-half{
+	width: 45%;
+	margin: 2% 2.5%;
+}
 .tablet .column-two, .tablet .column.tablet-two{ width: 63%; }
 .tablet .column-three,
 .tablet .column-four,
