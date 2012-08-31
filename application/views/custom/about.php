@@ -19,8 +19,10 @@
 		</div>
 	</section>
 	<section class="column-five rearrange section-two activatable" data-rearrange="screen">
-		<div class="column column-two tablet-one quote"><blockquote class="quote-box">A design approach focusing on the specific not the generic.”</blockquote></div>
-		<div class="vision about-icon"><div class="veare-sprite icon"></div></div>
+		<div class="column column-two tablet-one quote">
+			<blockquote class="quote-box">A design approach focusing on the specific not the generic.”</blockquote>
+			<div class="vision about-icon"><div class="veare-sprite icon"></div></div>
+		</div>
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Vision</h2>
@@ -30,7 +32,6 @@
 		</div>
 	</section>
 	<section class="column-five section-three activatable">
-		<div class="about-icon intelligent-design"><div class="veare-sprite icon"></div></div>
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Intelligent Design</h2>
@@ -38,12 +39,15 @@
 			</div>
 			<div class="active-bg left"></div>
 		</div>
-		<div class="column column-two tablet-one quote"><blockquote class="quote-box">A design approach focusing on the specific not the generic.”</blockquote></div>
+		<div class="column column-two tablet-one quote">
+			<blockquote class="quote-box">A design approach focusing on the specific not the generic.”</blockquote>
+			<div class="about-icon intelligent-design"><div class="veare-sprite icon"></div></div>
+		</div>
 	</section>
 	<section class="column-five section-four activatable rearrange" data-rearrange="screen">
 		<div class="column column-two tablet-one quote">
 			<blockquote class="quote-box">By letting go of total control a corporate identity can succeed in every environment.”</blockquote>
-			<div class="about-icon modern-branding"></div>
+			<div class="about-icon modern-branding"><div class="veare-sprite icon"></div></div>
 		</div>
 		<div class="column column-two content">
 			<div class="text">
@@ -63,8 +67,9 @@
 			</div>
 			<div class="active-bg left"></div>
 		</div>
-		<div class="column column-two tablet-one quote"><blockquote class="quote-box">By letting go of total control a corporate identity can succeed in every environment.”</blockquote>
-			<div class="about-icon interface-design"></div>
+		<div class="column column-two tablet-one quote">
+			<blockquote class="quote-box">By letting go of total control a corporate identity can succeed in every environment.”</blockquote>
+			<div class="about-icon interface-design"><div class="veare-sprite icon"></div></div>
 		</div>
 	</section>
 

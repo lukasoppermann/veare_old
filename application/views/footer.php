@@ -22,7 +22,7 @@
 <!-- <?
 	if(mobile() != true)
 	{
-		$this->fs_google->fonts(array('Open Sans:400,600,700,400italic', 'Bree Serif'));
+		$this->fs_google->fonts(array('Open Sans:400,600,700,400italic', 'Bree Serif'), $fonts_callback);
 	}
 ?> -->
 <? echo js('default', FALSE); ?>

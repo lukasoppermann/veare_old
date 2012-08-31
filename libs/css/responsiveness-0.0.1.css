@@ -1,7 +1,10 @@
 /* ---------------------------------------------------------------- */
 /* responsiveness */
-body.mobile{
+body.mobile, body.tablet-small{
 	font-size: 120%;
+}
+body.mobile, body.tablet{
+	font-size: 110%;
 }
 body:after {
     content: 'mobile-portrait';
