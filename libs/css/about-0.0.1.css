@@ -16,27 +16,19 @@
 	color: rgb(180,180,180);
 }
 .mobile .type{ font-size: 180%; }
+
 .column p{ margin-bottom: 1%; }
 section{
-	z-index: 2;	
 	margin-top: 7%;
 	padding: 20px 0;
 }
-section .column{
-	z-index: 3;
-}
-.quote{
+.quote, .quote .quote-box{
 	float: left;
 	display: block;
 	position: relative;
 }
 .quote .quote-box{
-	margin: 0 10px 0;
-	position: relative;
-	display: block;
-	float: left;
 	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
-	padding: 25px 25px 10px 40px;
 	font-size: 170%;
 	line-height: 140%;
 	color: rgb(150,150,150);
@@ -51,17 +43,24 @@ section .column{
 	-ms-transition: background .4s ease;
 }
 .quote.left .quote-box{
+	padding: 0px 25px 10px 20px;
 }
-.active .quote .quote-box{
-	color: rgb(80,160,180);	
+.quote.right .quote-box{
+	padding: 0px 0px 10px 45px;
 }
+.active .quote .quote-box{ color: rgb(80,160,180); }
 .quote-box:before{
 	content: "“";
 	display: block;
 	position: absolute;
 	margin-right: 10px;
 	font-size: 180%;
-	left: 20px;
+	left: 0px;
+}
+.right .quote-box:before{ left: 25px; }
+
+.tablet-small .quote-box{
+
 }
 .about-icon{
 	position: relative;
@@ -88,11 +87,11 @@ section .column{
 }
 .about-icon.vision .icon{
 	position: absolute;
-	top: 40px;
+	top: 45px;
 	left: 15px;
 	width: 120px;
 	height: 80px;
-	background-position: -270px -80px;
+	background-position: -270px 0px;
 }
 .about-icon.intelligent-design .icon{
 	position: absolute;
@@ -106,89 +105,47 @@ section .column{
 	float: right;
 	margin-left: 25px;
 }
+.about-icon.interface-design .icon{
+	position: absolute;
+	top: 35px;
+	left: 40px;
+	width: 70px;
+	height: 90px;
+	background-position: -400px 0px;
+}
 .about-icon.modern-branding{
 	float: right;
 	margin-right: 25px;
 }
+.about-icon.intelligent-design .icon{
+	position: absolute;
+	top: 5px;
+	left: 15px;
+	width: 120px;
+	height: 120px;
+	background-position: -270px -180px;
+}
 .active .about-icon{
 	background-color: rgb(245,160,10);
-}
-.veare-about{
-	z-index: 2;
-	background: rgb(255,255,255);
-	border-radius: 3px;
-	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
-	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
-	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
-	padding-bottom: 10px;
-	text-align: left;
-}
-.veare-about .header{
-	float: left;
-	width: 100%;
-	height: 100px;
-	background: rgb(245,160,10);
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;	
-}
-.veare-about .header .headline-about{
-	position: relative;
-	color: rgb(255,255,255);
-	font-size: 24px;
-	font-family: "Open Sans", Sans-serif, Arial;
-	margin: 20px 0 0 15px;
-}
-.veare-about .header .headline-about:before{
-	height: 2px;
-	width: 8px;
-	background: rgb(255,255,255);
-	position: absolute;
-	top: -2px;
-	left: 1px;
-}
-.veare-about .content{
-	width: 100%;
-	font-size: 110%;	
-	font-family: "Open Sans", Sans-serif, Arial;	
 }
 .content .text{
 	display: block;
 	position: relative;
 	z-index: 10;
 }
-.veare-about .column-right, .veare-about .column-left{
-	float: left;
-	width: 50%;
-	margin: 10px 0 0 0;
-}
-.mobile .veare-about .column-right, .mobile .veare-about .column-left{
-	width: 100%;
-}
-.veare-about .column-right p, .veare-about .column-left p{
-	padding: 5px 15px;
-}
-.veare-about .excerpt{
-	font-family: "Open Sans", Sans-serif, Arial;
-	font-style: italic;
-	font-size: 130%;
-	line-height: 130%;
-	color: rgb(80,160,180);
-	margin-bottom: 10px;
-}
 h2.adaptive{
 	font-family: "Open Sans Bold", Sans-serif, Arial;
 	font-size: 200%;
 }
+/* -------------------------- */
+/* active bg */
 .active-bg{
 	position: absolute;
 	top: -30px;
 	left: -30px;
 	display: block;
-	height: 100px;
-	width: 100px;
 	background: rgb(245,245,245);
 	opacity: 0;
-	z-index: 1;
 	transition: margin, opacity .5s ease;   
 	-webkit-transition: margin, opacity .5s ease;
 	-moz-transition: margin, opacity .5s ease;

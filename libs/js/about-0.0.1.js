@@ -36,9 +36,9 @@ _body.fs_resize(function(){
 	$('.activatable').each(function(index){
 		activatables[ index ] = new Array();
 		activatables[ index ].selector = $(this);
-		activatables[ index ].top = Math.round(activatables[index].selector.offset().top);		
-		activatables[ index ].bottom = activatables[ index ].top + activatables[ index ].selector.height();				
-		activate_areas[ index ] = Math.round(activatables[ index ].top);			
+		activatables[ index ].top = Math.round(activatables[index].selector.offset().top);
+		activatables[ index ].bottom = activatables[ index ].top + activatables[ index ].selector.height();
+		activate_areas[ index ] = Math.round(activatables[ index ].top);
 	});
 	if( ($('#stage').width()-$('#sidebar').width()) < $('.main-headline').width() )
 	{
@@ -74,9 +74,9 @@ _window.load( function() {
 	$('.activatable').each(function(index){
 		activatables[ index ] = new Array();
 		activatables[ index ].selector = $(this);
-		activatables[ index ].top = Math.round(activatables[index].selector.offset().top);		
-		activatables[ index ].bottom = activatables[ index ].top + activatables[ index ].selector.height();				
-		activate_areas[ index ] = Math.round(activatables[ index ].top);			
+		activatables[ index ].top = Math.round(activatables[index].selector.offset().top);
+		activatables[ index ].bottom = activatables[ index ].top + activatables[ index ].selector.height();
+		activate_areas[ index ] = Math.round(activatables[ index ].top);
 	});
 	//
 	if( ($('#stage').width()-$('#sidebar').width()) < $('.main-headline').width() )
@@ -116,8 +116,8 @@ _window.on('scroll', function(){
 	{
 		//
 		// if( scrollTop > top - (window_height/2) && scrollTop+25 < top)
-		if( (activatables[index].bottom >= scrollTop+(_window.height()*0.1)) && (activatables[index].top <= scrollBottom-(_window.height()*0.1))
-		&& (activatables[index].bottom <= scrollBottom-(_window.height()*0.1)) &&  (activatables[index].top >= scrollTop+(_window.height()*0.1)) )
+		if( (activatables[index].bottom >= scrollTop+(_window.height()*0.08)) && (activatables[index].top <= scrollBottom-(_window.height()*0.08))
+		&& (activatables[index].bottom <= scrollBottom-(_window.height()*0.08)) &&  (activatables[index].top >= scrollTop+(_window.height()*0.08)) )
 		{
 			// $('.activatable.active').removeClass('active');
 			activatables[index].selector.addClass('active');
