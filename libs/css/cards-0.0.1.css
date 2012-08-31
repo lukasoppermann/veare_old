@@ -54,7 +54,7 @@
 }
 .card{
 	/* transition */
-	-webkit-transition: -webkit-transform .5s cubic-bezier(.8,.1,.3,.9);
+	-webkit-transition: -webkit-transform 5.5s cubic-bezier(.8,.1,.3,.9);
 	-moz-transition: -moz-transform .5s cubic-bezier(.8,.1,.3,.9);
 	transition: transform .5s cubic-bezier(.8,.1,.3,.9);
 	/* backface hidden */

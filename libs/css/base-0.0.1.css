@@ -90,7 +90,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 .nav-narrow #logo .logo-inner .logo-img{
 	position: absolute;
-	top: -239px;
+	top: -241px;
 	left: 0;
 }
 #logo .logo-img{
@@ -107,7 +107,13 @@ only screen and (                min-resolution: 2dppx) {
 	-o-transition: margin .118s;
 	transition: margin .118s;
 }
-
+.nav-narrow #logo:hover .logo-img{
+	margin-top: 4px;
+	-webkit-transition: margin .118s;
+	-moz-transition: margin .118s;
+	-o-transition: margin .118s;
+	transition: margin .118s;
+}
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),

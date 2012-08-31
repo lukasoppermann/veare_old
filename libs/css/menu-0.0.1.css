@@ -67,6 +67,7 @@
 	opacity: 1;
 	margin-left: -200px; 
 }
+.nav-narrow #nav .item .menu-item-link .text{ display:none; }
 .nav-wide #nav .item .menu-item-link .text{ margin-left: 0px; }
 #nav .item.active .menu-item-link, #nav .item .menu-item-link:hover{
 	color: rgb(90,90,90);	
