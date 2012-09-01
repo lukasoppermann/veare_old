@@ -16,12 +16,20 @@
 	color: rgb(180,180,180);
 }
 .mobile .type{ font-size: 180%; }
-
+.mobile section:first-child{ margin-top: 0; }
+.column.headline-column{ margin-top: 0; margin-bottom: 0; }
+.mobile .main-headline{ margin-bottom: 0px }
 .column p{ margin-bottom: 1%; }
 section{
 	margin-top: 7%;
 	padding: 20px 0;
 }
+.mobile section{
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;	
+	padding: 20px 0;
+}
+.mobile .content{ padding-bottom: 0; }
 .quote, .quote .quote-box{
 	float: left;
 	display: block;
@@ -49,15 +57,21 @@ section{
 	padding: 0px 0px 10px 45px;
 }
 .tablet-small .quote .quote-box, .mobile .quote .quote-box{
-	padding: 35px 175px 10px 25px;
+	padding: 5px 175px 10px 0px;
 }
 .tablet-small .about-icon, .mobile .about-icon{
-	margin: 35px 0 0 25px !important;
+	margin: 5px 0 0 25px !important;
 	position: absolute;
 	top: 0;
 	right: 0;
 }
-.tablet-small .quote .quote-box:before, .mobile .quote .quote-box:before{ left: 0px; }
+.tablet-small .quote .quote-box:before, .mobile .quote .quote-box:before{ 
+/*	position: relative;*/
+/*	float: left;*/
+	left: -10px;
+	margin-right: 0px;
+	font-size: inherit;
+}
 .active .quote .quote-box{ color: rgb(80,160,180); }
 .quote-box:before{
 	content: "“";

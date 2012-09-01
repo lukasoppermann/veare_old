@@ -1,7 +1,7 @@
 <article class="article open_sans">
 	<section>
 		<div class="type column column-five">About veare</div>
-		<div class="column column-five"><h1 class="main-headline open_sans_bold">Visionary Design</h1></div>
+		<div class="column column-five headline-column"><h1 class="main-headline open_sans_bold">Visionary Design</h1></div>
 		<div class="column column-three">
 			<p class="excerpt">veare is a Berlin-based interface design studio with a focus on modern branding & intelligent design solutions.</p>
 		</div>
