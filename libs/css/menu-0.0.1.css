@@ -1,26 +1,8 @@
-/* Meta */
-#meta_nav{
-	float: left;
-	padding: 10px;
-}
-#meta_nav li{
-	padding: 0;
-	height: 25px;
-	width: 75px;
-	text-align: center;
-}
-#meta_nav li a{
-	width: 100%;
-	height: 15px;
-	padding: 6px 0 4px 0;
-	display: block;
-	text-decoration: none;
-}
+/* --------------------- */
 /* Nav */
 #nav{
 	float: left;
 	list-style: none;
-	width: 100%;	
 }
 #nav .item{
 	position: relative;
@@ -28,23 +10,6 @@
 	height: 30px;
 	padding: 5px 0;
 	width: 100%;
-}
-.mobile.portrait #nav{
-	float: right;
-	width: auto;
-	height: 55px;
-	margin-right: 25px;
-}
-.mobile.portrait #nav .item, .mobile.portrait #nav .item .menu-item-link{
-	float: left;
-	width: 50px;
-	height: 50px;
-}
-.mobile.portrait #nav .item .text{
-	display: block;
-}
-.closed #nav li{
-	width: 55px;
 }
 #nav .item .menu-item-link{
 	position: relative;
@@ -67,7 +32,6 @@
 	opacity: 1;
 	margin-left: -200px; 
 }
-.nav-narrow #nav .item .menu-item-link .text{ display:none; }
 .nav-wide #nav .item .menu-item-link .text{ margin-left: 0px; }
 #nav .item.active .menu-item-link, #nav .item .menu-item-link:hover{
 	color: rgb(90,90,90);	
@@ -92,18 +56,29 @@
 	-ms-transition: opacity .8s;
 	z-index: 5;
 }
-#nav .item:after{
-	display: block;
-	position: absolute;
-	top: 7px;
-	left: 0px;
-	content: "";
-	height: 30px;
-	width: 70px;
-	z-index: 4;
-/*	background-image: -moz-linear-gradient(left, rgba(243,243,243,1.0) 0, rgba(243,243,243,1.0) 50px, rgba(243,243,243,0.0) 70px);
-	background-image: -webkit-linear-gradient(left, rgba(243,243,243,1.0) 0, rgba(243,243,243,1.0) 50px, rgba(243,243,243,0.0) 70px);*/
+/* Nav mobile */
+.mobile.portrait #nav{
+	position: relative;
+	float: right;
+	height: 55px;
+	width: 180px;
+	margin-right: 15px;
 }
+.mobile.portrait #nav .item, .mobile.portrait #nav .item .menu-item-link{
+	float: left;
+	overflow: hidden;
+	width: 60px;
+	height: 50px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.mobile.portrait #nav .item .icon{
+	left: 15px;
+}
+.nav-narrow #nav .item .menu-item-link .text{ display:none; }
+/*------------------*/
+/* follow icons */
 #sidebar_bottom{
 	width: 60px;	
 	display: block;
@@ -119,14 +94,6 @@
 	height: 120px;
 	margin: 0 auto;	
 	padding-left: 10px;
-}
-.nav-wide #sidebar_bottom{
-	width: 160px;	
-}
-.nav-wide #follow_nav{
-	width: 170px;
-	height: 30px;
-	padding-left: 0px;
 }
 #follow_nav .item{
 	width: 40px;
@@ -153,6 +120,15 @@
 #footer .follow-nav{
 	display: none;
 }
+.nav-wide #sidebar_bottom{
+	width: 160px;	
+}
+.nav-wide #follow_nav{
+	width: 170px;
+	height: 30px;
+	padding-left: 0px;
+}
+/* follow icons mobile */
 .mobile #footer .follow-nav{
 	position: relative;	
 	float: left;

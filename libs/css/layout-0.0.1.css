@@ -175,6 +175,9 @@ background-image: -webkit-linear-gradient(left, rgb(248,248,248) 70%, rgb(243,24
 	font-weight: normal;
 	margin: 0 0 50px 50px;		
 }
+.article p{
+	margin-bottom: 10px;
+}
 .mobile .article{ margin: 0 0 50px 10px; }
 .tablet-small .article{ margin: 0 0 50px 30px; }
 section{

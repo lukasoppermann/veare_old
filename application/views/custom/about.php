@@ -27,7 +27,7 @@
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Vision</h2>
 				<p>Every creative process should start with a vision. An idea to strive towards. This idea does not have to be 100% realisable, but it should stay within the realm of realism.</p>
-				<p>A vision builds on your business philosophy, creating a direction for the future of your business. It should cover all levels of a project, the core idea, the design, the communication, the business aspect and whatever else is part of your business. This will be our guide throughout the project.</p>
+				<p>A vision builds on your business philosophy, creating a direction for the future of your business. This vision should cover all aspects of your business, because they might effect the project even if they do not seem closely related. We will use this vision as our guideline throughout the whole process.</p>
 			</div>
 			<div class="active-bg right"></div>
 		</div>
@@ -36,7 +36,8 @@
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Intelligent Design</h2>
-				<p>Intelligent design means informed decisions based on a future vision and a data-based user analysis. By making informed design decisions based on knowledge about the target users, I can create modern concepts that are designed to suit the user. This means that for each project the focus might be shifted. Some clients want state-of-the-art products that can fascinate their modern and up to date users, while others need to focus more on raw information and support for legacy browsers.</p>
+				<p>Intelligent design is informed decision making based on a future vision and a data-based user analysis. I create modern design solutions based on knowledge about your target users. This means that for each project the focus might be shifted. Some clients want state-of-the-art products that can fascinate their modern and up to date users, while others need to focus more on raw information and support for legacy browsers.
+</p>
 			</div>
 			<div class="active-bg left"></div>
 		</div>
@@ -53,9 +54,8 @@
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Modern Branding</h2>
-				<p>By designing flexible corporate identities with a strong emphasis on digital I deliver a modern branding solutions which adapt as media and devices change.</p>
-				<p>The hardest part of modern, adaptive design, is to let go of some control. But by going this step one can create a corporate system which works well in all media while being recognisable as one brand.</p>
-				<p>In contracts to the traditional corporate identity, a corporate system is flexible, it guides but does not always strictly define the one solution. This means it adapts to yet unforeseeable changes, were traditional identities have to be altered or even reinvented.
+				<p>I deliver modern branding solutions which adapt as media and devices change.
+The hardest part of modern, adaptive design, is to let go of some control. But by allowing for more flexibility we can create a corporate system which works well in all media while being recognisable as one brand. This means it adapts to yet unforeseeable changes, were traditional identities have to be altered or even reinvented.
 </p>
 			</div>
 			<div class="active-bg right"></div>
