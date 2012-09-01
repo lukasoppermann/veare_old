@@ -55,7 +55,7 @@
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Modern Branding</h2>
 				<p>I deliver modern branding solutions which adapt as media and devices change.
-The hardest part of modern, adaptive design, is to let go of some control. But by allowing for more flexibility we can create a corporate system which works well in all media while being recognisable as one brand. This means it adapts to yet unforeseeable changes, were traditional identities have to be altered or even reinvented.
+The hardest part of modern, adaptive design, is to let go of some control. But by allowing for more flexibility we can create a corporate system which works well in all media while being recognisable as one brand. This means it adapts to yet unforeseeable changes, were traditional identities have to be altered or even reinvented.<>
 </p>
 			</div>
 			<div class="active-bg right"></div>
