@@ -1,15 +1,6 @@
 		</div>
 	</div>
 </div>	
-	<!-- line -->
-	<!-- <div id="line">
-		<div id="grey_line"></div>
-		<div id="orange_line"></div>
-		<span class="lines-text" id="line_text_veare">veare</span>
-		<span class="lines-text" id="line_text_two">Interaction</span>
-		<span class="lines-text" id="line_text_three">Design</span>
-	</div> -->
-
 	<div id="footer">
 		<ul class="follow-nav">
 			<li class="item"><a class="link twitter" href="https://twitter.com/#!/vearenet" target="_blank"><span class="icon-small twitter"></span></a></li>
@@ -25,6 +16,6 @@
 		$this->fs_google->fonts(array('Open Sans:400,600,700,400italic', 'Bree Serif'), $fonts_callback);
 	}
 ?> -->
-<? echo js('default', FALSE); ?>
+<? echo js('default', TRUE); ?>
 </body>
 </html>

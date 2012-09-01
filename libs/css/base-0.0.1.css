@@ -10,9 +10,6 @@ rgb(80,160,180)
 */
 /*------------------*/
 /* Fonts */
-@font-face{ font-family: "Open Sans"; src: url('../../04_web/fonts/Open Sans/OpenSans-Regular.ttf'); }
-@font-face{ font-family: "Open Sans Bold"; src: url('../../04_web/fonts/Open Sans/OpenSans-Semibold.ttf'); } 
-@font-face{ font-family: "Bree Serif"; src: url('../../04_web/fonts/Bree Serif/BreeSerif-Regular.ttf'); }
 .open_sans, .column{
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
 }

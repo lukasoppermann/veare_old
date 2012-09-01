@@ -4,7 +4,7 @@
 <?
 echo favicon('favicon');
 echo meta();
-echo css('default', FALSE);
+echo css('default', TRUE);
 echo title(variable($meta_title, 'Welcome').' | vea.re – visionary design');
 if( variable($css) != null )
 {
@@ -35,7 +35,7 @@ else
 		<a href="<?=base_url()?>en/contact/" id="logo">
 			<div class="logo-inner logo-small veare-sprite">
 				<div class="logo-img">
-					<img src="<?=base_url()?>/media/layout/veare-icons.png" alt="veare - visionary design" />
+					<img src="<?=base_url(TRUE)?>media/layout/veare-icons.png" alt="veare - visionary design" />
 				</div>
 			</div>
 		</a>

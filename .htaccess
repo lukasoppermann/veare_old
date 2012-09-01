@@ -19,22 +19,21 @@ AddType text/x-vcard .vcf
 
 # Enable Apache's mod_expires Module
 <IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresDefault A0
-    ExpiresByType image/gif "access plus 1 month"
-    ExpiresByType image/jpeg "access plus 1 month"
-    ExpiresByType image/png "access plus 1 month"
-    ExpiresByType image/ico "access plus 1 month"
+	ExpiresActive On
+	ExpiresDefault A0
+	ExpiresByType image/gif "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType image/png "access plus 1 month"
+	ExpiresByType image/x-icon "access plus 1 year"
+	ExpiresByType image/ico "access plus 1 years"
     # ExpiresByType text/css "access plus 1 week"
     # ExpiresByType text/javascript "access plus 1 week"
     # ExpiresByType application/javascript "access plus 1 week"
     # ExpiresByType application/x-javascript "access plus 1 week"
-    ExpiresByType image/x-icon "access plus 1 year"
-    ExpiresByType image/ico "access plus 1 years"
 </IfModule>
 
 <ifModule mod_headers.c>
-  Header unset ETag
+	Header unset ETag
 </ifModule>
 FileETag None
 <FilesMatch "\.php$">
