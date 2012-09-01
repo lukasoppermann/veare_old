@@ -131,7 +131,7 @@ only screen and (                min-resolution: 2dppx)
 		width: 70px;
 		height: 55px;
 		background-image: url('../../media/layout/veare-icons@2x.png');
-		background-size: 480px 300px;		
+		background-size: 510px 300px;		
 		background-position: 0px -240px;
 	}
 }

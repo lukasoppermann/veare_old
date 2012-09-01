@@ -11,7 +11,6 @@ $(function()
 	// query actions	
 	var query_actions = function( resolution )
 	{
-		// alert(resolution);
 		// console.log(resolution);
 		// console.log($(window).width());
 		// $('html, body').height(_stage.height());

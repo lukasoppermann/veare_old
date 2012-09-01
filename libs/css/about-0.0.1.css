@@ -49,11 +49,13 @@ section{
 	padding: 0px 0px 10px 45px;
 }
 .tablet-small .quote .quote-box, .mobile .quote .quote-box{
-	padding: 35px 0px 10px 25px;
-	width: -webkit-calc(100% - 175px);
+	padding: 35px 175px 10px 25px;
 }
 .tablet-small .about-icon, .mobile .about-icon{
-	margin-top: 35px;
+	margin: 35px 0 0 25px !important;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 .tablet-small .quote .quote-box:before, .mobile .quote .quote-box:before{ left: 0px; }
 .active .quote .quote-box{ color: rgb(80,160,180); }
@@ -81,8 +83,6 @@ section{
 	-ms-transition: all .6s ease;
 }
 .about-icon.vision{
-	top: auto;
-	position: relative;
 	float: right;
 	margin-right: 25px;
 }
