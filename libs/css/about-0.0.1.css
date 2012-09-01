@@ -48,6 +48,14 @@ section{
 .quote.right .quote-box{
 	padding: 0px 0px 10px 45px;
 }
+.tablet-small .quote .quote-box, .mobile .quote .quote-box{
+	padding: 35px 0px 10px 25px;
+	width: -webkit-calc(100% - 175px);
+}
+.tablet-small .about-icon, .mobile .about-icon{
+	margin-top: 35px;
+}
+.tablet-small .quote .quote-box:before, .mobile .quote .quote-box:before{ left: 0px; }
 .active .quote .quote-box{ color: rgb(80,160,180); }
 .quote-box:before{
 	content: "“";
@@ -58,10 +66,6 @@ section{
 	left: 0px;
 }
 .right .quote-box:before{ left: 25px; }
-
-.tablet-small .quote-box{
-
-}
 .about-icon{
 	position: relative;
 	display: block;
