@@ -93,15 +93,6 @@ _window.load( function() {
 	{
 		$('.quote-box').css({'fontSize':''});		
 	}
-	// create active bgs
-	$('.active-bg.right').each(function(){
-		var _this = $(this);
-		_this.css({'marginLeft':$(window).width(),'width':$('.active-bg').parents('.column').width()+60+($('#stage').width()-$('.active-bg').position().left), 'height':$('.active-bg').parents('.column').height()+60});
-	});
-	$('.active-bg.left').each(function(){
-		var _this = $(this);
-		_this.css({'width':_this.parents('.column').width()+60, 'height':_this.parents('.column').height()+60});
-	});
 	//---------------------------
 	// reorganize quotes
 	if(_body.hasClass('tablet-small') || _body.hasClass('mobile-portrait') || _body.hasClass('mobile-landscape') || _body.hasClass('mobile'))
@@ -121,6 +112,16 @@ _window.load( function() {
 			_this.find('.quote').insertBefore(_this.find('.content'));
 		});
 	}
+	
+	// create active bgs
+	$('.active-bg.right').each(function(){
+		var _this = $(this);
+		_this.css({'marginLeft':$(window).width(),'width':$('.active-bg').parents('.column').width()+60+($('#stage').width()-$('.active-bg').position().left), 'height':$('.active-bg').parents('.column').height()+60});
+	});
+	$('.active-bg.left').each(function(){
+		var _this = $(this);
+		_this.css({'width':_this.parents('.column').width()+60, 'height':_this.parents('.column').height()+60});
+	});
 });
 //------------------------------------
 var scrollTop = _window.scrollTop();

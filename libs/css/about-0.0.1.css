@@ -87,11 +87,11 @@ section{
 	width: 150px;
 	background-color: rgb(80,160,180);
 	border-radius: 150px;
-	transition: all .6s ease;   
-	-webkit-transition: all .6s ease;
-	-moz-transition: all .6s ease;
-	-o-transition: all .6s ease;
-	-ms-transition: all .6s ease;
+	transition: background .6s ease;   
+	-webkit-transition: background .6s ease;
+	-moz-transition: background .6s ease;
+	-o-transition: background .6s ease;
+	-ms-transition: background .6s ease;
 }
 .about-icon.vision{
 	float: right;
@@ -131,6 +131,7 @@ h2.adaptive{
 }
 /* -------------------------- */
 /* active bg */
+.mobile .active-bg{ display: none; }
 .active-bg{
 	position: absolute;
 	top: -30px;
