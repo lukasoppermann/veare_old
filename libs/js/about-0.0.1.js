@@ -1,5 +1,6 @@
 $(function()
 {
+	$('.article').animate({'opacity':1,'marginTop':0}, 500, 'swing');
 // on reslution change
 var _body = $('body');
 _body.on('resolutionChange', function(e, resolution){

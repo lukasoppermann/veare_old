@@ -7,17 +7,23 @@ $(function()
 	// -----------------------
 	var _body = $('body');
 	var _stage = $('#stage');
+	var loaded = false;
 	// -----------------------
 	// Animate Content
 	var animate_content = function( resolution )
 	{
-		if(resolution == 'mobile-portrait')
+		if(loaded == false)
 		{
-			$('#sidebar').animate({'top':'0px'}, 700);
-		}
-		else
-		{
-			$('#sidebar').animate({'left':'0px'}, 500);
+			if(resolution == 'mobile-portrait')
+			{
+				$('#sidebar').css({'left':'0px'}).animate({'top':'0px'}, 700, 'swing');
+			}
+			else
+			{
+				$('#sidebar').css({'top':'0px'}).animate({'left':'0px'}, 500, 'swing');
+			}
+			// define loaded
+			loaded = true;
 		}
 	};
 	// -----------------------
