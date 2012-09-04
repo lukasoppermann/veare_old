@@ -28,6 +28,7 @@ section{
 	margin-bottom: 0 !important;	
 	padding: 20px 0;
 }
+.tablet-small .content{ margin-bottom: 40px; }
 .mobile .content{ padding-bottom: 0; }
 .quote, .quote .quote-box{
 	float: left;
