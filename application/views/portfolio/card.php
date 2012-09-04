@@ -6,7 +6,7 @@
 						<img src="<?=base_url()?>media/images/<?=variable($images['filename']).'-thumb_300_240.'.variable($images['ext'])?>" alt="<?=$title?>" />
 					</div>
 					<h3 class="card-headline open_sans_bold"><?=$title?></h3>
-					<p class="card-text open_sans"><?=variable($excerpt)?></p>
+					<p class="card-text open_sans"><?=text_limiter(variable($excerpt), 100, true, '')?></p>
 				</div>
 		</div>
 		<div class="card back">

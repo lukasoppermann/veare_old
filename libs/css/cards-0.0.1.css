@@ -128,3 +128,7 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+/*---------------------------------*/
+/* tablet versions */
+.tablet .card-content .card-headline, .tablet-small .card-content .card-headline{ font-size: 130%; }
+.tablet-small .card-content .card-text{ font-size: 105%; }
