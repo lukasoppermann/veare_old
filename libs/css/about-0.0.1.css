@@ -1,5 +1,4 @@
 .excerpt{
-	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
 	font-style: italic;
 	font-size: 180%;
 	line-height: 130%;
@@ -12,13 +11,12 @@
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;	
 	font-size: 200%;
-	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
 	color: rgb(180,180,180);
 }
 .mobile .type{ font-size: 180%; }
 .mobile section:first-child{ margin-top: 0; }
-.column.headline-column{ margin-top: 0; margin-bottom: 0; }
 .mobile .main-headline{ margin-bottom: 0px }
+.column.headline-column{ margin-top: 0; margin-bottom: 0; }
 section{
 	margin-top: 7%;
 	padding: 20px 0;
@@ -127,7 +125,6 @@ section{
 	z-index: 10;
 }
 h2.adaptive{
-	font-family: "Open Sans Bold", Sans-serif, Arial;
 	font-size: 200%;
 }
 /* -------------------------- */

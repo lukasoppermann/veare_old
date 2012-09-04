@@ -1,20 +1,15 @@
 .portfolio-item{
+	opacity: 1;
 	max-width: 1000px;
 }
 .type{
 	display: block;
 	margin: 40px 0 0 50px;
-	font-size: 30px;
-	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
+	font-size: 200%;
 	color: rgb(180,180,180);
 }
-h1{
-/*	display: block;
-	margin: -15px 0 50px 50px;	
-	font-size: 60px;
-	font-family: "Open Sans Bold";
-	font-weight: normal;
-	color: rgb(80,80,80);*/
+.main-headline{
+
 }
 .section-menu{
 	float: left;
