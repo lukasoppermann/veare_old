@@ -4,7 +4,7 @@
 }
 .type{
 	display: block;
-	margin: 40px 0 0 50px;
+	margin: 40px 0 0 0;
 	font-size: 200%;
 	color: rgb(180,180,180);
 }
@@ -13,9 +13,14 @@
 }
 .section-menu{
 	float: left;
-	margin: 20px 0 20px 50px;
+	margin: 20px 0 20px 0;
 	background: rgb(243,243,243);
 	border-radius: 3px;
+	
+/*	width: 100%;
+	position: fixed;
+	top: -20px;
+	margin-left: -20px;*/
 }
 .section-menu:after{
 	content: " ";
@@ -24,9 +29,7 @@
 .section-menu a{
 	padding: 7px 10px;
 	text-decoration: none;
-	font-family: "Open Sans Bold";
-	font-weight: normal;
-	font-size: 14px;
+	font-size: 100%;
 	color: rgb(150,150,150);
 	transition: all 1s ease .1s;   
 	-webkit-transition: all 1s ease .1s;
@@ -39,23 +42,22 @@
 	color: rgb(80,80,80);
 }
 .excerpt{
-	margin: 0 0 20px 50px;
+	margin: 0 0 20px 0;
 	float: left;
-	font-family: "Open Sans Bold";
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 22px;
+	font-style: italic;
+	font-size: 180%;
+	line-height: 130%;	
 	color: rgb(150,150,150);
 }
 section{
-	font-size: 14px;	
-	margin: 50px 0 0 50px;
+	font-size: 100%;
+	margin: 50px 0 0 0;
 	float: left;
 }
 header{
 	position: relative;
 	float: left;
-	border-top: 1px solid rgb(220,220,220);
+	border-top: 2px solid rgb(220,220,220);
 	width: 100%;
 	font-size: 20px;
 	margin-bottom: 10px;
@@ -63,27 +65,26 @@ header{
 header .section-count{
 	text-align: right;
 	display: block;
-	float: left;
+	position: absolute;
+	left: 0;
+	top: -1px;
 	width: 20%;
-	padding: 10px 10px 0 0;
-	font-family: "Open Sans";
-	font-weight: normal;
+	padding: 11px 10px 0 0;
+	border: 1px solid rgb(255,255,255);
 	color: rgb(150,150,150);
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
 }
 header h2{
-	padding-top: 10px;
-	font-family: "Open Sans Bold";
-	font-weight: normal;
+	padding: 10px 10px 0 20%;
 	color: rgb(80,80,80);
-	border-top: 1px solid rgb(220,220,220);
 	float: left;
 	display: block;
-	width: -webkit-calc(100% - 20%);
-	width: -moz-calc(100% - 20%);
-	width: calc(100% - 20%);
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
 }
 section .content{
 	float: left;
@@ -92,13 +93,10 @@ section p{
 	display: inline-block;
 	float: left;
 	color: rgb(120,120,120);
-	font-family: "Open Sans";	
 	margin: 10px 0;
 }
 section p strong{
 	display: inline-block;
-	font-family: "Open Sans Bold";
-	font-weight: normal;
 	color: rgb(80,80,80);
 }
 .right{	float: right; }
@@ -108,28 +106,4 @@ section p strong{
 }
 .tags{
 	float: left;
-}
-.column{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	padding-right: 2%;	
-}
-.one-column{
-	width: 20%;
-}
-.two-column{
-	width: 40%;
-}
-.three-column{
-	width: 60%;
-}
-.four-column{
-	width: 80%;
-}
-.five-column{
-	width: 100%;
-}
-.column img{
-	width: 100%;
 }

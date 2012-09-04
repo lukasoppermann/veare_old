@@ -10,18 +10,18 @@ rgb(80,160,180)
 */
 /*------------------*/
 /* Fonts */
-.open_sans, .column{
+.open_sans{
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
 }
-.open_sans_bold{
+.open_sans_bold, .open_sans strong{
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
 	font-weight: bold;
 }
-.wf-active .open_sans, .wf-active .column{
+.wf-active .open_sans{
 	font-family: "Open Sans", Arial, Sans-serif;
 	font-weight: 300;
 }
-.wf-active .open_sans_bold{
+.wf-active .open_sans_bold, .wf-active .open_sans strong{
 	font-family: "Open Sans Bold", Arial, Sans-serif;
 	font-weight: 400;	
 }
