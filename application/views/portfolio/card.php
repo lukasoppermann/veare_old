@@ -5,14 +5,14 @@
 					<div class="card-image">
 						<img src="<?=base_url()?>media/images/<?=variable($images['filename']).'-thumb_300_240.'.variable($images['ext'])?>" alt="<?=$title?>" />
 					</div>
-					<h3 class="card-headline"><?=$title?></h3>
-					<p class="card-text"><?=variable($excerpt)?></p>
+					<h3 class="card-headline open_sans_bold"><?=$title?></h3>
+					<p class="card-text open_sans"><?=variable($excerpt)?></p>
 				</div>
 		</div>
 		<div class="card back">
-				<div class="card-back-title">Open<br /> Case</div>
+				<div class="card-back-title open_sans_bold">Open<br /> Case</div>
 				<div class="card-back-content">
-					<h3 class="card-headline"><?=$title?></h3>
+					<h3 class="card-headline open_sans_bold"><?=$title?></h3>
 				</div>
 				<div class="card-arrow"></div>
 		</div>

@@ -7,6 +7,8 @@ var _window = $(window);
 var window_height;
 var activatables = new Array();
 var activate_areas = new Array();
+var scrollTop = _window.scrollTop();
+var scrollBottom = scrollTop + _window.height();
 //------------------------------------
 // define functions
 // check active for other devices
@@ -29,6 +31,7 @@ check_active_fn = function()
 		}
 	});
 };
+// prepare active areas
 var prepare_active_fn = function()
 {
 	console.log('prep');
@@ -44,15 +47,39 @@ var prepare_active_fn = function()
 	// create active bgs
 	$('.active-bg.right').each(function(){
 		var _this = $(this);
-		_this.css({'width':_this.parents('.column').width()+60+($('#stage').width()-_this.position().left), 'height':_this.parents('.column').height()+60});
+		_this.css({'width':_this.parents('.column').width()+60+($('#stage').width()-_this.position().left), 'height':_this.parents('.column').find('.text').height()+60});
 	});
 	$('.active-bg.left').each(function(){
 		var _this = $(this);
-		_this.css({'width':_this.parents('.column').width()+60, 'height':_this.parents('.column').height()+60});
+		_this.css({'width':_this.parents('.column').width()+60, 'height':_this.parents('.column').find('.text').height()+60});
 	});
 };
 // define check_active
 empty_fn = function(){};
+// adjust font
+var adjust_font = function()
+{
+	// cache selection
+	var _main_headline = $('.main-headline');
+	var _quote_box = $('.quote-box');
+	// adjust font size
+	if( ($('#stage').width()-$('#sidebar').width()) < _main_headline.width() )
+	{
+		_main_headline.addClass('small-font');
+	}
+	else
+	{
+		_main_headline.removeClass('small-font');
+	}
+	if(_quote_box.width() < 240)
+	{
+		_quote_box.css({'fontSize':'110%'});
+	}
+	else
+	{
+		_quote_box.css({'fontSize':''});
+	}
+}
 //
 //------------------------------------
 // on resolution change
@@ -96,46 +123,17 @@ _body.fs_resize(function()
 	{
 		prepare_active_fn();
 	}
-	
-	if( ($('#stage').width()-$('#sidebar').width()) < $('.main-headline').width() )
-	{
-		$('.main-headline').addClass('small-font');
-	}
-	else
-	{
-		$('.main-headline').removeClass('small-font');
-	}
-	if($('.quote-box').width() < 240)
-	{
-		$('.quote-box').css({'fontSize':'110%'});
-	}
-	else
-	{
-		$('.quote-box').css({'fontSize':''});
-	}
-
+	// adjust font size
+	adjust_font();
 });
 //------------------------------------
 // on load
-_window.load( function() {	
-	_window.trigger('resize');
+_window.load( function()
+{	
+	// _window.trigger('resize');
 	//
-	if( ($('#stage').width()-$('#sidebar').width()) < $('.main-headline').width() )
-	{
-		$('.main-headline').addClass('small-font');
-	}
-	else
-	{
-		$('.main-headline').removeClass('small-font');		
-	}
-	if($('.quote-box').width() < 240)
-	{
-		$('.quote-box').css({'fontSize':'110%'});
-	}
-	else
-	{
-		$('.quote-box').css({'fontSize':''});		
-	}
+	// adjust font size
+	adjust_font();
 	//---------------------------
 	// reorganize quotes
 	var _rearrange = $('.rearrange');
@@ -148,19 +146,17 @@ _window.load( function() {
 			_this.find('.content').insertBefore(_this.find('.quote'));
 		});
 		//
-		if( resolution != 'tablet-small' )
+		if( !_body.hasClass('tablet-small') )
 		{
 			check_active = "empty_fn";
 		}
 		else
 		{
-			prepare_active_fn();
 			check_active = "check_active_fn";
 		}
 	}
 	else
 	{
-		prepare_active_fn();
 		check_active = "check_active_fn";
 		// move back quote before content
 		_rearrange.each(function(){
@@ -168,24 +164,11 @@ _window.load( function() {
 			_this.find('.quote').insertBefore(_this.find('.content'));
 		});
 	}
-	
-	// // create active bgs
-	// $('.active-bg.right').each(function(){
-	// 	var _this = $(this);
-	// 	_this.css({'marginLeft':$(window).width(),'width':$('.active-bg').parents('.column').width()+60+($('#stage').width()-$('.active-bg').position().left), 'height':$('.active-bg').parents('.column').height()+60});
-	// });
-	// $('.active-bg.left').each(function(){
-	// 	var _this = $(this);
-	// 	_this.css({'width':_this.parents('.column').width()+60, 'height':_this.parents('.column').height()+60});
-	// });
-});
-//------------------------------------
-var scrollTop = _window.scrollTop();
-var scrollBottom = scrollTop + _window.height();
-_window.on('scroll', function()
-{
-	console.log(check_active);
-	window[check_active]();
+	//------------------------------------
+	_window.on('scroll', function()
+	{
+		window[check_active]();
+	});
 });
 //
 });

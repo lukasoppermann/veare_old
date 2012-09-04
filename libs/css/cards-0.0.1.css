@@ -91,7 +91,7 @@
 	overflow: hidden;
 }
 .card-content .card-text{
-	font-size: 100%;
+	font-size: 110%;
 	font-style: italic;
 }
 .card-content .card-image{
@@ -99,13 +99,9 @@
 	line-height: 36px;
 	text-align: right;
 	color: rgb(255,255,255);
-	font-family: "Open Sans Bold";
-	font-weight: normal;
 }
 .card-headline{
 	font-size: 140%;
-	font-family: "Open Sans Bold";
-	font-weight: normal;
 	letter-spacing: .02em;
 }
 /* card content - back */
@@ -128,8 +124,6 @@
 	padding: 15px;
 	font-size: 48px;
 	line-height: 48px;
-	font-family: "Open Sans Bold";
-	font-weight: normal;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;

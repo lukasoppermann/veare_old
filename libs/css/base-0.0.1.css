@@ -15,15 +15,15 @@ rgb(80,160,180)
 }
 .open_sans_bold{
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
-	font-weight: normal;
+	font-weight: bold;
 }
 .wf-active .open_sans, .wf-active .column{
 	font-family: "Open Sans", Arial, Sans-serif;
-	font-weight: normal;
+	font-weight: 300;
 }
 .wf-active .open_sans_bold{
 	font-family: "Open Sans Bold", Arial, Sans-serif;
-	font-weight: normal;	
+	font-weight: 400;	
 }
 /*------------------*/
 /* general */

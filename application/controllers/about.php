@@ -15,14 +15,7 @@ class About extends MY_Controller {
 		// font callback
 		$this->data['fonts_callback'] = "function(){
 			// create active bgs
-			$('.active-bg.right').each(function(){
-				var _this = $(this);
-				_this.css({'marginLeft':$(window).width(),'width':$('.active-bg').parents('.column').width()+60+($('#stage').width()-$('.active-bg').position().left), 'height':$('.active-bg').parents('.column').height()+60});
-			});
-			$('.active-bg.left').each(function(){
-				var _this = $(this);
-				_this.css({'width':_this.parents('.column').width()+60, 'height':_this.parents('.column').height()+60});
-			});
+			$('body').trigger('resize');
 		}";
 		// load view
 		view('custom/about', $this->data);

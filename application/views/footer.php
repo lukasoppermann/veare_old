@@ -13,7 +13,7 @@
 <!-- <?
 	if(mobile() != true)
 	{
-		$this->fs_google->fonts(array('Open Sans:400,600,700,400italic', 'Bree Serif'), $fonts_callback);
+		$this->fs_google->fonts(array('Open Sans:300,400,300italic'), variable($fonts_callback));
 	}
 ?> -->
 <? echo js('default', TRUE); ?>
