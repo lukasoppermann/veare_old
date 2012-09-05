@@ -27,7 +27,7 @@ class MY_Controller extends CI_Controller {
 		Header("Pragma: no-cache" ); // HTTP/1.0
 		// --------------------------------------------------------------------	
 		// load drivers
-		$this->load->driver('fs_optimize');
+		$this->load->driver('Fs_optimize');
 		// --------------------------------------------------------------------	
 		// load assets
 		// development !!!!!!!!
