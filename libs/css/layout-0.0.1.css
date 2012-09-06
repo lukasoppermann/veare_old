@@ -141,13 +141,6 @@ background-image: -webkit-linear-gradient(left, rgb(248,248,248) 70%, rgb(243,24
 .wide-screen .column-four{ width: 78%; }
 .wide-screen .column-five{ width: 98%; }
 .wide-screen .column-hide-four{ display: block; }
-/* hide columns */
-.column-hide-four{
-	height: 100px;
-	background: red !important;
-	border: 1px solid red;
-	display: none;
-}
 /*------------------*/
 /* content */
 .main-headline{
