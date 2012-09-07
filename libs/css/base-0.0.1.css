@@ -99,14 +99,14 @@ only screen and (                min-resolution: 2dppx) {
 	position: relative;
 	float: left;
 }
-.screen #logo:hover .logo-img{
+.hovers .screen #logo:hover .logo-img{
 	margin-top: 2px;
 	-webkit-transition: margin .118s;
 	-moz-transition: margin .118s;
 	-o-transition: margin .118s;
 	transition: margin .118s;
 }
-.nav-narrow #logo:hover .logo-img{
+.hovers .nav-narrow #logo:hover .logo-img{
 	margin-top: 4px;
 	-webkit-transition: margin .118s;
 	-moz-transition: margin .118s;

@@ -24,7 +24,6 @@ elseif( ipad() == true )
 }
 else
 {
-	echo 'tet';
 	$class = ' class="screen nav-wide"';
 }
 ?>

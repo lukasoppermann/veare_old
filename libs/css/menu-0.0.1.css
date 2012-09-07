@@ -7,8 +7,8 @@
 #nav .item{
 	position: relative;
 	display: block;
-	height: 30px;
-	padding: 5px 0;
+	height: 40px;
+	padding: 0;
 	width: 100%;
 }
 #nav .item .menu-item-link{
@@ -18,12 +18,16 @@
 	font-weight: bold;
 	text-decoration: none;
 	display: block;
+	height: 40px;
 	padding: 12px 10px 8px 70px;
 	transition: all .4s;   
 	-webkit-transition: all .4s;
 	-moz-transition: all .4s;
 	-o-transition: all .4s;
-	-ms-transition: all .4s;	
+	-ms-transition: all .4s;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 #nav .item .menu-item-link .text{
 	display: block;
@@ -114,7 +118,7 @@
 	left: 4px;
 	opacity: 0.4;	
 }
-#follow_nav .item:hover .icon-small{
+.hovers #follow_nav .item:hover .icon-small{
 	opacity: 0.6;	
 }
 #footer .follow-nav{
