@@ -112,7 +112,7 @@
 }
 .card-arrow{
 	position: absolute;
-	background: url(../../media/layout/veare-icons.png);
+	background: url(../../layout/veare-icons.png);
 	background-position: -150px -180px;
 	height: 30px;
 	width: 30px;

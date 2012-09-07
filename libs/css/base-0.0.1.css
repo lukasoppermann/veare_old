@@ -34,7 +34,7 @@ body{
 	background: rgb(250,250,250);
 }
 .veare-sprite, .icon, .icon-small{
-	background-image: url('../../media/layout/veare-icons.png');	
+	background-image: url('../../layout/veare-icons.png');	
 }
 @media
 only screen and (-Webkit-min-device-pixel-ratio: 2),
@@ -46,7 +46,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 	.veare-sprite, .icon, .icon-small{ 	
-		background-image: url('../../media/layout/veare-icons@2x.png');
+		background-image: url('../../layout/veare-icons@2x.png');
 		background-size: 510px 300px;
 	}
 }
@@ -132,7 +132,7 @@ only screen and (                min-resolution: 2dppx)
 		display: block;
 		width: 70px;
 		height: 55px;
-		background-image: url('../../media/layout/veare-icons@2x.png');
+		background-image: url('../../layout/veare-icons@2x.png');
 		background-size: 510px 300px;		
 		background-position: 0px -240px;
 	}

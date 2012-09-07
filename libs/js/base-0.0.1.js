@@ -60,14 +60,22 @@ $(function()
 			context: 'tablet-small',
 			callback: function() {
 				query_actions('tablet-small');
-				_body.addClass('hovers tablet-small hide-line-text nav-narrow').removeClass('nav-wide tablet mobile screen wide-screen');
+				_body.addClass('tablet-small hide-line-text nav-narrow').removeClass('hovers nav-wide tablet mobile screen wide-screen');
+				if( !_body.hasClass('loaded-tablet') )
+				{
+					_body.addClass('hovers');
+				}
 			}
 		},
 		{
 			context: 'tablet',
 			callback: function() {
 				query_actions('tablet');
-				_body.addClass('hovers tablet hide-line-text nav-narrow').removeClass('tablet-small nav-wide mobile screen wide-screen');
+				_body.addClass('tablet hide-line-text nav-narrow').removeClass('hovers tablet-small nav-wide mobile screen wide-screen');
+				if( !_body.hasClass('loaded-tablet') )
+				{
+					_body.addClass('hovers');
+				}
 			}
 		},
 		{

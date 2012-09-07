@@ -199,7 +199,7 @@ html, body{
 	right: 5px;
 	top: 5px;
 	background-position: -240px -30px;
-	background-image: url(../../media/layout/veare-icons.png);
+	background-image: url(../../layout/veare-icons.png);
 	width: 30;
 	height: 30;
 	opacity: 0.2;
@@ -313,7 +313,7 @@ html, body{
 	width: 30px;
 	height: 30px;
 	opacity: 0.4;
-	background-image: url(../../media/layout/veare-icons.png);
+	background-image: url(../../layout/veare-icons.png);
 	background-position: 0 -60px;
 }
 #post_container .code{

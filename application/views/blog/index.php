@@ -6,7 +6,7 @@
 				<div class="icon-box box-shadow"><span class="icon case"></span></div>
 				<h3 class="title-text box-shadow">Login security</h3>
 			</div>
-			<img src="<?=base_url()?>/media/images/login.jpg" alt="" />
+			<img src="<?=base_url()?>/images/login.jpg" alt="" />
 		</div>
 	</div>
 </div>

@@ -8,9 +8,8 @@
 | WITH a trailing slash:
 |
 */
-$config['dir_media']	= 'media/';
-$config['dir_layout']	= $config['dir_media'].'layout/';
-$config['dir_images']	= $config['dir_media'].'images/';
+$config['dir_layout']	= 'layout/';
+$config['dir_images']	= 'images/';
 // libs
 $config['dir_libs']		= 'libs/';
 // css

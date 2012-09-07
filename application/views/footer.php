@@ -17,5 +17,6 @@
 	}
 ?> -->
 <? echo js('default', TRUE); ?>
+</div>
 </body>
 </html>

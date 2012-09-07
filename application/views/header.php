@@ -14,20 +14,21 @@ if( variable($css) != null )
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 </head>
 <?
-if( mobile() == true)
+if( mobile() == true && ipad() != true)
 { 
-	$class = ' class="mobile portrait"';
+	$class = ' class="mobile portrait loaded-mobile"';
 }
 elseif( ipad() == true )
 {
-	$class = ' class="tablet"';	
+	$class = ' class="tablet loaded-tablet"';
 }
 else
 {
-	$class = ' class="screen nav-wide"';
+	$class = ' class="hovers screen nav-wide"';
 }
 ?>
 <body<?=$class?>> 
+	<div id="body">
 	<!-- .(mobile() == true ? 'mobile ' : '').(ipad() == true ? 'tablet' : '') -->
 	<!--+++++++++++++++++++++++++ sidebar +++++++++++++++++++++++++-->
 	<div id="sidebar" class="<?=variable($sidebar_class)?>">
@@ -35,7 +36,7 @@ else
 		<a href="<?=base_url()?>en/contact/" id="logo">
 			<div class="logo-inner logo-small veare-sprite">
 				<div class="logo-img">
-					<img src="<?=base_url(TRUE)?>media/layout/veare-icons.png" alt="veare - visionary design" />
+					<img src="<?=base_url(TRUE)?>layout/veare-icons.png" alt="veare - visionary design" />
 				</div>
 			</div>
 		</a>
