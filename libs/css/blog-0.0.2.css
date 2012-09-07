@@ -43,35 +43,35 @@ html, body{
 }
 .button:hover{
 	color: rgb(125,125,125);
-    text-decoration: none;
+	text-decoration: none;
 	font-weight: bold;
-    padding: 7px 10px;
-    position: relative;
-    display: inline-block;
+	padding: 7px 10px;
+	position: relative;
+	display: inline-block;
 	float: left;
-    text-shadow: 0 1px 0 rgb(255,255,255);
-    -webkit-transition: border-color .218s;
-    -moz-transition: border .218s;
-    -o-transition: border-color .218s;
-    transition: border-color .218s;
-    background: rgb(240,240,240);
+	text-shadow: 0 1px 0 rgb(255,255,255);
+	-webkit-transition: border-color .218s;
+	-moz-transition: border .218s;
+	-o-transition: border-color .218s;
+	transition: border-color .218s;
+	background: rgb(240,240,240);
 	background-image: linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
 	background-image: -o-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
 	background-image: -moz-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
 	background-image: -webkit-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
 	background-image: -ms-linear-gradient(top, rgb(245,245,245) 40%, rgb(235,235,235) 70%);
-    border: solid 1px rgb(220,220,220);
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+	border: solid 1px rgb(220,220,220);
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 }
-.button:hover, .vertical .button:hover{
+.hovers .button:hover, .hovers .vertical .button:hover{
 	cursor: pointer;
-    color: rgb(75,75,75);
-    border-color: rgb(150,150,150);
-    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
- 	-webkit-box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	color: rgb(75,75,75);
+	border-color: rgb(150,150,150);
+	-moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 .featured{
 	width: 800px;	
@@ -85,28 +85,28 @@ html, body{
 	width: 100%;
 	background:#fff;
 	-webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.3);
-	  -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.3);
-	       box-shadow:0 1px 2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.3);
+	box-shadow:0 1px 2px rgba(0, 0, 0, 0.3);
 }
 .drop-shadow:before, .drop-shadow:after {
-     content: "";
-     position: absolute;
-     z-index: -2;
+	content: "";
+	position: absolute;
+	z-index: -2;
 }
 .curved:before {
-     border-radius: 10px 10px 10px 10px / 100px 100px 100px 100px;
-     bottom: 10px;
-     box-shadow: 0pt 0pt 7px rgba(0,0,0,0.6);
-     left: 0pt;
-     right: 50%;
-     top: 10px;
+	 border-radius: 10px 10px 10px 10px / 100px 100px 100px 100px;
+	 bottom: 10px;
+	 box-shadow: 0pt 0pt 7px rgba(0,0,0,0.6);
+	 left: 0pt;
+	 right: 50%;
+	 top: 10px;
 }
 .curved-hz-1:before {
-     border-radius: 100px 100px 100px 100px / 10px 10px 10px 10px;
-     bottom: 0pt;
-     left: 10px;
-     right: 10px;
-     top: 50%;
+	 border-radius: 100px 100px 100px 100px / 10px 10px 10px 10px;
+	 bottom: 0pt;
+	 left: 10px;
+	 right: 10px;
+	 top: 50%;
 }
 .featured-header{
 	width: 100%;
@@ -119,12 +119,12 @@ html, body{
 	margin: 10px 0 20px -400px;
 }
 .featured:after {
-    content:"";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    height: 0;
-    font-size: 0;
+	content:"";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	font-size: 0;
 }
 .featured .title{
 	position: absolute;
@@ -324,12 +324,12 @@ html, body{
 #post_container pre{
 	border-left: 4px solid rgb(245,160,10);
 	padding: 5px 20px;
-    background: -webkit-linear-gradient(bottom, rgba(230,230,230,0.1) 0, transparent 1px) 0 22px;
-    background: -moz-linear-gradient(bottom, rgba(230,230,230,0.1) 0, transparent 1px) 0 22px;
-    background: linear-gradient(bottom, rgba(230,230,230,0.1) 0, transparent 1px) 0 22px;
-    -webkit-background-size: 100% 24px;
-    -moz-background-size: 100% 24px;
-    background-size: 100% 24px;
+	background: -webkit-linear-gradient(bottom, rgba(230,230,230,0.1) 0, transparent 1px) 0 22px;
+	background: -moz-linear-gradient(bottom, rgba(230,230,230,0.1) 0, transparent 1px) 0 22px;
+	background: linear-gradient(bottom, rgba(230,230,230,0.1) 0, transparent 1px) 0 22px;
+	-webkit-background-size: 100% 24px;
+	-moz-background-size: 100% 24px;
+	background-size: 100% 24px;
 	background-color: rgb(255,255,255);
 	font-size: 15px;
 	line-height: 24px;

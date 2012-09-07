@@ -46,49 +46,49 @@ $(function()
 			context: 'mobile-portrait',
 			callback: function() {
 				query_actions('mobile-portrait');
-				_body.addClass('mobile portrait hide-line-text nav-narrow').removeClass('tablet-small nav-wide landscape tablet screen wide-screen');
+				_body.addClass('mobile portrait hide-line-text nav-narrow').removeClass('hovers tablet-small nav-wide landscape tablet screen wide-screen');
 			}
 		},
 		{
 			context: 'mobile-landscape',
 			callback: function() {
 				query_actions('mobile-landscape');
-				_body.addClass('mobile landscape hide-line-text nav-narrow').removeClass('tablet-small nav-wide portrait tablet screen wide-screen');
+				_body.addClass('mobile landscape hide-line-text nav-narrow').removeClass('hovers tablet-small nav-wide portrait tablet screen wide-screen');
 			}
 		},
 		{
 			context: 'tablet-small',
 			callback: function() {
 				query_actions('tablet-small');
-				_body.addClass('tablet-small hide-line-text nav-narrow').removeClass('nav-wide tablet mobile screen wide-screen');
+				_body.addClass('hovers tablet-small hide-line-text nav-narrow').removeClass('nav-wide tablet mobile screen wide-screen');
 			}
 		},
 		{
 			context: 'tablet',
 			callback: function() {
 				query_actions('tablet');
-				_body.addClass('tablet hide-line-text nav-narrow').removeClass('tablet-small nav-wide mobile screen wide-screen');
+				_body.addClass('hovers tablet hide-line-text nav-narrow').removeClass('tablet-small nav-wide mobile screen wide-screen');
 			}
 		},
 		{
 			context: 'min-screen',
 			callback: function() {
 				query_actions('min-screen');
-				_body.addClass('nav-wide min-screen hide-line-text').removeClass('tablet-small mobile tablet wide-screen nav-narrow');
+				_body.addClass('hovers nav-wide min-screen hide-line-text').removeClass('tablet-small mobile tablet wide-screen nav-narrow');
 			}
 		},
 		{
 			context: 'screen',
 			callback: function() {
 				query_actions('screen');
-				_body.addClass('nav-wide screen').removeClass('tablet-small mobile tablet wide-screen min-screen hide-line-text nav-narrow');
+				_body.addClass('hovers nav-wide screen').removeClass('tablet-small mobile tablet wide-screen min-screen hide-line-text nav-narrow');
 			}
 		},
 		{
 			context: 'wide-screen',
 			callback: function() {
 				query_actions('wide-screen');
-				_body.addClass('nav-wide screen wide-screen').removeClass('tablet-small mobile tablet min-screen hide-line-text nav-narrow');
+				_body.addClass('hovers nav-wide screen wide-screen').removeClass('tablet-small mobile tablet min-screen hide-line-text nav-narrow');
 			}
  		}
 	];

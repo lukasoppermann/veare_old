@@ -23,14 +23,14 @@
 	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.2), 0px 1px 2px 0px rgba(0,0,0,0.1);
 	-webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.2), 0px 1px 2px 0px rgba(0,0,0,0.1);
 }
-.card-flip:hover .card{
+.hovers .card-flip:hover .card{
 	-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.3);
 	box-shadow: 0 15px 50px rgba(0,0,0,0.3);	
 }
 .card-flip{
 	z-index: 10;
 }
-.card-flip:hover{
+.hovers .card-flip:hover{
 	z-index: 90;
 }
 /*---------------------------------*/
@@ -59,7 +59,7 @@
 	backface-visibility: hidden;
 	opacity: 0.99;
 }
-.card-flip .front, .card-flip:hover .back{
+.card-flip .front, .hovers .card-flip:hover .back{
 	-webkit-transform: perspective(600px) rotateY( 0deg );
 	-moz-transform: perspective(600px) rotateY( 0deg );
 	transform: perspective(600px) rotateY( 0deg );	
@@ -71,7 +71,7 @@
 	transform: perspective(600px) rotateY( -180deg );
 	z-index: 800;
 }
-.card-flip:hover .front {
+.hovers .card-flip:hover .front {
 	-webkit-transform: rotateY( 180deg );
 	-moz-transform: rotateY( 180deg );
 	transform: rotateY( 180deg );

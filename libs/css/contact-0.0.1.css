@@ -88,7 +88,7 @@
 	width: 240px;
 	margin: -183px 0 0 0px;
 }
-.marker-wrapper:hover{
+.hovers .marker-wrapper:hover{
 	margin: -190px 0 0 0px !important;
 	transition: all .4s ease;   
 	-webkit-transition: all .4s ease;
@@ -96,7 +96,7 @@
 	-o-transition: all .4s ease;
 	-ms-transition: all .4s ease;
 }
-.marker-wrapper:hover .shadow{
+.hovers .marker-wrapper:hover .shadow{
 	margin-top: 10px;
 	transition: all .4s ease;   
 	-webkit-transition: all .4s ease;
@@ -157,7 +157,7 @@
 .veare-contact .contact-detail .content a{
 	text-decoration: none;
 }
-.veare-contact .contact-detail .content a:hover{
+.hovers .veare-contact .contact-detail .content a:hover{
 	text-decoration: underline;
 }
 .veare-about .content{

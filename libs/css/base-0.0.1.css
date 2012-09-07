@@ -56,12 +56,12 @@ only screen and (                min-resolution: 2dppx) {
 	display: block;	
 	float: left;
 	width: 100%;
-	padding: 15px;
-	height: 144px;
-	margin: 10px 0 20px 0px;	
+	padding: 0 15px 15px;
+	height: 150px;
+	margin: 20px 0 20px 0px;	
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
+	box-sizing: border-box;
 }
 .mobile #logo{
 	width: 70px;
@@ -96,6 +96,8 @@ only screen and (                min-resolution: 2dppx) {
 	-moz-transition: margin .318s;
 	-o-transition: margin .318s;
 	transition: margin .318s;
+	position: relative;
+	float: left;
 }
 .screen #logo:hover .logo-img{
 	margin-top: 2px;
