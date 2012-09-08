@@ -28,7 +28,7 @@ $(function(){
 			}
 		};
 		// action
-		if( !$('body').hasClass('mobile') )
+		if( !$('body').hasClass('mobile') && !$('body').hasClass('loaded-tablet') )
 		{
 			// make section menu stick to top
 			var section_menu_top = _section_menu.offset().top;
@@ -74,7 +74,7 @@ $(function(){
 			});
 		  }
 		}
-	 });
+		});
 	});
 	
 	_window.fs_resize(function(){

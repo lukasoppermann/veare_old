@@ -42,6 +42,8 @@
 	clear: both;
 }
 .section-menu a{
+	display: block;
+	float: left;
 	padding: 7px 10px;
 	text-decoration: none;
 	font-size: 100%;
@@ -128,6 +130,10 @@ section p strong{
 }
 .tags{
 	float: left;
+	font-size: 90%;
+}
+.tags [class*="tag-"]{
+	margin: 0 10px;
 }
 .article{
 	margin: 30px 50px 50px 50px;

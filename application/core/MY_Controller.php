@@ -33,7 +33,7 @@ class MY_Controller extends CI_Controller {
 		// development !!!!!!!!
 		js_add('jquery');
 		//////////////
-		css_add(array('reset','base','layout','responsiveness','menu', 'gui')); // ,'slogan_line'
+		css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui')); // ,'slogan_line'
 		js_add('jquery.mediaquery, fs.resize, base', 'default');
 		// --------------------------------------------------------------------
 		// Initialize Menus
