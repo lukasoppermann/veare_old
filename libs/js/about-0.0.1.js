@@ -34,7 +34,6 @@ check_active_fn = function()
 // prepare active areas
 var prepare_active_fn = function()
 {
-	console.log('prep');
 	// adjust size of active area & bgs
 	window_height = _window.height();
 	$('.activatable').each(function(index){

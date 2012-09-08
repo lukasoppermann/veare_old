@@ -2,6 +2,9 @@
 	opacity: 1;
 	max-width: 1000px;
 }
+.portfolio-item img{
+	max-width: 100%;
+}
 .type{
 	display: block;
 	margin: 40px 0 0 0;
@@ -73,7 +76,7 @@ header{
 	float: left;
 	border-top: 2px solid rgb(220,220,220);
 	width: 100%;
-	font-size: 20px;
+	font-size: 105%;
 	margin-bottom: 10px;
 }
 header .section-count{
@@ -100,8 +103,11 @@ header h2{
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
 }
-.tablet-small header .section-count, .mobile header .section-count{ width: 30%; }
-.tablet-small header h2, .mobile header h2{ padding: 10px 10px 0 30%; }
+.tablet-small header .section-count{ width: 30%; }
+.tablet-small header h2{padding: 10px 10px 0 30%; }
+.mobile header{ font-size: 100%; }
+.mobile header .section-count{ width: 40%; }
+.mobile header h2{ padding: 10px 10px 0 40%; }
 section .content{
 	float: left;
 }

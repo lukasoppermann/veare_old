@@ -51,12 +51,12 @@ $(function(){
 	
 		section_menu();
 		
-	function filterPath(string) {
-	  return string
-	    .replace(/^\//,'')
-	    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-	    .replace(/\/$/,'');
-	}
+		function filterPath(string) {
+			return string.replace(/^\//,'')
+			.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+			.replace(/\/$/,'');
+		}
+		
 		var locationPath = filterPath(location.pathname);
 		if($.browser.safari) scrollElem = $("body") 
 		else scrollElem = $("html,body")
