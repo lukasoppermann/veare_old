@@ -1,5 +1,4 @@
 <article class="article open_sans">
-	<section>
 		<div class="type column column-five">About veare</div>
 		<div class="column column-five headline-column"><h1 class="main-headline open_sans_bold">Visionary Design</h1></div>
 		<div class="column column-three">
@@ -17,7 +16,6 @@
 				<p>Working with a network of freelancers keeps veare flexible to adapt to your project, budget and schedule.</p>
 			</div>
 		</div>
-	</section>
 	<section class="column-five rearrange section-two activatable" data-rearrange="screen">
 		<div class="column column-two tablet-one quote left">
 			<blockquote class="quote-box">You have to know where you want to be in one year, or even ten years.”</blockquote>
