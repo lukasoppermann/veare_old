@@ -1,23 +1,16 @@
-.mobile section:first-child{ margin-top: 0; }
-.mobile .main-headline{ margin-bottom: 0px }
-section{
-	margin-top: 7%;
-	padding: 20px 0;
+.content .text{
+	display: block;
+	position: relative;
+	z-index: 10;
 }
-.mobile section{
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;	
-	padding: 20px 0;
-}
-.tablet-small .content{ margin-bottom: 40px; }
-.mobile .content{ padding-bottom: 0; }
+/* -------------------------- */
+/* quotes */
 .quote, .quote .quote-box{
 	float: left;
 	display: block;
 	position: relative;
 }
 .quote .quote-box{
-	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
 	font-size: 170%;
 	line-height: 140%;
 	color: rgb(150,150,150);
@@ -25,33 +18,14 @@ section{
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
-	transition: background .4s ease;   
-	-webkit-transition: background .4s ease;
-	-moz-transition: background .4s ease;
-	-o-transition: background .4s ease;
-	-ms-transition: background .4s ease;
+	transition: color .5s ease;   
+	-webkit-transition: color .5s ease;
+	-moz-transition: color .5s ease;
+	-o-transition: color .5s ease;
+	-ms-transition: color .5s ease;
 }
-.quote.left .quote-box{
-	padding: 0px 25px 10px 20px;
-}
-.quote.right .quote-box{
-	padding: 0px 0px 10px 45px;
-}
-.tablet-small .quote .quote-box, .mobile .quote .quote-box{
-	padding: 5px 175px 10px 0px;
-}
-.tablet-small .about-icon, .mobile .about-icon{
-	margin: 5px 0 0 25px !important;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-.tablet-small .quote .quote-box:before, .mobile .quote .quote-box:before{ 
-	left: -10px;
-	margin-right: 0px;
-	font-size: inherit;
-}
-.active .quote .quote-box{ color: rgb(80,160,180); }
+.quote.left .quote-box{ padding: 0px 25px 10px 20px; }
+.quote.right .quote-box{ padding: 0px 0px 10px 45px; }
 .quote-box:before{
 	content: "“";
 	display: block;
@@ -61,13 +35,12 @@ section{
 	left: 0px;
 }
 .right .quote-box:before{ left: 25px; }
-.content .text{
-	display: block;
-	position: relative;
-	z-index: 10;
-}
-h2.adaptive{
-	font-size: 200%;
+.active .quote .quote-box{ color: rgb(80,160,180); }
+.tablet-small .quote .quote-box, .mobile .quote .quote-box{ padding: 5px 175px 10px 0px; }
+.tablet-small .quote .quote-box:before, .mobile .quote .quote-box:before{ 
+	left: -10px;
+	margin-right: 0px;
+	font-size: inherit;
 }
 /* -------------------------- */
 /* about icons */
@@ -88,6 +61,12 @@ h2.adaptive{
 	-ms-transition: background .6s ease;
 }
 .active .about-icon{ background-color: rgb(245,160,10); }
+.tablet-small .about-icon, .mobile .about-icon{
+	margin: 5px 0 0 25px !important;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 .about-icon .icon{
 	background-position: -270px -80px;
 	position: absolute;
