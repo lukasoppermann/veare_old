@@ -145,26 +145,8 @@ background-image: -webkit-linear-gradient(left, rgb(248,248,248) 70%, rgb(243,24
 .wide-screen .column-hide-four{ display: block; }
 /*------------------*/
 /* content */
-.main-headline{
-	display: block;
-	float: left;
-	margin: 0 0 50px 0;
-	font-size: 600%;
-	font-family: "Open Sans Bold", Helvetica, Arial, Sans-serif;
-	font-weight: normal;
-	line-height: 100%;
-	color: rgb(80,80,80);
-}
-.main-headline.small-font{ font-size: 500%; }
-.mobile .main-headline{ font-size: 300%; }
-.sub-headline{
-	margin: -5px 0 20px 0;	
-	font-size: 200%;
-	line-height: 100%;
-	display: block;
-	font-weight: normal;
-	color: rgb(80,80,80);
-}
+/*---------*/
+/* article */
 .article{
 	position: relative;
 	float: left;
@@ -172,22 +154,27 @@ background-image: -webkit-linear-gradient(left, rgb(248,248,248) 70%, rgb(243,24
 	font-size: 120%;
 	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
 	font-weight: normal;
-	padding: 30px 0 50px 50px;
+	padding: 7% 50px 50px 50px;
 	opacity: 0;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
 }
-.article p{ margin-bottom: 10px; }
-.article{ padding: 7% 50px 50px 50px; }
 .tablet-small .article{ padding: 2% 5px 30px 10px; }
 .mobile .article{ padding: 0px 5px 30px 5px; }
+.article p{ margin-bottom: 10px; }
+/* section */
 section{
 	position: relative;
 	float: left;
 	width: 100%;
 }
 .mobile section{ margin: 20px 0 0 0; }
+section strong{
+	display: inline-block;
+	color: rgb(80,80,80);
+	font-weight: bold;
+}
 /* Excerpt */
 .excerpt{
 	font-style: italic;
@@ -206,3 +193,24 @@ section{
 	color: rgb(180,180,180);
 }
 .mobile .type{ font-size: 180%; }
+/* headlines */
+.main-headline{
+	display: block;
+	float: left;
+	margin: 0 0 50px 0;
+	font-size: 600%;
+	font-family: "Open Sans Bold", Helvetica, Arial, Sans-serif;
+	font-weight: normal;
+	line-height: 100%;
+	color: rgb(80,80,80);
+}
+/*.main-headline.small-font{ font-size: 500%; }*/
+.mobile .main-headline{ font-size: 300%; }
+.sub-headline{
+	margin: -5px 0 20px 0;	
+	font-size: 200%;
+	line-height: 100%;
+	display: block;
+	font-weight: normal;
+	color: rgb(80,80,80);
+}

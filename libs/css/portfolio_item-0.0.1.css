@@ -105,10 +105,6 @@ section p{
 	color: rgb(120,120,120);
 	margin: 10px 0;
 }
-section p strong{
-	display: inline-block;
-	color: rgb(80,80,80);
-}
 .right{ float: right; }
 .left{ float: left; }
 .full-height{
