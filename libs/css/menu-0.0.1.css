@@ -68,17 +68,28 @@
 	width: 180px;
 	margin-right: 15px;
 }
-.mobile.portrait #nav .item, .mobile.portrait #nav .item .menu-item-link{
+.mobile.portrait #nav .item{
 	float: left;
 	overflow: hidden;
 	width: 60px;
-	height: 50px;
+	height: 100%;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
 }
-.mobile.portrait #nav .item .icon{
-	left: 15px;
+.mobile.portrait #nav .item .menu-item-link{
+	width: 50px;
+	float: left;
+	overflow: hidden;
+	height: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+
+}
+.mobile.portrait #nav .item .icon{ 
+	top: 14px;
+	left: 15px; 
 }
 .nav-narrow #nav .item .menu-item-link .text{ display:none; }
 /*------------------*/

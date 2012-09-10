@@ -47,7 +47,7 @@ function show_tags( &$string = null, $limit = 5, $link = false )
 			for( $i = 0; $i < $limit && $i < $c; $i++ )
 			{
 				$tag = trim($tags[$i]);
-				$output[] = '<span class="tag-'.$tag.'">#'.$tag.'</span>';
+				$output[] = '<span class="tag-'.$tag.'">'.$tag.'</span>';
 			}
 		}
 		// return output

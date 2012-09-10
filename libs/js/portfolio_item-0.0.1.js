@@ -41,8 +41,8 @@ $(function(){
 		}
 		else
 		{
+			_logo.stop().attr('style', '');
 			_section_menu.removeClass('fixed').attr('style','');
-			_logo.stop().attr({'style': ''});
 			_window.unbind("scroll", activate_menu);
 		}
 	}

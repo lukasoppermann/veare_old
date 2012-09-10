@@ -50,7 +50,7 @@ background-image: -webkit-linear-gradient(left, rgb(248,248,248) 70%, rgb(243,24
 	width: 100%;
 	height: 50px;
 }
-.mobile{ display: block; }
+.mobile #footer{ display: block; }
 .mobile.landscape #footer{
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -64,16 +64,16 @@ background-image: -webkit-linear-gradient(left, rgb(248,248,248) 70%, rgb(243,24
 	float: left;
 	overflow: hidden;
 	width: 100%;
-	padding: 0 0 0 180px; /* 100px */
+	padding: 0 0 50px 180px; /* 100px */
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
 }
 .nav-narrow #stage{
-	padding: 0 0 0 80px;
+	padding: 0 0 50px 80px;
 }
 .nav-narrow.mobile.portrait #stage{
-	padding: 55px 0 25px 0;
+	padding: 55px 0 55px 0;
 }
 /* column */
 .column{
@@ -183,3 +183,20 @@ section{
 	position: relative;
 	float: left;
 }
+.mobile section{ margin: 20px 0 0 0; }
+.excerpt{
+	font-style: italic;
+	font-size: 180%;
+	line-height: 130%;
+	color: rgb(80,160,180);
+	margin-bottom: 10px;
+}
+.mobile .excerpt{ font-size: 150%; }
+.type{
+	display: block;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;	
+	font-size: 200%;
+	color: rgb(180,180,180);
+}
+.mobile .type{ font-size: 180%; }
