@@ -1,10 +1,6 @@
-.portfolio-item{
-	opacity: 1;
-	max-width: 1000px;
-}
-.portfolio-item img{
-	max-width: 100%;
-}
+.portfolio-item{ opacity: 1; max-width: 1000px; }
+/* ----------------------- */
+/* section menu */
 .mobile .section-menu, .tablet-small .section-menu{ display: none; }
 .section-menu{
 	position: relative;
@@ -34,10 +30,7 @@
 }
 .tablet .section-menu.fixed{ font-size: 85%; }
 .nav-narrow .section-menu.fixed{ padding-left: 130px; }
-.section-menu:after{
-	content: " ";
-	clear: both;
-}
+.section-menu:after{ content: " "; clear: both; }
 .section-menu a{
 	display: block;
 	float: left;
@@ -54,7 +47,10 @@
 .tablet-small .section-menu a{ font-size: 80%; }
 .section-menu.fixed a{ padding: 12px 7px; }
 .hovers .section-menu a:hover{ color: rgb(80,80,80); }
+/* ----------------------- */
+/* content */
 .excerpt{ color: rgb(150,150,150); }
+/* section */
 section{
 	position: relative;
 	font-size: 100%;
@@ -105,17 +101,11 @@ section p{
 	color: rgb(120,120,120);
 	margin: 10px 0;
 }
-.right{ float: right; }
-.left{ float: left; }
-.full-height{
-	height: 100%;
-}
+/* tags */
 .tags{
 	float: left;
 	font-size: 90%;
 	color: rgb(150,150,150);
 }
 .tags .icon{ float: left; opacity: 0.5; }
-.tags [class*="tag-"]{
-	margin: 0 6px;
-}
+.tags [class*="tag-"]{ margin: 0 6px; }
