@@ -194,6 +194,7 @@ section strong{
 }
 .mobile .type{ font-size: 180%; }
 /* headlines */
+.column.headline-column{ margin-top: 0; margin-bottom: 0; }
 .main-headline{
 	display: block;
 	float: left;

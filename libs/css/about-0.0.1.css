@@ -1,6 +1,5 @@
 .mobile section:first-child{ margin-top: 0; }
 .mobile .main-headline{ margin-bottom: 0px }
-.column.headline-column{ margin-top: 0; margin-bottom: 0; }
 section{
 	margin-top: 7%;
 	padding: 20px 0;
@@ -62,8 +61,20 @@ section{
 	left: 0px;
 }
 .right .quote-box:before{ left: 25px; }
+.content .text{
+	display: block;
+	position: relative;
+	z-index: 10;
+}
+h2.adaptive{
+	font-size: 200%;
+}
+/* -------------------------- */
+/* about icons */
 .about-icon{
 	position: relative;
+	float: right;
+	margin-right: 25px;
 	display: block;
 	z-index: 10;
 	height: 150px;
@@ -76,10 +87,7 @@ section{
 	-o-transition: background .6s ease;
 	-ms-transition: background .6s ease;
 }
-.about-icon.vision{
-	float: right;
-	margin-right: 25px;
-}
+.active .about-icon{ background-color: rgb(245,160,10); }
 .about-icon .icon{
 	background-position: -270px -80px;
 	position: absolute;
@@ -88,29 +96,10 @@ section{
 	width: 120px;
 	height: 120px;
 }
-.about-icon.vision .icon{ background-position: -270px 0px; }
-.about-icon.intelligent-design .icon{ background-position: -390px 0px; }
-.about-icon.modern-branding .icon{ background-position: -270px -120px; }
-.about-icon.interface-design .icon{ background-position: -390px -120px; }
-.about-icon.intelligent-design, .about-icon.interface-design{
-	float: right;
-	margin-left: 25px;
-}
-.about-icon.modern-branding{
-	float: right;
-	margin-right: 25px;
-}
-.active .about-icon{
-	background-color: rgb(245,160,10);
-}
-.content .text{
-	display: block;
-	position: relative;
-	z-index: 10;
-}
-h2.adaptive{
-	font-size: 200%;
-}
+.vision .icon{ background-position: -270px 0px; }
+.intelligent-design .icon{ background-position: -390px 0px; }
+.modern-branding .icon{ background-position: -270px -120px; }
+.interface-design .icon{ background-position: -390px -120px; }
 /* -------------------------- */
 /* active bg */
 .mobile .active-bg{ display: none; }
