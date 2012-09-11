@@ -46,6 +46,9 @@ section{
 	margin-right: 0px;
 	font-size: inherit;
 }
+.tablet-small .quote{
+	margin-top: 40px;
+}
 /* -------------------------- */
 /* about icons */
 .about-icon{
@@ -64,6 +67,7 @@ section{
 	-o-transition: background .6s ease;
 	-ms-transition: background .6s ease;
 }
+.right .about-icon{ margin: 0 0 0 25px; }
 .active .about-icon{ background-color: rgb(245,160,10); }
 .tablet-small .about-icon, .mobile .about-icon{
 	margin: 5px 0 0 25px !important;
@@ -110,3 +114,4 @@ section{
 .active-bg.left{ margin-left: -100%; }
 .active-bg.right{ margin-left: 150%; }
 .active .active-bg.left, .active .active-bg.right{ margin-left: 0 !important; }
+.tablet-small .active .active-bg.left, .tablet-small .active .active-bg.right{ margin-left: 15px !important; }

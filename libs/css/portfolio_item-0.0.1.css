@@ -57,6 +57,8 @@ section{
 	margin: 50px 0 0 0;
 	float: left;
 }
+.wide-screen section{ padding-left: 19%; }
+.wide-screen header{ margin-left: -19%; }
 header{
 	position: relative;
 	float: left;
@@ -109,3 +111,12 @@ section p{
 }
 .tags .icon{ float: left; opacity: 0.5; }
 .tags [class*="tag-"]{ margin: 0 6px; }
+.slideshow img{
+	float: left;
+	margin-right: 30px;
+	border: 1px solid rgb(235,235,235);
+}
+.slideshow{
+	overflow: hidden;
+	height: 352px;
+}
