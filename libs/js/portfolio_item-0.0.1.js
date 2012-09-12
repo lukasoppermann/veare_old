@@ -70,7 +70,7 @@ $(function(){
 				$(this).click(function(event) {
 				 	event.preventDefault();
 				 	var targetOffset =  Math.round($target.offset().top);
-				 	$(scrollElem).animate({scrollTop: targetOffset-60}, 400);
+				 	$(scrollElem).animate({scrollTop: targetOffset-70}, 400);
 			});
 		  }
 		}

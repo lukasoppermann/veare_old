@@ -184,6 +184,13 @@ section strong{
 	margin-bottom: 10px;
 }
 .mobile .excerpt{ font-size: 150%; }
+/* Quote */
+.quote{
+	font-size: 140%;
+	line-height: 130%;
+	color: rgb(150,150,150);
+	background: transparent;
+}
 /* Type */
 .type{
 	display: block;
