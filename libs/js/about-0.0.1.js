@@ -163,6 +163,7 @@ _window.load( function()
 			_this.find('.quote').insertBefore(_this.find('.content'));
 		});
 	}
+	prepare_active_fn();
 	//------------------------------------
 	_window.on('scroll', function()
 	{
