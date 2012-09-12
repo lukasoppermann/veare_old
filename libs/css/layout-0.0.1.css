@@ -195,6 +195,8 @@ section strong{
 .mobile .type{ font-size: 180%; }
 /* headlines */
 .column.headline-column{ margin-top: 0; margin-bottom: 0; }
+.column.image.center{ text-align: center; }
+.column.image.center img{ display: inline-block }
 .main-headline{
 	display: block;
 	float: left;

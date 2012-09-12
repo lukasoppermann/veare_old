@@ -112,7 +112,6 @@ section p{
 .tags .icon{ float: left; opacity: 0.5; }
 .tags [class*="tag-"]{ margin: 0 6px; }
 .slideshow img{
-	float: left;
 	margin-right: 30px;
 	border: 1px solid rgb(235,235,235);
 }

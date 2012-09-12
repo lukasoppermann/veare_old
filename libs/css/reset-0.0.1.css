@@ -54,7 +54,7 @@ img{
 	padding: 0;
 	margin: 0;	
 	border: 0;
-	float: left;
+	position: relative;
 }
 a, span{
 	color: inherit;
