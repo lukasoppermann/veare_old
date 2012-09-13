@@ -57,15 +57,20 @@ section{
 	margin: 50px 0 0 0;
 	float: left;
 }
-.wide-screen section{ padding-left: 19%; }
-.wide-screen header{ margin-left: -19%; }
+.wide-screen section{ padding-left: 20%; }
+.wide-screen header{ width: 120% !important; margin-left: -20%; }
+.wide-screen header h2{ padding-left: 0; }
+.wide-screen header .section-count{  }
 header{
 	position: relative;
-	float: left;
 	border-top: 2px solid rgb(220,220,220);
 	width: 100%;
 	font-size: 105%;
 	margin-bottom: 10px;
+}
+header:after{
+	content: "";
+	clear: both;
 }
 header .section-count{
 	text-align: right;
@@ -111,6 +116,7 @@ section p{
 }
 .tags .icon{ float: left; opacity: 0.5; }
 .tags [class*="tag-"]{ margin: 0 6px; }
+/* slideshow */
 .slideshow img{
 	margin-right: 30px;
 	border: 1px solid rgb(235,235,235);
@@ -119,3 +125,11 @@ section p{
 	overflow: hidden;
 	height: 352px;
 }
+/* ----------------------- */
+/* colors */
+.color{
+	height: 200px;
+	width: 100%;
+}
+.color-main{ height: 40%; }
+.color-sub{ height: 20%; }
