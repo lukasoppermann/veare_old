@@ -1,4 +1,4 @@
-.portfolio-item{ opacity: 1; max-width: 1000px; }
+.portfolio-item{ opacity: 1; max-width: 1200px; }
 /* ----------------------- */
 /* section menu */
 .mobile .section-menu, .tablet-small .section-menu{ display: none; }
@@ -34,7 +34,7 @@
 .section-menu a{
 	display: block;
 	float: left;
-	padding: 7px;
+	padding: 7px 10px;
 	text-decoration: none;
 	color: rgb(150,150,150);
 	transition: color .4s ease .3s;   
@@ -54,18 +54,35 @@
 section{
 	position: relative;
 	font-size: 100%;
-	margin: 50px 0 0 0;
+	padding: 50px 0;
 	float: left;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
 }
-.wide-screen section{ padding-left: 20%; }
-.wide-screen header{ width: 120% !important; margin-left: -20%; }
-.wide-screen header h2{ padding-left: 0; }
-.wide-screen header .section-count{  }
+.wide-screen section{ 
+	padding-left: 19%; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wide-screen header{ 
+	position: absolute; 
+	left: 0;
+	top: 0;
+}
+.wide-screen header h2{ 
+	padding-left: 20%; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	position: relative; 
+}
 header{
 	position: relative;
 	border-top: 2px solid rgb(220,220,220);
-	width: 100%;
-	font-size: 105%;
+	width: 100% !important;
+	font-size: 100%;
 	margin-bottom: 10px;
 }
 header:after{
