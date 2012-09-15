@@ -12,10 +12,12 @@ rgb(80,160,180)
 /* Fonts */
 .open_sans{
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	line-height: 140%;
 }
 .open_sans_bold, .open_sans strong{
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
 	font-weight: bold;
+	line-height: 140%;	
 }
 .wf-active .open_sans{
 	font-family: "Open Sans", Arial, Sans-serif;

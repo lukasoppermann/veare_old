@@ -163,6 +163,7 @@ background-image: -webkit-linear-gradient(left, rgb(248,248,248) 70%, rgb(243,24
 .tablet-small .article{ padding: 2% 5px 30px 10px; }
 .mobile .article{ padding: 0px 5px 30px 5px; }
 .article p{ margin-bottom: 10px; }
+.article .column p:first-child{ margin-top: 0; padding-top: 0; }
 /* section */
 section{
 	position: relative;
