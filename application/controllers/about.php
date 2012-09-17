@@ -9,7 +9,7 @@ class About extends MY_Controller {
 	}
 	
 	function index( )
-	{	
+	{
 		// font callback
 		$this->data['fonts_callback'] = "function(){
 			// create active bgs
@@ -19,7 +19,11 @@ class About extends MY_Controller {
 		// check for ajax
 		if( isset($_POST['ajax']) )
 		{
-			echo $this->load->view('custom/about', $this->data, TRUE);
+			echo json_encode(array(
+				'content' => $this->load->view('custom/about', $this->data, TRUE),
+				'css' 		=> css('default'),
+				'js' 			=> js('default', TRUE) 
+			));
 		}
 		else
 		{

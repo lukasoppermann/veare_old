@@ -2,15 +2,15 @@ $(function()
 {
 	// -----------------------
 	// when everything is fully loaded
-	$(window).load( function() {
-		if( !$('body').hasClass('mobile'))
+	$(window).load( function()
+	{
+		if( !$('body').hasClass('mobile') )
 		{
 			var lat = 52.546167;
 			var lng = 13.4145;
 			var zoom = 15;
-			
-			
-			$('#stage').height($(window).height());
+				
+			$('#stage, #stage .current-page').css({'height':$(window).height(),'paddingBottom':0});
 			var content = '<div class="marker-wrapper">'+$('.veare-contact').attr('class', 'veare-contact').clone().wrap('<div class="wrap" />').parents('.wrap').html()+'<div class="shadow"></div></div>';
 			// draw map
 			var map, dragevent;

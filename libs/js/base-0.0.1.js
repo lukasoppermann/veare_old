@@ -35,13 +35,14 @@ $(function()
 			$.ajax({
 				type : 'post',
 				data: {'ajax':true},
-				dataType: 'html',
+				dataType: 'json',
 				url: CI_BASE+'en/about',
 			}).done(function(response)
 			{
-				_stage.prepend('<div id="about" class="hidden-page" style="display:none;">'+response+'</div>');
+				_stage.prepend('<div id="about" class="hidden-page" style="display:none;">'+response.content+'</div>');
 				$('.current-page').fadeOut();
 				$('#about').addClass('current-page').removeClass('hidden-page').css({'display':'block','marginTop':50}).animate({'opacity':1,'marginTop':0}, 500);
+				$('head').append(response.css+response.js);
 			}
 			).fail(function(){ 
 				alert("Something went wrong."); 
@@ -53,10 +54,10 @@ $(function()
 			$('#about').addClass('current-page').removeClass('hidden-page').fadeIn();
 		}
 	}
-	$('#nav').on('click', '.menu-item-link', function(e){	
-		e.preventDefault();
-		content();
-	});
+	// $('#nav').on('click', '.menu-item-link', function(e){	
+	// 	e.preventDefault();
+	// 	content();
+	// });
 	// -----------------------
 	// query actions	
 	var query_actions = function( resolution )
