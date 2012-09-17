@@ -11,7 +11,7 @@ $(function(){
 		var _section_menu = $('.section-menu');
 		// function
 		activate_menu = function()
-		{	
+		{
 			if(section_menu_top_active < _window.scrollTop() && !_body.hasClass('mobile') && !_body.hasClass('tablet-small') && !_body.hasClass('loaded-tablet'))
 			{
 				if( menu_fixed == false )
@@ -32,8 +32,8 @@ $(function(){
 		if( !_body.hasClass('mobile') && !_body.hasClass('tablet-small') && !_body.hasClass('loaded-tablet') )
 		{
 			// make section menu stick to top
-			var section_menu_top = _section_menu.offset().top;
-			var section_menu_top_active = section_menu_top + _section_menu.height()+10;
+			var section_menu_top = Math.round(_section_menu.offset().top);
+			var section_menu_top_active = Math.round(section_menu_top + _section_menu.height()+10);
 			var menu_fixed = false;
 			// run activate_menu
 			activate_menu();
@@ -88,7 +88,7 @@ $(function(){
 	});
 	
 	_window.fs_resize(function(){
-		
+		section_menu();
 		$('.column').fs_equal_height();
 		 
 	});
