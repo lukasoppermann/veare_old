@@ -56,3 +56,4 @@ else
 	<div class="wrapper">
 		<div class="left-column-wrapper">		
 			<div id="stage">
+				<div class="current-page">

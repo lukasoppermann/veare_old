@@ -8,17 +8,24 @@ class About extends MY_Controller {
 		parent::__construct();
 	}
 	
-	function index()
+	function index( )
 	{	
-		css_add('about');
-		js_add('about');
 		// font callback
 		$this->data['fonts_callback'] = "function(){
 			// create active bgs
 			$('body').trigger('resize');
 		}";
-		// load view
-		view('custom/about', $this->data);
+		
+		// check for ajax
+		if( isset($_POST['ajax']) )
+		{
+			echo $this->load->view('custom/about', $this->data, TRUE);
+		}
+		else
+		{
+			// load view
+			view('custom/about', $this->data);
+		}
 	}
 // close class
 }

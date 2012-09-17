@@ -1,17 +1,18 @@
 // once jquery is loaded
 $(function(){
 	// defining vars
-	var _window = $(window);
-	var _logo = $('#logo');
+	var _window = $(window),
+			_logo = $('#logo'),
+			_body = $('body');
 	// defining functions
 	// section menu
 	var section_menu = function()
 	{	
 		var _section_menu = $('.section-menu');
 		// function
-		var activate_menu = function()
-		{
-			if(section_menu_top_active < _window.scrollTop())
+		activate_menu = function()
+		{	
+			if(section_menu_top_active < _window.scrollTop() && !_body.hasClass('mobile') && !_body.hasClass('tablet-small') && !_body.hasClass('loaded-tablet'))
 			{
 				if( menu_fixed == false )
 				{
@@ -28,7 +29,7 @@ $(function(){
 			}
 		};
 		// action
-		if( !$('body').hasClass('mobile') && !$('body').hasClass('loaded-tablet') )
+		if( !_body.hasClass('mobile') && !_body.hasClass('tablet-small') && !_body.hasClass('loaded-tablet') )
 		{
 			// make section menu stick to top
 			var section_menu_top = _section_menu.offset().top;
@@ -37,81 +38,22 @@ $(function(){
 			// run activate_menu
 			activate_menu();
 			// bind scroll fn
-			_window.scroll(activate_menu);
+			_window.bind('scroll', activate_menu);
 		}
 		else
 		{
-			_logo.stop().attr('style', '');
+			_logo.stop().css({'marginTop':'20px'});
 			_section_menu.removeClass('fixed').attr('style','');
-			_window.unbind("scroll", activate_menu);
 		}
 	}
 	// ------------------------------------------------------
 	//
-	var currentTallest = 0,
-	     currentRowStart = 0,
-	     rowDivs = new Array(),
-	     $el,
-	     topPosition = 0;
-			 
-	$('.column').each(function() {
-		 $el = $(this);
-		topPostion = $el.position().top;
-		if (currentRowStart != topPostion) 
-		 {
-			// we just came to a new row.  Set all the heights on the completed row
-			for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-				rowDivs[currentDiv].height(currentTallest);
-			 }
-			 // set the variables for the new row
-			rowDivs.length = 0; // empty the array
-			currentRowStart = topPostion;
-			currentTallest = $el.height();
-			rowDivs.push($el);
-		} 
-		else 
-		{
-			 // another div on the current row.  Add it to the list and check if it's taller
-			 rowDivs.push($el);
-			 currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
-		}
-		// do the last row
-		for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-			 rowDivs[currentDiv].height(currentTallest);
-		 }
-	 });
+
 	// when everything is loaded
 	_window.load(function(){
-	
-		$('.column').height('auto');
-		$('.column').each(function() {
-			$el = $(this);
-			topPostion = $el.position().top;
-			if (currentRowStart != topPostion) 
-			 {
-				// we just came to a new row.  Set all the heights on the completed row
-				for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++)
-				{
-					rowDivs[currentDiv].height(currentTallest);
-				}
-				 // set the variables for the new row
-				rowDivs.length = 0; // empty the array
-				currentRowStart = topPostion;
-				currentTallest = $el.innerHeight();
-				rowDivs.push($el);
-			} 
-			else 
-			{
-				 // another div on the current row.  Add it to the list and check if it's taller
-				 rowDivs.push($el);
-				 currentTallest = Math.max(currentTallest, $el.height());
-			}
-			// do the last row
-			for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-				 rowDivs[currentDiv].height(currentTallest);
-			 }
-		});
-	
+		
+		$('.column').fs_equal_height();
+		
 		section_menu();
 		
 		function filterPath(string) {
@@ -139,38 +81,15 @@ $(function(){
 		}
 		});
 	});
+	//
+	_body.on('resolutionChange', function(e, resolution)
+	{
+		section_menu();
+	});
 	
 	_window.fs_resize(function(){
-		section_menu();
 		
-		$('.column').height('auto');
-		$('.column').each(function() {
-			$el = $(this);
-			topPostion = $el.position().top;
-			if (currentRowStart != topPostion) 
-			 {
-				// we just came to a new row.  Set all the heights on the completed row
-				for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) 
-				{
-					rowDivs[currentDiv].height(currentTallest);
-				}
-				 // set the variables for the new row
-				rowDivs.length = 0; // empty the array
-				currentRowStart = topPostion;
-				currentTallest = $el.innerHeight();
-				rowDivs.push($el);
-			} 
-			else 
-			{
-				 // another div on the current row.  Add it to the list and check if it's taller
-				 rowDivs.push($el);
-				 currentTallest = Math.max(currentTallest, $el.height());
-			}
-			// do the last row
-			for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-				 rowDivs[currentDiv].height(currentTallest);
-			 }
-		});
+		$('.column').fs_equal_height();
 		 
 	});
 });

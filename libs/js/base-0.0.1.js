@@ -27,6 +27,37 @@ $(function()
 		}
 	};
 	// -----------------------
+	// Load Content
+	var content = function(  )
+	{
+		if( $('#about').length == 0 )
+		{
+			$.ajax({
+				type : 'post',
+				data: {'ajax':true},
+				dataType: 'html',
+				url: CI_BASE+'en/about',
+			}).done(function(response)
+			{
+				_stage.prepend('<div id="about" class="hidden-page" style="display:none;">'+response+'</div>');
+				$('.current-page').fadeOut();
+				$('#about').addClass('current-page').removeClass('hidden-page').css({'display':'block','marginTop':50}).animate({'opacity':1,'marginTop':0}, 500);
+			}
+			).fail(function(){ 
+				alert("Something went wrong."); 
+			});
+		}
+		else
+		{
+			$('.current-page').fadeOut();
+			$('#about').addClass('current-page').removeClass('hidden-page').fadeIn();
+		}
+	}
+	$('#nav').on('click', '.menu-item-link', function(e){	
+		e.preventDefault();
+		content();
+	});
+	// -----------------------
 	// query actions	
 	var query_actions = function( resolution )
 	{

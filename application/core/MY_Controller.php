@@ -35,6 +35,7 @@ class MY_Controller extends CI_Controller {
 		//////////////
 		css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui')); // ,'slogan_line'
 		js_add('jquery.mediaquery, fs.resize, base', 'default');
+		js_add_lines("CI_BASE = '".base_url()."';", 'default');
 		// --------------------------------------------------------------------
 		// Initialize Menus
 		$this->data['menu']['main'] = $this->fs_navigation->tree(array(
