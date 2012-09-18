@@ -70,7 +70,7 @@ The hardest part of modern, adaptive design, is to let go of some control. But b
 				<p>An interface should be driven by information, because information is the single most important part of any application. This includes websites as well as applications on a desktop or on a phone.
 This is why I focus on the information architecture first. Once the information is structured, an interface is created to allow fast and easy access. 
 				</p><p>
-As an interface designer I optimise for usability and performance. Users should focus on what they want to do rather than how to do it. This is why every piece of information has to be easily accessible. By combining a good information architecture and an easy to use interface, I deliver an enjoyable user experience.
+As an interface designer I optimise for usability and performance. Users should focus on what they want to do rather than how to do it. This is why every piece of information has to be easily accessible. By combining good information architecture and an easy to use interface, I deliver an enjoyable user experience.
 				</p>
 			</div>
 			<div class="active-bg left"></div>
