@@ -81,7 +81,7 @@ class Portfolio extends MY_Controller {
 	{
 		// add assets
 		css_add('portfolio_item');
-		js_add('fs.equal_height, portfolio_item');
+		js_add('fs.equal_height, fs.top_menu, portfolio_item');
 		//
 		$this->data['body_class'] = variable($this->data['body_class']).' item-view';
 		// get items from database

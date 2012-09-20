@@ -1,3 +1,5 @@
+// jquery equal height fn
+//
 (function($) {
 	$.fn.fs_equal_height = function(){
 		// create variables

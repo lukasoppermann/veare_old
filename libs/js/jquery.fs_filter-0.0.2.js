@@ -20,15 +20,15 @@
 			//
 			if(_this.hasClass(settings['all']))
 			{
-				_list.find(settings['filter']).not("."+settings['all']+", ."+settings['none'] ).addClass('active');			
+				_list.find(settings['filter']).not("."+settings['all']+", ."+settings['none'] ).addClass('active');
 			}
 			else if(_this.hasClass(settings['none']))
 			{
-				_list.find(settings['filter']).removeClass('active');			
+				_list.find(settings['filter']).removeClass('active');
 			}
 			else
 			{
-				_this.toggleClass('active');			
+				_this.toggleClass('active');
 			}
 			// get filters
 			$(settings['filters']).each(function(){
