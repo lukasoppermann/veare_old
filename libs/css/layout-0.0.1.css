@@ -194,6 +194,10 @@ section strong{
 	color: rgb(150,150,150);
 	background: transparent;
 }
+.word-description{
+	font-style: italic;
+	color: rgb(180,180,180);
+}
 /* Type */
 .article .type{
 	display: block;

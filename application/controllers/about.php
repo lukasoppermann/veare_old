@@ -11,10 +11,7 @@ class About extends MY_Controller {
 	function index( )
 	{
 		// font callback
-		$this->data['fonts_callback'] = "function(){
-			// create active bgs
-			$('body').trigger('resize');
-		}";
+		$this->data['fonts_callback'][] = "$('body').trigger('resize');";
 		
 		// check for ajax
 		if( isset($_POST['ajax']) )

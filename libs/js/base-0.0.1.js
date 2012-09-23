@@ -8,6 +8,23 @@ $(function()
 	var _body = $('body');
 	var _stage = $('#stage');
 	var loaded = false;
+	window.loaded = false;
+	// -----------------------
+	// window loaded
+	$(window).load(function(){
+		window.loaded = true;
+	});
+	var window_loaded = function()
+	{
+		if( windowLoaded === false )
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
 	// -----------------------
 	// Animate Content
 	var animate_content = function( resolution )
