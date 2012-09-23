@@ -1,6 +1,4 @@
 .slideshow{
-	width: 660px;
-	height: 380px;
 	margin: -15px 0 25px -25px;	
 	overflow: hidden;
 	position: relative;
@@ -12,7 +10,6 @@
 	width: 10000px;	
 }
 .slideshow .slide{
-	width: 660px;
 	height: 100%;
 	float: left;
 	position: relative;
@@ -37,4 +34,7 @@
 	-ms-transition: all .4s ease;
 }
 .slideshow .slide.loaded:before{opacity: 0;}
-.slideshow img{float: left;}
+.slideshow img{
+	float: left;
+	max-width: 100%;
+}

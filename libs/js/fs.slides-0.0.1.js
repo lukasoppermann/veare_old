@@ -30,11 +30,23 @@
 			_images 	= _this.find(methods.settings.image);
 			_first 		= _images.first();
 			_wrap 		= _this.find(methods.settings.wrap);
-			// check height and width
-			if( methods.settings.width == 0 ){ methods.settings.width = _this.width(); }
-			if( methods.settings.height == 0 ){ methods.settings.height = _this.height(); }
 			// resize slider
-			_this.css({'height':methods.settings.height});
+			if( methods.settings.height != 0 )
+			{
+				_this.css({'height':methods.settings.height});
+			}
+			// width
+			if( methods.settings.width != 0 )
+			{
+				_this.css({'width':methods.settings.width});
+			}
+			else
+			{
+				// if width = 0, set width
+				methods.settings.width = _this.css('width');
+			}
+			// set image width
+			_images.width(methods.settings.width);
 			// add click event for move
 			_this.on({
 				click: function()
@@ -78,6 +90,10 @@
 				// load image
 				_img.attr('src', _img.data('src')).load(function()
 				{
+					if( methods.settings.height == 0)
+					{
+						methods.settings.height = image.css('height');
+					}
 					// once image is loaded
 					image.addClass('loaded');
 					methods.load(image.next(methods.settings.image));
@@ -189,7 +205,7 @@
 		wrap: 				'.image-wrap',
 		image: 				'.slide',
 		width: 				0,
-		height: 			350,
+		height: 			0,
 		speed: 				5000,
 		easing: 			'swing'
 	};
