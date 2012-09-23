@@ -32,7 +32,7 @@
 			// add refresh to resize event
 			_window.on('resize', function(){
 				clearTimeout( resize_fn );
-				resize_fn = setTimeout( methods.refresh, 100)
+				resize_fn = setTimeout( methods.refresh, 100);
 			});
 		},
 		// refresh calculations for offset

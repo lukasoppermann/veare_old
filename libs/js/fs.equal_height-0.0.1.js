@@ -32,11 +32,15 @@
 				 row_divs.push(_this);
 				 current_tallest = Math.max(current_tallest, _this.height());
 			}
-			// do the last row
-			for(var current_div = 0, len = row_divs.length; current_div < len; current_div++)
+			// do the last row if more than 1 item in it
+			var len = row_divs.length;
+			if( len > 1)
 			{
-				 row_divs[current_div].height(current_tallest);
-			 }
+				for(var current_div = 0, current_div < len; current_div++)
+				{
+					 row_divs[current_div].height(current_tallest);
+				}
+			}
 		});
 		// return columns for chainability
 		return _column;

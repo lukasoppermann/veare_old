@@ -11,7 +11,7 @@
 // define functions 
 ;(function( $, window, document )
 {
-	var _this, _window, _current, _next, _previous, _first, remaining, _wrap, _images, autoplay, start;
+	var _this, _window, _current, _next, _previous, _first, remaining, _wrap, _images, autoplay, start, resize_fn;
 	// methods
 	var methods = {
 		// settings object
@@ -43,7 +43,15 @@
 			else
 			{
 				// if width = 0, set width
-				methods.settings.width = _this.css('width');
+				if( methods.settings.max_width == 0 || methods.settings.max_width >= _this.css('width'))
+				{
+					methods.settings.width = _this.css('width');
+				}
+				else
+				{
+					methods.settings.width = methods.settings.max_width;
+					_this.css({'width':methods.settings.max_width});
+				}
 			}
 			// set image width
 			_images.width(methods.settings.width);
@@ -79,6 +87,30 @@
 					methods.autoplay();
 				}
 			});
+			// on resize
+			_window.on('resize', function(){
+				clearTimeout( resize_fn );
+				resize_fn = setTimeout( methods.refresh, 100);
+			});
+		},
+		refresh: function()
+		{
+			// height
+			methods.settings.height = _this.css('height');
+			// width
+			if( methods.settings.max_width == 0 || methods.settings.max_width >= _this.css('width'))
+			{
+				methods.settings.width = _this.css('width');
+			}
+			else
+			{
+				methods.settings.width = methods.settings.max_width;
+			}
+			// set image width
+			_images.width(methods.settings.width);
+			_this.css({'height':methods.settings.height,'width':methods.settings.width});
+			// set first active
+			methods.first();
 		},
 		load: function( image )
 		{
@@ -167,6 +199,19 @@
 				_first.addClass(methods.settings.active);
 			}
 		},
+		// set first active
+		first: function()
+		{
+			// anmiate to first
+			_wrap.animate({'left':'0'});
+			// change active
+			if( _current != undefined )
+			{
+				_current.removeClass(methods.settings.active);
+			}
+			// ser first active
+			_first.addClass(methods.settings.active);
+		},
 		// move to previous element
 		previous: function()
 		{
@@ -206,6 +251,7 @@
 		image: 				'.slide',
 		width: 				0,
 		height: 			0,
+		max_width: 		0,
 		speed: 				5000,
 		easing: 			'swing'
 	};

@@ -33,7 +33,7 @@ $(function(){
 		
 		_section_menu.find('a').fs_anker();
 		
-		$('.slideshow').fs_slides();
+		$('.slideshow').fs_slides({'max_width':650});
 		
 		// function filterPath(string) {
 		// 	return string.replace(/^\//,'')
