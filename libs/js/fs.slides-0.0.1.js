@@ -95,12 +95,13 @@
 		},
 		refresh: function()
 		{
+			var width = _this.parents('.column').width();
 			// height
 			methods.settings.height = _this.css('height');
 			// width
-			if( methods.settings.max_width == 0 || methods.settings.max_width >= _this.css('width'))
+			if( methods.settings.max_width == 0 || methods.settings.max_width >= width)
 			{
-				methods.settings.width = _this.css('width');
+				methods.settings.width = width;
 			}
 			else
 			{
@@ -108,7 +109,7 @@
 			}
 			// set image width
 			_images.width(methods.settings.width);
-			_this.css({'height':methods.settings.height,'width':methods.settings.width});
+			_this.css({'width':methods.settings.width});
 			// set first active
 			methods.first();
 		},
