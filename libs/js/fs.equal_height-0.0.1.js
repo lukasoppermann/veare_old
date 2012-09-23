@@ -15,10 +15,14 @@
 			// check for new row
 			if( current_row_start != position_top )
 			{
-				// set heights for completed row
-				for(var current_div = 0, len = row_divs.length; current_div < len; current_div++) 
+				var len = row_divs.length;
+				if( len > 1)
 				{
-					row_divs[current_div].height(current_tallest);
+					// set heights for completed row
+					for(var current_div = 0; current_div < len; current_div++) 
+					{
+						row_divs[current_div].height(current_tallest);
+					}
 				}
 				// set the variables for the new row
 				row_divs.length = 0; // empty the array
@@ -36,7 +40,7 @@
 			var len = row_divs.length;
 			if( len > 1)
 			{
-				for(var current_div = 0, current_div < len; current_div++)
+				for(var current_div = 0; current_div < len; current_div++)
 				{
 					 row_divs[current_div].height(current_tallest);
 				}
