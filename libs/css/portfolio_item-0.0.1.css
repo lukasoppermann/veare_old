@@ -127,6 +127,7 @@ section p{
 }
 /* tags */
 .tags{
+	width: 100%;
 	float: left;
 	font-size: 90%;
 	color: rgb(150,150,150);
