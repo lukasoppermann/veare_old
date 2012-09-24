@@ -11,7 +11,7 @@
 			// cache selection
 			_this = $(this);
 			// get top position
-			position_top = _this.position().top;
+			position_top = _this.offset().top;
 			// check for new row
 			if( current_row_start != position_top )
 			{
