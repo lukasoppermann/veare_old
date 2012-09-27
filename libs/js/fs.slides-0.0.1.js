@@ -11,7 +11,7 @@
 // define functions 
 ;(function( $, window, document )
 {
-	var _this, _window, _current, _next, _previous, _first, remaining, _wrap, _images, autoplay, start, resize_fn;
+	var _this, _window, _previous, _first, remaining, _wrap, _images, autoplay, start, resize_fn;
 	// methods
 	var methods = {
 		// settings object
@@ -180,8 +180,8 @@
 		next: function()
 		{
 			// set current and next item
-			_current = _this.find('.'+methods.settings.active);
-			_next 	= _current.next(methods.settings.image);
+			var _current = _this.find('.'+methods.settings.active);
+			var _next 	= _current.next(methods.settings.image);
 			//
 			if( _next.length > 0 )
 			{
@@ -203,6 +203,8 @@
 		// set first active
 		first: function()
 		{
+			// set current item
+			var _current = _this.find('.'+methods.settings.active);
 			// anmiate to first
 			_wrap.animate({'left':'0'});
 			// change active
@@ -210,7 +212,7 @@
 			{
 				_current.removeClass(methods.settings.active);
 			}
-			// ser first active
+			// set first active
 			_first.addClass(methods.settings.active);
 		},
 		// move to previous element
