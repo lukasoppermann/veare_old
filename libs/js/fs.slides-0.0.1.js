@@ -33,9 +33,6 @@
 						wrap: 			_this.find(opts.wrap)
 					});
 				}
-				// check height and width
-				if( opts.width == 0 ){ _this.data('slideshow').opts.width = _this.width(); }
-				if( opts.height == 0 ){ _this.data('slideshow').opts.height = _this.height(); }
 				// add click event for move
 				_this.on({
 					click: function()
@@ -58,36 +55,60 @@
 				// on load events
 				$(document).ready(function()
 				{
-					// set width of wrapper element
-					_this.data('slideshow').wrap.width(_this.data('slideshow').images.length*_this.data('slideshow').opts.width);
-					// height
-					if( _this.data('slideshow').opts.min_height !== 0)
-					{
-						_this.css({'height': _this.data('slideshow').opts.min_height});
-					}
+					// set sizes
+					methods.refresh(_this);
 					// start loading images
 					methods.load(_this, _this.data('slideshow').first);
 					// start autoplay
 					methods.autoplay(_this);
 				});
+				// add refresh to resize event
+				$(window).on('resize', function(){
+					clearTimeout( _this.data('slideshow').resize_fn );
+					_this.data('slideshow').resize_fn = setTimeout( function(){
+						methods.refresh(_this)
+					}, 100);
+				});
 			});
 		},
 		refresh: function(_this)
 		{
-			// height
-			_this.data('slideshow').opts.height = _this.css('height');
-			// width
-			if( _this.data('slideshow').opts.max_width == 0 || _this.data('slideshow').opts.max_width >= _this.parent().width())
+			// get size variables
+			var parent_width 	= _this.parent().width();
+			var height 				= _this.data('slideshow').opts.min_height;
+			var max_width 		= _this.data('slideshow').opts.max_width;
+			if( max_width == 0 ){ _this.data('slideshow').opts.max_width = parent_width; }
+			// check image size
+			var image					= _this.data('slideshow').images.first().find('img');
+			if( image[0].naturalWidth != undefined && image[0].naturalWidth != 0 )
 			{
-				_this.data('slideshow').opts.width = _this.parent().width();
+				// set image width
+				var img_width 		= image.width();
+				// set height to image height 
+				if( image.height() > height )
+				{
+					height 					= image.height();
+				}
 			}
-			else
+			// width
+			if( (_this.data('slideshow').opts.width == 0 
+					&& parent_width >= _this.data('slideshow').opts.max_width)
+					|| 
+					(_this.data('slideshow').opts.width >= _this.data('slideshow').opts.max_width 
+					&& parent_width >= _this.data('slideshow').opts.max_width) )
 			{
 				_this.data('slideshow').opts.width = _this.data('slideshow').opts.max_width;
 			}
+			else if( parent_width < _this.data('slideshow').opts.max_width )
+			{
+				_this.data('slideshow').opts.width = parent_width;
+			}
 			// set image width
 			_this.data('slideshow').images.width(_this.data('slideshow').opts.width);
-			_this.css({'width':_this.data('slideshow').opts.width});
+			// set slidehow container width
+			_this.css({'width':_this.data('slideshow').opts.width, 'height':height});
+			// set width of wrapper element
+			_this.data('slideshow').wrap.width(_this.data('slideshow').images.length*_this.data('slideshow').opts.width);
 			// set first active
 			methods.first(_this);
 		},
@@ -101,24 +122,15 @@
 				// load image
 				_img.attr('src', _img.data('src')).load(function()
 				{
-					// get height
-					if( _this.data('slideshow').opts.height == 0)
-					{
-						_this.data('slideshow').opts.height = image.css('height');
-					}
-					// get width
-					if( _this.data('slideshow').opts.width == 0 && _this.data('slideshow').opts.max_width != 0 )
-					{
-						_this.data('slideshow').opts.width = _this.data('slideshow').opts.max_width;
-					}
-					else
-					{
-						_this.data('slideshow').opts.width = image.css('width');
-					}
-					// reset size
-					_this.css({'width':_this.data('slideshow').opts.width,'height':'auto'});
 					// once image is loaded
 					image.addClass('loaded');
+					// check if not refreshed yet
+					if( _this.data('slideshow').refreshed !== true )
+					{
+						_this.data('slideshow').refreshed = true;
+						methods.refresh(_this);
+					}
+					// load next image
 					methods.load(_this, image.next(_this.data('slideshow').image));
 				});
 			}
@@ -223,17 +235,19 @@
 	// default options		
 	$.fn.fs_slides = function( method )
 	{
+		// fetch arguments
+		var settings = arguments;
 		// Method calling logic
 		if ( methods[method] ) 
 		{
 			return $(this).each(function(){
-				 methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+				 methods[ method ].apply( this, Array.prototype.slice.call( settings, 1 ));
 			});
 		} 
 		else if ( typeof method === 'object' || ! method ) 
 		{
 			return $(this).each(function(){
-				methods.init.apply( this, arguments );
+				methods.init.apply( this, settings );
 			});
 		}
 		else
