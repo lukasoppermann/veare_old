@@ -57,6 +57,7 @@
 				{
 					// set sizes
 					methods.refresh(_this);
+					_this.height(_this.data('slideshow').opts.min_height);
 					// start loading images
 					methods.load(_this, _this.data('slideshow').first);
 					// start autoplay
@@ -75,7 +76,6 @@
 		{
 			// get size variables
 			var parent_width 	= _this.parent().width();
-			var height 				= _this.data('slideshow').opts.min_height;
 			var max_width 		= _this.data('slideshow').opts.max_width;
 			if( max_width == 0 ){ _this.data('slideshow').opts.max_width = parent_width; }
 			// check image size
@@ -84,29 +84,27 @@
 			{
 				// set image width
 				var img_width 		= image.width();
-				// set height to image height 
-				if( image.height() > height )
-				{
-					height 					= image.height();
-				}
 			}
 			// width
 			if( (_this.data('slideshow').opts.width == 0 
-					&& parent_width >= _this.data('slideshow').opts.max_width)
+					&& parent_width >= _this.data('slideshow').opts.max_width )
 					|| 
 					(_this.data('slideshow').opts.width >= _this.data('slideshow').opts.max_width 
-					&& parent_width >= _this.data('slideshow').opts.max_width) )
+					&& parent_width >= _this.data('slideshow').opts.max_width)
+					|| 
+					( parent_width > _this.data('slideshow').opts.max_width && _this.data('slideshow').opts.width < _this.data('slideshow').opts.max_width) 
+			)
 			{
 				_this.data('slideshow').opts.width = _this.data('slideshow').opts.max_width;
 			}
-			else if( parent_width < _this.data('slideshow').opts.max_width )
+			else if( parent_width <= _this.data('slideshow').opts.max_width )
 			{
 				_this.data('slideshow').opts.width = parent_width;
 			}
 			// set image width
 			_this.data('slideshow').images.width(_this.data('slideshow').opts.width);
 			// set slidehow container width
-			_this.css({'width':_this.data('slideshow').opts.width, 'height':height});
+			_this.css({'width':_this.data('slideshow').opts.width, 'height':'auto'});
 			// set width of wrapper element
 			_this.data('slideshow').wrap.width(_this.data('slideshow').images.length*_this.data('slideshow').opts.width);
 			// set first active
