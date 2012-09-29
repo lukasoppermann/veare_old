@@ -17,7 +17,7 @@
 		$this->fs_google->fonts(array('Open Sans:300,400,300italic'), variable($fonts_callback));
 	}
 ?>
-<? echo js('default', TRUE); ?>
+<? echo js('default', FALSE); ?>
 </div>
 </body>
 </html>

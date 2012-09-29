@@ -1,7 +1,7 @@
 // ----------------------------------------------------
 // Slideshow Class
 //
-// dependencies
+// dependencies:
 //
 // TODO:
 // - add possibility to include different effects
@@ -11,109 +11,87 @@
 // define functions 
 ;(function( $, window, document )
 {
-	var _this, _window, _previous, _first, remaining, _wrap, _images, autoplay, start, resize_fn;
 	// methods
 	var methods = {
-		// settings object
-		settings: {},
 		// initialize gallery class
 		init: function( settings ) 
 		{ 
-			// Extend default options with those provided
-			methods.settings = $.extend({}, $.fn.fs_slides.defaults, settings);
-			// set remaining time to total time
-			remaining = methods.settings.speed; 
-			// chache selection
-			_this 		= $(this);
-			_window 	= $(window);
-			_document = $(document);
-			_images 	= _this.find(methods.settings.image);
-			_first 		= _images.first();
-			_wrap 		= _this.find(methods.settings.wrap);
-			// resize slider
-			if( methods.settings.height != 0 )
-			{
-				_this.css({'height':methods.settings.height});
-			}
-			// width
-			if( methods.settings.width != 0 )
-			{
-				_this.css({'width':methods.settings.width});
-			}
-			else
-			{
-				// if width = 0, set width
-				if( methods.settings.max_width == 0 || methods.settings.max_width >= _this.css('width'))
+			return $(this).each(function(){
+				// set variables
+				var _this = $(this),
+						data 	= _this.data('slideshow'),
+						opts 	= $.extend({}, $.fn.fs_slides.defaults, settings);
+				// check if it needs to be initializes
+				if( !data )
 				{
-					methods.settings.width = _this.css('width');
+					_this.data('slideshow', {
+						target: 		_this,
+						opts: 			opts,
+						remaining: 	opts.speed,
+						images: 		_this.find(opts.image),
+						first: 			_this.find(opts.image).first(),
+						wrap: 			_this.find(opts.wrap)
+					});
 				}
-				else
-				{
-					methods.settings.width = methods.settings.max_width;
-					_this.css({'width':methods.settings.max_width});
-				}
-			}
-			// set image width
-			_images.width(methods.settings.width);
-			// add click event for move
-			_this.on({
-				click: function()
-				{
-					methods.next.apply(this);
-					// reset time
-					methods.reset();
-					// save start time
-					start = new Date();
-				},
-				mouseenter: function()
-				{
-					methods.pause.apply(this);
-				},
-				mouseleave: function()
-				{
-					methods.resume.apply(this);
-				}
-			});
-			// on load events
-			_document.ready(function()
-			{
-				if( window.load !== false || window.load === undefined)
+				// check height and width
+				if( opts.width == 0 ){ _this.data('slideshow').opts.width = _this.width(); }
+				if( opts.height == 0 ){ _this.data('slideshow').opts.height = _this.height(); }
+				// add click event for move
+				_this.on({
+					click: function()
+					{
+						methods.next(_this);
+						// reset time
+						methods.reset(_this);
+						// save start time
+						_this.data('slideshow').start = new Date();
+					},
+					mouseenter: function()
+					{
+						methods.pause(_this);
+					},
+					mouseleave: function()
+					{
+						methods.resume(_this);
+					}
+				});
+				// on load events
+				$(document).ready(function()
 				{
 					// set width of wrapper element
-					_wrap.width(_images.length*methods.settings.width);
+					_this.data('slideshow').wrap.width(_this.data('slideshow').images.length*_this.data('slideshow').opts.width);
+					// height
+					if( _this.data('slideshow').opts.min_height !== 0)
+					{
+						_this.css({'height': _this.data('slideshow').opts.min_height});
+					}
 					// start loading images
-					methods.load(_first);
+					methods.load(_this, _this.data('slideshow').first);
 					// start autoplay
-					methods.autoplay();
-				}
-			});
-			// on resize
-			_window.on('resize', function(){
-				clearTimeout( resize_fn );
-				resize_fn = setTimeout( methods.refresh, 100);
+					methods.autoplay(_this);
+				});
 			});
 		},
-		refresh: function()
+		refresh: function(_this)
 		{
-			var width = _this.parents('.column').width();
 			// height
-			methods.settings.height = _this.css('height');
+			_this.data('slideshow').opts.height = _this.css('height');
 			// width
-			if( methods.settings.max_width == 0 || methods.settings.max_width >= width)
+			if( _this.data('slideshow').opts.max_width == 0 || _this.data('slideshow').opts.max_width >= _this.parent().width())
 			{
-				methods.settings.width = width;
+				_this.data('slideshow').opts.width = _this.parent().width();
 			}
 			else
 			{
-				methods.settings.width = methods.settings.max_width;
+				_this.data('slideshow').opts.width = _this.data('slideshow').opts.max_width;
 			}
 			// set image width
-			_images.width(methods.settings.width);
-			_this.css({'width':methods.settings.width});
+			_this.data('slideshow').images.width(_this.data('slideshow').opts.width);
+			_this.css({'width':_this.data('slideshow').opts.width});
 			// set first active
-			methods.first();
+			methods.first(_this);
 		},
-		load: function( image )
+		load: function(_this, image )
 		{
 			// cache img selection
 			var _img = image.find('img');
@@ -123,97 +101,112 @@
 				// load image
 				_img.attr('src', _img.data('src')).load(function()
 				{
-					if( methods.settings.height == 0)
+					// get height
+					if( _this.data('slideshow').opts.height == 0)
 					{
-						methods.settings.height = image.css('height');
+						_this.data('slideshow').opts.height = image.css('height');
 					}
+					// get width
+					if( _this.data('slideshow').opts.width == 0 && _this.data('slideshow').opts.max_width != 0 )
+					{
+						_this.data('slideshow').opts.width = _this.data('slideshow').opts.max_width;
+					}
+					else
+					{
+						_this.data('slideshow').opts.width = image.css('width');
+					}
+					// reset size
+					_this.css({'width':_this.data('slideshow').opts.width,'height':'auto'});
 					// once image is loaded
 					image.addClass('loaded');
-					methods.load(image.next(methods.settings.image));
+					methods.load(_this, image.next(_this.data('slideshow').image));
 				});
 			}
 		},
 		// adding autoplay
-		autoplay: function()
+		autoplay: function(_this)
 		{
 			// save start time
-			start = new Date();
+			_this.data('slideshow').start = new Date();
 			// start slideshow
-			methods.resume();
+			methods.resume(_this);
 		},
 		// stop autoplay
-		pause: function()
+		pause: function(_this)
 		{
 			// remove autoplay
-			window.clearInterval(autoplay);
+			window.clearInterval(_this.data('slideshow').autoplay);
 			// save remaining time
-			remaining -= new Date() - start;
+			_this.data('slideshow').remaining -= new Date() - _this.data('slideshow').start;
 		},
 		// reset autoplay duration
-		reset: function()
+		reset: function(_this)
 		{
 			// reset remaining time
-			remaining = methods.settings.speed;
+			_this.data('slideshow').remaining = _this.data('slideshow').opts.speed;
 			// remove autoplay
-			window.clearInterval(autoplay);
+			window.clearInterval(_this.data('slideshow').autoplay);
 			// add autoplay with reset time
-			autoplay = window.setInterval(methods.next, remaining);
+			_this.data('slideshow').autoplay = window.setInterval(function(){
+				methods.next(_this)
+			}, _this.data('slideshow').remaining);
 		},
 		// resume autoplay
-		resume: function()
+		resume: function(_this)
 		{
 			// remove autoplay
-			window.clearInterval(autoplay);
+			window.clearInterval(_this.data('slideshow').autoplay);
 			// resume autoplay
-			autoplay = window.setInterval(function()
+			_this.data('slideshow').autoplay = window.setInterval(function()
 			{
 				// move to next slide
-				methods.next();
+				methods.next(_this);
 				// reset time
-				methods.reset();
+				methods.reset(_this);
 				// save start time
-				start = new Date();
+				_this.data('slideshow').start = new Date();
 				//
-			}, remaining);
+			}, _this.data('slideshow').remaining);
 		},
 		// move to next element
-		next: function()
+		next: function(_this)
 		{
 			// set current and next item
-			var _current = _this.find('.'+methods.settings.active);
-			var _next 	= _current.next(methods.settings.image);
+			var _current = _this.find('.'+_this.data('slideshow').opts.active);
+			var _next 	= _current.next(_this.data('slideshow').opts.image);
 			//
 			if( _next.length > 0 )
 			{
 				// anmiate forward
-				_wrap.animate({'left':'-='+methods.settings.width});
+				_this.data('slideshow').wrap.animate({'left':'-='+_this.data('slideshow').opts.width});
 				// change active
-				_current.removeClass(methods.settings.active);
-				_next.addClass(methods.settings.active);
+				_current.removeClass(_this.data('slideshow').opts.active);
+				// set next to active
+				_next.addClass(_this.data('slideshow').opts.active);
 			}
 			else
 			{
 				// anmiate to first
-				_wrap.animate({'left':'0'});
+				_this.data('slideshow').wrap.animate({'left':'0'});
 				// change active
-				_current.removeClass(methods.settings.active);
-				_first.addClass(methods.settings.active);
+				_current.removeClass(_this.data('slideshow').opts.active);
+				_this.data('slideshow').first.addClass(_this.data('slideshow').opts.active);
 			}
 		},
 		// set first active
-		first: function()
+		first: function(_this)
 		{
 			// set current item
-			var _current = _this.find('.'+methods.settings.active);
+			_this.data('slideshow').current = _this.find('.'+_this.data('slideshow').opts.active);
 			// anmiate to first
-			_wrap.animate({'left':'0'});
+			_this.data('slideshow').wrap.animate({'left':'0'});
 			// change active
-			if( _current != undefined )
+			if( _this.data('slideshow').current != undefined )
 			{
-				_current.removeClass(methods.settings.active);
+				_this.data('slideshow').current.removeClass(_this.data('slideshow').opts.active);
 			}
 			// set first active
-			_first.addClass(methods.settings.active);
+			_this.data('slideshow').first.addClass(_this.data('slideshow').opts.active);
 		},
 		// move to previous element
 		previous: function()
@@ -259,6 +252,7 @@
 		width: 				0,
 		height: 			0,
 		max_width: 		0,
+		min_height:   0,
 		speed: 				5000,
 		easing: 			'swing'
 	};
