@@ -132,11 +132,17 @@ section p{
 	font-size: 90%;
 	color: rgb(150,150,150);
 }
+.wide-screen .tags{ 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	padding-left: 19%;
+}
 .tags .icon{ float: left; opacity: 0.5; }
 .tags [class*="tag-"]{ margin: 0 6px; }
 /* slideshow */
 .slideshow{
-	border: 1px solid rgb(235,235,235);
+/*	border: 1px solid rgb(235,235,235);*/
 }
 /* ----------------------- */
 /* colors */
