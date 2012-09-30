@@ -10,6 +10,18 @@ if( variable($css) != null )
 {
 	echo '<style type="text/css" media="screen">'.$css."</style>";
 }
+if( variable($css_file) != null )
+{
+	$files = explode(',',$css_file);
+	foreach($files as $css)
+	{
+		if( substr($css,5) != 'http:' )
+		{
+			$css = base_url().config('dir_css').'/'.trim($css,'/');
+		}
+		echo '<link media="screen" type="text/css" href="'.$css.'" rel="stylesheet">';
+	}
+}
 ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 </head>

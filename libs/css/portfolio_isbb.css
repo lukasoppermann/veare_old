@@ -1,0 +1,53 @@
+#stage{
+	background-color: rgb(250,250,250);
+	background-image: -moz-linear-gradient(top, rgb(250,250,250), rgb(240,240,240));
+	background-image: -webkit-linear-gradient(top, rgb(250,250,250), rgb(240,240,240));
+}
+#sidebar{
+	border: 0;
+	box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.35);
+	-webkit-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.35);
+}
+.current-page{
+	width: 100%;
+	float: left;
+	background-image: url('../../images/isbb_berlin_bg_top.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+section{
+	background-color: rgb(255,255,255);
+}
+.section-menu:not(.fixed){
+	border-bottom: 1px solid rgb(80,80,80);
+	box-shadow: 0 1px 0 0 rgba(0,0,0,0.2), 0 -1px 0 1px rgba(255,255,255,0.1);
+	-webkit-box-shadow: 0 1px 0 0 rgba(0,0,0,0.2), 0 -1px 0 1px rgba(255,255,255,0.1);
+	background-color: rgb(120,120,120);
+	background-image: -moz-linear-gradient(top, rgb(140,140,140), rgb(100,100,100));
+	background-image: -webkit-linear-gradient(top, rgb(140,140,140), rgb(100,100,100));
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(140,140,140)), to(rgb(100,100,100)));
+	color: rgb(225,225,225);
+	text-shadow: rgba(0,0,0,0.3) 1px 1px 0;
+}
+.section-menu:not(.fixed) a{ 
+	color: rgb(235,235,235); 
+	border: 1px solid transparent;
+	border-width: 0 1px;
+}
+.section-menu:not(.fixed) a:hover{ 
+	color: rgb(255,255,255);
+ 	background-color: rgb(65,165,210);
+	background-image: -moz-linear-gradient(top, rgb(65,165,210), rgb(30,110,150));
+	background-image: -webkit-linear-gradient(top, rgb(65,165,210), rgb(30,110,150));
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(65,165,210)), to(rgb(30,110,150)));
+	border-color: rgb(20,100,140);
+}
+.main-headline{
+	color: rgb(255,255,255);
+	text-shadow: rgba(0,0,0,0.15) 0px 1px 1px, rgba(0,0,0,0.1) 0px 2px 3px;
+}
+.type{
+	color: rgb(60,60,60);
+	text-shadow: rgba(255,255,255,0.5) 1px 1px 0px;
+}

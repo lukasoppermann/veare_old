@@ -31,7 +31,6 @@ class Portfolio extends MY_Controller {
 		// get entries from database
 		$cards = db_select( 'client_entries', array('type' => 3, 'status' => 1), array('limit' => 50, 'order' => 'date DESC', 'json' => 'data') );
 		// grab all image ids
-		$images = array();
 		foreach($cards as $card)
 		{
 			if( isset($card['card-image']) )
@@ -39,14 +38,17 @@ class Portfolio extends MY_Controller {
 				$images[$card['card-image']] = $card['card-image'];
 			}
 		}
-		// retrieve images from db
-		$images = db_select( 'files', array('status' => 1, 'id' => array($images)), array('json' => 'data', 'index' => 'id') );
+		if( isset($images) && count($images) > 1 )
+		{
+			// retrieve images from db
+			$images = db_select( 'files', array('status' => 1, 'id' => array($images)), array('json' => 'data', 'index' => 'id') );
+		}
 		// loop through posts
 		foreach($cards as $card)
 		{
 			$card['tags'] = explode(',',$card['tags']);
 			// add image
-			if( isset($card['card-image']) )
+			if( isset($card['card-image']) && isset($images[$card['card-image']]) && is_array($images[$card['card-image']]) )
 			{
 				$card['images'] = $images[$card['card-image']][key($images[$card['card-image']])];
 			}
@@ -65,7 +67,6 @@ class Portfolio extends MY_Controller {
 			}
 		}
 		// tag menu
-
  		$this->data['tag_menu'] = '<div class="filter-list">
 				<div class="group">
 					<ul id="tag_menu" data-filter="tag" class="filters tag">'.implode('',$tag_menu).'</ul>
