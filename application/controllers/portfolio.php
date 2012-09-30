@@ -53,6 +53,7 @@ class Portfolio extends MY_Controller {
 				$card['images'] = $images[$card['card-image']][key($images[$card['card-image']])];
 			}
 			// load into view
+			unset($card['css'],$card['css_file']);
 			$entries[] = $this->load->view('portfolio/card', $card, TRUE);
 			// tags
 			foreach( $card['tags'] as $tag )
@@ -89,6 +90,7 @@ class Portfolio extends MY_Controller {
 		$this->data['body_class'] = variable($this->data['body_class']).' item-view';
 		// get items from database
 		$item = db_select( 'client_entries', array('type' => 3, 'permalink' => $permalink), array('json' => 'data', 'single' => TRUE));
+		
 		// load item if exists
 		if( $item != null )
 		{

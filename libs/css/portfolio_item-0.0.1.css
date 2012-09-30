@@ -139,11 +139,8 @@ section p{
 	padding-left: 19%;
 }
 .tags .icon{ float: left; opacity: 0.5; }
-.tags [class*="tag-"]{ margin: 0 6px; }
+.tags [class*="tag-"]{ margin: 3px 6px 0; }
 /* slideshow */
-.slideshow{
-/*	border: 1px solid rgb(235,235,235);*/
-}
 /* ----------------------- */
 /* colors */
 .color{

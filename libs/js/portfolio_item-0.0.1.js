@@ -12,8 +12,10 @@ $(function(){
 	//
 	// when everything is loaded
 	_window.load(function(){
-		
-		$('.column').fs_equal_height();
+		setTimeout(function() 
+		{
+			$('.column').fs_equal_height();
+		}, 100);
 		// stick top menu
 		_section_menu.fs_sticky_top({
 			scroll_active_fn: function(){
@@ -34,52 +36,12 @@ $(function(){
 		_section_menu.find('a').fs_anker();
 		
 		$('.slideshow').fs_slides({'max_width':650, 'min_height': 150});
-		
-		// function filterPath(string) {
-		// 	return string.replace(/^\//,'')
-		// 	.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-		// 	.replace(/\/$/,'');
-		// }
-		// 
-		// var locationPath = filterPath(location.pathname);
-		// 
-		// if($.browser.safari)
-		// {
-		// 	scrollElem = $("body");
-		// }
-		// else
-		// {
-		// 	scrollElem = $("html,body");
-		// }
-		// $('a[href*=#]').each(function()
-		// {
-		// 	var thisPath = filterPath(this.pathname) || locationPath;
-		// 	if (  locationPath == thisPath
-		// 		&& (location.hostname == this.hostname || !this.hostname)
-		// 		&& this.hash.replace(/#/,'') ) 
-		// 	{
-		// 		var $target = $(this.hash), target = this.hash;
-		// 		if (target)
-		// 		{
-		// 			$(this).click(function(event)
-		// 			{
-		// 		 		event.preventDefault();
-		// 		 		var targetOffset =  Math.round($target.offset().top);
-		// 		 		$(scrollElem).animate({scrollTop: targetOffset-70}, 400);
-		// 			});
-		//   	}
-		// 	}
-		// });
-		
+	
 	});
 	//
-	// _body.on('resolutionChange', function(e, resolution)
-	// {
-	// 	_section_menu.fs_sticky_top()
-	// });
 	
-	_window.fs_resize(function(){
+	_window.fs_resize(function()
+	{
 		$('.column').fs_equal_height();
-		 
 	});
 });
