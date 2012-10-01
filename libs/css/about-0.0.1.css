@@ -29,7 +29,7 @@ section{
 	-ms-transition: color .5s ease;
 }
 .quote.left .quote-box{ padding: 0px 25px 10px 20px; }
-.quote.right .quote-box{ padding: 0px 0px 10px 45px; }
+.quote.right .quote-box{ padding: 0 0px 10px 45px; }
 .quote-box:before{
 	content: "“";
 	display: block;

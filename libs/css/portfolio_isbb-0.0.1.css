@@ -80,3 +80,12 @@ section:first-child{
 	color: rgb(125,125,125);
 	text-shadow: rgb(255,255,255) 1px 1px 0px;
 }
+.column.excerpt{
+	text-align: center;
+	margin: 20px 0 40px;
+}
+.column.excerpt p{
+	float: none;
+	display: inline-block;
+	text-align: center;
+}
