@@ -12,8 +12,8 @@
 	height: 230px;
 	width: 100%;
 	overflow: hidden;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
 	background: rgb(245,160,10);
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;

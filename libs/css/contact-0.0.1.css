@@ -14,10 +14,10 @@
 	height: 350px;
 	color: rgb(255,255,255);
 	background: rgb(245,160,10);
-	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15), 0px 0px 1px 0px rgba(0,0,0,0.25);
-	-webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15), 0px 0px 1px 0px rgba(0,0,0,0.25);
-	-moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15), 0px 0px 1px 0px rgba(0,0,0,0.25);
-	border-radius: 3px;
+	box-shadow: 0px 1px 0 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0px 1px 0 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 1px 0 0px rgba(0,0,0,0.25);
+	border-radius: 1px;
 	z-index: 95;
 }
 .veare-contact:before, .veare-contact:after{
@@ -52,8 +52,8 @@
 .veare-about{
 	background: rgb(255,255,255);
 	color: rgb(75,75,75);
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
 	float: left;
 	height: 140px;
 	-moz-box-sizing: border-box;
