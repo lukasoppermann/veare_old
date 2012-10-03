@@ -67,10 +67,10 @@ The hardest part of modern, adaptive design, is to let go of some control. But b
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Web & Interface Design</h2>
-				<p>An interface should be driven by information, because information is the single most important part of any application. This includes websites as well as applications on a desktop or on a phone.
+				<p>An interface should be driven by information, because information is the single most important part of any application or websites on desktops, tablets or phones.
 This is why I focus on the information architecture first. Once the information is structured, an interface is created to allow fast and easy access. 
 				</p><p>
-As an interface designer I optimise for usability and performance. Users should focus on what they want to do rather than how to do it. This is why every piece of information has to be easily accessible. By combining good information architecture and an easy to use interface, I deliver an enjoyable user experience.
+As an interface designer I aim for usability and performance. Users should focus on what they want to do rather than how to do it. This is why every piece of information has to be easily accessible. By combining good information architecture and an easy to use interface, I deliver an enjoyable user experience.
 				</p>
 			</div>
 			<div class="active-bg left"></div>
@@ -82,12 +82,3 @@ As an interface designer I optimise for usability and performance. Users should 
 	</section>
 
 </article>
-<!--
-- state-of-art
-- intelligent design 
-- clients needs
--
-
-The fast changing world of commerce requires a different approach to branding due to the recent changes including the move towards mobile and the web. Digital media becomes more prominent and important than offline brand experience and therefore the brand has to be integrated deeply into your design to provide a brand experience even without logos and other corporate elements.
-
--->
