@@ -173,7 +173,10 @@ section{
 	float: left;
 	width: 100%;
 }
-.mobile section{ margin: 20px 0 0 0; }
+.mobile section{
+	margin: 10px 0 0 0; 
+	padding: 20px 0 10px;
+}
 section strong{
 	display: inline-block;
 	color: rgb(80,80,80);

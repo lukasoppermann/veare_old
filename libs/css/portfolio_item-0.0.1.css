@@ -10,7 +10,7 @@ body{
 	float: left;
 	margin: 20px 0 20px 0;
 	background: rgb(243,243,243);
-	border-radius: 3px;
+	border-radius: 1px;
 	width: 100%;
 	font-size: 100%;
 }
@@ -52,7 +52,14 @@ body{
 .hovers .section-menu a:hover{ color: rgb(80,80,80); }
 /* ----------------------- */
 /* content */
-.excerpt{ color: rgb(150,150,150); }
+.article.portfolio-item .excerpt, .article.portfolio-item .excerpt:first-child{ 
+	display: inline-block;
+	color: rgb(150,150,150); 
+	margin: 30px 0 40px 0;
+}
+.mobile .article.portfolio-item .excerpt{
+	margin: 0;
+}
 /* section */
 section{
 	position: relative;
