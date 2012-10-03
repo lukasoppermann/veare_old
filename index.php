@@ -90,7 +90,6 @@ if (defined('ENVIRONMENT'))
 		$system_path = $system_path['online'];
 		$application_folder = $application_folder['online'];
 	}
-	echo $system_path;
 /*
  * --------------------------------------------------------------------
  * DEFAULT CONTROLLER
