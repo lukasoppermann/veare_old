@@ -56,8 +56,8 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = '../ci_formandsystem_2.1.2';
-
+	$system_path['offline'] = '../ci_formandsystem_2.1.2';
+	$system_path['online'] = '../../ci_formandsystem_2.1.2';
 /*
  *---------------------------------------------------------------
  * APPLICATION FOLDER NAME
@@ -72,8 +72,24 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = 'application';
-
+	$application_folder['offline'] = 'application';
+	$application_folder['online'] = 'application';
+/*
+ * --------------------------------------------------------------------
+ * Online / offline files
+ * --------------------------------------------------------------------
+ *
+ */
+	if( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1'  )
+	{
+		$system_path = $system_path['offline'];
+		$application_folder = $application_folder['offline'];
+	}
+	else
+	{
+		$system_path = $system_path['online'];
+		$application_folder = $application_folder['online'];
+	}
 /*
  * --------------------------------------------------------------------
  * DEFAULT CONTROLLER
