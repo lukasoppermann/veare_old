@@ -38,10 +38,10 @@ class Portfolio extends MY_Controller {
 				$images[$card['card-image']] = $card['card-image'];
 			}
 		}
-		if( isset($images) && count($images) > 1 )
+		if( isset($images) && count($images) > 0 )
 		{
 			// retrieve images from db
-			$images = db_select( 'files', array('status' => 1, 'id' => array($images)), array('json' => 'data', 'index' => 'id') );
+			$images = db_select('files', array('status' => 1, 'id' => array($images)), array('json' => 'data', 'index' => 'id', 'index_single' => true) );
 		}
 		// loop through posts
 		foreach($cards as $card)
@@ -50,7 +50,7 @@ class Portfolio extends MY_Controller {
 			// add image
 			if( isset($card['card-image']) && isset($images[$card['card-image']]) && is_array($images[$card['card-image']]) )
 			{
-				$card['images'] = $images[$card['card-image']][key($images[$card['card-image']])];
+				$card['images'] = $images[$card['card-image']];
 			}
 			// load into view
 			unset($card['css'],$card['css_file']);
