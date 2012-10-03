@@ -12,10 +12,10 @@
 			<div class="column column-two tablet-half">
 				<p>veare stands for good design and state-of-the-art development with a focus on user experience.</p>
 				<p>The brand experience as well as the product experience has to change as media and devices change.</p>
-				<p>By designing flexible corporate identities with a strong emphasis on digital, I deliver a modern branding solutions which can adapt and take advantage of new possibilities.</p>
+				<p>By designing flexible corporate identities with a strong emphasis on digital, I deliver modern branding solutions which can adapt and take advantage of new possibilities.</p>
 			</div>
 			<div class="column column-two tablet-half">
-				<p>Starting with a precise vision I create performant and usable products, adding complexity only where needed.</p>
+				<p>Starting with a precise vision I create high performance and usable products, adding complexity only where needed.</p>
 				<p>A passion for usability, simplicity, performance and well delivered content is what makes my projects successful.</p>
 				<p>Working with a network of freelancers keeps veare flexible to adapt to your project, budget and schedule.</p>
 			</div>
@@ -28,7 +28,7 @@
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Vision</h2>
-				<p>Every creative process should start with a vision. An idea to strive towards. This idea does not have to be 100% realisable, but it should stay within the realm of realism.</p>
+				<p>Every creative process should start with a vision, an idea to strive towards. This idea does not have to be 100% realisable, but it should stay within the realm of realism.</p>
 				<p>A vision builds on your business philosophy, creating a direction for the future of your business. This vision should cover all aspects of your business, because they might effect the project even if they do not seem closely related. We will use this vision as our guideline throughout the whole process.</p>
 			</div>
 			<div class="active-bg right"></div>
@@ -38,7 +38,7 @@
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Intelligent Design</h2>
-				<p>Intelligent design is informed decision making based on a future vision and a data-based user analysis. I create modern design solutions based on knowledge about your target users. This means that for each project the focus might be shifted. Some clients want state-of-the-art products that can fascinate their modern and up to date users, while others need to focus more on raw information and support for legacy browsers.
+				<p>Intelligent design is informed decision making based on a future vision and a data-based user analysis. I create modern design solutions based on knowledge about your target users. This means that for each project the focus might be shifted. Some clients want state-of-the-art products that can engage their modern and up to date users, while others need to focus more on raw information and support for legacy browsers.
 </p>
 			</div>
 			<div class="active-bg left"></div>
