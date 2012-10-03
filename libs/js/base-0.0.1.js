@@ -27,22 +27,22 @@ $(function()
 	}
 	// -----------------------
 	// Animate Content
-	var animate_content = function( resolution )
-	{
-		if(loaded == false)
-		{
-			if(resolution == 'mobile-portrait')
-			{
-				$('#sidebar').css({'left':'0px'}).animate({'top':'0px'}, 700, 'swing');
-			}
-			else
-			{
-				$('#sidebar').css({'top':'0px'}).animate({'left':'0px'}, 500, 'swing');
-			}
-			// define loaded
-			loaded = true;
-		}
-	};
+	// var animate_content = function( resolution )
+	// {
+	// 	if(loaded == false)
+	// 	{
+	// 		if(resolution == 'mobile-portrait')
+	// 		{
+	// 			$('#sidebar').css({'left':'0px'}).animate({'top':'0px'}, 700, 'swing');
+	// 		}
+	// 		else
+	// 		{
+	// 			$('#sidebar').css({'top':'0px'}).animate({'left':'0px'}, 500, 'swing');
+	// 		}
+	// 		// define loaded
+	// 		loaded = true;
+	// 	}
+	// };
 	// -----------------------
 	// Load Content
 	var content = function(  )
@@ -83,7 +83,7 @@ $(function()
 		// console.log($(window).width());
 		// $('html, body').height(_stage.height());
 		_body.trigger('resolutionChange', resolution);
-		animate_content(resolution);
+		// animate_content(resolution);
 		// _stage.width($(document).width());
 	};
 	// -----------------------
