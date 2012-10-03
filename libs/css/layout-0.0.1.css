@@ -152,6 +152,9 @@
 .hidden-page{
 	opacity: 0;
 }
+.current-page.loading{
+	
+}
 /*---------*/
 /* article */
 .article{

@@ -39,12 +39,13 @@ class MY_Controller extends CI_Controller {
 		// --------------------------------------------------------------------
 		// Initialize Menus
 		$this->data['menu']['main'] = $this->fs_navigation->tree(array(
-			'menu' 					=> 1, 
-			'id' 					=> 'nav',
-			'item_class' 			=> 'item',
+			'menu' 							=> 1, 
+			'id' 								=> 'nav',
+			'item_class' 				=> 'item',
+			'link_class' 				=> 'ajax-link',
 			'active_unset' 			=> array(1),
 			'item_before' 			=> '<span class="icon"></span><span class="text">',
-			'item_after' 			=> '</span>'
+			'item_after' 				=> '</span>'
 		));
 		// --------------------------------------------------------------------
 	}

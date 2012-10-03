@@ -16,6 +16,20 @@ class Contact extends MY_Controller {
 		$this->data['sidebar_class'] = 'shadow';
 		$this->data['body_class'] = variable($this->data['body_class']).' no-line';
 		// load view
-		view('custom/contact', $this->data);
+		
+		// check for ajax
+		if( isset($_POST['ajax']) )
+		{
+			echo json_encode(array(
+				'content' => $this->load->view('custom/contact', $this->data, TRUE),
+				'css' 		=> css('default'),
+				'js' 			=> js('default', TRUE) 
+			));
+		}
+		else
+		{
+			// load view
+			view('custom/contact', $this->data);
+		}
 	}
 }
