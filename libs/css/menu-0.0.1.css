@@ -127,6 +127,7 @@
 #follow_nav .icon-small{
 	position: absolute;
 	left: 4px;
+	top: 2px;
 	opacity: 0.4;	
 }
 .hovers #follow_nav .item:hover .icon-small{
