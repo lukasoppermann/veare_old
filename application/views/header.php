@@ -5,6 +5,7 @@
 echo favicon('favicon');
 echo meta();
 echo css('default', TRUE);
+echo css('test', TRUE);
 echo title(variable($meta_title, 'Welcome').' | vea.re – visionary design');
 if( variable($css) != null )
 {

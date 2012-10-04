@@ -13,6 +13,8 @@ $(function(){
 			var path = $(this).attr('href');
 			// get current page
 			var _current = $('.current-page');
+			// set url
+			history.pushState(null, null, path);
 			// check if content exists
 			if( content[path] )
 			{

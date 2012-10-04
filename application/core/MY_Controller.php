@@ -34,6 +34,7 @@ class MY_Controller extends CI_Controller {
 		js_add('jquery');
 		//////////////
 		css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui')); // ,'slogan_line'
+		css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui'),'test');
 		js_add('jquery.mediaquery, fs.resize, fs.loading, base', 'default');
 		js_add_lines("CI_BASE = '".base_url()."';", 'default');
 		// --------------------------------------------------------------------
