@@ -19,7 +19,7 @@ $config['css']['regex'] = array(
 	)
 );
 // default tags DO NOT REMOVE
-$config['css']['tags']['default']	= 	'<link rel="stylesheet" href="[file]" type="text/css" media="screen" />';
-$config['css']['tags']['print']		= 	'<link rel="stylesheet" href="[file]" type="text/css" media="print" />';
+$config['css']['tags']['default']	= 	'<link rel="stylesheet" href="[file]" type="text/css" media="screen" [data]/>';
+$config['css']['tags']['print']		= 	'<link rel="stylesheet" href="[file]" type="text/css" media="print" [data]/>';
 $config['css']['tags']['lines'] 	= 	'<style type="text/css">'."\n\t".'[file]'."\n\t".'</style>';
 // define your own tags

@@ -11,6 +11,6 @@ $config['js']['regex'] = array(
 	)
 );
 // default tags DO NOT DELETE 
-$config['js']['tags']['default']	= '<script type="text/javascript" src="[file]"></script>'; 
+$config['js']['tags']['default']	= '<script type="text/javascript" src="[file]" [data]></script>'; 
 $config['js']['tags']['lines'] 		= '<script type="text/javascript">'."\n".'[file]'."\n".'</script>';
 // define your own tags

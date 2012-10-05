@@ -33,23 +33,69 @@ class MY_Controller extends CI_Controller {
 		// development !!!!!!!!
 		js_add('jquery');
 		//////////////
-		css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui')); // ,'slogan_line'
-		css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui'),'test');
-		js_add('jquery.mediaquery, fs.resize, fs.loading, base', 'default');
-		js_add_lines("CI_BASE = '".base_url()."';", 'default');
-		// --------------------------------------------------------------------
-		// Initialize Menus
-		$this->data['menu']['main'] = $this->fs_navigation->tree(array(
-			'menu' 							=> 1, 
-			'id' 								=> 'nav',
-			'item_class' 				=> 'item',
-			'link_class' 				=> 'ajax-link',
-			'active_unset' 			=> array(1),
-			'item_before' 			=> '<span class="icon"></span><span class="text">',
-			'item_after' 				=> '</span>'
-		));
-		// --------------------------------------------------------------------
+		$this->init( variable($_POST['ajax']) );
 	}
+	// --------------------------------------------------------------------
+	/**
+	 * init
+	 *
+	 * fn for initial load
+	 *
+	 * @access	public
+	 * @param		boolean
+	 * @return 
+	 */
+	function init( $ajax = null )
+	{
+		// check if initial load
+		if( !isset($ajax) || $ajax == null )
+		{
+			// load asets
+			css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui'));
+			js_add('jquery.mediaquery, fs.resize, fs.loading, base', 'default');
+			js_add_lines("CI_BASE = '".base_url()."';", 'default');
+			// --------------------------------------------------------------------
+			// Initialize Menus
+			$this->data['menu']['main'] = $this->fs_navigation->tree(array(
+				'menu' 							=> 1, 
+				'id' 								=> 'nav',
+				'item_class' 				=> 'item',
+				'link_class' 				=> 'ajax-link',
+				'active_unset' 			=> array(1),
+				'item_before' 			=> '<span class="icon"></span><span class="text">',
+				'item_after' 				=> '</span>'
+			));
+		}
+	}
+	// --------------------------------------------------------------------
+	/**
+	 * view
+	 *
+	 * load view into html or as ajax
+	 *
+	 * @access	public
+	 * @param		boolean
+	 * @return 
+	 */
+	function view( $template = null, $data = null )
+	{
+		// if ajax request
+		if( isset($_POST['ajax']) )
+		{
+			echo json_encode(array(
+				'content' => $this->load->view($template, $data, TRUE),
+				'css' 		=> css_link('page', TRUE),
+				'js' 			=> js_link('page', TRUE)
+			));
+		}
+		// normal loading
+		else
+		{
+			// load view
+			view($template, $data);
+		}
+	}
+// close class
 }
 /* End of file MY_Controller.php */
 /* Location: ./application/core/MY_Controller.php */

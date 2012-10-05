@@ -1,7 +1,3 @@
-<?php
-	css_add('about');
-	js_add('about');
-?>
 <article class="article open_sans">
 		<div class="type column column-five">About veare</div>
 		<div class="column column-five headline-column"><h1 class="main-headline open_sans_bold">Visionary Design</h1></div>

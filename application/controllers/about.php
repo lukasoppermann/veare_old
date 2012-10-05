@@ -12,21 +12,11 @@ class About extends MY_Controller {
 	{
 		// font callback
 		$this->data['fonts_callback'][] = "$('body').trigger('resize');";
-		
+		// add css and js files
+		css_add('about','page');
+		js_add('about','page');
 		// check for ajax
-		if( isset($_POST['ajax']) )
-		{
-			echo json_encode(array(
-				'content' => $this->load->view('custom/about', $this->data, TRUE),
-				'css' 		=> css('default'),
-				'js' 			=> js('default', TRUE) 
-			));
-		}
-		else
-		{
-			// load view
-			view('custom/about', $this->data);
-		}
+		$this->view('custom/about', $this->data);
 	}
 // close class
 }

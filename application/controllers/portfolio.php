@@ -24,8 +24,8 @@ class Portfolio extends MY_Controller {
 	function overview()
 	{	
 		// load assets
-		css_add('cards, portfolio');
-		js_add('jquery.fs_filter, portfolio');
+		css_add('cards, portfolio', 'page');
+		js_add('jquery.fs_filter, portfolio', 'page');
 		// define variables
 		$tag_menu = array();
 		// get entries from database
@@ -75,27 +75,26 @@ class Portfolio extends MY_Controller {
 		//
 		$this->data['content'] = implode('',$entries);
 		// load view
-		view('portfolio/index', $this->data);
+		$this->view('portfolio/index', $this->data);
 	}
 	// ------------------------
 	// Item
 	function item( $permalink = null )
 	{
 		// add assets
-		css_add('portfolio_item, fs.slides');
-		js_add('fs.equal_height, fs.anker, fs.sticky_top, fs.slides, portfolio_item');
+		css_add('portfolio_item, fs.slides', 'page');
+		js_add('fs.equal_height, fs.anker, fs.sticky_top, fs.slides, portfolio_item', 'page');
 		// font callback
 		$this->data['fonts_callback'][] = "$('.section_menu').fs_sticky_top('refresh'); $('.column').fs_equal_height();";
 		//
 		$this->data['body_class'] = variable($this->data['body_class']).' item-view';
 		// get items from database
 		$item = db_select( 'client_entries', array('type' => 3, 'permalink' => $permalink), array('json' => 'data', 'single' => TRUE));
-		
 		// load item if exists
 		if( $item != null )
 		{
 			$this->data = array_merge($this->data, $item);
-			view('portfolio/item', $this->data);
+			$this->view('portfolio/item', $this->data);
 		}
 		else
 		{

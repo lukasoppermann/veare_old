@@ -138,7 +138,7 @@ _body.fs_resize(function()
 });
 //------------------------------------
 // on load
-_window.load( function()
+$(document).ready( function()
 {	
 	// _window.trigger('resize');
 	//
