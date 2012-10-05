@@ -65,7 +65,6 @@ $(function(){
 						content[path] = {};
 						// create script element
 						var script = document.createElement( 'script' );
-						script.data = 'text/javascript';
 						script.src = response.js;
 						// add script element to DOM
 						document.body.appendChild(script);

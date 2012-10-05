@@ -52,7 +52,7 @@ function &DB($params = '', $active_record_override = NULL)
 		// check if online or offline
 		if( isset($active_group) && is_array($active_group) )
 		{
-			if( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1'  )
+			if( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1' || substr($_SERVER['REMOTE_ADDR'], 0, 6) == '10.0.2' )
 			{
 				$active_group = $active_group['offline'];
 			}

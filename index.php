@@ -80,7 +80,8 @@ if (defined('ENVIRONMENT'))
  * --------------------------------------------------------------------
  *
  */
-	if( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1'  )
+ echo  $_SERVER['REMOTE_ADDR'];
+	if( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1' || substr($_SERVER['REMOTE_ADDR'], 0, 6) == '10.0.2' )
 	{
 		$system_path = $system_path['offline'];
 		$application_folder = $application_folder['offline'];
