@@ -62,19 +62,40 @@ $(function(){
 					// define ajax done method
 					ajax.done(function( response )
 					{
+						// create content var
 						content[path] = {};
-						// create script element
-						var script = document.createElement( 'script' );
-						script.src = response.js;
-						// add script element to DOM
-						document.body.appendChild(script);
-						// add css to head
-						_head.append("<link data-path='"+path+"' href='"+response.css+"' type='text/css' rel='stylesheet' \/>");
-						
-						content[path]["css"] = _head.find("link[data-path='"+path+"']");
-						content[path]["css"].attr("disabled", "disabled");
-						
-						content[path]["js"] = _head.find("script[src='"+response.js+"']").data('path', path);
+						// prepare js
+						if( response.js != undefined && response.js != '' )
+						{
+							// split js files
+							var js = response.js.split(",");
+							// loop through js files
+							$.each(js, function( i, file ){
+								// create script element
+								var script = document.createElement( 'script' );
+								// create script element
+								script.src = file;
+								// add script element to DOM
+								document.body.appendChild(script);
+							});
+						}
+						// prepare css
+						if( response.css != undefined && response.css != '' )
+						{
+							var output = '';
+							// split css files
+							var css = response.css.split(",");
+							// loop through js files
+							$.each(css, function( i, file ){
+								output += "<link data-path='"+path+"' href='"+file+"' type='text/css' rel='stylesheet' />"
+							});
+							// add to DOM
+							_head.append(output);
+							// cache css selection
+							content[path]["css"] = _head.find("link[data-path='"+path+"']");
+							// disabled files
+							content[path]["css"].attr("disabled", "disabled");
+						}
 						
 						current['page'].after($('<div class="current-page page">'+response.content+'</div>').css({'opacity':'0','marginTop':'20%'}));
 						//

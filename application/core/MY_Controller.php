@@ -84,8 +84,8 @@ class MY_Controller extends CI_Controller {
 		{
 			echo json_encode(array(
 				'content' => $this->load->view($template, $data, TRUE),
-				'css' 		=> css_link('page', TRUE),
-				'js' 			=> js_link('page', TRUE)
+				'css' 		=> css_link('page', TRUE, ','),
+				'js' 			=> js_link('page', TRUE, ',')
 			));
 		}
 		// normal loading

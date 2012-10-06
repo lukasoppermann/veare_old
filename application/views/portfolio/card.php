@@ -1,4 +1,4 @@
-<a class="column card-flip" data-tag="<?=implode(' ',$tags)?>" href="<?=base_url().'en/portfolio/'.$permalink?>">
+<a class="column card-flip ajax-link" data-tag="<?=implode(' ',$tags)?>" href="<?=base_url().'en/portfolio/'.$permalink?>">
 	<div class="card-wrap">
 		<div class="card front">	
 				<div class="card-content">
