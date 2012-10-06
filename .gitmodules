@@ -1,0 +1,3 @@
+[submodule "libs/js/fs-load"]
+	path = libs/js/fs-load
+	url = git@github.com:lukasoppermann/fs-load.git
