@@ -1,20 +1,17 @@
 // once jquery is loaded
 $(function(){
 	// defining vars
-	var _window = $(window),
-			_logo = $('#logo'),
-			_body = $('body'),
-			_section_menu = $('.section-menu');
-	// defining functions
-	// section menu
-	
-	// ------------------------------------------------------
-	//
+	var	_logo = $('#logo'),
+			_portfolio_item = $('.portfolio-item'),
+			_section_menu = _portfolio_item.find('.section-menu'),
+			_columns = _portfolio_item.find('.column');
+			
 	// when everything is loaded
 	$.fs_load(function(){
+		// run equal height
 		setTimeout(function() 
 		{
-			$('.column').fs_equal_height();
+			_columns.fs_equal_height();
 		}, 100);
 		// stick top menu
 		_section_menu.fs_sticky_top({
@@ -22,7 +19,7 @@ $(function(){
 				_logo.stop().animate({'marginTop': '50px'}, 300);
 			},
 			scroll_deactive_fn: function(){
-				if( !_body.hasClass('mobile') && !_body.hasClass('tablet-small') && !_body.hasClass('loaded-tablet') )
+				if( !gCache.body.hasClass('mobile') && !gCache.body.hasClass('tablet-small') && !gCache.body.hasClass('loaded-tablet') )
 				{
 					_logo.stop().animate({'marginTop': '20px'}, 300);
 				}
@@ -39,9 +36,9 @@ $(function(){
 	
 	});
 	//
-	
-	_window.fs_resize(function()
+	gCache.window.fs_resize(function()
 	{
-		$('.column').fs_equal_height();
+		_columns.fs_equal_height();
 	});
+	//
 });

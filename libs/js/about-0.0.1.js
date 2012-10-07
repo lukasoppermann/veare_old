@@ -2,26 +2,24 @@
 $(function()
 {
 // define variables
-var _body = $('body');
-var _window = $(window);
 var window_height;
 var activatables = new Array();
 var activate_areas = new Array();
-var scrollTop = _window.scrollTop();
-var scrollBottom = scrollTop + _window.height();
+var scrollTop = gCache.window.scrollTop();
+var scrollBottom = scrollTop + gCache.window.height();
 //------------------------------------
 // define functions
 // check active for other devices
 check_active_fn = function()
 {
-	scrollTop = _window.scrollTop();
-	scrollBottom = scrollTop + _window.height();
+	scrollTop = gCache.window.scrollTop();
+	scrollBottom = scrollTop + gCache.window.height();
 	// check for active area
 	$.each(activate_areas, function(index, top)
 	{
 		//
-		if( (activatables[index].bottom >= scrollTop+(_window.height()*0.08)) && (activatables[index].top <= scrollBottom-(_window.height()*0.08))
-		&& (activatables[index].bottom <= scrollBottom-(_window.height()*0.08)) &&  (activatables[index].top >= scrollTop+(_window.height()*0.08)) )
+		if( (activatables[index].bottom >= scrollTop+(gCache.window.height()*0.08)) && (activatables[index].top <= scrollBottom-(gCache.window.height()*0.08))
+		&& (activatables[index].bottom <= scrollBottom-(gCache.window.height()*0.08)) &&  (activatables[index].top >= scrollTop+(gCache.window.height()*0.08)) )
 		{
 			activatables[index].selector.addClass('active');
 		}
@@ -35,7 +33,7 @@ check_active_fn = function()
 var prepare_active_fn = function()
 {
 	// adjust size of active area & bgs
-	window_height = _window.height();
+	window_height = gCache.window.height();
 	$('.activatable').each(function(index){
 		activatables[ index ] = new Array();
 		activatables[ index ].selector = $(this);
@@ -44,7 +42,7 @@ var prepare_active_fn = function()
 		activate_areas[ index ] = Math.round(activatables[ index ].top);
 	});
 	// check for tablet screen
-	if(_body.hasClass('tablet-small'))
+	if(gCache.body.hasClass('tablet-small'))
 	{
 		$('.active-bg').each(function(){
 			var _this = $(this);
@@ -93,7 +91,7 @@ var adjust_font = function()
 //
 //------------------------------------
 // on resolution change
-_body.on('resolutionChange', function(e, resolution){
+gCache.body.on('resolutionChange', function(e, resolution){
 	// define variables
 	var _rearrange = $('.rearrange');
 	// rearrange elements
@@ -127,9 +125,9 @@ _body.on('resolutionChange', function(e, resolution){
 $('.article').animate({'opacity':1,'marginTop':0}, 500, 'swing');
 //------------------------------------
 // on resize
-_body.fs_resize(function()
+gCache.body.fs_resize(function()
 {
-	if(!_body.hasClass('mobile'))
+	if(!gCache.body.hasClass('mobile'))
 	{
 		prepare_active_fn();
 	}
@@ -140,7 +138,7 @@ _body.fs_resize(function()
 // on load
 $.fs_load( function()
 {	
-	// _window.trigger('resize');
+	// gCache.window.trigger('resize');
 	//
 	// adjust font size
 	adjust_font();
@@ -148,7 +146,7 @@ $.fs_load( function()
 	// reorganize quotes
 	var _rearrange = $('.rearrange');
 	//	
-	if(_body.hasClass('tablet-small') || _body.hasClass('mobile-portrait') || _body.hasClass('mobile-landscape') || _body.hasClass('mobile'))
+	if(gCache.body.hasClass('tablet-small') || gCache.body.hasClass('mobile-portrait') || gCache.body.hasClass('mobile-landscape') || gCache.body.hasClass('mobile'))
 	{
 		// move quote after content
 		_rearrange.each(function(){
@@ -156,7 +154,7 @@ $.fs_load( function()
 			_this.find('.content').insertBefore(_this.find('.quote'));
 		});
 		//
-		if( !_body.hasClass('tablet-small') )
+		if( !gCache.body.hasClass('tablet-small') )
 		{
 			check_active = "empty_fn";
 		}
@@ -176,7 +174,7 @@ $.fs_load( function()
 	}
 	prepare_active_fn();
 	//------------------------------------
-	_window.on('scroll', function()
+	gCache.window.on('scroll', function()
 	{
 		window[check_active]();
 	});

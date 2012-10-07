@@ -1,3 +1,4 @@
+var gCache = {};
 // ----------------------------------------------------
 // Base functions used in all or many files
 // ----------------------------------------------------
@@ -5,26 +6,10 @@
 $(function()
 {
 	// -----------------------
-	var _body = $('body');
-	var _stage = $('#stage');
-	var loaded = false;
-	window.loaded = false;
-	// -----------------------
-	// window loaded
-	$(window).load(function(){
-		window.loaded = true;
-	});
-	var window_loaded = function()
-	{
-		if( windowLoaded === false )
-		{
-			return false;
-		}
-		else
-		{
-			return true;
-		}
-	}
+	gCache.window = $(window);
+	gCache.document = $(document);
+	gCache.body = $('body');
+	gCache.stage = $('#stage');
 	// -----------------------
 	// Animate Content
 	// var animate_content = function( resolution )
@@ -56,7 +41,7 @@ $(function()
 				url: CI_BASE+'en/about',
 			}).done(function(response)
 			{
-				_stage.prepend('<div id="about" class="hidden-page" style="display:none;">'+response.content+'</div>');
+				gCache.stage.prepend('<div id="about" class="hidden-page" style="display:none;">'+response.content+'</div>');
 				$('.current-page').fadeOut();
 				$('#about').addClass('current-page').removeClass('hidden-page').css({'display':'block','marginTop':50}).animate({'opacity':1,'marginTop':0}, 500);
 				$('head').append(response.css+response.js);
@@ -82,7 +67,7 @@ $(function()
 		// console.log(resolution);
 		// console.log($(window).width());
 		// $('html, body').height(_stage.height());
-		_body.trigger('resolutionChange', resolution);
+		gCache.body.trigger('resolutionChange', resolution);
 		// animate_content(resolution);
 		// _stage.width($(document).width());
 	};
@@ -95,24 +80,24 @@ $(function()
 			context: 'mobile-portrait',
 			callback: function() {
 				query_actions('mobile-portrait');
-				_body.addClass('mobile portrait hide-line-text nav-narrow').removeClass('hovers tablet-small nav-wide landscape tablet screen wide-screen');
+				gCache.body.addClass('mobile portrait hide-line-text nav-narrow').removeClass('hovers tablet-small nav-wide landscape tablet screen wide-screen');
 			}
 		},
 		{
 			context: 'mobile-landscape',
 			callback: function() {
 				query_actions('mobile-landscape');
-				_body.addClass('mobile landscape hide-line-text nav-narrow').removeClass('hovers tablet-small nav-wide portrait tablet screen wide-screen');
+				gCache.body.addClass('mobile landscape hide-line-text nav-narrow').removeClass('hovers tablet-small nav-wide portrait tablet screen wide-screen');
 			}
 		},
 		{
 			context: 'tablet-small',
 			callback: function() {
 				query_actions('tablet-small');
-				_body.addClass('tablet-small hide-line-text nav-narrow').removeClass('hovers nav-wide tablet mobile screen wide-screen');
-				if( !_body.hasClass('loaded-tablet') )
+				gCache.body.addClass('tablet-small hide-line-text nav-narrow').removeClass('hovers nav-wide tablet mobile screen wide-screen');
+				if( !gCache.body.hasClass('loaded-tablet') )
 				{
-					_body.addClass('hovers');
+					gCache.body.addClass('hovers');
 				}
 			}
 		},
@@ -120,10 +105,10 @@ $(function()
 			context: 'tablet',
 			callback: function() {
 				query_actions('tablet');
-				_body.addClass('tablet hide-line-text nav-narrow').removeClass('hovers tablet-small nav-wide mobile screen wide-screen');
-				if( !_body.hasClass('loaded-tablet') )
+				gCache.body.addClass('tablet hide-line-text nav-narrow').removeClass('hovers tablet-small nav-wide mobile screen wide-screen');
+				if( !gCache.body.hasClass('loaded-tablet') )
 				{
-					_body.addClass('hovers');
+					gCache.body.addClass('hovers');
 				}
 			}
 		},
@@ -131,21 +116,21 @@ $(function()
 			context: 'min-screen',
 			callback: function() {
 				query_actions('min-screen');
-				_body.addClass('hovers nav-wide min-screen hide-line-text').removeClass('tablet-small mobile tablet wide-screen nav-narrow');
+				gCache.body.addClass('hovers nav-wide min-screen hide-line-text').removeClass('tablet-small mobile tablet wide-screen nav-narrow');
 			}
 		},
 		{
 			context: 'screen',
 			callback: function() {
 				query_actions('screen');
-				_body.addClass('hovers nav-wide screen').removeClass('tablet-small mobile tablet wide-screen min-screen hide-line-text nav-narrow');
+				gCache.body.addClass('hovers nav-wide screen').removeClass('tablet-small mobile tablet wide-screen min-screen hide-line-text nav-narrow');
 			}
 		},
 		{
 			context: 'wide-screen',
 			callback: function() {
 				query_actions('wide-screen');
-				_body.addClass('hovers nav-wide screen wide-screen').removeClass('tablet-small mobile tablet min-screen hide-line-text nav-narrow');
+				gCache.body.addClass('hovers nav-wide screen wide-screen').removeClass('tablet-small mobile tablet min-screen hide-line-text nav-narrow');
 			}
  		}
 	];

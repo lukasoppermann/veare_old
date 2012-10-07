@@ -58,6 +58,7 @@ only screen and (                min-resolution: 2dppx) {
 /*------------------*/
 /* Logo */
 #logo{
+	position: relative;
 	display: block;	
 	float: left;
 	width: 100%;
