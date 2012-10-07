@@ -64,6 +64,11 @@ $(function(){
 					{
 						// create content var
 						content[path] = {};
+						// add content
+						current['page'].after($('<div class="current-page page">'+response.content+'</div>').css({'opacity':'0','marginTop':'20%'}));
+						//
+						content[path]['page'] = $('.current-page');
+						content[path]['page'].css('display','block').animate({'opacity':'1','marginTop':0}, 300);
 						// prepare js
 						if( response.js != undefined && response.js != '' )
 						{
@@ -72,11 +77,12 @@ $(function(){
 							// loop through js files
 							$.each(js, function( i, file ){
 								// create script element
-								var script = document.createElement( 'script' );
-								// create script element
-								script.src = file;
-								// add script element to DOM
-								document.body.appendChild(script);
+								// var script = document.createElement( 'script' );
+								// // create script element
+								// script.src = file;
+								// // add script element to DOM
+								// document.body.appendChild(script);
+								$.getScript(file);
 							});
 						}
 						// prepare css
@@ -96,12 +102,6 @@ $(function(){
 							// disabled files
 							content[path]["css"].attr("disabled", "disabled");
 						}
-						
-						current['page'].after($('<div class="current-page page">'+response.content+'</div>').css({'opacity':'0','marginTop':'20%'}));
-						//
-
-						content[path]['page'] = $('.current-page');
-						content[path]['page'].css('display','block').animate({'opacity':'1','marginTop':0}, 300);
 						content[path]['css'].removeAttr('disabled');
 					});
 					// define ajax fail method

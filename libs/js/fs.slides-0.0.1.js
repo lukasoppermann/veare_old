@@ -53,7 +53,7 @@
 					}
 				});
 				// on load events
-				$(document).ready(function()
+				if(document.readyState == 'complete')
 				{
 					// set sizes
 					methods.refresh(_this);
@@ -62,7 +62,19 @@
 					methods.load(_this, _this.data('slideshow').first);
 					// start autoplay
 					methods.autoplay(_this);
-				});
+				}
+				else
+				{
+					$(window).load(function(){
+						// set sizes
+						methods.refresh(_this);
+						_this.height(_this.data('slideshow').opts.min_height);
+						// start loading images
+						methods.load(_this, _this.data('slideshow').first);
+						// start autoplay
+						methods.autoplay(_this);
+					});
+				}
 				// add refresh to resize event
 				$(window).on('resize', function(){
 					clearTimeout( _this.data('slideshow').resize_fn );

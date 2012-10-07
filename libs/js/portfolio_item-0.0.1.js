@@ -11,7 +11,7 @@ $(function(){
 	// ------------------------------------------------------
 	//
 	// when everything is loaded
-	_window.load(function(){
+	$.fs_load(function(){
 		setTimeout(function() 
 		{
 			$('.column').fs_equal_height();
