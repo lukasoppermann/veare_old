@@ -77,13 +77,14 @@ class MY_Controller extends CI_Controller {
 	 * @param		boolean
 	 * @return 
 	 */
-	function view( $template = null, $data = null )
+	function view( $template = null, $data = null, $namespace = null )
 	{
 		// if ajax request
 		if( isset($_POST['ajax']) )
 		{
 			echo json_encode(array(
 				'content' => $this->load->view($template, $data, TRUE),
+				'namespace' => $namespace,
 				'css' 		=> css_link('page', TRUE, ','),
 				'js' 			=> js_link('page', TRUE, ',')
 			));

@@ -191,7 +191,7 @@
 			}, _this.data('slideshow').remaining);
 		},
 		// move to next element
-		next: function(_this)
+		next: function( _this )
 		{
 			// set current and next item
 			var _current = _this.find('.'+_this.data('slideshow').opts.active);
@@ -216,7 +216,7 @@
 			}
 		},
 		// set first active
-		first: function(_this)
+		first: function( _this )
 		{
 			// set current item
 			_this.data('slideshow').current = _this.find('.'+_this.data('slideshow').opts.active);
@@ -231,7 +231,7 @@
 			_this.data('slideshow').first.addClass(_this.data('slideshow').opts.active);
 		},
 		// move to previous element
-		previous: function()
+		previous: function( _this )
 		{
 			// // set current and previous item
 			// _current = _this.find('.'+methods.settings.active);
@@ -239,6 +239,14 @@
 			// //
 			// _wrap.animate({'left':'+='+methods.settings.width});
 			// _this.find('.'+methods.settings.active).removeClass(methods.settings.active).prev(methods.settings.image).addClass(methods.settings.active);
+		},
+		// destory
+		destroy: function()
+		{
+			$(this).each(function(){
+				$(this).off("click, mouseenter, mouseleave");
+				methods.pause($(this));
+			});
 		}
 	}
 	//-------------------------------------------

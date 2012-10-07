@@ -152,8 +152,24 @@
 .hidden-page{
 	opacity: 0;
 }
-.current-page.loading{
-	
+.page{
+	float: left;
+	position: relative;
+	width: 100%;
+}
+.page:before{
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	background: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+.current-page:before{
+	display: none;
 }
 /*---------*/
 /* article */

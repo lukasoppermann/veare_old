@@ -9,9 +9,7 @@
 	-webkit-box-shadow: 2px 0px 0px 0px rgba(0,0,0,.1);
 	-moz-box-shadow: 2px 0px 0px 0px rgba(0,0,0,.1);
 }
-.current-page{
-	width: 100%;
-	float: left;
+.page{
 	background-image: url('../../images/isbb_berlin_bg_top.png');
 	background-position: 0 0;
 	background-repeat: no-repeat;

@@ -30,10 +30,11 @@
 			// add scroll event to window
 			_window.bind('scroll', methods.do_scroll);
 			// add refresh to resize event
-			_window.on('resize', function(){
-				clearTimeout( resize_fn );
-				resize_fn = setTimeout( methods.refresh, 100);
-			});
+			resize_fn = function(fn){
+				clearTimeout( fn );
+				fn = setTimeout( methods.refresh, 100);
+			};
+			_window.on('resize', resize_fn);
 		},
 		// refresh calculations for offset
 		refresh: function()
@@ -63,6 +64,16 @@
 				_this.removeClass(methods.settings.active_class).attr('style','');
 				methods.settings.scroll_deactive_fn.apply(this);
 			}
+		},
+		destory: function(){
+			// set active false
+			active = false;
+			_this.removeClass(methods.settings.active_class).attr('style','');
+			methods.settings.scroll_deactive_fn.apply(this);
+			// unbind scroll
+			_window.unbind('scroll', methods.do_scroll);
+			// add refresh to resize event
+			_window.on('resize', resize_fn);
 		}
 	};
 	

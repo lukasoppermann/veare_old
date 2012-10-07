@@ -13,14 +13,15 @@ $(function(){
 	{
 		_body.on('click', '.ajax-link', function()
 		{
-			var loading = true;
 			// get current path
 			var _this = $(this),
 					path 	= _this.attr('href');
 			// get current page
-			var current = new Array();
+			var current = {};
 					current.page = $('.current-page');
 					current.path = location.href.split("#")[0];
+			// remove active
+			current.page.removeClass('current-page');
 			// set url
 			history.pushState(null, null, path);
 			// scroll to top
@@ -41,6 +42,12 @@ $(function(){
 						content[path]['css'].removeAttr("disabled");
 						content[path]['page'].css('display','block').animate({'opacity':'1','marginTop':0}, 300).addClass('current-page');
 					});
+					
+					if( current != undefined && current.path != undefined && content[current.path] != undefined &&
+						content[current.path]['namespace'] != undefined && pages[content[current.path]['namespace']] != undefined)
+					{
+						pages[content[current.path]['namespace']].destory();
+					}
 				}
 			}
 			// content does not exists
@@ -68,12 +75,13 @@ $(function(){
 						current['page'].after($('<div class="current-page page">'+response.content+'</div>').css({'opacity':'0','marginTop':'20%'}));
 						//
 						content[path]['page'] = $('.current-page');
-						content[path]['page'].css('display','block').animate({'opacity':'1','marginTop':0}, 300);
+						content[path]['page'].css('display','block');
 						// prepare js
 						if( response.js != undefined && response.js != '' )
 						{
 							// split js files
 							var js = response.js.split(",");
+							
 							// loop through js files
 							$.each(js, function( i, file ){
 								// create script element
@@ -82,8 +90,28 @@ $(function(){
 								// script.src = file;
 								// // add script element to DOM
 								// document.body.appendChild(script);
-								$.getScript(file);
+								if( pages.js[file] == undefined )
+								{
+									$.getScript(file);
+									pages.js[file] = 'loaded';
+								}
 							});
+						}
+						
+						//
+						if( response.namespace != undefined )
+						{
+							content[path]['namespace'] = response.namespace;
+							if( pages[response.namespace] != undefined )
+							{
+								pages[response.namespace].init();
+							}
+						}
+						
+						if( current != undefined && current.path != undefined && content[current.path] != undefined &&
+							content[current.path]['namespace'] != undefined && pages[content[current.path]['namespace']] != undefined)
+						{
+							pages[content[current.path]['namespace']].destory();
 						}
 						// prepare css
 						if( response.css != undefined && response.css != '' )
@@ -98,18 +126,16 @@ $(function(){
 							// add to DOM
 							_head.append(output);
 							// cache css selection
-							content[path]["css"] = _head.find("link[data-path='"+path+"']");
-							// disabled files
-							content[path]["css"].attr("disabled", "disabled");
+							content[path]['css'] = _head.find("link[data-path='"+path+"']");
 						}
-						content[path]['css'].removeAttr('disabled');
+						content[path]['page'].animate({'opacity':'1','marginTop':0}, 300);
 					});
 					// define ajax fail method
 					ajax.fail(function()
 					{
 						current['page'].css('display','block').animate({'marginTop':'0','opacity':1}, 300).addClass('current-page');	
 					});
-				}).removeClass('current-page');
+				});
 			}
 			// stop propagation if link
 			return false;

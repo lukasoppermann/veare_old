@@ -81,20 +81,26 @@ class Portfolio extends MY_Controller {
 	// Item
 	function item( $permalink = null )
 	{
-		// add assets
-		css_add('portfolio_item, fs.slides', 'page');
-		js_add('fs.equal_height, fs.anker, fs.sticky_top, fs.slides, portfolio_item', 'page');
 		// font callback
 		$this->data['fonts_callback'][] = "$('.section_menu').fs_sticky_top('refresh'); $('.column').fs_equal_height();";
 		//
 		$this->data['body_class'] = variable($this->data['body_class']).' item-view';
 		// get items from database
 		$item = db_select( 'client_entries', array('type' => 3, 'permalink' => $permalink), array('json' => 'data', 'single' => TRUE));
+		//
+		$css = '';
+		if( isset($item['css_file']) && $item['css_file'] != null )
+		{
+			$css = ','.$item['css_file'];
+		}
+		// add assets
+		css_add('portfolio_item, fs.slides'.$css, 'page');
+		js_add('fs.equal_height, fs.anker, fs.sticky_top, fs.slides, portfolio_item', 'page');
 		// load item if exists
 		if( $item != null )
 		{
 			$this->data = array_merge($this->data, $item);
-			$this->view('portfolio/item', $this->data);
+			$this->view('portfolio/item', $this->data, 'portfolio_item');
 		}
 		else
 		{
