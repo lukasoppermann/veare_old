@@ -4,3 +4,6 @@
 [submodule "libs/js/fs-slides"]
 	path = libs/js/fs-slides
 	url = git@github.com:lukasoppermann/fs-slides.git
+[submodule "libs/js/fs-resize"]
+	path = libs/js/fs-resize
+	url = git@github.com:lukasoppermann/fs-resize.git
