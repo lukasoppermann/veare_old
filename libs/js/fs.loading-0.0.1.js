@@ -38,8 +38,8 @@ $(function(){
 						$(this).hide();
 						// remove data
 						content[current.path]['css'].attr("disabled","disabled");
-						// add new data
-						content[path]['css'].removeAttr("disabled");
+						// activate pages
+						content[path]['css'].removeAttr("disabled"); 
 						content[path]['page'].css('display','block').animate({'opacity':'1','marginTop':0}, 300).addClass('current-page');
 					});
 					
@@ -73,6 +73,16 @@ $(function(){
 						content[path] = {};
 						// add content
 						current['page'].after($('<div class="current-page page">'+response.content+'</div>').css({'opacity':'0','marginTop':'20%'}));
+						// deactivate css
+						console.log('Now');
+						if( content[current.path] != undefined && content[current.path]['css'] != undefined )
+						{
+							console.log(content[current.path]['css']);
+							$.each(content[current.path]['css'], function(i, file)
+							{
+								file.attr('disabled','disabled');
+							});
+						};
 						//
 						content[path]['page'] = $('.current-page');
 						content[path]['page'].css('display','block');
@@ -83,13 +93,8 @@ $(function(){
 							var js = response.js.split(",");
 							
 							// loop through js files
-							$.each(js, function( i, file ){
-								// create script element
-								// var script = document.createElement( 'script' );
-								// // create script element
-								// script.src = file;
-								// // add script element to DOM
-								// document.body.appendChild(script);
+							$.each(js, function( i, file )
+							{
 								if( pages.js[file] == undefined )
 								{
 									$.getScript(file);
@@ -119,16 +124,21 @@ $(function(){
 							var output = '';
 							// split css files
 							var css = response.css.split(",");
-							// loop through js files
+							// add css object
+							content[path]['css'] = {};
+							// loop through css files
 							$.each(css, function( i, file ){
-								output += "<link data-path='"+path+"' href='"+file+"' type='text/css' rel='stylesheet' />"
+								output += "<link href='"+file+"' type='text/css' rel='stylesheet' />";
 							});
 							// add to DOM
 							_head.append(output);
 							// cache css selection
-							content[path]['css'] = _head.find("link[data-path='"+path+"']");
+							// loop through js files
+							$.each(css, function( i, file ){
+								content[path]['css'][i] = _head.find("link[href='"+file+"']");
+							});
 						}
-						content[path]['page'].animate({'opacity':'1','marginTop':0}, 300);
+						content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
 					});
 					// define ajax fail method
 					ajax.fail(function()

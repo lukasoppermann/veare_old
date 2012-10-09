@@ -93,6 +93,7 @@ class MY_Controller extends CI_Controller {
 		else
 		{
 			// load view
+			$data['namespace'] = $namespace;
 			view($template, $data);
 		}
 	}

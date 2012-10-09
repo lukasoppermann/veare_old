@@ -99,10 +99,10 @@ $(function()
 	// Function to init js fns on load
 	pages.about.init = function()
 	{
-		alert('Test');
 		//------------------------------------
 		// on resolution change
-		resChange = function(e, resolution){
+		resChange = function(e, resolution)
+		{
 			console.log('Test');
 			// define variables
 			var _rearrange = $('.rearrange');

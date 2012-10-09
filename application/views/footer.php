@@ -18,7 +18,7 @@
 	}
 ?>
 <? echo js('default', FALSE); ?>
-<? echo js('page', FALSE, "data-path='".current_url()."' "); ?>
+<? echo js('page', TRUE, "data-path='".current_url()."' "); ?>
 </div>
 </body>
 </html>
