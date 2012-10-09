@@ -6,25 +6,27 @@ body.mobile, body.tablet-small{
 body.mobile, body.tablet{
 	font-size: 110%;
 }
-body:after {
-    content: 'mobile-portrait';
-    display: none;
+body{
+	font-family: 'Helvetica Neue', 'Helvetica', Arial, Sans-serif;
+}
+html {
+    font-family: 'mobile-portrait';
 }
 @media screen and (max-width: 320px) and (orientation:portrait) { 
-	body:after { content: 'mobile-portrait'; }
+	html { font-family: 'mobile-portrait'; }
 }
 @media screen and (min-width: 400px) and (orientation:landscape){
-	body:after { content: 'mobile-landscape'; }	
+	html { font-family: 'mobile-landscape'; }	
 }
 @media screen and (min-width: 540px){
-	body:after { content: 'tablet-small'; }	
+	html { font-family: 'tablet-small'; }	
 }
 @media screen and (min-width: 780px){ 
-	body:after { content: 'tablet'; }
+	html { font-family: 'tablet'; }
 } 
 @media screen and (min-width: 1100px) { 
-	body:after { content: 'screen'; }
+	html { font-family: 'screen'; }
 }
 @media screen and (min-width: 1400px) { 
-	body:after { content: 'wide-screen'; }
+	html { font-family: 'wide-screen'; }
 }
