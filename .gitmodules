@@ -19,3 +19,9 @@
 [submodule "libs/js/fs-media-queries"]
 	path = libs/js/fs-media-queries
 	url = git@github.com:lukasoppermann/fs-media-queries.git
+[submodule "gmaps"]
+	path = gmaps
+	url = git@github.com:lukasoppermann/gmaps.git
+[submodule "libs/js/gmaps"]
+	path = libs/js/gmaps
+	url = git@github.com:lukasoppermann/gmaps.git
