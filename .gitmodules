@@ -25,3 +25,6 @@
 [submodule "libs/js/gmaps"]
 	path = libs/js/gmaps
 	url = git@github.com:lukasoppermann/gmaps.git
+[submodule "libs/js/jquery"]
+	path = libs/js/jquery
+	url = https://github.com/jquery/jquery.git
