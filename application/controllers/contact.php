@@ -17,6 +17,6 @@ class Contact extends MY_Controller {
 		$this->data['sidebar_class'] = 'shadow';
 		$this->data['body_class'] = variable($this->data['body_class']).' no-line';
 		// load view
-		$this->view('custom/contact', $this->data);
+		$this->view('custom/contact', $this->data, 'contact');
 	}
 }

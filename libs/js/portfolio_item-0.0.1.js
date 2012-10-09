@@ -35,8 +35,8 @@ $(function(){
 						}
 					}
 				});
-				// run anker fn
-				_section_menu.find('a').fs_anker();
+				// run anchor fn
+				_section_menu.find('a').fs_anchor();
 				// run equal height
 				setTimeout(function() 
 				{

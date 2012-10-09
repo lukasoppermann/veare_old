@@ -10,3 +10,9 @@
 [submodule "libs/js/fs-equal-height"]
 	path = libs/js/fs-equal-height
 	url = git@github.com:lukasoppermann/fs-equal-height.git
+[submodule "libs/js/fs-anchor"]
+	path = libs/js/fs-anchor
+	url = git@github.com:lukasoppermann/fs-anchor.git
+[submodule "libs/js/fs-sticky-top"]
+	path = libs/js/fs-sticky-top
+	url = git@github.com:lukasoppermann/fs-sticky-top.git

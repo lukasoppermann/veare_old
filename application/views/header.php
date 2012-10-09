@@ -46,7 +46,7 @@ else
 	<!--+++++++++++++++++++++++++ sidebar +++++++++++++++++++++++++-->
 	<div id="sidebar" class="<?=variable($sidebar_class)?>">
 		<!-- logo -->
-		<a href="<?=base_url()?>en/contact/" id="logo">
+		<a href="<?=base_url()?>en/contact/" id="logo" class="ajax-link">
 			<div class="logo-inner logo-small veare-sprite">
 				<div class="logo-img">
 					<img src="<?=base_url(TRUE)?>layout/veare-icons.png" alt="veare - visionary design" />

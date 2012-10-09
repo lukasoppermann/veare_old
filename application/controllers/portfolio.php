@@ -95,7 +95,7 @@ class Portfolio extends MY_Controller {
 		}
 		// add assets
 		css_add('portfolio_item, fs.slides'.$css, 'page');
-		js_add('fs.equal_height, fs.anker, fs.sticky_top, fs.slides, portfolio_item', 'page');
+		js_add('fs.equal_height, fs.anchor, fs.sticky_top, fs.slides, portfolio_item', 'page');
 		// load item if exists
 		if( $item != null )
 		{
