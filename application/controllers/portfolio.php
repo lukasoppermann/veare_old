@@ -75,7 +75,7 @@ class Portfolio extends MY_Controller {
 		//
 		$this->data['content'] = implode('',$entries);
 		// load view
-		$this->view('portfolio/index', $this->data);
+		$this->view('portfolio/index', $this->data, 'portfolio');
 	}
 	// ------------------------
 	// Item

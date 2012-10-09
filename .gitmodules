@@ -7,3 +7,6 @@
 [submodule "libs/js/fs-resize"]
 	path = libs/js/fs-resize
 	url = git@github.com:lukasoppermann/fs-resize.git
+[submodule "libs/js/fs-equal-height"]
+	path = libs/js/fs-equal-height
+	url = git@github.com:lukasoppermann/fs-equal-height.git

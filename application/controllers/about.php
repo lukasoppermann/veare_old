@@ -16,7 +16,7 @@ class About extends MY_Controller {
 		css_add('about','page');
 		js_add('about','page');
 		// check for ajax
-		$this->view('custom/about', $this->data);
+		$this->view('custom/about', $this->data, 'about');
 	}
 // close class
 }
