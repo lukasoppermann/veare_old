@@ -16,3 +16,6 @@
 [submodule "libs/js/fs-sticky-top"]
 	path = libs/js/fs-sticky-top
 	url = git@github.com:lukasoppermann/fs-sticky-top.git
+[submodule "libs/js/fs-media-queries"]
+	path = libs/js/fs-media-queries
+	url = git@github.com:lukasoppermann/fs-media-queries.git
