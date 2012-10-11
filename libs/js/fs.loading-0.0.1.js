@@ -7,7 +7,16 @@ $(function(){
 	// cache selsections
 	var content = {}, 
 			_head 	= $('head'),
-			_body 	= $('body');
+			_body 	= $('body'),
+			loc 		= location.href.split("#")[0];
+	// set content
+	content[loc] = {};
+	content[loc]['page'] = $('.current-page');
+	content[loc]['css'] 	= {};
+	$.each(_head.find("link[data-type='page']"), function(i, file){
+		content[loc]['css'][i] 	= $(file);
+	}); 
+	content[loc]['namespace'] = _head.find("link[data-type='page']").data("namespace"); 
 	// check for history api support
 	if( supports_history_api() )
 	{
@@ -37,9 +46,19 @@ $(function(){
 					{
 						$(this).hide();
 						// remove data
-						content[current.path]['css'].attr("disabled","disabled");
+						if( content[current.path] != undefined && content[current.path]['css'] != undefined )
+						{
+							$.each(content[current.path]['css'], function(i, file){
+								file.attr('disabled','disabled');
+							});
+						};
 						// activate pages
-						content[path]['css'].removeAttr("disabled"); 
+						if( content[path] != undefined && content[path]['css'] != undefined )
+						{
+							$.each(content[path]['css'], function(i, file){
+								file.removeAttr("disabled");
+							});
+						};
 						content[path]['page'].css('display','block').animate({'opacity':'1','marginTop':0}, 300).addClass('current-page');
 					});
 					
@@ -74,12 +93,9 @@ $(function(){
 						// add content
 						current['page'].after($('<div class="current-page page">'+response.content+'</div>').css({'opacity':'0','marginTop':'20%'}));
 						// deactivate css
-						console.log('Now');
 						if( content[current.path] != undefined && content[current.path]['css'] != undefined )
 						{
-							console.log(content[current.path]['css']);
-							$.each(content[current.path]['css'], function(i, file)
-							{
+							$.each(content[current.path]['css'], function(i, file){
 								file.attr('disabled','disabled');
 							});
 						};
@@ -128,7 +144,14 @@ $(function(){
 							content[path]['css'] = {};
 							// loop through css files
 							$.each(css, function( i, file ){
-								output += "<link href='"+file+"' type='text/css' rel='stylesheet' />";
+								if( _head.find("link[href='"+file+"']").length == 0 )
+								{
+									output += "<link href='"+file+"' type='text/css' rel='stylesheet' />";
+								}
+								else
+								{
+									_head.find("link[href='"+file+"']").removeAttr('disabled');
+								}
 							});
 							// add to DOM
 							_head.append(output);
