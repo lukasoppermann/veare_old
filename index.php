@@ -56,7 +56,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path['offline'] = '../ci_formandsystem';
+	$system_path['offline'] = '../ci_formandsystem/system/';
 	$system_path['online'] = '../../ci_formandsystem_2.1.2';
 /*
  *---------------------------------------------------------------
