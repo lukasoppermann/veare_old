@@ -6,11 +6,7 @@ echo favicon('favicon');
 echo meta();
 echo css('default', TRUE);
 echo css('page', TRUE, "data-type='page' data-namespace='".$namespace."'");
-echo title(variable($meta_title, 'Welcome').' | vea.re – visionary design');
-if( variable($css) != null )
-{
-	echo '<style type="text/css" media="screen">'.$css."</style>";
-}
+// add css files specific for pages
 if( variable($css_file) != null )
 {
 	$files = explode(',',$css_file);
@@ -20,9 +16,11 @@ if( variable($css_file) != null )
 		{
 			$css = base_url().config('dir_css').'/'.trim($css,'/');
 		}
-		echo '<link media="screen" type="text/css" href="'.$css.'" rel="stylesheet">';
+		echo '<link media="screen" type="text/css" href="'.$css.'" rel="stylesheet" data-type="page" data-namespace="'.$namespace.'">'."\n";
 	}
 }
+// title
+echo title(variable($meta_title, 'Welcome').' | vea.re – visionary design');
 ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 </head>
@@ -71,6 +69,6 @@ else
 	</div>
 	<!--+++++++++++++++++++++++++ sidebar end +++++++++++++++++++++++++-->
 	<div class="wrapper">
-		<div class="left-column-wrapper">		
+		<div class="left-column-wrapper">
 			<div id="stage">
 				<div class="current-page page">
