@@ -181,11 +181,11 @@
 }
 .language .label{
 	display: none;
-	color: rgb(180,180,180);
+	color: rgb(150,150,150);
 	height: 24px;
 	line-height: 14px;
 	font-size: 14px;
-	padding: 5px 10px;
+	padding: 4px 10px;
 }
 .nav-wide .language .label{ display: block; }
 .lang-switch{
