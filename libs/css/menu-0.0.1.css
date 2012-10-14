@@ -203,9 +203,8 @@
 	-ms-transition: background-color .4s ease;
 }
 .nav-wide .lang-switch{ right: 10px; }
-.lang-switch:hover{
-	background-color: rgb(245,160,10);
-}
+.lang-switch:hover{ background-color: rgb(245,160,10); }
+.disabled .lang-switch:hover{ background-color: rgb(200,200,200); cursor: default; }
 .lang-switch .circle{
 	position: absolute;
 	height: 20px;
@@ -223,9 +222,9 @@
 	-moz-transition-duration: 0.3s;
 }
 .en .lang-switch .circle{ right: 0; }
-.hovers .en .lang-switch:hover .circle{ right: 4px; }
+.hovers .en:not(".disbaled") .lang-switch:hover .circle{ right: 4px; }
 .de .lang-switch .circle{ left: 0; }
-.hovers .de .lang-switch:hover .circle{ left: 4px; }
+.hovers .de:not(".disbaled") .lang-switch:hover .circle{ left: 4px; }
 .en .lang-switch .lang-de, .de .lang-switch .lang-en{ opacity: 0; }
 .lang-switch .lang-label{
 	color: rgb(245,245,245);
@@ -236,7 +235,8 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
 }
-.hovers .en .lang-switch:hover .lang-label{ padding-left: 6px; }
+.hovers .en:not(".disbaled") .lang-switch:hover .lang-label{ padding-left: 6px; }
+.hovers .de:not(".disbaled") .lang-switch:hover .lang-label{ padding-right: 6px; }
 .lang-switch .lang-label{
 	transition-property: padding;
 	transition-duration: 0.3s;
