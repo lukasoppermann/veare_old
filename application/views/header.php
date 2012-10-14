@@ -64,7 +64,7 @@ else
 				<li class="item"><a class="hover-button linkedin" href="https://www.linkedin.com/in/lukasoppermann" target="_blank"><span class="icon-small linkedin"></span></a></li>
 			</ul>
 			<div class="language en">
-				<div class="label">Sprache</div>
+				<div class="label open_sans_bold">Sprache</div>
 				<div class="lang-switch open_sans_bold"><span class="lang-label lang-en">ENG</span><span class="circle"></span><span class="lang-label lang-de">DEU</span></div>
 			</div>
 		</div>
