@@ -81,6 +81,9 @@ class Portfolio extends MY_Controller {
 	// Item
 	function item( $permalink = null )
 	{
+		// add assets
+		css_add('portfolio_item, fs.slides', 'page');
+		js_add('fs.equal_height, fs.anchor, fs.sticky_top, fs.slides, portfolio_item', 'page');
 		// font callback
 		$this->data['fonts_callback'][] = "$('.section_menu').fs_sticky_top('refresh'); $('.column').fs_equal_height();";
 		//
@@ -91,11 +94,8 @@ class Portfolio extends MY_Controller {
 		$css = '';
 		if( isset($item['css_file']) && $item['css_file'] != null )
 		{
-			$css = ','.$item['css_file'];
+			css_add($item['css_file'], 'page');
 		}
-		// add assets
-		css_add('portfolio_item, fs.slides'.$css, 'page');
-		js_add('fs.equal_height, fs.anchor, fs.sticky_top, fs.slides, portfolio_item', 'page');
 		// load item if exists
 		if( $item != null )
 		{
