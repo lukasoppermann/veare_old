@@ -15,7 +15,6 @@ class Contact extends MY_Controller {
 		js_add(array('http://maps.google.com/maps/api/js?sensor=true','gmaps','contact'), 'page');
 		//
 		$this->data['sidebar_class'] = 'shadow';
-		$this->data['body_class'] = variable($this->data['body_class']).' no-line';
 		// load view
 		$this->view('custom/contact', $this->data, 'contact');
 	}

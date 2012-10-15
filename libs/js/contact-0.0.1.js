@@ -17,6 +17,8 @@ $(function()
 						map, 
 						dragevent;
 				
+				gCache.sidebar.addClass('shadow');
+				
 				gCache.stage.css({'height':gCache.window.height(),'paddingBottom':0});
 				gCache.stage.find('.current-page').css({'height':gCache.window.height(),'paddingBottom':0});
 				var content = '<div class="marker-wrapper">'+$('.veare-contact').attr('class', 'veare-contact').clone().wrap('<div class="wrap" />').parents('.wrap').html()+'<div class="shadow"></div></div>';
@@ -73,7 +75,7 @@ $(function()
 				gCache.body.on('resolutionChange', function(e, resolution){
 					if(resolution == 'mobile-portrait' || resolution == 'mobile-landscape' || resolution == 'mobile')
 					{
-						gCache.stage.attr('style','');
+						pages.contact.destroy();
 					}
 				});
 			}
@@ -82,7 +84,7 @@ $(function()
 				gCache.body.on('resolutionChange', function(e, resolution){
 					if(resolution != 'mobile-portrait' && resolution != 'mobile-landscape' && resolution != 'mobile')
 					{
-						window.location.reload();
+						pages.contact.init();
 					}
 				});
 			}
@@ -91,7 +93,11 @@ $(function()
 	// destruct fn
 	pages.contact.destroy = function()
 	{
-		
+		// remove shadow
+		gCache.sidebar.removeClass('shadow');
+		// reset size of windows
+		gCache.stage.attr('style','');
+		gCache.stage.find('.current-page').css({'height':'auto','paddingBottom':'auto'});
 	};
 	// run init on page load
 	pages.contact.init();

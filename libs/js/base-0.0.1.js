@@ -12,6 +12,7 @@ $(function()
 	gCache.document = $(document);
 	gCache.body = $('body');
 	gCache.stage = $('#stage');
+	gCache.sidebar = $('#sidebar');
 	// -----------------------
 	// Animate Content
 	// var animate_content = function( resolution )

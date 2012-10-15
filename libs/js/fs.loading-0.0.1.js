@@ -130,7 +130,7 @@ $(function(){
 						}
 						
 						if( current != undefined && current.path != undefined && content[current.path] != undefined &&
-							content[current.path]['namespace'] != undefined && pages[content[current.path]['namespace']] != undefined)
+							content[current.path]['namespace'] != undefined && pages[content[current.path]['namespace']] != undefined && pages[content[current.path]['namespace']].destory != undefined)
 						{
 							pages[content[current.path]['namespace']].destory();
 						}
