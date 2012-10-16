@@ -55,7 +55,7 @@ $(function(){
 	};
 	// --------------------
 	// Function to destroy portfolio_item when unloaded
-	pages.portfolio_item.destory = function(){
+	pages.portfolio_item.destroy = function(){
 		_section_menu.fs_sticky_top('destory');
 		_portfolio_item.find('.slideshow').fs_slides('destroy');
 	};

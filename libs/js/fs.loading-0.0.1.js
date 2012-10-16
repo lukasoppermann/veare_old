@@ -65,7 +65,7 @@ $(function(){
 					if( current != undefined && current.path != undefined && content[current.path] != undefined &&
 						content[current.path]['namespace'] != undefined && pages[content[current.path]['namespace']] != undefined)
 					{
-						pages[content[current.path]['namespace']].destory();
+						pages[content[current.path]['namespace']].destroy();
 					}
 				}
 			}
@@ -130,9 +130,9 @@ $(function(){
 						}
 						
 						if( current != undefined && current.path != undefined && content[current.path] != undefined &&
-							content[current.path]['namespace'] != undefined && pages[content[current.path]['namespace']] != undefined && pages[content[current.path]['namespace']].destory != undefined)
+							content[current.path]['namespace'] != undefined && pages[content[current.path]['namespace']] != undefined && pages[content[current.path]['namespace']].destroy != undefined)
 						{
-							pages[content[current.path]['namespace']].destory();
+							pages[content[current.path]['namespace']].destroy();
 						}
 						// prepare css
 						if( response.css != undefined && response.css != '' )

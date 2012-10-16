@@ -152,7 +152,6 @@ $(function()
 	// Function to destroy js fns on unload
 	pages.about.destroy = function()
 	{
-		console.log('destory');
 		gCache.body.off('resolutionChange', resChange);
 		// !!!!!!!!!!! gCache.body.fs_resize('off', resizeFN);
 	};
