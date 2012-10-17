@@ -109,23 +109,39 @@ $(function(){
 							var js = response.js.split(",");
 							
 							// loop through js files
+							var count = js.length;
 							$.each(js, function( i, file )
 							{
 								if( pages.js[file] == undefined )
 								{
-									$.getScript(file);
+									$.getScript(file).done(function(){
+										// check if last script
+										if( count == 1+i )
+										{
+											if( response.namespace != undefined )
+											{
+												content[path]['namespace'] = response.namespace;
+												if( pages[response.namespace] != undefined )
+												{
+													pages[response.namespace].init();
+												}
+											}
+										}
+									});
 									pages.js[file] = 'loaded';
 								}
 							});
 						}
-						
-						//
-						if( response.namespace != undefined )
+						else
 						{
-							content[path]['namespace'] = response.namespace;
-							if( pages[response.namespace] != undefined )
+							//
+							if( response.namespace != undefined )
 							{
-								pages[response.namespace].init();
+								content[path]['namespace'] = response.namespace;
+								if( pages[response.namespace] != undefined )
+								{
+									pages[response.namespace].init();
+								}
 							}
 						}
 						
