@@ -1,3 +1,7 @@
+var loaded = false;
+// declare object
+pages.contact = {};
+//
 var init_contact = function(){
 	pages.contact.init();
 	pages.contact.map();
@@ -5,9 +9,6 @@ var init_contact = function(){
 
 $(function()
 {
-	var loaded = false;
-	// declare object
-	pages.contact = {};
 	// -----------------------
 	// init fn
 	pages.contact.init = function()
@@ -22,7 +23,8 @@ $(function()
 				gCache.stage.find('.current-page').css({'height':gCache.window.height(),'paddingBottom':0});
 				var content = '<div class="marker-wrapper">'+$('.veare-contact').attr('class', 'veare-contact').clone().wrap('<div class="wrap" />').parents('.wrap').html()+'<div class="shadow"></div></div>';
 				// remove style on resolution change
-				gCache.body.on('resolutionChange', function(e, resolution){
+				gCache.body.on('resolutionChange', function(e, resolution)
+				{
 					if(resolution == 'mobile-portrait' || resolution == 'mobile-landscape' || resolution == 'mobile')
 					{
 						pages.contact.destroy();
@@ -43,7 +45,7 @@ $(function()
 	// run init map
 	pages.contact.map = function()
 	{
-		if(window.google && window.google.maps){
+		if(window.google && window.google.maps)
 		{
 			if( loaded == false )
 			{
@@ -108,7 +110,7 @@ $(function()
 				}
 			});
 		}
-	}
+	};
 	// destruct fn
 	pages.contact.destroy = function()
 	{

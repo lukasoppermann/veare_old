@@ -1,5 +1,5 @@
 // fn to check for history api
-function supports_history_api(){ return !!(window.history && history.pushState); }
+function supports_history_api(){ return !!(window.history && history.pushState); };
 // default animation
 // var animation
 // once jquery is loaded
