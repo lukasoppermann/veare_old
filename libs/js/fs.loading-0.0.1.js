@@ -73,6 +73,8 @@ $(function(){
 			// load content using ajax
 			else
 			{
+				// activate loading animation
+				gCache.loading.addClass('active');
 				// run ajax request
 				var ajax = $.ajax({
 					type : 'post',
@@ -178,11 +180,13 @@ $(function(){
 							});
 						}
 						content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
+						gCache.loading.removeClass('active');
 					});
 					// define ajax fail method
 					ajax.fail(function()
 					{
-						current['page'].css('display','block').animate({'marginTop':'0','opacity':1}, 300).addClass('current-page');	
+						current['page'].css('display','block').animate({'marginTop':'0','opacity':1}, 300).addClass('current-page');
+						gCache.loading.removeClass('active');
 					});
 				});
 			}

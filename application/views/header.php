@@ -71,4 +71,9 @@ else
 	<div class="wrapper">
 		<div class="left-column-wrapper">
 			<div id="stage">
+				<div class="loading">
+					<div class="loading-bar">
+						<div class="loading-circle"></div>
+					</div>
+				</div>
 				<div class="current-page page">

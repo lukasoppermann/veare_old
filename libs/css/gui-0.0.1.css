@@ -72,3 +72,79 @@
 	background: rgb(225,225,225);
 	border-radius: 1px;
 }
+/*------------------*/
+/* Loading Animation */
+.loading{
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	margin-left: -100px;
+	width: 200px;
+	height: 50px;
+	background: rgb(255,255,255);
+	border-radius: 1px;
+	box-shadow: 0px 1px 0px 0px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0px 1px 0px 0px rgba(0,0,0,.1);
+	-moz-box-shadow: 0px 1px 0px 0px rgba(0,0,0,.1);
+	opacity: 0;
+	margin-top: -60px;
+	transition: all .4s ease;   
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+}
+.loading.active{
+	opacity: 1;
+	margin-top: 0px;
+}
+.loading .loading-bar{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 24px;
+	width: 80px;
+	margin: -12px 0 0 -40px;
+	background-color: rgb(225,225,225);
+	border-radius: 24px;
+}
+.loading .loading-circle{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	border-radius: 20px;
+	margin: 2px;
+	background-color: rgb(255,255,255);
+}
+.loading.active .loading-circle{
+	animation-duration: 2s;
+	animation-name: load;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	-moz-animation-duration: 2s;
+	-moz-animation-name: load;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction: alternate;
+	-moz-animation-timing-function: linear;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-name: load;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: linear;
+}
+@keyframes load {
+	from { left: 0; }
+	to { left: 57px; }
+}
+@-moz-keyframes load {
+	from { left: 0; }
+	to { left: 57px; }
+}
+@-webkit-keyframes load {
+	from { left: 0; }
+	to { left: 57px; }
+}
