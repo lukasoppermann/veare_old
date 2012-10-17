@@ -120,17 +120,17 @@
 	background-color: rgb(255,255,255);
 }
 .loading.active .loading-circle{
-	animation-duration: 2s;
+	animation-duration: 1s;
 	animation-name: load;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 	animation-timing-function: linear;
-	-moz-animation-duration: 2s;
+	-moz-animation-duration: 1s;
 	-moz-animation-name: load;
 	-moz-animation-iteration-count: infinite;
 	-moz-animation-direction: alternate;
 	-moz-animation-timing-function: linear;
-	-webkit-animation-duration: 2s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-name: load;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
