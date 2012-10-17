@@ -176,8 +176,10 @@ $(function(){
 								// check if last one is added
 								if( 1+i == count )
 								{
-									gCache.loading.removeClass('active');
-									content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
+									setTimeout(function(){
+										gCache.loading.removeClass('active');
+										content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
+									}, 300);
 								}
 							});
 							// add to DOM
