@@ -84,17 +84,11 @@ class MY_Config extends CI_Config {
 				}
 			}
 		}
-		///////
-		// From HERE SPeed decrease
 		// -----------------------------------
 		// compression
 		if( isset($config['settings']['compression']) )
 		{
-			// $this->config['compression'] = $config['settings']['compression'];
-			$this->config['html_compression'] = $config['settings']['compression']['html']['compression'];
-			$this->config['html_gzip'] 				= $config['settings']['compression']['html']['gzip'];
-			$this->config['html_expire'] 			= $config['settings']['compression']['html']['expire'];
-			//
+			$this->config['compression'] = $config['settings']['compression'];
 			unset($config['settings']['compression']);
 		}
 		// -----------------------------------
@@ -108,24 +102,22 @@ class MY_Config extends CI_Config {
 			{
 				$config['lang_default_abbr']	= $lang['abbr'];
 				$config['lang_default_id']	= $lang['_id'];
-				$config['lang_default_name']	= $lang['name'];					
+				$config['lang_default_name']	= $lang['name'];
 			}
 			// map ids & abbrs
-			$config['languages_abbr'][$lang['_id']]	= $lang['abbr'];
-			$config['languages_id'][$lang['abbr']] 	= $lang['_id'];		
+			$this->config['languages_abbr'][$lang['_id']]	= $lang['abbr'];
+			$this->config['languages_id'][$lang['abbr']] 	= $lang['_id'];
 		}
 		// set current lang
 		$this->CI->fs_url->part(1, 'lang_abbr', $this->config['languages_abbr'][key($this->config['languages_abbr'])], $this->config['languages_abbr']);
-		$config['lang_id'] = 	$this->config['languages_id'][$this->config['lang_abbr']];
-		$config['languages']['current'] = $this->config['languages'][$this->config['lang_id']];
+		$this->config['lang_id'] = 	$this->config['languages_id'][$this->config['lang_abbr']];
+		$this->config['languages']['current'] = $this->config['languages'][$this->config['lang_id']];
 		// -----------------------------------
 		// settings
 		foreach($config['settings'] as $key => $settings)
 		{
 			$this->config[$key] = $settings;
 		}
-		///////
-		// To HERE
 	}
 // --------------------------------------------------------------------
 
