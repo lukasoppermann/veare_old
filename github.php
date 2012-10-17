@@ -1,0 +1,1 @@
+<?php echo `git pull && git submodule update --init --recursive 2>&1`;
