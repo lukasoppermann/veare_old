@@ -161,7 +161,10 @@ $(function(){
 							// add css object
 							content[path]['css'] = {};
 							// loop through css files
-							$.each(css, function( i, file ){
+							var count = css.length;
+							//
+							$.each(css, function( i, file )
+							{
 								if( _head.find("link[href='"+file+"']").length == 0 )
 								{
 									output += "<link href='"+file+"' type='text/css' rel='stylesheet' />";
@@ -170,17 +173,27 @@ $(function(){
 								{
 									_head.find("link[href='"+file+"']").removeAttr('disabled');
 								}
+								// check if last one is added
+								if( 1+i == count )
+								{
+									gCache.loading.removeClass('active');
+									content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
+								}
 							});
 							// add to DOM
 							_head.append(output);
 							// cache css selection
-							// loop through js files
-							$.each(css, function( i, file ){
+							// loop through css files
+							$.each(css, function( i, file )
+							{
 								content[path]['css'][i] = _head.find("link[href='"+file+"']");
 							});
 						}
-						content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
-						gCache.loading.removeClass('active');
+						else
+						{
+							gCache.loading.removeClass('active');
+							content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
+						}
 					});
 					// define ajax fail method
 					ajax.fail(function()
