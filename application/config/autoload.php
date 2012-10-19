@@ -52,7 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array( 'database','fs_url','fs_google');
+$autoload['libraries'] = array('database','fs_url');
 
 
 /*
@@ -64,7 +64,7 @@ $autoload['libraries'] = array( 'database','fs_url','fs_google');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('fs_variable','number','array','fs_database','string','text','url','fs_config','fs_metadata', 'fs_view','form','date','content');
+$autoload['helper'] = array('form','date','number','array','string','text','url','fs_variable','fs_database','fs_config','fs_metadata','fs_view','content');
 
 /*
 | -------------------------------------------------------------------

@@ -27,14 +27,9 @@ class MY_Controller extends CI_Controller {
 		Header("Pragma: no-cache" ); // HTTP/1.0
 		// --------------------------------------------------------------------	
 		// load assets
-		// load navigation
-		$this->load->add_package_path(BASEPATH.'packages/fs_navigation/');
-		$this->load->library('fs_navigation');
 		// load optimize
 		$this->load->add_package_path(BASEPATH.'packages/fs_optimize/');
 		$this->load->driver('Fs_optimize');
-		// 
-		
 		// 
 		// --------------------------------------------------------------------	
 		// load assets
@@ -58,7 +53,17 @@ class MY_Controller extends CI_Controller {
 		// check if initial load
 		if( !isset($ajax) || $ajax == null )
 		{
-			// load asets
+			// load authentication
+			$this->load->add_package_path(BASEPATH.'packages/fs_authentication/');
+			$this->load->library('fs_authentication');
+			// load navigation
+			$this->load->add_package_path(BASEPATH.'packages/fs_navigation/');
+			$this->load->library('fs_navigation');
+			// load google
+			$this->load->add_package_path(BASEPATH.'packages/fs_google/');
+			$this->load->library('fs_google');
+			// --------------------------------------------------------------------
+			// add css & js files
 			css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui'));
 			js_add('fs.media_queries, fs.resize, fs.load, fs.loading, base', 'default');
 			js_add_lines("CI_BASE = '".base_url()."';", 'default');
