@@ -9,11 +9,13 @@
  * @link		http://doc.formandsystem.com/core/loader
 **/
 class MY_Loader extends CI_Loader {
+
 	
 	//php 5 constructor
 	function __construct() 
  	{
 		parent::__construct();
+		
 	}
 	// --------------------------------------------------------------------
 	/**
@@ -63,7 +65,64 @@ class MY_Loader extends CI_Loader {
 		$CI->db = $db;
     }
 	// --------------------------------------------------------------------
+	/**
+	 * Load Helper
+	 *
+	 * This function loads the specified helper file.
+	 *
+	 * @param	mixed
+	 * @return	void
+	 */
+	public function helper($helpers = array())
+	{
+		foreach ($this->_ci_prep_filename($helpers, '_helper') as $helper)
+		{
+			if (isset($this->_ci_helpers[$helper]))
+			{
+				continue;
+			}
+			
+			// Try to load the helper
+			foreach( $this->_ci_helper_paths as $path )
+			{
+				if( file_exists($path.'helpers/'.$helper.'.php') )
+				{
+					$base_helper = $path.'helpers/'.$helper.'.php';
+				}
+			}
+			
+			if( isset($base_helper) )
+			{
+				$ext_helper = APPPATH.'helpers/'.config_item('subclass_prefix').$helper.'.php';
+				// Is this a helper extension request?
+				if (file_exists($ext_helper))
+				{
+					include_once($ext_helper);
+					include_once($base_helper);
 
+					unset($base_helper);
+
+					$this->_ci_helpers[$helper] = TRUE;
+					log_message('debug', 'Helper loaded: '.$helper);
+					continue;
+				}
+				// only load base helper
+				else
+				{
+					include_once($base_helper);
+					unset($base_helper);
+					$this->_ci_helpers[$helper] = TRUE;
+					log_message('debug', 'Helper loaded: '.$helper);
+				}
+			}
+			// unable to load the helper
+			if ( ! isset($this->_ci_helpers[$helper]))
+			{
+				show_error('Unable to load the requested file: helpers/'.$helper.'.php');
+			}
+		}
+	}
+	// --------------------------------------------------------------------
 	/**
 	 * Extended Driver
 	 *

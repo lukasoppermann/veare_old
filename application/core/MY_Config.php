@@ -56,11 +56,16 @@ class MY_Config extends CI_Config {
 		{	
 			// json_decode data
 			$_json = json_decode($result['data'], TRUE);
-			foreach($_json as $key => $val)
+			//
+			if( is_array($_json) )
 			{
-				$result[$key] = $val;
+				foreach($_json as $key => $val)
+				{
+					$result[$key] = $val;
+				}
+				// unset data
+				unset($result['data']);
 			}
-			unset($result['data']);
 			// index by key and type
 			if(isset($result['_id']))
 			{
@@ -69,7 +74,14 @@ class MY_Config extends CI_Config {
 			}
 			else
 			{
-				$config[$result['key']][$result['type']][] = $result;
+				if( isset($result['data']) )
+				{
+					$config[$result['key']][$result['type']][] = $result['data'];
+				}
+				else
+				{
+					$config[$result['key']][$result['type']][] = $result;
+				}
 			}
 		}
 		// -----------------------------------

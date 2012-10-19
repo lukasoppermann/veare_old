@@ -26,8 +26,16 @@ class MY_Controller extends CI_Controller {
 		Header("Cache-Control: post-check=0, pre-check=0", FALSE); 
 		Header("Pragma: no-cache" ); // HTTP/1.0
 		// --------------------------------------------------------------------	
-		// load drivers
+		// load assets
+		// load navigation
+		$this->load->add_package_path(BASEPATH.'packages/fs_navigation/');
+		$this->load->library('fs_navigation');
+		// load optimize
+		$this->load->add_package_path(BASEPATH.'packages/fs_optimize/');
 		$this->load->driver('Fs_optimize');
+		// 
+		
+		// 
 		// --------------------------------------------------------------------	
 		// load assets
 		// development !!!!!!!!
