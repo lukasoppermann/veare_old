@@ -33,7 +33,6 @@ class MY_Controller extends CI_Controller {
 		
 		$this->load->add_package_path(BASEPATH.'packages/fs_debug/');
 		$this->load->library('fs_debug');
-		echo'<pre>';print_r(fs_debug_print_css());echo'</pre>';
 		//
 		// --------------------------------------------------------------------	
 		// load assets
