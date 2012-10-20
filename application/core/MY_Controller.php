@@ -30,7 +30,11 @@ class MY_Controller extends CI_Controller {
 		// load optimize
 		$this->load->add_package_path(BASEPATH.'packages/fs_optimize/');
 		$this->load->driver('Fs_optimize');
-		// 
+		
+		$this->load->add_package_path(BASEPATH.'packages/fs_debug/');
+		$this->load->library('fs_debug');
+		echo'<pre>';print_r(fs_debug_print_css());echo'</pre>';
+		//
 		// --------------------------------------------------------------------	
 		// load assets
 		// development !!!!!!!!
@@ -54,14 +58,16 @@ class MY_Controller extends CI_Controller {
 		if( !isset($ajax) || $ajax == null )
 		{
 			// load authentication
-			$this->load->add_package_path(BASEPATH.'packages/fs_authentication/');
-			$this->load->library('fs_authentication');
+			// $this->load->add_package_path(BASEPATH.'packages/fs_authentication/');
+			// $this->load->library('fs_authentication');
 			// load navigation
 			$this->load->add_package_path(BASEPATH.'packages/fs_navigation/');
 			$this->load->library('fs_navigation');
 			// load google
 			$this->load->add_package_path(BASEPATH.'packages/fs_google/');
 			$this->load->library('fs_google');
+			// load helpers
+			$this->load->helpers(array('fs_metadata'));
 			// --------------------------------------------------------------------
 			// add css & js files
 			css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui'));

@@ -37,7 +37,7 @@
 |
 */
 
-$autoload['packages'] = array();
+$autoload['packages'] = array(BASEPATH.'packages/fs_utilities/',BASEPATH.'packages/fs_url/',BASEPATH.'packages/fs_log/');
 
 
 /*
@@ -64,7 +64,7 @@ $autoload['libraries'] = array('database','fs_url');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('form','date','number','array','string','text','url','fs_variable','fs_database','fs_config','fs_metadata','fs_view','content');
+$autoload['helper'] = array('form','date','number','array','string','text','url','content','fs_variable','fs_database','fs_config','fs_view');
 
 /*
 | -------------------------------------------------------------------
