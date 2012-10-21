@@ -123,7 +123,7 @@ $(function(){
 						// create content var
 						content[path] = {};
 						// add content
-						current['page'].after($('<div class="current-page page">'+response.content+'</div>').css({'opacity':'0.01','marginTop':'20%'}));
+						current['page'].after($('<div class="current-page page">'+response.content+'</div>').css({'opacity':'0.1','marginTop':'20%'}));
 						// deactivate css
 						if( content[current.path] != undefined && content[current.path]['css'] != undefined )
 						{
