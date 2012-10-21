@@ -78,14 +78,14 @@
 	box-sizing: border-box;	
 }
 .mobile.portrait #nav .item .menu-item-link{
-	width: 50px;
+	width: 60px;
 	float: left;
 	overflow: hidden;
 	height: 100%;
+	padding: 0;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
-
+	box-sizing: border-box;
 }
 .mobile.portrait #nav .item .icon{ 
 	top: 14px;

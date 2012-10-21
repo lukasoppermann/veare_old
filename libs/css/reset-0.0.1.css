@@ -55,9 +55,11 @@ img{
 	border: 0;
 	position: relative;
 }
-a, span{
+a, span, a:hover, a:active, a:focus{
 	color: inherit;
 	display: inline-block;
+	outline: 0;
+	-webkit-tap-highlight-color: transparent;
 }
 p{ 
 	display: inline-block;

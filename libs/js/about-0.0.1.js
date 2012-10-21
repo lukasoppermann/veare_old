@@ -103,7 +103,6 @@ $(function()
 		// on resolution change
 		resChange = function(e, resolution)
 		{
-			console.log('Test');
 			// define variables
 			var _rearrange = $('.rearrange');
 			// rearrange elements
