@@ -1,4 +1,5 @@
-var loaded = false;
+var loaded = false,
+		content;
 // declare object
 pages.contact = {};
 //
@@ -20,8 +21,10 @@ $(function()
 				gCache.sidebar.addClass('shadow');
 				
 				gCache.stage.css({'height':gCache.window.height(),'paddingBottom':0});
+				
 				gCache.stage.find('.current-page').css({'height':gCache.window.height(),'paddingBottom':0});
-				var content = '<div class="marker-wrapper">'+$('.veare-contact').attr('class', 'veare-contact').clone().wrap('<div class="wrap" />').parents('.wrap').html()+'<div class="shadow"></div></div>';
+				
+				content = '<div class="marker-wrapper">'+$('.veare-contact').attr('class', 'veare-contact').clone().wrap('<div class="wrap" />').parents('.wrap').html()+'<div class="shadow"></div></div>';
 				// remove style on resolution change
 				gCache.body.on('resolutionChange', function(e, resolution)
 				{
