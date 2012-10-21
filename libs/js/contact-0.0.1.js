@@ -18,7 +18,7 @@ $(function()
 			if( !gCache.body.hasClass('mobile') )
 			{
 				gCache.sidebar.addClass('shadow');
-				
+
 				gCache.stage.css({'height':gCache.window.height(),'paddingBottom':0});
 				
 				gCache.stage.find('.current-page').css({'height':gCache.window.height(),'paddingBottom':0});
@@ -43,7 +43,11 @@ $(function()
 				});
 			}
 			// run callback
-			eval(callback+"()");
+			if( callback != null )
+			{
+				// run callback
+				eval(callback+"()");
+			}
 		});
 	};
 	// run init map

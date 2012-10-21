@@ -59,6 +59,12 @@ $(function(){
 								file.removeAttr("disabled");
 							});
 						};
+						// run init
+						if( content[path]['namespace'] != undefined && pages[content[path]['namespace']] != undefined )
+						{
+							pages[content[path]['namespace']].init();
+						}
+						// show page
 						content[path]['page'].css('display','block').animate({'opacity':'1','marginTop':0}, 300).addClass('current-page');
 					});
 					
