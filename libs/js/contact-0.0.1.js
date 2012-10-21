@@ -4,8 +4,7 @@ var loaded = false,
 pages.contact = {};
 //
 var init_contact = function(){
-	pages.contact.init();
-	pages.contact.map();
+	pages.contact.init("pages.contact.map");
 };
 
 $(function()
@@ -43,6 +42,8 @@ $(function()
 					}
 				});
 			}
+			// run callback
+			eval(callback+"()");
 		});
 	};
 	// run init map
