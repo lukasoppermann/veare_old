@@ -11,7 +11,7 @@ $(function()
 {
 	// -----------------------
 	// init fn
-	pages.contact.init = function()
+	pages.contact.init = function( callback = null )
 	{
 		$.fs_load(function()
 		{

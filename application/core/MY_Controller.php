@@ -104,7 +104,7 @@ class MY_Controller extends CI_Controller {
 				'content' => $this->load->view($template, $data, TRUE),
 				'namespace' => $namespace,
 				'css' 		=> css_link('page', TRUE, ','),
-				'js' 			=> js_link('page', TRUE, ',')
+				'js' 			=> js_link('page', FALSE, ',')
 			));
 		}
 		// normal loading
