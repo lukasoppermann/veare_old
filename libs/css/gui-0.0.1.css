@@ -106,7 +106,7 @@
 }
 .mobile.portrait .loading{
 	width: 100%;
-	left: 0px;
+	left: 0;
 }
 .loading.active{
 	display: block;
