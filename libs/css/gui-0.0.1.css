@@ -77,6 +77,7 @@
 .loading{
 	z-index: 999;
 	position: fixed;
+	display: block;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -92,9 +93,9 @@
 	display: none;
 }
 .loading{
-	width: -moz-calc(100%-180px);
-	width: -webkit-calc(100%-180px);
-	width: calc(100%-180px);
+	width: -moz-calc(100% - 180px);
+	width: -webkit-calc(100% - 180px);
+	width: calc(100% - 180px);
 	left: 180px;
 }
 .loading.active{
