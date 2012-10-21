@@ -4,21 +4,8 @@
 <?
 echo favicon('favicon');
 echo meta();
-echo css('default', TRUE);
-echo css('page', TRUE, "data-type='page' data-namespace='".$namespace."'");
-// add css files specific for pages
-if( variable($css_file) != null )
-{
-	$files = explode(',',$css_file);
-	foreach($files as $css)
-	{
-		if( substr($css,5) != 'http:' )
-		{
-			$css = base_url().config('dir_css').'/'.trim($css,'/');
-		}
-		echo '<link media="screen" type="text/css" href="'.$css.'" rel="stylesheet" data-type="page" data-namespace="'.$namespace.'">'."\n";
-	}
-}
+echo css('default', FALSE);
+echo css('page', FALSE, "data-type='page' data-namespace='".$namespace."'");
 // title
 echo title(variable($meta_title, 'Welcome').' | vea.re – visionary design');
 ?>

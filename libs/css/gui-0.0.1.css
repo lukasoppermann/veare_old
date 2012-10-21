@@ -92,11 +92,21 @@
 	-ms-transition: all .4s ease;
 	display: none;
 }
-.loading{
+.nav-wide .loading{
 	width: -moz-calc(100% - 180px);
 	width: -webkit-calc(100% - 180px);
 	width: calc(100% - 180px);
 	left: 180px;
+}
+.nav-narrow .loading{
+	width: -moz-calc(100% - 80px);
+	width: -webkit-calc(100% - 80px);
+	width: calc(100% - 80px);
+	left: 80px;
+}
+.mobile.portrait .loading{
+	width: 100%;
+	left: 0px;
 }
 .loading.active{
 	display: block;

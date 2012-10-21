@@ -50,7 +50,8 @@ section{
 	text-shadow: rgba(255,255,255,0.5) 1px 1px 0px;
 }
 .sections{
-	float: left;
+	display: block;
+	position: relative;
 	background: rgb(255,255,255);
 	padding: 10px;
 	border-radius: 5px;
@@ -58,13 +59,11 @@ section{
 	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.4);
 }
 section{
+	display: block;
 	position: relative;
+	margin: 10px;
 	font-size: 100%;
 	padding: 50px 0;
-	float: left;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
 }
 section:first-child{
 	margin-top: 30px;

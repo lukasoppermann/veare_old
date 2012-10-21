@@ -80,13 +80,13 @@ $(function(){
 								file.removeAttr("disabled");
 							});
 						};
+						// show page
+						content[path]['page'].css('display','block').animate({'opacity':'1','marginTop':0}, 300).addClass('current-page');
 						// run init
 						if( content[path]['namespace'] != undefined && pages[content[path]['namespace']] != undefined )
 						{
 							pages[content[path]['namespace']].init();
 						}
-						// show page
-						content[path]['page'].css('display','block').animate({'opacity':'1','marginTop':0}, 300).addClass('current-page');
 					});
 					
 					if( current != undefined && current.path != undefined && content[current.path] != undefined &&
@@ -101,7 +101,10 @@ $(function(){
 			else
 			{
 				// activate loading animation
-				gCache.loading.addClass('active');
+				gCache.loading.find('.loading-box').animate({'top':'50%'}, 250);
+				gCache.loading.animate({'opacity':'1'}, 100, function(){
+					gCache.loading.addClass('active');
+				});
 				// run ajax request
 				var ajax = $.ajax({
 					type : 'post',
@@ -203,10 +206,11 @@ $(function(){
 								// check if last one is added
 								if( 1+i == count )
 								{
-									setTimeout(function(){
+									gCache.loading.find('.loading-box').animate({'top':'0'}, 300);
+									gCache.loading.animate({'opacity':'0'}, 300, function(){
 										gCache.loading.removeClass('active');
 										content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
-									}, 300);
+									});
 								}
 							});
 							// add to DOM
@@ -220,8 +224,11 @@ $(function(){
 						}
 						else
 						{
-							gCache.loading.removeClass('active');
-							content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
+							gCache.loading.find('.loading-box').animate({'top':'0'}, 300);
+							gCache.loading.animate({'opacity':'0'}, 300, function(){
+								gCache.loading.removeClass('active');
+								content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
+							});
 						}
 					});
 					// define ajax fail method
