@@ -35,6 +35,27 @@ $(function(){
 			history.pushState(null, null, path);
 			// scroll to top
 			_body.animate({'scrollTop': 0}, 400);
+			// check if activatable
+			if( _this.hasClass('activatable') )
+			{
+				// if clicked item is activatable
+				if( _this.data('connect') != null )
+				{
+					$("[data-connect='"+_this.data('connect')+"']").removeClass('active');
+					_this.addClass('active');
+				}
+				// else
+				else
+				{
+					var parent = _this.parent();
+					// if clicked items parent is activatable
+					if( parent.data('connect') != null )
+					{
+						$("[data-connect='"+parent.data('connect')+"']").removeClass('active');
+						parent.addClass('active');
+					}
+				}
+			}
 			// check if content exists
 			if( content[path] )
 			{

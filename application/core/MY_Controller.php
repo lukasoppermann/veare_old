@@ -78,7 +78,8 @@ class MY_Controller extends CI_Controller {
 				'menu' 							=> 1, 
 				'id' 								=> 'nav',
 				'item_class' 				=> 'item',
-				'link_class' 				=> 'ajax-link',
+				'link_class' 				=> 'ajax-link activatable',
+				'item_data'					=> 'data-connect="navigation"',
 				'active_unset' 			=> array(1),
 				'item_before' 			=> '<span class="icon"></span><span class="text">',
 				'item_after' 				=> '</span>'
