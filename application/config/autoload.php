@@ -37,7 +37,7 @@
 |
 */
 
-$autoload['packages'] = array(BASEPATH.'packages/fs_utilities/',BASEPATH.'packages/fs_url/',BASEPATH.'packages/fs_log/',BASEPATH.'packages/fs_jsminw/');
+$autoload['packages'] = array(BASEPATH.'packages/fs_utilities/',BASEPATH.'packages/fs_url/',BASEPATH.'packages/fs_log/',BASEPATH.'packages/fs_jsmin/');
 
 
 /*

@@ -182,9 +182,20 @@ $(function(){
 						{
 							pages[content[current.path]['namespace']].destroy();
 						}
+						// define init function
+						var init = function(){
+							gCache.loading.find('.loading-box').animate({'top':'0'}, 300);
+							gCache.loading.animate({'opacity':'0'}, 300, function(){
+								gCache.loading.removeClass('active');
+								content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
+							});
+						};
 						// prepare css
 						if( response.css != undefined && response.css != '' )
 						{
+							// add testing element
+							var _css_loaded = $('<div>').attr('id', 'namespace_'+response.namespace).appendTo('body');
+							//
 							var output = '';
 							// split css files
 							var css = response.css.split(",");
@@ -195,6 +206,7 @@ $(function(){
 							//
 							$.each(css, function( i, file )
 							{
+								//
 								if( _head.find("link[href='"+file+"']").length == 0 )
 								{
 									output += "<link href='"+file+"' type='text/css' rel='stylesheet' />";
@@ -206,11 +218,26 @@ $(function(){
 								// check if last one is added
 								if( 1+i == count )
 								{
-									gCache.loading.find('.loading-box').animate({'top':'0'}, 300);
-									gCache.loading.animate({'opacity':'0'}, 300, function(){
-										gCache.loading.removeClass('active');
-										content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
-									});
+									// checking fn
+									var check_css_loaded = function() {return _css_loaded.height() == '1'; }
+									// checking loop
+									if ( !check_css_loaded() ) {
+										var tries = 0,
+												interval = 10,
+												timeout = 10000; // max ms to check for
+										setTimeout(function timer() 
+										{
+											if ( check_css_loaded() ) {
+												init();
+												_css_loaded.remove();
+											} else if (tries*interval >= timeout) {
+											} else {
+												tries++;
+												setTimeout(timer, interval);
+											}
+										}, interval);
+									}
+									//
 								}
 							});
 							// add to DOM
