@@ -182,14 +182,6 @@ $(function(){
 						{
 							pages[content[current.path]['namespace']].destroy();
 						}
-						// define init function
-						var init = function(){
-							gCache.loading.find('.loading-box').animate({'top':'0'}, 300);
-							gCache.loading.animate({'opacity':'0'}, 300, function(){
-								gCache.loading.removeClass('active');
-								content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
-							});
-						};
 						// prepare css
 						if( response.css != undefined && response.css != '' )
 						{
@@ -224,13 +216,19 @@ $(function(){
 									if ( !check_css_loaded() ) {
 										var tries = 0,
 												interval = 10,
-												timeout = 10000; // max ms to check for
+												timeout = 20000; // max ms to check for
 										setTimeout(function timer() 
 										{
-											if ( check_css_loaded() ) {
-												init();
+											if ( check_css_loaded() ) 
+											{
+												gCache.loading.find('.loading-box').animate({'top':'0'}, 300);
+												gCache.loading.animate({'opacity':'0'}, 300, function(){
+													gCache.loading.removeClass('active');
+													content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
+												});
 												_css_loaded.remove();
-											} else if (tries*interval >= timeout) {
+											} 
+												else if (tries*interval >= timeout) {
 											} else {
 												tries++;
 												setTimeout(timer, interval);
