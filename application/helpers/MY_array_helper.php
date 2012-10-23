@@ -343,7 +343,14 @@ function index_array($array, $index, $multi = FALSE)
 			// loop through array
 			foreach($array as $key => $value)
 			{
-				$new_array[$value[$index]][$key] = $value;		
+				if(isset($value[$index]))
+				{
+					$new_array[$value[$index]][$key] = $value;
+				}
+				else
+				{
+					$new_array['noindex'][$key] = $value;
+				}
 			}
 		}
 		// if unique keys expected
