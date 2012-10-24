@@ -64,15 +64,15 @@ The hardest part of modern, adaptive design, is to let go of some control. But b
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Web & Interface Design</h2>
 				<p>An interface should be driven by information, because information is the single most important part of any application or websites on desktops, tablets or phones.
-This is why I focus on the information architecture first. Once the information is structured, an interface is created to allow fast and easy access. 
+This is why we focus on the information architecture first. Once the information is structured, an interface is created to allow fast and easy access. 
 				</p><p>
-As an interface designer I aim for usability and performance. Users should focus on what they want to do rather than how to do it. This is why every piece of information has to be easily accessible. By combining good information architecture and an easy to use interface, I deliver an enjoyable user experience.
+As an interface design studio veare aims for usability and performance. Users should focus on what they want to do rather than how to do it. This is why every piece of information has to be easily accessible. By combining good information architecture and an easy to use interface, we deliver an enjoyable user experience.
 				</p>
 			</div>
 			<div class="active-bg left"></div>
 		</div>
 		<div class="column column-two tablet-one quote right">
-			<blockquote class="quote-box">A good information architecture is the core of every interface I build.”</blockquote>
+			<blockquote class="quote-box">A good information architecture is the core of every interface we build.”</blockquote>
 			<div class="about-icon interface-design"><div class="veare-sprite icon"></div></div>
 		</div>
 	</section>
