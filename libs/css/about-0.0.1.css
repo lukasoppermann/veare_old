@@ -95,7 +95,7 @@ section{
 	top: -30px;
 	left: -30px;
 	display: block;
-	background: rgb(240,240,240);
+	background: rgb(245,245,245);
 	opacity: 0;
 	transition: margin, opacity .5s ease;   
 	-webkit-transition: margin, opacity .5s ease;

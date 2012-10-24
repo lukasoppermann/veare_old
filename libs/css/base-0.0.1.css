@@ -33,7 +33,7 @@ body{
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
 	position: relative;
 	color: rgb(75,75,75);
-	background: rgb(248,248,248);
+	background: rgb(253,253,253);
 	overflow-y: scroll;
 }
 img{ float: left; }

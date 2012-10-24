@@ -226,6 +226,7 @@ $(function(){
 													gCache.loading.removeClass('active');
 													content[path]['page'].animate({'opacity':1,'marginTop':0}, 300);
 												});
+												
 												_css_loaded.remove();
 											} 
 												else if (tries*interval >= timeout) {

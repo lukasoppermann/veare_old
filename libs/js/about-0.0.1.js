@@ -69,7 +69,7 @@ $(function()
 	// define check_active
 	empty_fn = function(){};
 	// adjust font
-	var adjust_font = function()
+	var adjust_font = function( callback = 'function(){}' )
 	{
 		// cache selection
 		var _main_headline = $('.main-headline');
@@ -91,7 +91,11 @@ $(function()
 		{
 			_quote_box.css({'fontSize':''});
 		}
-	}
+		//
+		setTimeout(function(){
+				callback();
+		},300);
+	};
 	// --------------------
 	// declare object
 	pages.about = {};
@@ -146,6 +150,55 @@ $(function()
 		gCache.body.on('resolutionChange', resChange);
 		// on resize
 		gCache.body.fs_resize(resizeFN);
+		//------------------------------------
+		// on load
+		$.fs_load( function()
+		{	
+			//
+			// adjust font size
+			adjust_font(function(){
+				//---------------------------
+				// reorganize quotes
+				var _rearrange = $('.rearrange');
+				//	
+				if(gCache.body.hasClass('tablet-small') || gCache.body.hasClass('mobile-portrait') || gCache.body.hasClass('mobile-landscape') || gCache.body.hasClass('mobile'))
+				{
+					// move quote after content
+					_rearrange.each(function(){
+						var _this = $(this);
+						_this.find('.content').insertBefore(_this.find('.quote'));
+					});
+					//
+					if( !gCache.body.hasClass('tablet-small') )
+					{
+						check_active = "empty_fn";
+					}
+					else
+					{
+						check_active = "check_active_fn";
+					}
+				}
+				else
+				{
+					check_active = "check_active_fn";
+					// move back quote before content
+					_rearrange.each(function(){
+						var _this = $(this);
+						_this.find('.quote').insertBefore(_this.find('.content'));
+					});
+				}
+				prepare_active_fn();
+				//------------------------------------
+				gCache.window.on('scroll', function()
+				{
+					if(window_height != gCache.window.height() )
+					{
+						prepare_active_fn();
+					}
+					window[check_active]();
+				});
+			});
+		});
 	};
 	// --------------------
 	// Function to destroy js fns on unload
@@ -159,50 +212,5 @@ $(function()
 //
 
 //------------------------------------
-//------------------------------------
-// on load
-$.fs_load( function()
-{	
-	// gCache.window.trigger('resize');
-	//
-	// adjust font size
-	adjust_font();
-	//---------------------------
-	// reorganize quotes
-	var _rearrange = $('.rearrange');
-	//	
-	if(gCache.body.hasClass('tablet-small') || gCache.body.hasClass('mobile-portrait') || gCache.body.hasClass('mobile-landscape') || gCache.body.hasClass('mobile'))
-	{
-		// move quote after content
-		_rearrange.each(function(){
-			var _this = $(this);
-			_this.find('.content').insertBefore(_this.find('.quote'));
-		});
-		//
-		if( !gCache.body.hasClass('tablet-small') )
-		{
-			check_active = "empty_fn";
-		}
-		else
-		{
-			check_active = "check_active_fn";
-		}
-	}
-	else
-	{
-		check_active = "check_active_fn";
-		// move back quote before content
-		_rearrange.each(function(){
-			var _this = $(this);
-			_this.find('.quote').insertBefore(_this.find('.content'));
-		});
-	}
-	prepare_active_fn();
-	//------------------------------------
-	gCache.window.on('scroll', function()
-	{
-		window[check_active]();
-	});
-});
 //
 });
