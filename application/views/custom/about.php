@@ -8,10 +8,10 @@
 			<div class="column column-two tablet-half">
 				<p>veare stands for good design and state-of-the-art development with a focus on user experience.</p>
 				<p>The brand experience as well as the product experience has to change as media and devices change.</p>
-				<p>By designing flexible corporate identities with a strong emphasis on digital, I deliver modern branding solutions which can adapt and take advantage of new possibilities.</p>
+				<p>By designing flexible corporate identities with a strong emphasis on digital, we deliver modern branding solutions which can adapt and take advantage of new possibilities.</p>
 			</div>
 			<div class="column column-two tablet-half">
-				<p>Starting with a precise vision I create high performance and usable products, adding complexity only where needed.</p>
+				<p>Starting with a precise vision veare creates usable products with a high performance, adding complexity only where needed.</p>
 				<p>A passion for usability, simplicity, performance and well delivered content is what makes my projects successful.</p>
 				<p>Working with a network of freelancers keeps veare flexible to adapt to your project, budget and schedule.</p>
 			</div>
@@ -34,7 +34,7 @@
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Intelligent Design</h2>
-				<p>Intelligent design is informed decision making based on a future vision and a data-based user analysis. I create modern design solutions based on knowledge about your target users. This means that for each project the focus might be shifted. Some clients want state-of-the-art products that can engage their modern and up to date users, while others need to focus more on raw information and support for legacy browsers.
+				<p>Intelligent design is informed decision making based on a future vision and a data-based user analysis. We create modern design solutions based on knowledge about your target users. This means that for each project the focus might be shifted. Some clients want state-of-the-art products that can engage their modern and up to date users, while others need to focus more on raw information and support for legacy browsers.
 </p>
 			</div>
 			<div class="active-bg left"></div>
@@ -52,7 +52,7 @@
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Modern Branding</h2>
-				<p>I deliver modern branding solutions which adapt as media and devices change.
+				<p>veare delivers modern branding solutions which adapt as media and devices change.
 The hardest part of modern, adaptive design, is to let go of some control. But by allowing for more flexibility we can create a corporate system which works well in all media while being recognisable as one brand. This means it adapts to yet unforeseeable changes, were traditional identities have to be altered or even reinvented.
 </p>
 			</div>
