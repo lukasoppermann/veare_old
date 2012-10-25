@@ -28,3 +28,6 @@
 [submodule "libs/js/jquery"]
 	path = libs/js/jquery
 	url = https://github.com/jquery/jquery.git
+[submodule "libs/js/fs-history"]
+	path = libs/js/fs-history
+	url = https://github.com/lukasoppermann/fs-history.git
