@@ -70,15 +70,15 @@ class MY_Controller extends CI_Controller {
 			// --------------------------------------------------------------------
 			// add css & js files
 			css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui'));
-			js_add('fs.media_queries, fs.resize, fs.load, fs.loading, base', 'default');
+			js_add('fs.media_queries, fs.resize, fs.load, fs.loading, fs.history, base', 'default');
 			js_add_lines("CI_BASE = '".base_url()."';", 'default');
 			// --------------------------------------------------------------------
 			// Initialize Menus
 			$this->data['menu']['main'] = $this->fs_navigation->tree(array(
 				'menu' 							=> 1, 
 				'id' 								=> 'nav',
-				'item_class' 				=> 'item',
-				'link_class' 				=> 'ajax-link activatable',
+				'item_class' 				=> 'item activatable',
+				'link_class' 				=> 'ajax-link',
 				'item_data'					=> 'data-connect="navigation"',
 				'active_unset' 			=> array(1),
 				'item_before' 			=> '<span class="icon"></span><span class="text">',
@@ -106,7 +106,8 @@ class MY_Controller extends CI_Controller {
 				'content' => $this->load->view($template, $data, TRUE),
 				'namespace' => $namespace,
 				'css' 		=> css_link('page', TRUE, ','),
-				'js' 			=> js_link('page', TRUE, ',')
+				'js' 			=> js_link('page', TRUE, ','),
+				'title' 	=> variable($data['meta_title'], 'Welcome').' | vea.re – visionary design'
 			));
 		}
 		// normal loading
