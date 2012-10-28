@@ -69,8 +69,10 @@ $(function()
 	// define check_active
 	empty_fn = function(){};
 	// adjust font
-	var adjust_font = function( callback = 'function(){}' )
+	var adjust_font = function( callback )
 	{
+		// preset variables
+		if(typeof(callback)==='undefined') callback = function(){};
 		// cache selection
 		var _main_headline = $('.main-headline');
 		var _quote_box = $('.quote-box');
