@@ -11,12 +11,12 @@
 
 // ------------------------------------------------------------------------
 /**
- * base_url - returns the base_url with the current language part
+ * base_url - returns the base_url with or without slash
  *
  * @param boolean 
  * @return string
  */
-function base_url($slash = TRUE)
+function base_url( $slash = TRUE )
 {
 	$CI =& get_instance();
 	
@@ -32,7 +32,6 @@ function base_url($slash = TRUE)
 // ------------------------------------------------------------------------
 /**
  * Current URL - returns the current URL with or without slash
- *
  *
  * @access	public
  * @return	string
@@ -52,6 +51,17 @@ function current_url( $slash = TRUE )
 }
 // ------------------------------------------------------------------------
 /**
+ * current_path - returns current url without the base_url
+ *
+ * @param boolean 
+ * @return string
+ */
+ function current_path()
+ {
+	return str_replace(base_url(), '', current_url());
+ }
+// ------------------------------------------------------------------------
+/**
  * active_url - returns the base_url with the default parts
  *
  * @param boolean
@@ -67,23 +77,6 @@ function active_url($slash = TRUE)
 	else
 	{
 		return $CI->config->slash_item('base_url').variable($CI->config->slash_item('url_parts'));
-	}
-}
-// ------------------------------------------------------------------------
-/**
- * slash - returns the given url / url segment with slashes
- *
- * @param boolean 
- * @return string
- */
-function slash($url = null)
-{
-	if($url != null)
-	{
-		// remove slashes from url
-		$url = trim($url, '/');
-		// add slashes to url
-		return '/'.$url.'/';
 	}
 }
 // ------------------------------------------------------------------------
@@ -166,6 +159,7 @@ function safe_mailto($email, $name = null, $opt = array(null))
 			'link' 		=> TRUE,
 			'subject' 	=> '',
 			'name' 		=> $name,
+			'body' 		=> '',
 			'bcc' 		=> '',
 			'cc' 		=> '',
 			'class' 	=> 'email',
@@ -174,6 +168,7 @@ function safe_mailto($email, $name = null, $opt = array(null))
 	$opt);
 	
 	$opt['subject']	= !empty($opt['subject'])	? 'subject='.$opt['subject'] : '';
+	$opt['body']	= !empty($opt['body'])	? '&body='.$opt['body'] : '';
 	$opt['cc'] 		= !empty($opt['cc']) ? '&cc='.$opt['cc'] : '';	
 	$opt['bcc'] 	= !empty($opt['bcc']) ? '&bcc='.$opt['bcc'] : '';
 	$opt['class'] 	= !empty($opt['class'])	? ' class="'.$opt['class'].'"' : '';
@@ -181,7 +176,7 @@ function safe_mailto($email, $name = null, $opt = array(null))
 	
 	if($opt['link'] == TRUE)
 	{
-		$email = '<a href="mailto:'.$email.'?'.$opt['subject'].$opt['cc'].$opt['bcc'].'"'.$opt['class'].$opt['id'].'>'.$opt['name'].'</a>';
+		$email = '<a target="_blank" href="mailto:'.$email.'?'.$opt['subject'].$opt['body'].$opt['cc'].$opt['bcc'].'"'.$opt['class'].$opt['id'].'>'.$opt['name'].'</a>';
 	}
 
 	$email = str_replace(array('"','@','.','/'),array('\"','\100','\56','\057'),$email);
@@ -189,6 +184,27 @@ function safe_mailto($email, $name = null, $opt = array(null))
 	
 	return '<script type="text/javascript">document.write("'.$email.'".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));</script>';
 }
-
+// ------------------------------------------------------------------------
+/**
+ * tiny_url - returns url as tinyurl
+ *
+ * @param boolean 
+ * @return string
+ */
+function tiny_url( $url )
+{
+	// init cUrl
+	$cURL = curl_init();  
+	$timeout = 5;  
+	// create tiny_url with url
+	curl_setopt($cURL,CURLOPT_URL,'http://tinyurl.com/api-create.php?url='.urlencode($url));  
+	curl_setopt($cURL,CURLOPT_RETURNTRANSFER,1);  
+	curl_setopt($cURL,CURLOPT_CONNECTTIMEOUT,$timeout);
+	// get tiny URL
+	$tinyURL = curl_exec($cURL);  
+	curl_close($cURL);  
+	// return URL
+	return $tinyURL;
+}
 /* End of file MY_url_helper.php */
 /* Location: ./application/helpers/MY_url_helper.php */
