@@ -12,7 +12,7 @@
 			</div>
 			<div class="column column-two tablet-half">
 				<p>Starting with a precise vision veare creates usable products with a high performance, adding complexity only where needed.</p>
-				<p>A passion for usability, simplicity, performance and well delivered content is what makes my projects successful.</p>
+				<p>A passion for usability, simplicity, performance and well delivered content is what makes our projects successful.</p>
 				<p>Working with a network of freelancers keeps veare flexible to adapt to your project, budget and schedule.</p>
 			</div>
 		</div>
