@@ -50,7 +50,11 @@ else
 			</ul>
 			<div class="language en disabled">
 				<div class="label open_sans_bold">Sprache</div>
-				<div class="lang-switch open_sans_bold"><span class="lang-label lang-en">ENG</span> <span class="circle"></span><span class="lang-label lang-de">DEU</span></div>
+				<ul class="lang-switch open_sans_bold">
+					<li class="lang-label lang-en">ENG</li>
+					<li><span class="circle"></span></li>
+					<li class="lang-label lang-de">DEU</li>
+				</ul>
 			</div>
 		</div>
 	</div>
