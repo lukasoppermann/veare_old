@@ -43,10 +43,10 @@ else
 		<!-- follow nav -->
 		<div id="sidebar_bottom">
 			<ul id="follow_nav">
-				<li class="item"><a class="hover-button twitter" href="https://twitter.com/#!/vearenet" target="_blank"><span class="icon-small twitter"></span></a></li>
-				<li class="item"><a class="hover-button dribbble" href="http://dribbble.com/lukasoppermann" target="_blank"><span class="icon-small dribbble"></span></a></li>
-				<li class="item"><a class="hover-button xing" href="https://www.xing.com/profile/Lukas_Oppermann" target="_blank"><span class="icon-small xing"></span></a></li>
-				<li class="item"><a class="hover-button linkedin" href="https://www.linkedin.com/in/lukasoppermann" target="_blank"><span class="icon-small linkedin"></span></a></li>
+				<li class="item"><a class="hover-button twitter" href="https://twitter.com/#!/vearenet" target="_blank"><span class="icon-small twitter">twitter</span></a></li>
+				<li class="item"><a class="hover-button dribbble" href="http://dribbble.com/lukasoppermann" target="_blank"><span class="icon-small dribbble">dribbble</span></a></li>
+				<li class="item"><a class="hover-button xing" href="https://www.xing.com/profile/Lukas_Oppermann" target="_blank"><span class="icon-small xing">xing</span></a></li>
+				<li class="item"><a class="hover-button linkedin" href="https://www.linkedin.com/in/lukasoppermann" target="_blank"><span class="icon-small linkedin">linkedin</span></a></li>
 			</ul>
 			<div class="language en disabled">
 				<div class="label open_sans_bold">Sprache</div>

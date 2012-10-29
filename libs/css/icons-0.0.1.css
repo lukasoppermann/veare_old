@@ -17,6 +17,7 @@
 	width: 30px;
 	height: 30px;
 	padding: 0;
+	text-indent: -9999px;
 }
 /* icons */
 .icon.case{ background-position: -150px 0; }
