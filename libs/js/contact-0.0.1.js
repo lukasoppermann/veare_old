@@ -3,15 +3,15 @@ var loaded = false,
 // declare object
 pages.contact = {};
 //
-var init_contact = function(){
-	pages.contact.init("pages.contact.map");
-};
+// var init_contact = function(){
+// 	pages.contact.init("pages.contact.map");
+// };
 
 $(function()
 {
 	// -----------------------
 	// init fn
-	pages.contact.init = function( callback = null )
+	pages.contact.init = function(  )
 	{
 		$.fs_load(function()
 		{
@@ -43,11 +43,22 @@ $(function()
 				});
 			}
 			// run callback
-			if( callback != null )
+			var tries = 0,
+					interval = 40,
+					timeout = 120000; // max ms to check for
+			setTimeout(function timer() 
 			{
-				// run callback
-				eval(callback+"()");
-			}
+				if ( typeof(google) === 'object' && typeof(google.maps) === 'object' ) 
+				{
+					console.log(google.maps);
+					pages.contact.map();
+				} 
+				else if (tries*interval <= timeout)
+				{
+					tries++;
+					setTimeout(timer, interval);
+				}
+			}, interval);
 		});
 	};
 	// run init map
@@ -55,68 +66,75 @@ $(function()
 	{
 		if(window.google && window.google.maps)
 		{
+			var run_this = function()
+			{
+				// set variables
+				var lat = 52.546167,
+						lng = 13.4145,
+					 	zoom = 15,
+						map, 
+						dragevent;
+				// draw map
+				var dragfn = function(){
+					map.setCenter(lat, lng);
+					map.setZoom(zoom);	
+				};
+				// -----------------------
+				// Create GMaps object
+				map = new GMaps({
+					div: '#veare_map',
+					lat: lat, // lat: 52.546167, - neu:  52.5354,13.43315
+					lng: lng, // lng: 13.415201,
+					disableDefaultUI: true,
+					dragstart: function(){
+						clearTimeout( dragevent );	
+					},
+					dragend: function()
+					{
+						dragevent = setTimeout( dragfn, 3000);
+					},
+					zoom_changed: function(){
+						clearTimeout( dragevent );
+						dragevent = setTimeout( dragfn, 3000);
+					},
+					tilesloaded: function(){
+						var _marker = $('.marker-wrapper');
+						if(_marker.css('opacity') == 0)
+						{
+							_marker.find('.veare-contact').show();
+							_marker.css({'marginTop':'-400px'}).delay(300).animate({'opacity':'1.0','marginTop':'-160px'}, 300, 'swing').animate({'marginTop':'-183px'}, 300);
+						}
+					}
+				});
+				// -----------------------
+				// Draw Overlay
+				map.drawOverlay({
+					lat: map.getCenter().lat()-.0054,
+					lng: map.getCenter().lng(),
+					layer: 'overlayLayer',
+					content: content
+				});
+				// debounced resize event (fires once every 100ms)
+				gCache.window.fs_resize(function(){
+					if(!gCache.body.hasClass('mobile'))
+					{
+						gCache.stage.height(gCache.window.height());
+						map.refresh();
+						map.setCenter(map.getCenter().lat(), map.getCenter().lng());
+					}
+				});
+			};
 			if( loaded == false )
 			{
 				// set loaded true
 				loaded = true;
 				// run init map
-				init_map();
+				init_map(run_this());
 			}
-			// set variables
-			var lat = 52.546167,
-					lng = 13.4145,
-				 	zoom = 15,
-					map, 
-					dragevent;
-			// draw map
-			var dragfn = function(){
-				map.setCenter(lat, lng);
-				map.setZoom(zoom);	
-			};
-			// -----------------------
-			// Create GMaps object
-			map = new GMaps({
-				div: '#veare_map',
-				lat: lat, // lat: 52.546167, - neu:  52.5354,13.43315
-				lng: lng, // lng: 13.415201,
-				disableDefaultUI: true,
-				dragstart: function(){
-					clearTimeout( dragevent );	
-				},
-				dragend: function()
-				{
-					dragevent = setTimeout( dragfn, 3000);
-				},
-				zoom_changed: function(){
-					clearTimeout( dragevent );
-					dragevent = setTimeout( dragfn, 3000);
-				},
-				tilesloaded: function(){
-					var _marker = $('.marker-wrapper');
-					if(_marker.css('opacity') == 0)
-					{
-						_marker.find('.veare-contact').show();
-						_marker.css({'marginTop':'-400px'}).delay(300).animate({'opacity':'1.0','marginTop':'-160px'}, 300, 'swing').animate({'marginTop':'-183px'}, 300);
-					}
-				}
-			});
-			// -----------------------
-			// Draw Overlay
-			map.drawOverlay({
-				lat: map.getCenter().lat()-.0054,
-				lng: map.getCenter().lng(),
-				layer: 'overlayLayer',
-				content: content
-			});
-			// debounced resize event (fires once every 100ms)
-			gCache.window.fs_resize(function(){
-				if(!gCache.body.hasClass('mobile'))
-				{
-					gCache.stage.height(gCache.window.height());
-					map.refresh();
-					map.setCenter(map.getCenter().lat(), map.getCenter().lng());
-				}
-			});
+			else
+			{
+				run_this();
+			}
 		}
 	};
 	// destruct fn
@@ -129,6 +147,6 @@ $(function()
 		gCache.stage.find('.current-page').css({'height':'auto','paddingBottom':'auto'});
 	};
 	// run init on page load
-	// pages.contact.init();
+	pages.contact.init();
 //
 });
