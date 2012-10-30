@@ -98,10 +98,10 @@ class MY_Controller extends CI_Controller {
 	 */
 	function view( $template = null, $data = null, $namespace = null )
 	{
+		css_add_lines('#namespace_'.$namespace.'{height:1px;}','page', FALSE );
 		// if ajax request
 		if( isset($_POST['ajax']) )
 		{
-			css_add_lines('#namespace_'.$namespace.'{height:1px;}','page', FALSE );
 			echo json_encode(array(
 				'content' => $this->load->view($template, $data, TRUE),
 				'namespace' => $namespace,
