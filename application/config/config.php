@@ -14,10 +14,10 @@ $config['dir_images']	= 'images/';
 $config['dir_libs']		= 'libs/';
 // css
 $config['dir_css']		= $config['dir_libs'].'css/';
-$config['dir_css_cache']= $config['dir_libs'].'css/_cache/';
+$config['dir_css_cache']= $config['dir_libs'].'css/cache/';
 // js
 $config['dir_js']		= $config['dir_libs'].'js/';
-$config['dir_js_cache']	= $config['dir_libs'].'js/_cache/';
+$config['dir_js_cache']	= $config['dir_libs'].'js/cache/';
 
 $config['lang_id'] = 1;
 // attempts
