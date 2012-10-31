@@ -1,10 +1,7 @@
 // once jquery is loaded
 $(function(){
 	// defining vars
-	var	_logo = $('#logo'),
-	_portfolio_item,
-	_section_menu,
-	_columns;
+	var	_logo = $('#logo');
 	// declare object
 	pages.portfolio_item = {};
 	// --------------------
@@ -12,9 +9,9 @@ $(function(){
 	pages.portfolio_item.init = function()
 	{
 		// deassign variables
-		_portfolio_item = $('.current-page').find('.portfolio-item'),
-		_section_menu = _portfolio_item.find('.section-menu'),
-		_columns = _portfolio_item.find('.column');
+		var _portfolio_item = $('.current-page').find('.portfolio-item'),
+				_section_menu = _portfolio_item.find('.section-menu'),
+				_columns = _portfolio_item.find('.column');
 		// when everything is loaded
 		$.fs_load(function(){
 			// stick top menu
@@ -55,7 +52,10 @@ $(function(){
 	};
 	// --------------------
 	// Function to destroy portfolio_item when unloaded
-	pages.portfolio_item.destroy = function(){
+	pages.portfolio_item.destroy = function()
+	{
+		var _portfolio_item = $('.current-page').find('.portfolio-item'),
+				_section_menu = _portfolio_item.find('.section-menu');
 		_section_menu.fs_sticky_top('destory');
 		_portfolio_item.find('.slideshow').fs_slides('destroy');
 	};

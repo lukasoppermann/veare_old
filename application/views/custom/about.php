@@ -16,7 +16,7 @@
 				<p>Working with a network of freelancers keeps veare flexible to adapt to your project, budget and schedule.</p>
 			</div>
 		</div>
-	<section class="rearrange section-two activatable" data-rearrange="screen">
+	<section class="rearrange section-two about-activatable" data-rearrange="screen">
 		<div class="column column-two tablet-one quote left">
 			<blockquote class="quote-box">You have to know where you want to be in one year, or even ten years.”</blockquote>
 			<div class="vision about-icon"><div class="veare-sprite icon"></div></div>
@@ -30,7 +30,7 @@
 			<div class="active-bg right"></div>
 		</div>
 	</section>
-	<section class="section-three activatable">
+	<section class="section-three about-activatable">
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Intelligent Design</h2>
@@ -44,7 +44,7 @@
 			<div class="about-icon intelligent-design"><div class="veare-sprite icon"></div></div>
 		</div>
 	</section>
-	<section class="section-four activatable rearrange" data-rearrange="screen">
+	<section class="section-four about-activatable rearrange" data-rearrange="screen">
 		<div class="column column-two tablet-one quote left">
 			<blockquote class="quote-box">By letting go of total control a corporate identity can succeed in every environment.”</blockquote>
 			<div class="about-icon modern-branding"><div class="veare-sprite icon"></div></div>
@@ -59,7 +59,7 @@ The hardest part of modern, adaptive design, is to let go of some control. But b
 			<div class="active-bg right"></div>
 		</div>
 	</section>
-	<section class="section-five activatable">
+	<section class="section-five about-activatable">
 		<div class="column column-two content">
 			<div class="text">
 				<h2 class="open_sans_bold sub-headline">Web & Interface Design</h2>

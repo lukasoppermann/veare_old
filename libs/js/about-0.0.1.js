@@ -37,7 +37,7 @@ $(function()
 	{
 		// adjust size of active area & bgs
 		window_height = gCache.window.height();
-		$('.activatable').each(function(index){
+		$('.about-activatable').each(function(index){
 			activatables[ index ] = new Array();
 			activatables[ index ].selector = $(this);
 			activatables[ index ].top = Math.round(activatables[index].selector.offset().top);
