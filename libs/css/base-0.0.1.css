@@ -70,13 +70,13 @@ only screen and (                min-resolution: 2dppx) {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.mobile #logo{
+.mobile #logo, .nav-narrow #logo{
 	width: 70px;
 	height: 55px;	
 	padding: 0 10px;
 	margin: 0 0 0 5px;	
 }
-.mobile.landscape #logo{ margin-bottom: 15px; }
+.mobile.landscape #logo, .nav-narrow #logo{ margin-bottom: 15px; }
 #logo .logo-inner{
 	overflow: hidden;
 	display: block;	

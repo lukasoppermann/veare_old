@@ -41,8 +41,15 @@ section{
 .right .quote-box:before{ left: 25px; }
 .active .quote .quote-box{ color: rgb(80,160,180); }
 .tablet-small .quote .quote-box, .mobile .quote .quote-box{ padding: 5px 175px 10px 0px; }
-.tablet-small .quote .quote-box:before, .mobile .quote .quote-box:before{ 
+.tablet-small .quote .quote-box:before{ 
 	left: -10px;
+	margin-right: 0px;
+	font-size: inherit;
+}
+.mobile .quote .quote-box:before{
+	left: 0px;
+	display: inline-block;
+	position: relative;
 	margin-right: 0px;
 	font-size: inherit;
 }

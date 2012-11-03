@@ -95,16 +95,18 @@
 .column-four,
 .column-five{
 	float: left;
-	position: relative;		
+	position: relative;
 }
 /* mobile */
+.mobile .column{
+	margin: 4% 2%;
+}
 .mobile .column,
 .mobile .column-two,
 .mobile .column-three,
 .mobile .column-four,
 .mobile .column-five{
 	width: 96%;
-	margin: 4% 2%;
 }
 /* tablet small */
 .tablet-small .column{
@@ -253,7 +255,7 @@ section strong{
 	color: rgb(80,80,80);
 }
 .main-headline.small-font{ font-size: 500%; }
-.mobile .main-headline{ font-size: 300%; }
+.mobile .main-headline{ font-size: 300%; margin-bottom: 10px; }
 .sub-headline{
 	margin: -5px 0 20px 0;	
 	font-size: 200%;
