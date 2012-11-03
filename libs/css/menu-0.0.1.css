@@ -20,11 +20,11 @@
 	display: block;
 	height: 40px;
 	padding: 12px 10px 8px 70px;
-	transition: all .4s;   
-	-webkit-transition: all .4s;
-	-moz-transition: all .4s;
-	-o-transition: all .4s;
-	-ms-transition: all .4s;
+	transition: color .4s;   
+	-webkit-transition: color .4s;
+	-moz-transition: color .4s;
+	-o-transition: color .4s;
+	-ms-transition: color .4s;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;

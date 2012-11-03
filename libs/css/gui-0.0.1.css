@@ -50,6 +50,7 @@
 /* Hover Buttons */
 .hover-button{
 	border: 1px solid transparent;
+	border-radius: 1px;
 	padding: 7px 10px;
 	position: relative;
 	display: inline-block;
@@ -58,22 +59,21 @@
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
-	transition: all .4s;   
-	-webkit-transition: all .4s;
-	-moz-transition: all .4s;
-	-o-transition: all .4s;
-	-ms-transition: all .4s;
+	transition: color .4s, background .4s;
+	-webkit-transition: color .4s, background .4s;
+	-moz-transition: color .4s, background .4s;
+	-o-transition: color .4s, background .4s;
+	-ms-transition: color .4s, background .4s;
 }
 .hovers .hover-button:hover{
-	color: rgb(125,125,125);
 	text-decoration: none;
 	font-weight: bold;
 	padding: 7px 10px;
 	position: relative;
 	display: inline-block;
 	float: left;
+	color: rgb(125,125,125);
 	background: rgb(225,225,225);
-	border-radius: 1px;
 }
 /*------------------*/
 /* Loading Animation */

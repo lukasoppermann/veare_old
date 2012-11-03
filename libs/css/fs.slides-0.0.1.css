@@ -27,13 +27,13 @@
 	background-image: url(../../layout/loading.gif);
 	background-repeat: no-repeat;
 	background-position: 298px 83px;
-	transition: all .4s ease;   
-	-webkit-transition: all .4s ease;
-	-moz-transition: all .4s ease;
-	-o-transition: all .4s ease;
-	-ms-transition: all .4s ease;
+	transition: opacity .4s ease;   
+	-webkit-transition: opacity .4s ease;
+	-moz-transition: opacity .4s ease;
+	-o-transition: opacity .4s ease;
+	-ms-transition: opacity .4s ease;
 }
-.slideshow .slide.loaded:before{opacity: 0;}
+.slideshow .slide.loaded:before{ opacity: 0;}
 .slideshow img{
 	float: left;
 	max-width: 100%;

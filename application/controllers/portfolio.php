@@ -100,6 +100,9 @@ class Portfolio extends MY_Controller {
 		if( $item != null )
 		{
 			$this->data = array_merge($this->data, $item);
+			// replace [images] with dir
+			$this->data['text'] = str_replace('[images]',media('','image'),$this->data['text']);
+			// load view
 			$this->view('portfolio/item', $this->data, 'portfolio_item');
 		}
 		else
