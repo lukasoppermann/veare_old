@@ -115,6 +115,7 @@ class MY_Controller extends CI_Controller {
 		{
 			// load view
 			$data['namespace'] = $namespace;
+			$data['path'] = base_url(true).config('lang_abbr').implode('',$this->fs_navigation->active('path'));
 			view($template, $data);
 		}
 	}
