@@ -6,12 +6,8 @@ body.mobile, body.tablet-small{
 body.mobile, body.tablet{
 	font-size: 110%;
 }
-body{
-	font-family: 'Helvetica Neue', 'Helvetica', Arial, Sans-serif;
-}
-html {
-    font-family: 'mobile-portrait';
-}
+body{ font-family: 'Helvetica Neue', 'Helvetica', Arial, Sans-serif; }
+html { font-family: 'mobile-portrait'; }
 @media screen and (max-width: 320px) and (orientation:portrait) { 
 	html { font-family: 'mobile-portrait'; }
 }
@@ -19,7 +15,7 @@ html {
 	html { font-family: 'mobile-landscape'; }	
 }
 @media screen and (min-width: 540px){
-	html { font-family: 'tablet-small'; }	
+	html { font-family: 'tablet-small'; }
 }
 @media screen and (min-width: 780px){ 
 	html { font-family: 'tablet'; }
@@ -27,6 +23,6 @@ html {
 @media screen and (min-width: 1100px) { 
 	html { font-family: 'screen'; }
 }
-@media screen and (min-width: 1400px) { 
+@media screen and (min-width: 1300px) { 
 	html { font-family: 'wide-screen'; }
 }

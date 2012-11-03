@@ -245,5 +245,5 @@
 	-moz-transition-property: padding;
 	-moz-transition-duration: 0.3s;
 }
-.lang-switch .lang-label.lang-en{ padding: 5px 5px 5px 10px; }
+.lang-switch .lang-label.lang-en{ padding: 5px 5px 5px 8px; }
 .lang-switch .lang-label.lang-de{ padding: 5px 10px 5px 5px; }
