@@ -31,3 +31,6 @@
 [submodule "libs/js/fs-history"]
 	path = libs/js/fs-history
 	url = https://github.com/lukasoppermann/fs-history.git
+[submodule "libs/js/fittext"]
+	path = libs/js/fittext
+	url = https://github.com/lukasoppermann/FitText.js.git
