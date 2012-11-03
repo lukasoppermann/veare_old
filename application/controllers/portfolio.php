@@ -22,7 +22,7 @@ class Portfolio extends MY_Controller {
 	// ------------------------
 	// Overview
 	function overview()
-	{	
+	{
 		// load assets
 		css_add('cards, portfolio', 'page');
 		js_add('jquery.fs_filter, portfolio', 'page');
