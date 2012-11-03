@@ -1,18 +1,20 @@
-var loaded = false,
+var loaded = false, map, 
 		content;
 // declare object
 pages.contact = {};
 //
-// var init_contact = function(){
-// 	pages.contact.init("pages.contact.map");
-// };
-
 $(function()
 {
+	// set variables
+	var lat = 52.546167,
+			lng = 13.4145,
+		 	zoom = 15,
+			
+			dragevent;
 	// -----------------------
 	// init fn
 	pages.contact.init = function(  )
-	{
+	{	
 		$.fs_load(function()
 		{
 			if( !gCache.body.hasClass('mobile') )
@@ -67,12 +69,6 @@ $(function()
 		{
 			function run_this()
 			{
-				// set variables
-				var lat = 52.546167,
-						lng = 13.4145,
-					 	zoom = 15,
-						map, 
-						dragevent;
 				// draw map
 				var dragfn = function(){
 					map.setCenter(lat, lng);
@@ -114,12 +110,13 @@ $(function()
 					content: content
 				});
 				// debounced resize event (fires once every 100ms)
-				gCache.window.fs_resize(function(){
+				$.fs_resize(function(){
 					if(!gCache.body.hasClass('mobile'))
 					{
 						gCache.stage.height(gCache.window.height());
-						map.refresh();
-						map.setCenter(map.getCenter().lat(), map.getCenter().lng());
+						gCache.stage.find('.current-page').height(gCache.window.height());
+						gCache.stage.find('#veare_map').height(gCache.window.height());
+						dragfn();
 					}
 				});
 			};

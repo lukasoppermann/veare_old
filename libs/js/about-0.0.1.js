@@ -151,14 +151,14 @@ $(function()
 		//------------------------------------
 		gCache.body.on('resolutionChange', resChange);
 		// on resize
-		gCache.body.fs_resize(resizeFN);
+		$.fs_resize(resizeFN);
 		//------------------------------------
 		// on load
 		$.fs_load( function()
 		{	
-			//
 			// adjust font size
-			adjust_font(function(){
+			adjust_font(function()
+			{
 				//---------------------------
 				// reorganize quotes
 				var _rearrange = $('.rearrange');

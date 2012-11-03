@@ -45,7 +45,7 @@ $(function(){
 	
 		});
 		//
-		gCache.window.fs_resize(function()
+		$.fs_resize(function()
 		{
 			_columns.fs_equal_height();
 		});

@@ -18,6 +18,14 @@ section{
 	font-size: 170%;
 	line-height: 140%;
 }
+.mobile .quote{
+	font-size: 120%;
+	line-height: 120%;
+}
+.mobile.landscape .quote{
+	font-size: 140%;
+	line-height: 140%;
+}
 .quote .quote-box{
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;

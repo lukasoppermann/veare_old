@@ -70,7 +70,7 @@ class MY_Controller extends CI_Controller {
 			// --------------------------------------------------------------------
 			// add css & js files
 			css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui'));
-			js_add('fs.media_queries, fs.resize, fs.load, 2fs.loading, fs.history, base', 'default');
+			js_add('fs.media_queries, fs.resize, fs.load, fs.history, jquery.fittext.js, base', 'default');
 			js_add_lines("CI_BASE = '".base_url()."';", 'default');
 			// --------------------------------------------------------------------
 			// Initialize Menus
