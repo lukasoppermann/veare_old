@@ -15,17 +15,19 @@
 #sidebar{
 	position: fixed;
 	top: 0;
-/*	left: -90px;*/
 	bottom: 0;
 	z-index: 20;
 	width: 80px;
 	height: 100%;
+	background-color: rgb(245,245,245);
 	background-image: -moz-linear-gradient(left, rgb(248,248,248), rgb(240,240,240));
 	background-image: -webkit-linear-gradient(left, rgb(248,248,248), rgb(240,240,240));
+	background-image: -o-linear-gradient(left, rgb(248,248,248), rgb(240,240,240));
+	background-image: -ms-linear-gradient(left, rgb(248,248,248), rgb(240,240,240));
+	background-image: linear-gradient(left, rgb(248,248,248), rgb(240,240,240));
 }
 .nav-wide #sidebar{ 
 	width: 180px; 
-/*	left: -190px; */
 }
 #sidebar.shadow{
 	border: 0;
