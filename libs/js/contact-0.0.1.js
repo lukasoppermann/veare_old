@@ -50,7 +50,6 @@ $(function()
 			{
 				if ( typeof(google) === 'object' && typeof(google.maps) === 'object' ) 
 				{
-					console.log(google.maps);
 					pages.contact.map();
 				} 
 				else if (tries*interval <= timeout)
@@ -66,7 +65,7 @@ $(function()
 	{
 		if(window.google && window.google.maps)
 		{
-			var run_this = function()
+			function run_this()
 			{
 				// set variables
 				var lat = 52.546167,
@@ -129,7 +128,7 @@ $(function()
 				// set loaded true
 				loaded = true;
 				// run init map
-				init_map(run_this());
+				init_map(run_this);
 			}
 			else
 			{
