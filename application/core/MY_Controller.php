@@ -114,9 +114,14 @@ class MY_Controller extends CI_Controller {
 		// normal loading
 		else
 		{
+			// set path
+			$data['path'] = base_url(true).config('lang_abbr').implode('',$this->fs_navigation->active('path'));
+			if( strstr(current_url(), $data['path']) )
+			{
+				$data['path'] = trim(current_url(),'/');
+			}
 			// load view
 			$data['namespace'] = $namespace;
-			$data['path'] = base_url(true).config('lang_abbr').implode('',$this->fs_navigation->active('path'));
 			view($template, $data);
 		}
 	}
