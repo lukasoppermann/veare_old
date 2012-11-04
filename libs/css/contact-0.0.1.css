@@ -191,6 +191,7 @@
 .tablet .veare-contact, .tablet-small .veare-contact{
 	width: 260px;
 	height: 380px;
+	margin-top: -30px;
 }
 .tablet .veare-contact .contact-wrapper, .tablet-small .veare-contact .contact-wrapper{ height: 230px; }
 .tablet .veare-about, .tablet-small .veare-about{ height: 150px; }
