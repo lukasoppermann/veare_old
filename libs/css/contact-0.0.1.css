@@ -188,7 +188,7 @@
 .tablet .veare-about .content{ font-size: 105%; }
 /*------------------------------------------------------------------*/
 /* tablet-small version */
-.tablet-small .veare-contact{
+.tablet .veare-contact, .tablet-small .veare-contact{
 	width: 260px;
 	height: 380px;
 }
