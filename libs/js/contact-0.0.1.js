@@ -1,7 +1,8 @@
-var loaded = false, map, 
-		content;
 // declare object
 pages.contact = {};
+// variables
+var loaded = false, map, 
+		content;
 //
 $(function()
 {
@@ -9,7 +10,6 @@ $(function()
 	var lat = 52.546167,
 			lng = 13.4145,
 		 	zoom = 15,
-			
 			dragevent;
 	// -----------------------
 	// init fn

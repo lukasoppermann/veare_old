@@ -195,6 +195,7 @@
 .tablet-small .veare-contact .contact-wrapper{ height: 230px; }
 .tablet-small .veare-about{ height: 150px; }
 .tablet-small .veare-about .content{ font-size: 100%; }
+.tablet-small .veare-about .heading{	margin: 15px 15px 5px 10px; }
 /*------------------------------------------------------------------*/
 /* mobile version */
 .mobile #veare_card{ display: block; }
