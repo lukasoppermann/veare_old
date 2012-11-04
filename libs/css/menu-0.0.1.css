@@ -11,6 +11,9 @@
 	padding: 0;
 	width: 100%;
 }
+.tablet #nav .item, .tablet-small #nav .item{
+	margin-bottom: 10px;
+}
 #nav .item .menu-item-link{
 	position: relative;
 	color: rgb(150,150,150);
