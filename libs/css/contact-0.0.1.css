@@ -192,8 +192,8 @@
 	width: 260px;
 	height: 380px;
 }
-.tablet-small .veare-contact .contact-wrapper{ height: 230px; }
-.tablet-small .veare-about{ height: 150px; }
+.tablet .veare-contact .contact-wrapper, .tablet-small .veare-contact .contact-wrapper{ height: 230px; }
+.tablet .veare-about, .tablet-small .veare-about{ height: 150px; }
 .tablet-small .veare-about .content{ font-size: 100%; }
 .tablet-small .veare-about .heading{	margin: 15px 15px 5px 10px; }
 /*------------------------------------------------------------------*/
