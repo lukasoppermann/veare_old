@@ -116,6 +116,7 @@ class MY_Controller extends CI_Controller {
 		{
 			// set path
 			$data['path'] = base_url(true).config('lang_abbr').implode('',$this->fs_navigation->active('path'));
+			// check if path is wrong
 			if( strstr(current_url(), $data['path']) )
 			{
 				$data['path'] = trim(current_url(),'/');
