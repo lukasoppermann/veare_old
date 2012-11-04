@@ -103,11 +103,12 @@ class MY_Controller extends CI_Controller {
 		if( isset($_POST['ajax']) )
 		{
 			echo json_encode(array(
-				'content' => $this->load->view($template, $data, TRUE),
-				'namespace' => $namespace,
-				'css' 		=> css_link('page', TRUE, ','),
-				'js' 			=> js_link('page', TRUE, ','),
-				'title' 	=> variable($data['meta_title'], 'Welcome').' | vea.re – visionary design'
+				'content' 			=> $this->load->view($template, $data, TRUE),
+				'namespace' 		=> $namespace,
+				'css' 					=> css_link('page', TRUE, ','),
+				'js' 						=> js_link('page', TRUE, ','),
+				'title' 				=> variable($data['meta_title'], 'Welcome').' | vea.re – visionary design',
+				'body_class'		=> variable($data['body_class'])
 			));
 		}
 		// normal loading

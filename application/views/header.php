@@ -14,18 +14,18 @@ echo title(variable($meta_title, 'Welcome').' | vea.re – visionary design');
 <?
 if( mobile() == true && ipad() != true)
 { 
-	$class = ' class="mobile portrait loaded-mobile"';
+	$class = ' class="mobile portrait loaded-mobile '.variable($body_class).'"';
 }
 elseif( ipad() == true )
 {
-	$class = ' class="tablet loaded-tablet"';
+	$class = ' class="tablet loaded-tablet '.variable($body_class).'"';
 }
 else
 {
-	$class = ' class="hovers screen nav-wide"';
+	$class = ' class="hovers screen nav-wide '.variable($body_class).'"';
 }
 ?>
-<body<?=$class?>> 
+<body<?=$class?> data-page_class="<?=$body_class?>"> 
 	<div id="body">
 	<!-- .(mobile() == true ? 'mobile ' : '').(ipad() == true ? 'tablet' : '') -->
 	<!--+++++++++++++++++++++++++ sidebar +++++++++++++++++++++++++-->
