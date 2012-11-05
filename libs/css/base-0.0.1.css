@@ -134,11 +134,15 @@ only screen and (                min-resolution: 2dppx)
 	}
 	#logo .logo-inner .logo-img{ 
 		background-image: url('../../layout/veare-icons@2x.png'); 
+		background-size: 510px 300px;	
 	}
 	.nav-wide #logo .logo-inner .logo-img{
 		height: 150px;
 		width: 180px;
 		background-color: red;
+		left: 0;
+		top: -1px;
+		display: block;
 	}
 	.nav-narrow #logo .logo-inner .logo-img{
 		position: absolute;
@@ -146,8 +150,7 @@ only screen and (                min-resolution: 2dppx)
 		top: -1px;
 		display: block;
 		width: 70px;
-		height: 55px;
-		background-size: 510px 300px;		
+		height: 55px;	
 		background-position: 0px -240px;
 	}
 }
