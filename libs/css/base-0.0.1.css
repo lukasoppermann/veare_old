@@ -132,7 +132,13 @@ only screen and (                min-resolution: 2dppx)
 	.logo-img img{
 		display: none;
 	}
-	#logo .logo-inner .logo-img{ background-image: url('../../layout/veare-icons@2x.png'); }
+	#logo .logo-inner .logo-img{ 
+		background-image: url('../../layout/veare-icons@2x.png'); 
+	}
+	.nav-wide #logo .logo-inner .logo-img{
+		height: 150px;
+		width: 180px;
+	}
 	.nav-narrow #logo .logo-inner .logo-img{
 		position: absolute;
 		left: 0;
