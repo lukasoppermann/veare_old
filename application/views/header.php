@@ -29,7 +29,7 @@ else
 	<div id="body">
 	<!-- .(mobile() == true ? 'mobile ' : '').(ipad() == true ? 'tablet' : '') -->
 	<!--+++++++++++++++++++++++++ sidebar +++++++++++++++++++++++++-->
-	<div id="sidebar" class="nav-wide">
+	<div id="sidebar" class="<?=variable($sidebar_class)?>">
 		<!-- logo -->
 		<a href="<?=base_url()?>en/contact/" id="logo" class="ajax-link">
 			<div class="logo-inner logo-small veare-sprite">
