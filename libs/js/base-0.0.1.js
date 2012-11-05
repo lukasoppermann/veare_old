@@ -109,7 +109,8 @@ $(function()
 			context: 'tablet',
 			callback: function() {
 				query_actions('tablet');
-				gCache.body.addClass('tablet hide-line-text nav-narrow').removeClass('hovers tablet-small nav-wide mobile screen wide-screen');
+				// gCache.body.addClass('tablet hide-line-text nav-narrow').removeClass('hovers tablet-small nav-wide mobile screen wide-screen');
+								gCache.body.addClass('hovers nav-wide min-screen hide-line-text').removeClass('tablet-small mobile tablet wide-screen nav-narrow');
 				if( !gCache.body.hasClass('loaded-tablet') )
 				{
 					gCache.body.addClass('hovers');
