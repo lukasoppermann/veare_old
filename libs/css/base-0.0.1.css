@@ -138,6 +138,7 @@ only screen and (                min-resolution: 2dppx)
 	.nav-wide #logo .logo-inner .logo-img{
 		height: 150px;
 		width: 180px;
+		background-color: red;
 	}
 	.nav-narrow #logo .logo-inner .logo-img{
 		position: absolute;
