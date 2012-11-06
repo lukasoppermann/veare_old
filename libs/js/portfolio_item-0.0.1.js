@@ -54,10 +54,8 @@ $(function(){
 	// Function to destroy portfolio_item when unloaded
 	pages.portfolio_item.destroy = function()
 	{
-		var _portfolio_item = $('.current-page').find('.portfolio-item'),
-				_section_menu = _portfolio_item.find('.section-menu');
-		_section_menu.fs_sticky_top('destory');
-		_portfolio_item.find('.slideshow').fs_slides('destroy');
+		$('.section-menu').fs_sticky_top('destory');
+		$('.slideshow').fs_slides('destroy');
 	};
 	
 	
