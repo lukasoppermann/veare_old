@@ -58,7 +58,9 @@ $(function(){
 		$('.slideshow').fs_slides('destroy');
 	};
 	
-	
-	pages.portfolio_item.init();
+	if( pages.loaded != true )
+	{
+		pages.portfolio_item.init();
+	}
 	//
 });

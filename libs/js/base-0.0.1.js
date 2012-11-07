@@ -1,6 +1,7 @@
 var gCache = {};
 var pages = {};
 		pages.js = {},
+		pages.loaded = false,
 		pages.empty = function(){};
 // ----------------------------------------------------
 // Base functions used in all or many files
