@@ -76,6 +76,33 @@ section{
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.sections section.full-width{
+	width: 100%;
+	padding: 50px 0 0 0;
+}
+.sections section.full-width:before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 550px;
+	background: rgb(245,245,245);
+}
+.sections section.center{ text-align: center; }
+.sections section.center header{ text-align: left; }
+.sections section.center header .section-count{ border-top: 1px solid rgb(245,245,245);}
+.sections section.center .slideshow{
+	display: inline-block;
+	float: none;
+	margin-bottom: 0;
+	width: auto;
+}
+.slideshow.border{
+	border: 5px solid rgb(235,235,235);
+}
+.sections section.center .slideshow .image-wrap, .sections section.center .slideshow .slide{ width: auto; }
 .wide-screen header{ 
 	position: absolute; 
 	left: 0;

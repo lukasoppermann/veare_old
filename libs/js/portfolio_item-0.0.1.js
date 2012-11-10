@@ -41,7 +41,7 @@ $(function(){
 				}, 100);
 			}
 			//
-			_portfolio_item.find('.slideshow').fs_slides({'max_width':650, 'min_height': 150});
+			_portfolio_item.find('.slideshow').fs_slides({'min_height': 150});
 	
 		});
 		//
