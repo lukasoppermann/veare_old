@@ -1,0 +1,43 @@
+.article{
+	position: relative;
+	float: left;
+	width: 100%;
+	max-width: 100%;
+	padding: 7% 0 50px 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.portfolio-item{ max-width: 100%; }
+.tablet-small .article{ padding: 2% 5px 30px 10px; }
+.mobile .article{ padding: 0px 5px 30px 5px; }
+
+
+.article section{
+	padding: 0 50px;
+	width: 100%;
+	max-width: 1200px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.section-menu-wrap, .headline-column, .type.column, .excerpt.column{
+	padding: 0 50px;
+	width: 100%;
+	max-width: 1200px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.article section.full-width{
+	width: 100%;
+	max-width: 100%;
+}
+.sections section.full-width:before{
+	background-color: rgb(240,150,15);
+	background-image: -moz-linear-gradient(top, rgb(240,150,15), rgb(235,120,30));
+	background-image: -webkit-linear-gradient(top, rgb(240,150,15), rgb(235,120,30));
+	background-image: -o-linear-gradient(top, rgb(240,150,15), rgb(235,120,30));
+	background-image: -ms-linear-gradient(top, rgb(240,150,15), rgb(235,120,30));
+	background-image: linear-gradient(top, rgb(240,150,15), rgb(235,120,30));
+}
