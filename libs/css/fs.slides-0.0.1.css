@@ -11,6 +11,7 @@
 	width: 10000px;	
 }
 .slideshow .slide{
+	text-align: center;
 	float: left;
 	position: relative;
 }
@@ -35,6 +36,8 @@
 }
 .slideshow .slide.loaded:before{ opacity: 0;}
 .slideshow img{
-	float: left;
+	float: none;
+	position: relative;
+	display: inline-block;
 	max-width: 100%;
 }
