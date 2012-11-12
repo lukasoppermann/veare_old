@@ -10,13 +10,13 @@ class Portfolio extends MY_Controller {
 	
 	function index( $permalink = null )
 	{
-		if( $permalink == null )
+		if( $permalink != null && $permalink != '' && isset($permalink) )
 		{
-			$this->overview();
+			$this->item( $permalink );
 		}
 		else
 		{
-			$this->item( $permalink );
+			$this->overview();
 		}
 	}
 	// ------------------------
@@ -31,8 +31,9 @@ class Portfolio extends MY_Controller {
 		// get entries from database
 		$cards = db_select( 'client_entries', array('type' => 3, 'status' => 1), array('limit' => 50, 'order' => 'date DESC', 'json' => 'data') );
 		// grab all image ids
-		foreach($cards as $card)
+		foreach($cards as $id => $card)
 		{
+			unset($card['css'],$card['css_file'],$cards[$id]['css'],$cards[$id]['css_file']);
 			if( isset($card['card-image']) )
 			{
 				$images[$card['card-image']] = $card['card-image'];
@@ -104,10 +105,6 @@ class Portfolio extends MY_Controller {
 			$this->data['text'] = str_replace('[images]',media('','images'),$this->data['text']);
 			// load view
 			$this->view('portfolio/item', $this->data, 'portfolio_item');
-		}
-		else
-		{
-			$this->overview();
 		}
 	}
 // close class
