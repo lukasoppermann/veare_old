@@ -4,8 +4,8 @@
 		<h2 class="company open_sans_bold">veare / intelligent design</h2>
 		<div class="contact-details open_sans">
 			<div class="contact-detail">
-				<span class="type">P</span>
-				<span class="content"><a target="_blank" href="tel:004915771496644">015771496644</a></span>
+				<!-- <span class="type">P</span>
+				<span class="content"><a target="_blank" href="tel:004915771496644">015771496644</a></span> -->
 			</div>
 			<div class="contact-detail">
 				<span class="type">M</span>
