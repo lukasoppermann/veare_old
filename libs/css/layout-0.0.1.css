@@ -19,12 +19,12 @@
 	z-index: 20;
 	width: 80px;
 	height: 100%;
-	background-color: rgb(245,245,245);
-	background-image: -moz-linear-gradient(left, rgb(248,248,248), rgb(240,240,240));
-	background-image: -webkit-linear-gradient(left, rgb(248,248,248), rgb(240,240,240));
-	background-image: -o-linear-gradient(left, rgb(248,248,248), rgb(240,240,240));
-	background-image: -ms-linear-gradient(left, rgb(248,248,248), rgb(240,240,240));
-	background-image: linear-gradient(left, rgb(248,248,248), rgb(240,240,240));
+	background-color: rgb(250,250,250);
+	background-image: -moz-linear-gradient(left, rgb(250,250,250), rgb(250,250,250) 60%, rgb(245,245,245));
+	background-image: -webkit-linear-gradient(left, rgb(250,250,250), rgb(250,250,250) 60%, rgb(245,245,245));
+	background-image: -o-linear-gradient(left, rgb(250,250,250), rgb(250,250,250) 60%, rgb(245,245,245));
+	background-image: -ms-linear-gradient(left, rgb(250,250,250), rgb(250,250,250) 60%, rgb(245,245,245));
+	background-image: linear-gradient(left, rgb(250,250,250), rgb(250,250,250) 60%, rgb(245,245,245));
 }
 .nav-wide #sidebar{ 
 	width: 180px; 
@@ -221,6 +221,11 @@ section strong{
 	margin-bottom: 10px;
 }
 .mobile .excerpt{ font-size: 150%; }
+.excerpt sup{
+	vertical-align: super;
+	font-size: 50%;
+	font-weight: bold;
+}
 /* Quote */
 .quote{
 	font-size: 140%;

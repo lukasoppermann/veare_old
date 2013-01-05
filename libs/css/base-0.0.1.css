@@ -35,6 +35,11 @@ body{
 	color: rgb(75,75,75);
 	background: rgb(253,253,253);
 	overflow-y: scroll;
+	transition: background .4s ease;   
+	-webkit-transition: background .4s ease;
+	-moz-transition: background .4s ease;
+	-o-transition: background .4s ease;
+	-ms-transition: background .4s ease;
 }
 img{ float: left; }
 .right{ float: right; }
