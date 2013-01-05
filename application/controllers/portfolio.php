@@ -44,9 +44,13 @@ class Portfolio extends MY_Controller {
 			// retrieve images from db
 			$images = db_select('files', array('status' => 1, 'id' => array($images)), array('json' => 'data', 'index' => 'id', 'index_single' => true) );
 		}
+		$empty_card = array();
 		// loop through posts
 		foreach($cards as $card)
 		{
+			// merge variables to outfox view cache
+			$card = array_merge($empty_card, $card);
+			// prep tags
 			$card['tags'] = explode(',',$card['tags']);
 			// add image
 			if( isset($card['card-image']) && isset($images[$card['card-image']]) && is_array($images[$card['card-image']]) )
@@ -66,6 +70,11 @@ class Portfolio extends MY_Controller {
 				{
 					$tag_menu[$tag] = '<li class="filter-item" data-value="'.$tag.'">#'.$tag.'<span class="close">×</span></li>';
 				}
+			}
+			// unset cards
+			foreach($card as $key => $val)
+			{
+				$empty_card[$key] = ' ';
 			}
 		}
 		// tag menu
@@ -104,7 +113,7 @@ class Portfolio extends MY_Controller {
 			// replace [images] with dir
 			$this->data['text'] = str_replace('[images]',media('','images'),$this->data['text']);
 			// load view
-			$this->view('portfolio/item', $this->data, 'portfolio_item');
+			$this->view('portfolio/item_test', $this->data, 'portfolio_item');
 		}
 	}
 // close class

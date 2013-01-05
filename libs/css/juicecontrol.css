@@ -1,0 +1,34 @@
+.portfolio-item{
+	margin: 0;
+	padding: 7% 0 50px 0;
+	max-width: 100%;
+}
+
+.tablet-small .portfolio-item{ padding: 2% 0 30px 0; }
+.mobile .portfolio-item{ padding: 0px 0 30px 5; }
+
+.whitespace{ 
+	margin: 0 50px 0 50px !important; 
+	max-width: 1200px;
+}
+.tablet-small .whitespace{ padding: 0 5px 0 10px; }
+.mobile .whitespace{ padding: 0 5px 0 5px; }
+.grey{
+	background: rgb(235,235,235);
+}
+section{
+	background: rgb(250,250,250);
+	width: 100%;
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	border: 1px solid red;
+/*	padding: 50px 0 0 19%; */
+}
+.wide-screen header{
+	width: calc(100% - 100px) !important;
+	width: -webkit-calc(100% - 100px) !important;
+}
+.section-content{
+	float: left;
+	padding: 50px 0 0 19%; 
+}
