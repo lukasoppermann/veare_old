@@ -5,7 +5,7 @@
 		<div class="contact-details open_sans">
 			<div class="contact-detail">
 				<span class="type">P</span>
-				<span class="content"><a target="_blank" href="tel:00491631626947">01631626947</a></span>
+				<span class="content"><a target="_blank" href="tel:00491631626947">0163 1626947</a></span>
 			</div>
 			<div class="contact-detail">
 				<span class="type">M</span>
