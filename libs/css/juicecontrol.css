@@ -3,9 +3,8 @@
 	padding: 7% 0 50px 0;
 	max-width: 100%;
 }
-
 .tablet-small .portfolio-item{ padding: 2% 0 30px 0; }
-.mobile .portfolio-item{ padding: 0px 0 30px 5; }
+.mobile .portfolio-item{ padding: 0px 0 30px 5px; }
 
 .whitespace{ 
 	margin: 0 50px 0 50px !important; 
@@ -17,18 +16,41 @@
 	background: rgb(235,235,235);
 }
 section{
-	background: rgb(250,250,250);
 	width: 100%;
 	padding-right: 0 !important;
 	padding-left: 0 !important;
-	border: 1px solid red;
-/*	padding: 50px 0 0 19%; */
 }
 .wide-screen header{
+	padding-left: 20%;
 	width: calc(100% - 100px) !important;
 	width: -webkit-calc(100% - 100px) !important;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
 }
 .section-content{
 	float: left;
-	padding: 50px 0 0 19%; 
+	padding: 50px 0 0 20%; 
 }
+header.whitespace{
+	height: 50px;
+}
+.wide-screen header h2{ 
+	padding-left: 0px;
+}
+.wide-screen section .column-two:nth-child(2n), .screen section .column-two:nth-child(2n){
+	margin-left: 2%;
+}
+.wide-screen .tags, .screen .tags, .tablet .tags{
+	padding-left: 20%;
+	padding-top: 20px;
+	position: relative;
+}
+.tags .tags-container{
+	position: relative;
+}
+.tags .icon.tag{
+	position: absolute;
+	left: -35px;
+}
+.tags [class*="tag-"]{ margin: 1px 9px 0 0; }
