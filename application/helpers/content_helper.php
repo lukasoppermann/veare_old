@@ -24,7 +24,7 @@
 * - build tag system into db_data	
 *
 */
-function show_tags( &$string = null, $limit = 5, $link = false )
+function show_tags( &$string = null, $limit = 5, $link = false, $after = '' )
 {
 	// check if tags are set
 	if( trim($string) != null )
@@ -47,11 +47,11 @@ function show_tags( &$string = null, $limit = 5, $link = false )
 			for( $i = 0; $i < $limit && $i < $c; $i++ )
 			{
 				$tag = trim($tags[$i]);
-				$output[] = '<span class="tag-'.$tag.'">'.$tag.'</span>';
+				$output[] = '<span class="tag-'.$tag.'">'.$tag.'</span>'.$after;
 			}
 		}
 		// return output
-		return implode('',$output);
+		return rtrim(implode('',$output),$after);
 	}
 }
 

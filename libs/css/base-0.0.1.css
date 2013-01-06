@@ -90,12 +90,12 @@ only screen and (                min-resolution: 2dppx) {
 	margin-top: 5px;
 	width: 50px;
 	height: 50px;
-	background-position: -60px -235px;
+	background-position: -60px -238px;
 }
 .nav-wide #logo .logo-inner{
 	width: 150px;
 	height: 120px;
-	background-position: 0px -114px;	
+	background-position: 0px -117px;	
 }
 .nav-narrow #logo .logo-inner .logo-img{
 	position: absolute;
@@ -103,7 +103,7 @@ only screen and (                min-resolution: 2dppx) {
 	left: 0;
 }
 #logo .logo-img{
-	margin-top: 6px;	
+	margin-top: 3px;	
 	-webkit-transition: margin .318s;
 	-moz-transition: margin .318s;
 	-o-transition: margin .318s;
@@ -112,14 +112,7 @@ only screen and (                min-resolution: 2dppx) {
 	float: left;
 }
 .hovers.screen #logo:hover .logo-img, .hovers.wide-screen #logo:hover .logo-img{
-	margin-top: 2px;
-	-webkit-transition: margin .118s;
-	-moz-transition: margin .118s;
-	-o-transition: margin .118s;
-	transition: margin .118s;
-}
-.hovers .nav-narrow #logo:hover .logo-img{
-	margin-top: 4px;
+	margin-top: 0px;
 	-webkit-transition: margin .118s;
 	-moz-transition: margin .118s;
 	-o-transition: margin .118s;
