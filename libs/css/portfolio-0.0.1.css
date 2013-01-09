@@ -1,14 +1,14 @@
 body{
-	background: rgb(249,249,249);
+	background: rgb(240,240,240);
 }
-#sidebar{
+/*#sidebar{
 	background-color: rgb(242,242,242);
 	background-image: -moz-linear-gradient(left, rgb(248,248,248), rgb(248,248,248) 60%, rgb(242,242,242));
 	background-image: -webkit-linear-gradient(left, rgb(248,248,248), rgb(248,248,248) 60%, rgb(242,242,242));
 	background-image: -o-linear-gradient(left, rgb(248,248,248), rgb(248,248,248) 60%, rgb(242,242,242));
 	background-image: -ms-linear-gradient(left, rgb(248,248,248), rgb(248,248,248) 60%, rgb(242,242,242));
 	background-image: linear-gradient(left, rgb(248,248,248), rgb(248,248,248) 60%, rgb(242,242,242));
-}
+}*/
 #content_wrapper{
 	padding: 15px;
 	-moz-box-sizing: border-box;
@@ -23,6 +23,7 @@ body{
 	height: 230px;
 	width: 100%;
 	overflow: hidden;
+	position: relative;
 	border-top-left-radius: 1px;
 	border-top-right-radius: 1px;
 	background: rgb(245,160,10);
@@ -31,8 +32,15 @@ body{
 	box-sizing: border-box;	
 }
 .card-image img{
+	position: relative;
 	float: right;
 	width: 300px;	
+}
+.center .card-image img{
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
 }
 .card-headline{
 	margin: 0;
