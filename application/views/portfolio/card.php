@@ -1,6 +1,6 @@
 <a class="column card-flip ajax-link <?=variable($card_class)?>" data-tag="<?=implode(' ',$tags)?>" href="<?=base_url().'en/portfolio/'.$permalink?>">
 	<div class="card-wrap">
-		<div class="card front">	
+		<div class="card front">
 				<div class="card-content">
 					<div class="card-image">
 						<img src="<?=base_url()?>images/<?=variable($images['filename']).'.'.variable($images['ext'])?>" alt="<?=$title?>" />
