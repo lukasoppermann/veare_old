@@ -113,7 +113,7 @@ class Portfolio extends MY_Controller {
 			// replace [images] with dir
 			$this->data['text'] = str_replace('[images]',media('','images'),$this->data['text']);
 			// load view
-			$this->view('portfolio/item_test', $this->data, 'portfolio_item');
+			$this->view('portfolio/item', $this->data, 'portfolio_item');
 		}
 	}
 // close class
