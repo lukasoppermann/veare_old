@@ -241,11 +241,14 @@ section strong{
 .article .type{
 	display: block;
 	margin-top: 20px;
-	margin-bottom: 0px !important;	
+	margin-bottom: 0px;
 	font-size: 200%;
 	color: rgb(180,180,180);
 }
-.mobile .article .type{ font-size: 180%; }
+.mobile .article .type{ 
+	font-size: 160%; 
+	margin-bottom: 10px;
+}
 /* headlines */
 .column.headline-column{ margin-top: 0; margin-bottom: 0; }
 .column.image.center{ text-align: center; }
