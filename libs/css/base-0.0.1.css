@@ -79,7 +79,7 @@ only screen and (                min-resolution: 2dppx) {
 	width: 70px;
 	height: 55px;	
 	padding: 0 10px;
-	margin: 0 0 0 5px;	
+	margin: 5px 0 0 5px;	
 }
 .mobile.landscape #logo, .nav-narrow #logo{ margin-bottom: 15px; }
 #logo .logo-inner{
