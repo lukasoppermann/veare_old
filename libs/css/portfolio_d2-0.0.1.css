@@ -1,42 +1,11 @@
-.portfolio-item{ max-width: 100%; }
-.article{
-	position: relative;
-	float: left;
+.full-width:before{
+	display: block;
+	content: "";
 	width: 100%;
-	max-width: 100%;
-	padding: 7% 0 50px 0;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.section-menu-wrap, .headline-column, .type.column, .excerpt.column{
-	padding: 0 50px;
-	width: 100%;
-	max-width: 1200px;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.article section{
-	max-width: 1200px;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
-}
-.tablet-small .article section{ 
-	padding-right: 5px;
-	padding-left: 10px;
-}
-.mobile .article section{ 
-	padding-right: 5px;
-	padding-left: 5px;
-}
-.article section.full-width{
-	width: 100%;
-	max-width: 100%;
-	padding: 0;
-}
-.sections section.full-width:before{
+	height: 80%;
+	position: absolute;
+	left: 0;
+	top: 0;
 	z-index: 1;
 	background-color: rgb(240,150,15);
 	background-image: -moz-linear-gradient(top, rgb(240,150,15), rgb(235,120,30));
@@ -48,27 +17,29 @@
 .main-stage{
 	z-index: 2;
 }
-.main-stage:before, .main-stage:after{
+.main-stage:before{
 	z-index: 1;
 	position: absolute;
-	right: 55%;
+	left: 0;
 	top: 0;
 	height: 100%;
-	width: 500px;
-	background: transparent url('../../images/d2-bg-pattern.png');
+	width: 100%;
+	background: transparent url('../../images/d2-bg-pattern.png') left top;
 }
-.main-stage:after{
-	left: 55%;
-}
-.main-stage .image-wrap{
-	padding-left: 100px;
+.main-stage .slideshow{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 	z-index: 2;
 }
+.screen.wide-screen .main-stage .slideshow{ padding-left: 150px; }
+.screen .main-stage .slideshow{ padding-left: 150px; }
+.tablet .main-stage .slideshow, .tablet-small .main-stage .slideshow, .mobile .main-stage .slideshow{padding: 0; }
 .main-stage .image-description{
 	position: absolute;
 	color: rgb(255,255,255);
 	width: 250px;
 	text-align: left;
 	top: 60%;
-	left: 10%;
+	left: 5%;
 }
