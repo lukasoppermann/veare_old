@@ -15,6 +15,9 @@
 	float: left;
 	position: relative;
 }
+.slideshow.left .slide{
+	text-align: left;
+}
 .slideshow .slide:before{
 	opacity: 0.9;
 	position: absolute;
