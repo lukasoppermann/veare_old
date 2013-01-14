@@ -76,10 +76,10 @@ only screen and (                min-resolution: 2dppx) {
 	box-sizing: border-box;
 }
 .mobile #logo, .nav-narrow #logo{
-	width: 70px;
-	height: 55px;	
+	width: 75px;
+	height: 50px;	
 	padding: 0 10px;
-	margin: 5px 0 0 5px;	
+	margin: 10px 0 0 7px;	
 }
 .mobile.landscape #logo, .nav-narrow #logo{ margin-bottom: 15px; }
 #logo .logo-inner{
@@ -127,9 +127,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx)
 {
-	.logo-img img{
-		display: none;
-	}
+	.logo-img img{ display: none; }
 	.nav-wide #logo .logo-inner .logo-img, .nav-narrow #logo .logo-inner .logo-img{ 
 		background-image: url('../../layout/veare-icons@2x.png'); 
 		background-size: 510px 300px;
