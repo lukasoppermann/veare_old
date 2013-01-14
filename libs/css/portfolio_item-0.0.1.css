@@ -63,7 +63,7 @@ body{ background: rgb(255,255,255); }
 .section-menu a{
 	display: block;
 	float: left;
-	padding: 7px 10px;
+	padding: 7px 15px;
 	text-decoration: none;
 	color: rgb(150,150,150);
 	transition: color .4s ease .3s;   
