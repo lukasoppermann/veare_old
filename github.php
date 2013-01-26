@@ -5,11 +5,11 @@ $payload = json_decode($_REQUEST['payload']);
 foreach($payload->commits as $commits)
 {
 	if( $commits->id == $payload->after ){
-		$commit = $commits;
+		$commit = $commits->message;
 	}
 }
 // check for cache handle
-if( stristr($commit->message,'-cache') != FALSE )
+if( stristr($commit,'-cache') != FALSE )
 {
 	// remove chached files
 	// ----------------------
