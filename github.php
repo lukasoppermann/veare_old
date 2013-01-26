@@ -9,7 +9,7 @@ foreach($payload->commits as $commits)
 	}
 }
 
-if( stristr($commit->message,'-cache') !== FALSE )
+if( stristr($commit->message,'-cache') != FALSE )
 {
 	// remove chached files
 	// ----------------------
