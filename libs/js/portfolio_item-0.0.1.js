@@ -11,7 +11,7 @@ $(function(){
 		// deassign variables
 		var _portfolio_item = $('.current-page').find('.portfolio-item'),
 				_section_menu = _portfolio_item.find('.section-menu'),
-				_columns = _portfolio_item.find('.column');
+				_equalize = _portfolio_item.find('.equalize');
 		// when everything is loaded
 		$.fs_load(function(){
 			// stick top menu
@@ -37,7 +37,7 @@ $(function(){
 				// run equal height
 				setTimeout(function() 
 				{
-					_columns.fs_equal_height();
+					_equalize.fs_equal_height();
 				}, 100);
 			}
 			//
@@ -47,7 +47,7 @@ $(function(){
 		//
 		$.fs_resize(function()
 		{
-			_columns.fs_equal_height();
+			_equalize.fs_equal_height();
 		});
 	};
 	// --------------------
