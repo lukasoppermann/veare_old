@@ -32,7 +32,7 @@
 .card-flip{ z-index: 10; }
 .hovers .card-flip:hover{
 	z-index: 90;
-}
+} 
 /*---------------------------------*/
 /* Flip animation */
 .card-flip, .card{
