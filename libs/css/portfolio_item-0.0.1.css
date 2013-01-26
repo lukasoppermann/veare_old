@@ -210,6 +210,7 @@ section p{
 .tags .icon.tag{
 	position: absolute;
 	left: -35px;
+	top: 0;
 }
 .tablet-small .tags, 
 .mobile .tags{
