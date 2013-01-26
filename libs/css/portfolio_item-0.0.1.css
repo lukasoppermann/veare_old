@@ -149,6 +149,7 @@ header, .section-content{
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
 }
+.section-content.full-width{ max-width: 100%; }
 .section-count{
 	text-align: right;
 	display: block;
