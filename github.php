@@ -1,8 +1,6 @@
 <?php echo `git pull origin master --force && git submodule update --init --recursive 2>&1`;
 // fetch payload data
 $payload = json_decode($_REQUEST['payload']);
-// Log the payload object
-file_put_contents('application/logs/github.txt', print_r($payload, TRUE), FILE_APPEND);
 // find last commit 
 foreach($payload->commits as $commits)
 {
