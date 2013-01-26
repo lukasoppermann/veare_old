@@ -11,9 +11,6 @@ section.main-stage .column{
 	left: 50%;
 	width: 100%;
 }
-section.main-stage .column{
-	left: -50%;
-}
 section.main-stage .slideshow img {
 	float: left;
 }
