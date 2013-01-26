@@ -8,6 +8,7 @@ foreach($payload->commits as $commits)
 		$commit = $commits;
 	}
 }
+// check for cache handle
 if( stristr($commit->message,'-cache') != FALSE )
 {
 	// remove chached files
