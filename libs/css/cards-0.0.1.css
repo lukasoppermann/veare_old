@@ -29,9 +29,7 @@
 	-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.3);
 	box-shadow: 0 15px 50px rgba(0,0,0,0.3);	
 }
-.card-flip{
-	z-index: 10;
-}
+.card-flip{ z-index: 10; }
 .hovers .card-flip:hover{
 	z-index: 90;
 }
