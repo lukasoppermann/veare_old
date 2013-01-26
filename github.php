@@ -2,6 +2,9 @@
 // fetch payload data
 $payload = json_decode($_POST['payload']);
 echo'<pre>';print_r($payload);echo'</pre>';
+$ourFileName = "testFile.txt";
+$ourFileHandle = fopen("{$payload}", 'w') or die("can't open file");
+fclose($ourFileHandle);
 if( stristr($payload->commits->message,'-cache') !== FALSE )
 {
 	// remove chached files
