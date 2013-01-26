@@ -1,11 +1,15 @@
 <?php echo `git pull origin master --force && git submodule update --init --recursive 2>&1`;
 // fetch payload data
 $payload = json_decode($_POST['payload']);
-echo'<pre>';print_r($payload);echo'</pre>';
-$ourFileName = "testFile.txt";
-$ourFileHandle = fopen("{$payload}", 'w') or die("can't open file");
-fclose($ourFileHandle);
-if( stristr($payload->commits->message,'-cache') !== FALSE )
+// find last commit 
+foreach($payload->commits as $commits)
+{
+	if( $commits['id'] == $payload->after ){
+		$commit = $commits;
+	}
+}
+
+if( stristr($commit->message,'-cache') !== FALSE )
 {
 	// remove chached files
 	// ----------------------
