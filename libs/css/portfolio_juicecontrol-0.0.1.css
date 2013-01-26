@@ -7,11 +7,11 @@ section.main-stage{
 	background: rgb(174,177,166);
 	float: left;
 }
-section.main-stage .column.full-width{
+section.main-stage .section-inner-content{
 	left: 50%;
 	width: 100%;
 }
-section.main-stage .slideshow{
+section.main-stage .column{
 	left: -50%;
 }
 section.main-stage .slideshow img {
