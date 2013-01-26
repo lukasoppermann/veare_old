@@ -7,8 +7,9 @@ section.main-stage{
 	background: rgb(174,177,166);
 	float: left;
 }
-section.main-stage .column{
+section.main-stage .column.full-width{
 	left: 50%;
+	width: 100%;
 }
 section.main-stage .slideshow{
 	left: -50%;
