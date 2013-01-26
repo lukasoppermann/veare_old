@@ -1,6 +1,7 @@
 <?php echo `git pull origin master --force && git submodule update --init --recursive 2>&1`;
 // fetch payload data
 $payload = json_decode($_POST['payload']);
+echo'<pre>';print_r($payload);echo'</pre>';
 if( stristr($payload->commits->message,'-cache') !== FALSE )
 {
 	// remove chached files
