@@ -6,7 +6,7 @@ file_put_contents('application/logs/github.txt', print_r($payload, TRUE), FILE_A
 // find last commit 
 foreach($payload->commits as $commits)
 {
-	if( $commits['id'] == $payload->after ){
+	if( $commits->id == $payload->after ){
 		$commit = $commits;
 	}
 }
