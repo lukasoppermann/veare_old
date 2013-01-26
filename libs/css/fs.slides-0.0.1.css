@@ -38,8 +38,8 @@
 	-ms-transition: opacity .4s ease;
 }
 .slideshow .slide.loaded:before{ opacity: 0;}
-.slideshow img{
-	float: none;
+.slideshow.center img{
+	float: none !important;
 	position: relative;
 	display: inline-block;
 	max-width: 100%;

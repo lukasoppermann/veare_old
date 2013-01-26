@@ -7,7 +7,7 @@ section.main-stage{
 	background: rgb(174,177,166);
 	float: left;
 }
-section.main-stage .section-inner-content{
+section.main-stage .column{
 	left: 50%;
 	width: 100%;
 }
