@@ -28,6 +28,12 @@ body{ background: rgb(255,255,255); }
 	width: -webkit-calc(100% - 10px);
 	width: -moz-calc(100% - 10px);
 }
+.full-width.center .whitespace-width{
+	max-width: calc(100% - 10px);
+	max-width: -webkit-calc(100% - 10px);
+	max-width: -moz-calc(100% - 10px);
+
+}
 /* ----------------------- */
 /* section menu */
 .mobile .section-menu, .tablet-small .section-menu{ display: none; }

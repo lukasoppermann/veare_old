@@ -38,7 +38,7 @@
 	-ms-transition: opacity .4s ease;
 }
 .slideshow .slide.loaded:before{ opacity: 0;}
-.slideshow.center img{
+.center .slideshow img{
 	float: none !important;
 	position: relative;
 	display: inline-block;
