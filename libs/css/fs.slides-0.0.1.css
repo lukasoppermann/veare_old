@@ -12,6 +12,7 @@
 }
 .slideshow .slide{
 	text-align: center;
+	line-height: 0;
 	float: left;
 	position: relative;
 }
@@ -42,6 +43,7 @@
 	float: none !important;
 	position: relative;
 	display: inline-block;
+	line-height: 0;
 	max-width: 100%;
 	max-height: 100%;
 }
