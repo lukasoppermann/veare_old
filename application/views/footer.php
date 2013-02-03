@@ -1,3 +1,4 @@
+	<?php echo $this->benchmark->elapsed_time();?>
 			</div>
 		</div>
 	</div>
@@ -10,7 +11,6 @@
 			<li class="item"><a class="link linkedin" href="https://www.linkedin.com/in/lukasoppermann" target="_blank"><span class="icon-small linkedin"></span></a></li>
 		</ul>
 	</div>
-	
 <?
 	if(mobile() != true)
 	{
