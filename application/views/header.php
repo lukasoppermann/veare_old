@@ -9,7 +9,7 @@ echo css('page', FALSE, "data-type='page' data-namespace='".$namespace."' data-p
 // title
 echo title('vea.re | '.variable($meta_title, 'welcome').' | visionary design');
 ?>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1,maximum-scale=5">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1,maximum-scale=1">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 </head>
 <?
