@@ -47,7 +47,7 @@ $(function()
 			// run callback
 			var tries = 0,
 					interval = 40,
-					timeout = 120000; // max ms to check for
+					timeout = 180000; // max ms to check for
 			setTimeout(function timer() 
 			{
 				if ( typeof(google) === 'object' && typeof(google.maps) === 'object' ) 
@@ -58,6 +58,10 @@ $(function()
 				{
 					tries++;
 					setTimeout(timer, interval);
+				}
+				else if( tries*interval >= timeout )
+				{
+					location.reload();
 				}
 			}, interval);
 		});
