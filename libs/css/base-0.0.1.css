@@ -46,9 +46,7 @@ img{ float: left; }
 .left{ float: left; }
 /*------------------*/
 /* lists */
-.list{
-	clear: both;
-}
+.list{ clear: both; }
 /*------------------*/
 /* sprite */
 .veare-sprite, .icon, .icon-small{ background-image: url('../../layout/veare-icons.png'); }
