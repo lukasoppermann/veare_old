@@ -1,4 +1,4 @@
-	<?php echo $this->benchmark->elapsed_time();?>
+	<!-- <?php echo $this->benchmark->elapsed_time();?> -->
 			</div>
 		</div>
 	</div>
