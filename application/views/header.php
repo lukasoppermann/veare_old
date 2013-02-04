@@ -7,7 +7,7 @@ echo meta();
 echo css('default', FALSE);
 echo css('page', FALSE, "data-type='page' data-namespace='".$namespace."' data-path='".$path."'");
 // title
-echo title(variable($meta_title, 'Welcome').' | vea.re – visionary design');
+echo title('vea.re | '.variable($meta_title, 'Welcome').' | visionary design');
 ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1,maximum-scale=5">
 <meta name="apple-mobile-web-app-capable" content="yes" />
