@@ -67,7 +67,7 @@ $(function()
 			}, interval);
 		});
 	};
-	// run init map 
+	// run init map
 	pages.contact.map = function()
 	{
 		if(window.google && window.google.maps)
