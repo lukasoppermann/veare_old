@@ -130,7 +130,7 @@ $(function()
 					timeout = 120000; // max ms to check for
 			setTimeout(function timer() 
 			{
-				if ( typeof(window.google) === 'object' && typeof(window.google.maps) === 'object' ) 
+				if ( typeof(GMaps) === 'object' && typeof(GMaps) === 'object' ) 
 				{
 					run_this();
 				} 
