@@ -76,7 +76,7 @@ class MY_Controller extends CI_Controller {
 			// check for mobile
 			if( mobile() != true )
 			{
-				js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true&callback=pages.empty','gmaps','contact'), 'default');
+				js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true&callback=pages.empty','gmaps'), 'default');
 			}
 			// --------------------------------------------------------------------
 			// Initialize Menus
