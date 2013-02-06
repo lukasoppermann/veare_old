@@ -47,7 +47,7 @@ $(function()
 			// run callback
 			var tries = 0,
 					interval = 40,
-					timeout = 180000; // max ms to check for
+					timeout = 120000; // max ms to check for
 			setTimeout(function timer() 
 			{
 				console.log(tries);
