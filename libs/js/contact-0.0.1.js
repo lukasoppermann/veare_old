@@ -139,6 +139,5 @@ $(function()
 	};
 	// run init on page load
 	pages.contact.init();
-	console.log('later');
 // 
 });
