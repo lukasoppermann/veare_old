@@ -74,7 +74,7 @@ $(function()
 		{
 			function run_this()
 			{
-				// draw map
+				// draw map  
 				var dragfn = function(){
 					map.setCenter(lat, lng);
 					map.setZoom(zoom);	
