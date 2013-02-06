@@ -51,6 +51,9 @@ $(function()
 			setTimeout(function timer() 
 			{
 				console.log(tries);
+				console.log(tries*interval);
+				console.log(timeout);
+				console.log('------------');
 				if ( typeof(window.google) === 'object' && typeof(window.google.maps) === 'object') 
 				{
 					pages.contact.map();
