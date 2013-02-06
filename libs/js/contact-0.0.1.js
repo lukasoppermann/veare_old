@@ -124,17 +124,7 @@ $(function()
 					}
 				});
 			};
-			if( loaded == false )
-			{
-				// set loaded true
-				loaded = true;
-				// run init map
-				init_map(run_this);
-			}
-			else
-			{
-				run_this();
-			}
+			run_this();
 		}
 	};
 	// destruct fn
