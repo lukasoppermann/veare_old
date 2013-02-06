@@ -52,8 +52,6 @@ $(function()
 			{
 				if ( typeof(window.google) === 'object' && typeof(window.google.maps) === 'object') 
 				{
-					console.log('now');
-					console.log(tries);
 					pages.contact.map();
 				} 
 				else if (tries*interval < timeout)
@@ -141,5 +139,6 @@ $(function()
 	};
 	// run init on page load
 	pages.contact.init();
+	console.log('later');
 // 
 });
