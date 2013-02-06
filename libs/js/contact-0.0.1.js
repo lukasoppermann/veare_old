@@ -46,7 +46,7 @@ $(function()
 			}
 			// run callback
 			var tries = 0,
-					interval = 40,
+					interval = 60,
 					timeout = 120000; // max ms to check for
 			setTimeout(function timer() 
 			{
@@ -55,7 +55,7 @@ $(function()
 				{
 					pages.contact.map();
 				} 
-				else if (tries*interval <= timeout)
+				else if (tries*interval < timeout)
 				{
 					tries++;
 					setTimeout(timer, interval);
@@ -81,7 +81,7 @@ $(function()
 				};
 				// -----------------------
 				// Create GMaps object
-				map = new GMaps({
+				map = new maps({
 					div: '#veare_map',
 					lat: lat, // lat: 52.546167, - neu:  52.5354,13.43315
 					lng: lng, // lng: 13.415201,
