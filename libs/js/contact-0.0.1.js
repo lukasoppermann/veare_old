@@ -70,6 +70,7 @@ $(function()
 	// run init map 
 	pages.contact.map = function()
 	{
+		console.log('map');
 		if(window.google && window.google.maps)
 		{
 			function run_this()
