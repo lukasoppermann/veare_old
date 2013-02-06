@@ -70,8 +70,9 @@ class MY_Controller extends CI_Controller {
 			// --------------------------------------------------------------------
 			// add css & js files
 			css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui'));
-			// css_add('contact');
+			css_add('contact');
 			js_add('fs.media_queries, fs.resize, fs.load, fs.history, jquery.fittext.js, base', 'default');
+			js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true&callback=pages.empty','gmaps','contact'), 'default');
 			js_add_lines("CI_BASE = '".base_url()."';", 'default');
 			// --------------------------------------------------------------------
 			// Initialize Menus
