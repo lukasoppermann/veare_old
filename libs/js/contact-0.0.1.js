@@ -70,7 +70,6 @@ $(function()
 	// run init map 
 	pages.contact.map = function()
 	{
-		console.log('map');
 		if(window.google && window.google.maps)
 		{
 			function run_this()
@@ -126,23 +125,8 @@ $(function()
 					}
 				});
 			};
-			// Check for gmaps
-			var tries = 0,
-					interval = 40,
-					timeout = 120000; // max ms to check for
-			setTimeout(function timer() 
-			{
-				if ( typeof(GMaps) !== undefined && typeof(GMaps) === 'object' ) 
-				{
-					console.log(GMaps);
-					run_this();
-				} 
-				else if (tries*interval <= timeout)
-				{
-					tries++;
-					setTimeout(timer, interval);
-				}
-			}, interval);
+			//
+			init_map(run_this);
 		}
 	};
 	// destruct fn
