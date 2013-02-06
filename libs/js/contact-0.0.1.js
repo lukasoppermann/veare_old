@@ -52,6 +52,7 @@ $(function()
 			{
 				if ( typeof(window.google) === 'object' && typeof(window.google.maps) === 'object') 
 				{
+					console.log('now');
 					pages.contact.map();
 				} 
 				else if (tries*interval < timeout)
