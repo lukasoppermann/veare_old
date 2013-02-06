@@ -124,7 +124,22 @@ $(function()
 					}
 				});
 			};
-			run_this();
+			// Check for gmaps
+			var tries = 0,
+					interval = 40,
+					timeout = 120000; // max ms to check for
+			setTimeout(function timer() 
+			{
+				if ( typeof(window.google) === 'object' && typeof(window.google.maps) === 'object' ) 
+				{
+					run_this();
+				} 
+				else if (tries*interval <= timeout)
+				{
+					tries++;
+					setTimeout(timer, interval);
+				}
+			}, interval);
 		}
 	};
 	// destruct fn
