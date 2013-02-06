@@ -50,7 +50,7 @@ $(function()
 					timeout = 180000; // max ms to check for
 			setTimeout(function timer() 
 			{
-				if ( typeof(google) === 'object' && typeof(google.maps) === 'object' ) 
+				if ( typeof(window.google) === 'object' && typeof(window.google.maps) === 'object' ) 
 				{
 					pages.contact.map();
 				} 
