@@ -20,9 +20,7 @@
 	width: auto;
 	max-width: 100%;
 }
-.slideshow.left .slide{
-	text-align: left;
-}
+.slideshow.left .slide{ text-align: left; }
 .slideshow .slide:before{
 	opacity: 0.9;
 	position: absolute;
