@@ -5,7 +5,7 @@
 echo favicon('favicon');
 echo meta();
 echo css('default', TRUE);
-echo css('page', FALSE, "data-type='page' data-namespace='".$namespace."' data-path='".$path."'");
+echo css('page', TRUE, "data-type='page' data-namespace='".$namespace."' data-path='".$path."'");
 // title
 echo title('vea.re | '.variable($meta_title, 'welcome').' | visionary design', 'veare');
 ?>
