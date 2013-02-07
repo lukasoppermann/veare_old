@@ -34,3 +34,6 @@
 [submodule "libs/js/fittext"]
 	path = libs/js/fittext
 	url = https://github.com/lukasoppermann/FitText.js.git
+[submodule "libs/js/bigtext"]
+	path = libs/js/bigtext
+	url = https://github.com/zachleat/BigText.git

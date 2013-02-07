@@ -42,7 +42,6 @@ $(function(){
 			}
 			//
 			_portfolio_item.find('.slideshow').fs_slides({'min_height': 150});
-	
 		});
 		//
 		$.fs_resize(function()
