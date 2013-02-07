@@ -11,7 +11,7 @@ class Contact extends MY_Controller {
 	function index()
 	{	
 		// assets
-		// css_add('contact', 'page');
+		css_add('contact', 'page');
 		js_add('contact','page');
 		//
 		$this->data['sidebar_class'] = 'shadow';
