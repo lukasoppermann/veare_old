@@ -16,6 +16,10 @@
 	float: left;
 	position: relative;
 }
+.slideshow .slide img{
+	width: 100%;
+	max-width: 100%;
+}
 .slideshow.left .slide{
 	text-align: left;
 }
