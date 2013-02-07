@@ -17,7 +17,7 @@
 	position: relative;
 }
 .slideshow .slide img{
-	width: 100%;
+	width: auto;
 	max-width: 100%;
 }
 .slideshow.left .slide{
