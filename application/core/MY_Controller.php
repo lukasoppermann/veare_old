@@ -75,6 +75,7 @@ class MY_Controller extends CI_Controller {
 			// check for mobile
 			if( mobile() != true )
 			{
+				echo 'TESTTESTTEST';
 				js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true','gmaps'), 'default');
 			}
 			// --------------------------------------------------------------------
