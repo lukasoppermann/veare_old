@@ -73,9 +73,8 @@ class MY_Controller extends CI_Controller {
 			js_add('fs.media_queries, fs.resize, fs.load, fs.history, jquery.fittext.js, base', 'default'); 
 			js_add_lines("CI_BASE = '".base_url()."';var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-7074034-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();", 'default');
 			// check for mobile
-			if( mobile() != true )
+			if( mobile() != true || ipad() == true )
 			{
-				echo 'TESTTESTTEST';
 				js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true','gmaps'), 'default');
 			}
 			// --------------------------------------------------------------------
