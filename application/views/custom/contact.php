@@ -9,11 +9,11 @@
 			</div>
 			<div class="contact-detail">
 				<span class="type">M</span>
-				<span class="content"><a target="_blank" href="mailto:mail@vea.re">mail@vea.re</a></span>
+				<span class="content"><a target="_blank" href="mailto:lukas@vea.re">lukas@vea.re</a></span>
 			</div>
 			<div class="contact-detail">
 				<span class="type">T</span>
-				<span class="content"><a target="_blank" href="https://twitter.com/lukasoppermann">@vearenet</a></span>
+				<span class="content"><a target="_blank" href="https://twitter.com/lukasoppermann">@lukasoppermann</a></span>
 			</div>
 		</div>
 	</div>
