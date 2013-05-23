@@ -1,0 +1,33 @@
+[submodule "libs/js/fs-load"]
+	path = libs/js/fs-load
+	url = git@github.com:lukasoppermann/fs-load.git
+[submodule "libs/js/fs-slides"]
+	path = libs/js/fs-slides
+	url = git@github.com:lukasoppermann/fs-slides.git
+[submodule "libs/js/fs-resize"]
+	path = libs/js/fs-resize
+	url = git@github.com:lukasoppermann/fs-resize.git
+[submodule "libs/js/fs-equal-height"]
+	path = libs/js/fs-equal-height
+	url = git@github.com:lukasoppermann/fs-equal-height.git
+[submodule "libs/js/fs-anchor"]
+	path = libs/js/fs-anchor
+	url = git@github.com:lukasoppermann/fs-anchor.git
+[submodule "libs/js/fs-sticky-top"]
+	path = libs/js/fs-sticky-top
+	url = git@github.com:lukasoppermann/fs-sticky-top.git
+[submodule "libs/js/fs-media-queries"]
+	path = libs/js/fs-media-queries
+	url = git@github.com:lukasoppermann/fs-media-queries.git
+[submodule "gmaps"]
+	path = gmaps
+	url = git@github.com:lukasoppermann/gmaps.git
+[submodule "libs/js/gmaps"]
+	path = libs/js/gmaps
+	url = git@github.com:lukasoppermann/gmaps.git
+[submodule "libs/js/jquery"]
+	path = libs/js/jquery
+	url = https://github.com/jquery/jquery.git
+[submodule "libs/js/fs-history"]
+	path = libs/js/fs-history
+	url = https://github.com/lukasoppermann/fs-history.git
