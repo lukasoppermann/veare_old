@@ -1,0 +1,204 @@
+/*------------------*/
+/* general */
+html, body{
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	font-weight: 400;
+	color: rgb(75,75,75);
+}
+body{
+	background: rgb(255,255,255);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	text-align: center;
+	position: relative;
+	min-width: 280px;
+	width: 100%;
+}
+html.menu-active, body.mobile.menu-active{
+	overflow: hidden !important;
+}
+.float-left{ float: left; position: relative; }
+.float-right{ float: right; sposition: relative; }
+.opacity-50{ opacity: 0.5; }
+.opacity-25{ opacity: 0.25; }
+/*------------------*/
+/* fonts */
+.regular{
+	font-family: "Source Sans Pro";
+	font-weight: 400;
+}
+.bold{
+	font-family: "Source Sans Pro";
+	font-weight: 600;
+}
+.align-left{ text-align: left !important; }
+.align-right{ text-align: right !important; }
+/*------------------*/
+/* colors */
+/* white */
+.white{ background: rgb(255,255,255); }
+.font-white{ color: rgb(255,255,255); }
+.white-pseudo:before, .white-pseudo:after{ background: rgb(255,255,255); }
+/* black */
+.black{ background: rgb(50,50,50); border-color: rgb(50,50,50);}
+.font-black{ color: rgb(50,50,50); }
+.black-pseudo:before, .black-pseudo:after{ background: rgb(50,50,50);}
+/* gray */
+.gray{ background: rgb(215,220,220); }
+.font-gray{ color: rgb(215,220,220); }
+.gray-pseudo:before, .gray-pseudo:after{ background: rgb(215,220,220);}
+/* light gray */
+.light-gray{ background: rgb(235,240,240); border-color: rgb(235,240,240); }
+.font-light-gray{ color: rgb(235,240,240); }
+/* light orange */
+.orange{ background: rgb(245,150,0); border-color: rgb(245,150,0); }
+.font-orange{ color: rgb(245,150,0); }
+.orange-pseudo:before, .orange-pseudo:after{ background: rgb(245,150,0);}
+/* orange */
+.light-orange{ background: rgb(250,190,40); border-color: rgb(250,190,40); }
+.font-light-orange{ color: rgb(240,170,30); }
+/* turqoise */
+.turquoise{ background: rgb(105,195,160); }
+.font-turquoise{ color: rgb(105,195,160); }
+.turquoise-pseudo:before, .turquoise-pseudo:after{ background: rgb(105,195,160); }
+/* yellow */
+.yellow{ background: rgb(245,230,85); border-color: rgb(245,230,85); }
+.font-yellow{ color: rgb(245,230,85); }
+/* light red */
+.light-red{ background: rgb(235,120,95); }
+.font-light-red{ color: rgb(235,120,95); }
+.light-red-pseudo:before, .light-red-pseudo:after{ background: rgb(235,120,95); }
+/* light blue */
+.light-blue{ background: rgb(165,205,200); }
+.font-light-blue{ color: rgb(165,205,200); }
+.light-blue-pseudo:before, .light-blue-pseudo:after{ background: rgb(165,205,200); }
+/* blue */
+.blue{ background: rgb(70,155,180); }
+.font-blue{ color: rgb(70,155,180); }
+.blue-pseudo:before, .blue-pseudo:after{ background: rgb(70,155,180); }
+/* dark blue */
+.dark-blue{ background: rgb(5,60,95); }
+.font-dark-blue{ color: rgb(5,60,95); }
+.dark-blue-pseudo:before, .dark-blue-pseudo:after{ background: rgb(5,60,95); }
+/* pink */
+.pink{ background: rgb(235,135,175); }
+.font-pink{ color: rgb(235,135,175); }
+.pink-pseudo:before, .pink-pseudo:after{ background: rgb(235,135,175);}
+/*------------------*/
+/* typography */
+h1, .giant-headline{ font-size: 200px; line-height: 100%; }
+h2, .big-headline{ font-size: 100px; line-height: 120%; }
+h3, h4, .medium-headline{ font-size: 48px; line-height: 120%; }
+.small-headline{ font-size: 24px; line-height: 100%; margin-bottom: 10px; }
+.copy{ font-size: 18px; text-align: left; }
+.copy p{ margin: 0 0 10px 0; width: 100%; max-width: 550px; line-height: 120%; }
+.copy strong{ font-weight: 600; }
+
+.tablet h1, .tablet .giant-headline{ font-size: 180px; line-height: 120%; }
+.tablet h2, .tablet .big-headline{ font-size: 80px; line-height: 120%; }
+.tablet h3, .tablet h4, .tablet .medium-headline{ font-size: 36px; line-height: 120%; }
+
+.tablet-small h1, .tablet-small .giant-headline{ font-size: 140px; line-height: 120%; }
+.tablet-small h2, .tablet-small .big-headline{ font-size: 60px; line-height: 120%; }
+.tablet-small h3, .tablet-small h4, .tablet-small .medium-headline{ font-size: 30px; line-height: 120%; }
+
+.mobile h1, .mobile .giant-headline{ font-size: 110px; line-height: 120%; }
+.mobile h2, .mobile .big-headline{ font-size: 35px; line-height: 120%; }
+.mobile h3, .mobile h4, .mobile .medium-headline{ font-size: 30px; line-height: 120%; }
+.mobile .copy{ font-size: 22px; line-height: 115%; }
+.mobile .small-headline{ font-size: 28px; line-height: 150%; }
+/*------------------*/
+/* sprite */
+.veare-sprite{ background-image: url('../../layout/veare-icons.png'); }
+@media
+only screen and (-Webkit-min-device-pixel-ratio: 2),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (   -moz-min-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+	.veare-sprite{ 	
+		background-image: url('../../layout/veare-icons.png'); /* background-image: url('../../layout/veare-icons@2x.png');*/
+		background-size: 510px 300px;
+	}
+}
+/*------------------*/
+/* images */
+.image{
+	margin: 0 auto;
+}
+/*------------------*/
+/* body */
+#body{
+	float: left;
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	background: rgb(255,255,255);
+}
+/*------------------*/
+/* header */
+#header{
+	width: 100%;
+	height: 125px;
+	display: block;
+	position: absolute;
+}
+.mobile #header{
+	float: left;
+	width: 100%;
+	height: 55px;
+	display: block;
+}
+/*------------------*/
+/* logo */
+#logo{
+	cursor: pointer;
+	position: relative;
+	display: block;	
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 140px;
+	height: 115px;
+	padding: 0;
+	margin: 20px 0 0 20px;
+	opacity: 0;
+	z-index: 999;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	transition: opacity .8s ease .3s;
+	-webkit-transition: opacity .8s ease .3s;
+	-moz-transition: opacity .8s ease .3s;
+	-o-transition: opacity .8s ease .3s;
+	-ms-transition: opacity .8s ease .3s;
+}
+.loaded #logo{
+	opacity: 1;
+}
+#logo img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+.white-logo #logo img{
+	top: -210px;
+}
+.mobile #logo{
+	width: 50px;
+	height: 40px;
+}
+.mobile #logo img{
+	top: -120px;
+	left: 0;
+}
+.mobile.white-logo #logo img{
+	top: -150px;
+	left: -90px;
+}
