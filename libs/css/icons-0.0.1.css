@@ -8,14 +8,6 @@
 	z-index: 99;
 	position: relative;
 }
-/*.big-arrow{ 
-	height: 120px;
-	width: 90px;
-	overflow: hidden;
-	display: block;
-	background-position: -270px 0px; 
-	background-image: url('../../layout/veare-icons.png');
-}*/
 
 .about .veare-sprite{ background-position: -150px -60px; }
 .portfolio .veare-sprite{ background-position: -150px 0px; }
@@ -26,7 +18,7 @@
 .mail.veare-sprite{ background-position: -180px 0px; }
 .phone.veare-sprite{ background-position: -180px -30px; }
 .twitter.veare-sprite{ background-position: -180px -60px; }
-.dribbble.veare-sprite, .dribbble .veare-sprite{ background-position: -180px -91px; }
+.dribbble.veare-sprite{ background-position: -180px -91px; }
 .xing.veare-sprite{ background-position: -180px -121px; }
 .linkedin.veare-sprite{ background-position: -180px -152px; }
 
