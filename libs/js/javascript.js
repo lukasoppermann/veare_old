@@ -87,6 +87,11 @@ $(function(){
 
 	};
 	// -----------------------
+	// add retina detection
+	var pixelRatio = !!window.devicePixelRatio ? 'x1' : 'x2';
+	var pixelnotRatio = !!window.devicePixelRatio ? 'x2' : 'x1';
+	_body.addClass(pixelRatio);
+	// -----------------------
 	// query actions	
 	var query_actions = function( resolution )
 	{
@@ -97,23 +102,23 @@ $(function(){
 	var queries = [
 		{
 			context: 'mobile-portrait',
-			callback: function() {
+			match: function() {
 				query_actions('mobile-portrait');
-				_body.addClass('mobile portrait').removeClass('hovers tablet-small tablet-medium landscape tablet screen wide-screen');
+				_body.addClass('mobile portrait '+pixelRatio).removeClass('hovers tablet-small tablet-medium landscape tablet screen wide-screen '+pixelnotRatio);
 			}
 		},
 		{
 			context: 'mobile-landscape',
-			callback: function() {
+			match: function() {
 				query_actions('mobile-landscape');
-				_body.addClass('mobile landscape').removeClass('hovers tablet-small tablet-medium portrait tablet screen wide-screen');
+				_body.addClass('mobile landscape '+pixelRatio).removeClass('hovers tablet-small tablet-medium portrait tablet screen wide-screen '+pixelnotRatio);
 			}
 		},
 		{
 			context: 'tablet-small',
-			callback: function() {
+			match: function() {
 				query_actions('tablet-small');
-				_body.addClass('tablet-small').removeClass('hovers tablet tablet-medium mobile screen wide-screen');
+				_body.addClass('tablet-small '+pixelRatio).removeClass('hovers tablet tablet-medium mobile screen wide-screen '+pixelnotRatio);
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -122,9 +127,9 @@ $(function(){
 		},
 		{
 			context: 'tablet-medium',
-			callback: function() {
+			match: function() {
 				query_actions('tablet-medium');
-				_body.addClass('tablet-medium').removeClass('hovers tablet-small tablet mobile screen wide-screen');
+				_body.addClass('tablet-medium '+pixelRatio).removeClass('hovers tablet-small tablet mobile screen wide-screen '+pixelnotRatio);
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -133,9 +138,9 @@ $(function(){
 		},
 		{
 			context: 'tablet',
-			callback: function() {
+			match: function() {
 				query_actions('tablet');
-				_body.addClass('tablet').removeClass('hovers tablet-small tablet-medium mobile screen wide-screen');
+				_body.addClass('tablet '+pixelRatio).removeClass('hovers tablet-small tablet-medium mobile screen wide-screen '+pixelnotRatio);
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -144,23 +149,23 @@ $(function(){
 		},
 		{
 			context: 'min-screen',
-			callback: function() {
+			match: function() {
 				query_actions('min-screen');
-				_body.addClass('hovers min-screen').removeClass('tablet-small tablet-medium mobile tablet wide-screen');
+				_body.addClass('hovers min-screen '+pixelRatio).removeClass('tablet-small tablet-medium mobile tablet wide-screen '+pixelnotRatio);
 			}
 		},
 		{
 			context: 'screen',
-			callback: function() {
+			match: function() {
 				query_actions('screen');
-				_body.addClass('hovers screen').removeClass('tablet-small tablet-medium mobile tablet wide-screen min-screen');
+				_body.addClass('hovers screen '+pixelRatio).removeClass('tablet-small tablet-medium mobile tablet wide-screen min-screen '+pixelnotRatio);
 			}
 		},
 		{
 			context: 'wide-screen',
-			callback: function() {
-				query_actions('wide-screen');
-				_body.addClass('hovers screen wide-screen').removeClass('tablet-small tablet-medium mobile tablet min-screen');
+			match: function() {
+				query_actions('wide-screen '+pixelRatio);
+				_body.addClass('hovers screen wide-screen').removeClass('tablet-small tablet-medium mobile tablet min-screen '+pixelnotRatio);
 			}
  		}
 	];

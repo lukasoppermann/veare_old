@@ -1,0 +1,3 @@
+[submodule "libs/js/fs-meadia-queries"]
+	path = libs/js/fs-meadia-queries
+	url = https://github.com/lukasoppermann/fs-media-queries.git

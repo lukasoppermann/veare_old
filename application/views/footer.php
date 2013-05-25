@@ -5,7 +5,7 @@
 	<!-- logo -->
 	<a href="<?=base_url(TRUE)?>home" class="ajax-link" data-nav="#nav">
 		<div class="logo">
-			<img class="logo-img" src="<?=base_url(TRUE)?>layout/veare-icons.png" alt="veare - visionary design" />
+			<img class="logo-img img-optimized" data-2x-src="<?=base_url(TRUE)?>layout/veare-icons@2x.png" data-orig-src="<?=base_url(TRUE)?>layout/veare-icons.png" src="" alt="veare design studio - visionary design" />
 		</div>
 	</a>
 	<!-- main menu -->

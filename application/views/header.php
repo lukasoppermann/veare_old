@@ -15,15 +15,15 @@
 <?
 	if( mobile() == true && ipad() != true)
 	{ 
-		$class = ' class="mobile portrait loaded-mobile '.variable($body_class).'"';
+		$class = ' class="mobile portrait loaded-mobile'.variable($body_class).'"';
 	}
 	elseif( ipad() == true )
 	{
-		$class = ' class="tablet loaded-tablet '.variable($body_class).'"';
+		$class = ' class="tablet loaded-tablet'.variable($body_class).'"';
 	}
 	else
 	{
-		$class = ' class="hovers screen '.variable($body_class).'"';
+		$class = ' class="hovers screen'.variable($body_class).'"';
 	}
 ?>
 <body<?=$class?> data-page_class="<?=$body_class?>">
