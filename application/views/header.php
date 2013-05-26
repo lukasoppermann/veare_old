@@ -28,11 +28,11 @@
 	}
 ?>
 <body<?=$class?> data-page_class="<?=$body_class?>">
+	<div id="menu_icon"><div class="veare-sprite"></div></div>
 	<div id="body">
 		<div id="header">
 			<a href="<?=base_url(TRUE)?>home" id="logo" class="no-flicker ajax-link" data-nav="#nav">
 				<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-icons@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-icons.png" alt="veare - visionary design, interface design, iOS, webdesign" />
 			</a>
 		</div>
-		<div id="menu_icon"><div class="veare-sprite"></div></div>
 		<div class="wrapper">
