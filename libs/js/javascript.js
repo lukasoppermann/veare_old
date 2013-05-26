@@ -96,7 +96,6 @@ $(function(){
 		_this.addClass('loading').attr('src',_this.data('src-x'+pixelRatio)).load(function(){
 			var width = _this.width()/pixelRatio;
 			var height = _this.height()/pixelRatio;
-			alert(_this.width());
 			_this.css({'width':width,'height':height}).addClass('loaded').removeClass('loading');
 		});
 	});
