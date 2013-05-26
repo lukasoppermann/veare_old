@@ -9,19 +9,20 @@
 	cursor: pointer;
 	position: fixed;
 	top: 25px;
-	right: -70px;
+	right: 0;
 	opacity: 0;
 	padding-right: 20px;
 	margin-top: 5px;
+	-webkit-transform-style: preserve-3d;
+	transform: translate3d(100px, 0px, 0px);
+	-webkit-transform: translate3d(100px, 0px, 0px);
 }
 .loaded #menu_icon{
-	right: 0;
 	opacity: 1;
-	transition: all .4s ease;   
-	-webkit-transition: all .4s ease;
-	-moz-transition: all .4s ease;
-	-o-transition: all .4s ease;
-	-ms-transition: all .4s ease;
+	transform: translate3d(0px, 0px, 0px);
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	transition: transform .4s ease, opacity .4s ease;
+	-webkit-transition: -webkit-transform .4s ease, opacity .4s ease;
 }
 #menu_icon .veare-sprite{
 	height: 20px;
@@ -140,29 +141,18 @@
 }
 /*------------------*/
 /* animation */
-.menu-active #menu_icon{
-	margin-right: 250px;
-	transition: margin .4s ease;   
-	-webkit-transition: margin .4s ease;
-	-moz-transition: margin .4s ease;
-	-o-transition: margin .4s ease;
-	-ms-transition: margin .4s ease;
+#body{
+	-webkit-transform-style: preserve-3d;
+	transform: translate3d(0px, 0px, 0px);
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	transition: transform .6s ease;   
+	-webkit-transition: -webkit-transform .4s ease;
 }
 .menu-active #body{
-	margin-left: -250px;
-	transition: margin .4s ease;   
-	-webkit-transition: margin .4s ease;
-	-moz-transition: margin .4s ease;
-	-o-transition: margin .4s ease;
-	-ms-transition: margin .4s ease;
-}
-#body{
-	margin-left: 0;
-	transition: margin .4s ease;   
-	-webkit-transition: margin .4s ease;
-	-moz-transition: margin .4s ease;
-	-o-transition: margin .4s ease;
-	-ms-transition: margin .4s ease;
+	transform: translate3d(-250px, 0px, 0px);
+	-webkit-transform: translate3d(-250px, 0px, 0px);
+	transition: transform .6s ease;   
+	-webkit-transition: -webkit-transform .4s ease;
 }
 .mobile.menu-active #menu_icon{
 	margin-right: 80%;

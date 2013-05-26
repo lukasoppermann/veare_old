@@ -1,4 +1,4 @@
-<section class="bold font-light-orange vertical-center">
+<section class="bold font-light-orange vertical-center no-flicker">
 	<div class="section-content fixed">
 		<span class="hello giant-headline" style="display: inline-block;">Hello,</span><br />
 		<h2 class="big-headline" style="display: inline-block;">I design interfaces</h2><br />
@@ -6,7 +6,7 @@
 	</div>
 </section>
 
-<section class="turquoise font-white bold vertical-center">
+<section class="turquoise font-white bold vertical-center no-flicker">
 	<div class="section-content">
 		<figure class="image fixed coffee veare-illustrations">
 			<img src="<?=base_url()?>layout/veare-illustrations@2x.png" alt="lukas oppermann coffee" />
@@ -16,7 +16,7 @@
 	</div>
 </section>
 
-<section class="about-lukas-oppermann bold light-gray vertical-center">
+<section class="about-lukas-oppermann bold light-gray vertical-center no-flicker">
 	<div class="section-content fixed">
 		<h2 class="font-orange width-100">Current project</h2>
 		<div class="columns">
@@ -48,7 +48,7 @@
 	</div>
 </section>
 
-<section class="skills light-blue font-white vertical-center">
+<section class="skills light-blue font-white vertical-center no-flicker">
 	<div class="section-content fixed">
 		<div class="columns">
 			<div class="column column-half">
@@ -129,7 +129,7 @@
 	</div>
 </section> 
 
-<section class="about-veare yellow font-white vertical-center">
+<section class="about-veare yellow font-white vertical-center no-flicker">
 	<div class="section-content fixed">
 		<div class="columns plus">
 			<div class="column tablet-half column-two">
@@ -165,7 +165,7 @@
 	</div>
 </section>
 
-<section class="light-red font-white vertical-center">
+<section class="light-red font-white vertical-center no-flicker">
 	<div class="section-content fixed">
 		<h4 class="bold big-headline">I write about stuff …</h4>
 			<a href="#" class="column blog-link">
@@ -184,7 +184,7 @@
 	</div>
 </section>
 
-<section class="light-blue last-block map">
+<section class="light-blue last-block map no-flicker">
 	<div class="vcard-wrapper">
 		<div id="veare_businesscard" class="copy regular">
 		<div class="name top-line">Lukas<br />

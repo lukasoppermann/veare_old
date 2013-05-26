@@ -93,15 +93,14 @@ $(function(){
 	// set images depending on ratio
 	$('.img-optimized').each(function(){
 		var _this = $(this);
-		_this.attr('src',_this.data('src-x'+pixelRatio)).load(function(){
-			_this.width(_this.width()/pixelRatio);
+		_this.addClass('loading').attr('src',_this.data('src-x'+pixelRatio)).load(function(){
+			_this.width(_this.width()/pixelRatio).addClass('loaded').removeClass('loading');
 		});
 	});
 	// -----------------------
 	// query actions	
 	var query_actions = function( resolution )
 	{
-
 	};
 	// -----------------------
 	// media queries	
@@ -110,21 +109,21 @@ $(function(){
 			context: 'mobile-portrait',
 			match: function() {
 				query_actions('mobile-portrait');
-				_body.addClass('mobile portrait '+pixelRatio).removeClass('hovers tablet-small tablet-medium landscape tablet screen wide-screen');
+				_body.addClass('mobile portrait').removeClass('hovers tablet-small tablet-medium landscape tablet screen wide-screen');
 			}
 		},
 		{
 			context: 'mobile-landscape',
 			match: function() {
 				query_actions('mobile-landscape');
-				_body.addClass('mobile landscape '+pixelRatio).removeClass('hovers tablet-small tablet-medium portrait tablet screen wide-screen');
+				_body.addClass('mobile landscape').removeClass('hovers tablet-small tablet-medium portrait tablet screen wide-screen');
 			}
 		},
 		{
 			context: 'tablet-small',
 			match: function() {
 				query_actions('tablet-small');
-				_body.addClass('tablet-small '+pixelRatio).removeClass('hovers tablet tablet-medium mobile screen wide-screen');
+				_body.addClass('tablet-small').removeClass('hovers tablet tablet-medium mobile screen wide-screen');
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -135,7 +134,7 @@ $(function(){
 			context: 'tablet-medium',
 			match: function() {
 				query_actions('tablet-medium');
-				_body.addClass('tablet-medium '+pixelRatio).removeClass('hovers tablet-small tablet mobile screen wide-screen');
+				_body.addClass('tablet-medium').removeClass('hovers tablet-small tablet mobile screen wide-screen');
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -146,7 +145,7 @@ $(function(){
 			context: 'tablet',
 			match: function() {
 				query_actions('tablet');
-				_body.addClass('tablet '+pixelRatio).removeClass('hovers tablet-small tablet-medium mobile screen wide-screen');
+				_body.addClass('tablet').removeClass('hovers tablet-small tablet-medium mobile screen wide-screen');
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -157,20 +156,20 @@ $(function(){
 			context: 'min-screen',
 			match: function() {
 				query_actions('min-screen');
-				_body.addClass('hovers min-screen '+pixelRatio).removeClass('tablet-small tablet-medium mobile tablet wide-screen');
+				_body.addClass('hovers min-screen').removeClass('tablet-small tablet-medium mobile tablet wide-screen');
 			}
 		},
 		{
 			context: 'screen',
 			match: function() {
 				query_actions('screen');
-				_body.addClass('hovers screen '+pixelRatio).removeClass('tablet-small tablet-medium mobile tablet wide-screen min-screen');
+				_body.addClass('hovers screen').removeClass('tablet-small tablet-medium mobile tablet wide-screen min-screen');
 			}
 		},
 		{
 			context: 'wide-screen',
 			match: function() {
-				query_actions('wide-screen '+pixelRatio);
+				query_actions('wide-screen');
 				_body.addClass('hovers screen wide-screen').removeClass('tablet-small tablet-medium mobile tablet min-screen');
 			}
  		}
@@ -178,7 +177,9 @@ $(function(){
 	// Go!
 	MQ.init(queries);	
 	// run initial resize fn
-	$('section').fs_centered({callback:function(){_body.delay(100).addClass('loaded');},'content':'.section-content'});
+	$('section').fs_centered({callback:function(){
+		_body.delay(100).addClass('loaded');
+	},'content':'.section-content'});
 	// _body.delay(100).addClass('loaded');
 	// resize_sections(function(){
 	// 	_body.delay(100).addClass('loaded');

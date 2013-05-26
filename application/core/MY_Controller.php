@@ -66,7 +66,7 @@ class MY_Controller extends CI_Controller {
 			$this->load->helpers(array('fs_metadata'));
 			// --------------------------------------------------------------------
 			// add css & js files
-			css_add(array('reset','base','layout','icons','responsiveness','menu', 'gui'));
+			css_add(array('reset','base','layout','animations','icons','responsiveness','menu'));
 			if( mobile() != true || ipad() == true )
 			{
 				js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true','gmaps'), 'default');

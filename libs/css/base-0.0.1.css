@@ -1,9 +1,13 @@
 /*------------------*/
 /* general */
 html, body{
-	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-	font-weight: 400;
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	font-weight: normal;
 	color: rgb(75,75,75);
+}
+.wf-active html, .wf-active body{ 
+	font-family: "Source Sans Pro"; 
+	font-weight: 400;
 }
 body{
 	background: rgb(255,255,255);
@@ -23,11 +27,13 @@ html.menu-active, body.mobile.menu-active{
 .opacity-25{ opacity: 0.25; }
 /*------------------*/
 /* fonts */
-.regular{
+.regular{ font-family: "Helvetica Neue"; }
+.bold{ font-family: "Helvetica Neue"; font-weight: bold; }
+.wf-active .regular{
 	font-family: "Source Sans Pro";
 	font-weight: 400;
 }
-.bold{
+.wf-active .bold{
 	font-family: "Source Sans Pro";
 	font-weight: 600;
 }
@@ -128,6 +134,12 @@ only screen and (                min-resolution: 2dppx) {
 /* images */
 .image{
 	margin: 0 auto;
+}
+img.loading{ opacity: 0; }
+img.loaded{ 
+	opacity: 1.0; 
+	transition: opacity .4s ease;   
+	-webkit-transition: opacity .4s ease;
 }
 /*------------------*/
 /* body */

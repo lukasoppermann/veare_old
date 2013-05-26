@@ -42,7 +42,7 @@
 	</div>
 </div>
 <?
-	$this->fs_google->fonts(array('Source Sans Pro:400,600'), variable($fonts_callback));
+	$this->fs_google->fonts(array('Source Sans Pro:400,600'));
 ?>
 <? echo js('default', FALSE); ?>
 <? echo js('page', FALSE); ?>
