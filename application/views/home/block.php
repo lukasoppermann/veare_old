@@ -72,22 +72,22 @@
 			</div>
 			
 			<div class="column column-five">
+				<div class="skill-content centered">
+					<a class="more vcenter" style="position: absolute; height: 100%; width: 60px; top: 0; left: 0;">
+						<div class="medium-arrow black-pseudo left opacity-25"></div>
+					</a>
+					<div class="circle-copy copy font-black float-left" style="margin-left: 60px">
+						<h2 class="bold font-white medium-headline">Print design</h2>
+						<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
+						</p>
+						<p>The design we develop will be one step
+						towards fulfilling this vision.
+						</p>
+					</div>
+				</div>
 				<figure class="image fixed print veare-illustrations hover-circle centered">
 					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="print design, magazines, posters, graphic design" />
 				</figure>
-				<div class="skill-content centered">
-					<div class="circle-copy copy font-black float-left">
-					<h2 class="bold font-white medium-headline">Print design</h2>
-					<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
-					</p>
-					<p>The design we develop will be one step
-						towards fulfilling this vision.
-					</p>
-				</div>
-					<a class="more vcenter float-left" style="position: absolute; height: 100%; width: 60px; top: 0; right: 0;">
-						<div class="medium-arrow black-pseudo opacity-25"></div>
-					</a>
-				</div>
 			</div>
 
 			<div class="column column-five">
@@ -110,22 +110,22 @@
 			</div>
 
 			<div class="column column-five">
+				<div class="skill-content centered">
+					<a class="more vcenter" style="position: absolute; height: 100%; width: 60px; top: 0; left: 0;">
+						<div class="medium-arrow black-pseudo left opacity-25"></div>
+					</a>
+					<div class="circle-copy copy font-black float-left" style="margin-left: 60px">
+						<h2 class="bold font-white medium-headline">Modern branding</h2>
+						<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
+						</p>
+						<p>The design we develop will be one step
+							towards fulfilling this vision.
+						</p>
+					</div>
+				</div>
 				<figure class="image fixed branding veare-illustrations hover-circle centered">
 					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="corporate design, modern branding, logo design, corporate identity" />
 				</figure>
-				<div class="skill-content centered">
-					<div class="circle-copy copy font-black float-left">
-					<h2 class="bold font-white medium-headline">Modern branding</h2>
-					<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
-					</p>
-					<p>The design we develop will be one step
-						towards fulfilling this vision.
-					</p>
-				</div>
-					<a class="more vcenter float-left" style="position: absolute; height: 100%; width: 60px; top: 0; right: 0;">
-						<div class="medium-arrow black-pseudo opacity-25"></div>
-					</a>
-				</div>	
 			</div>
 			
 		</div>
