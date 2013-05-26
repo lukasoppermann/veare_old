@@ -94,7 +94,10 @@ $(function(){
 	$('.img-optimized').each(function(){
 		var _this = $(this);
 		_this.addClass('loading').attr('src',_this.data('src-x'+pixelRatio)).load(function(){
-			_this.width(_this.width()/pixelRatio).addClass('loaded').removeClass('loading');
+			var width = _this.width()/pixelRatio;
+			var height = _this.height()/pixelRatio;
+			alert(_this.width());
+			_this.css({'width':width,'height':height}).addClass('loaded').removeClass('loading');
 		});
 	});
 	// -----------------------

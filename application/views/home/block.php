@@ -1,5 +1,5 @@
 <section class="bold font-light-orange vertical-center no-flicker">
-	<div class="section-content fixed">
+	<div class="section-content centered fixed">
 		<span class="hello giant-headline" style="display: inline-block;">Hello,</span><br />
 		<h2 class="big-headline" style="display: inline-block;">I design interfaces</h2><br />
 		<h1 class="veare-studio medium-headline" style="display: inline-block; float: right;">&amp; veare is my design studio.</h1><br />
@@ -7,18 +7,18 @@
 </section>
 
 <section class="turquoise font-white bold vertical-center no-flicker">
-	<div class="section-content">
+	<div class="section-content centered">
 		<figure class="image fixed coffee veare-illustrations">
-			<img src="<?=base_url()?>layout/veare-illustrations@2x.png" alt="lukas oppermann coffee" />
+			<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="lukas oppermann designer at veare design studio" />
 		</figure>
-		<h2 class="bold big-headline align-left">I think first, design second</h2>
+		<h2 class="big-headline align-left">I think first, design second</h2>
 		<span class="medium-headline float-right align-left">&amp; drink quite some coffee while I do that.</span>
 	</div>
 </section>
 
 <section class="about-lukas-oppermann bold light-gray vertical-center no-flicker">
-	<div class="section-content fixed">
-		<h2 class="font-orange width-100">Current project</h2>
+	<div class="section-content centered fixed">
+		<h3 class="font-orange big-headline width-100">I recently worked on</h3>
 		<div class="columns">
 			<div class="column column-four-three">
 				<div class="browser-frame dark">
@@ -49,15 +49,35 @@
 </section>
 
 <section class="skills light-blue font-white vertical-center no-flicker">
-	<div class="section-content fixed">
+	<div class="section-content centered fixed">
+		<h2 class="font-white width-100">This is what I do </h2>
 		<div class="columns">
-			<div class="column column-half">
-				<figure class="image fixed interface veare-illustrations hover-circle">
-					<img src="<?=base_url()?>layout/veare-illustrations@2x.png" alt="interface design" />
+			<div class="column column-five">
+				<figure class="image fixed interface veare-illustrations hover-circle centered">
+					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="interface design, web design, iOS design, responsive design" />
 				</figure>
-				<div class="skill-content">
+				<div class="skill-content centered">
+					<div class="circle-copy copy font-black opacity float-left">
+					<h2 class="bold font-white medium-headline">Interface design</h2>
+					<p>visionary design means to define a vision before the design process is started. This vision is an overall business &amp; strategy vision which you will keep for the coming years as a goal to achieve.
+					</p>
+					<p>The design we develop will be one step
+						towards fulfilling this vision.
+					</p>
+				</div>
+					<a class="more vcenter float-left" style="position: absolute; height: 100%; width: 60px; top: 0; right: 0;">
+						<div class="medium-arrow black-pseudo opacity-25"></div>
+					</a>
+				</div>
+			</div>
+			
+			<div class="column column-five">
+				<figure class="image fixed print veare-illustrations hover-circle centered">
+					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="print design, magazines, posters, graphic design" />
+				</figure>
+				<div class="skill-content centered">
 					<div class="circle-copy copy font-black float-left">
-					<h2 class="bold font-white medium-headline">interface design</h2>
+					<h2 class="bold font-white medium-headline">Print design</h2>
 					<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
 					</p>
 					<p>The design we develop will be one step
@@ -69,13 +89,14 @@
 					</a>
 				</div>
 			</div>
-			<div class="column column-half">
-				<figure class="image fixed print veare-illustrations hover-circle">
-					<img src="<?=base_url()?>layout/veare-illustrations@2x.png" alt="interface design" />
+
+			<div class="column column-five">
+				<figure class="image fixed infographics veare-illustrations hover-circle centered">
+					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="Infographics, information design, information architecture" />
 				</figure>
-				<div class="skill-content">
+				<div class="skill-content centered">
 					<div class="circle-copy copy font-black float-left">
-					<h2 class="bold font-white medium-headline">print design</h2>
+					<h2 class="bold font-white medium-headline">Infographics</h2>
 					<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
 					</p>
 					<p>The design we develop will be one step
@@ -87,15 +108,14 @@
 					</a>
 				</div>
 			</div>
-		</div>
-		<div class="columns">
-			<div class="column column-half">
-				<figure class="image fixed branding veare-illustrations hover-circle">
-					<img src="<?=base_url()?>layout/veare-illustrations@2x.png" alt="interface design" />
+
+			<div class="column column-five">
+				<figure class="image fixed branding veare-illustrations hover-circle centered">
+					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="corporate design, modern branding, logo design, corporate identity" />
 				</figure>
-				<div class="skill-content">
+				<div class="skill-content centered">
 					<div class="circle-copy copy font-black float-left">
-					<h2 class="bold font-white medium-headline">modern branding</h2>
+					<h2 class="bold font-white medium-headline">Modern branding</h2>
 					<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
 					</p>
 					<p>The design we develop will be one step
@@ -107,35 +127,18 @@
 					</a>
 				</div>	
 			</div>
-			<div class="column column-half">
-				<figure class="image fixed infographics veare-illustrations hover-circle">
-					<img src="<?=base_url()?>layout/veare-illustrations@2x.png" alt="interface design" />
-				</figure>
-				<div class="skill-content">
-					<div class="circle-copy copy font-black float-left">
-					<h2 class="bold font-white medium-headline">infographics</h2>
-					<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
-					</p>
-					<p>The design we develop will be one step
-						towards fulfilling this vision.
-					</p>
-				</div>
-					<a class="more vcenter float-left" style="position: absolute; height: 100%; width: 60px; top: 0; right: 0;">
-						<div class="medium-arrow black-pseudo opacity-25"></div>
-					</a>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 </section> 
 
 <section class="about-veare yellow font-white vertical-center no-flicker">
-	<div class="section-content fixed">
+	<div class="section-content centered fixed">
 		<div class="columns plus">
 			<div class="column tablet-half column-two">
 				<div class="circle-big light-blue">
 					<figure class="image eye veare-illustrations">
-						<img src="<?=base_url()?>layout/veare-illustrations@2x.png" alt="lukas oppermann coffee" />
+					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="veare visionary design, design & content strategy" />
 					</figure>
 				</div>
 				<div class="circle-copy copy font-black">
@@ -150,7 +153,7 @@
 			<div class="column tablet-half column-two">
 				<div class="circle-big light-blue">
 					<figure class="image brain veare-illustrations">
-						<img src="<?=base_url()?>layout/veare-illustrations@2x.png" alt="lukas oppermann coffee" />
+					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="intelligent design, usability, user experience, information architecture, storytelling" />
 					</figure>
 				</div>
 				<div class="circle-copy copy font-black"><h3 class="bold circle-headline font-white">intelligent</h3>
@@ -166,7 +169,7 @@
 </section>
 
 <section class="light-red font-white vertical-center no-flicker">
-	<div class="section-content fixed">
+	<div class="section-content centered fixed">
 		<h4 class="bold big-headline">I write about stuff …</h4>
 			<a href="#" class="column blog-link">
 				<div class="big-arrow left shadow white-pseudo"><div class="shadow black-pseudo"></div></div>

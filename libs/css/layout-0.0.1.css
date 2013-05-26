@@ -46,7 +46,7 @@ section{
 	margin-left: -1px;
 	overflow: hidden;
 }
-.vertical-center .section-content{
+.vertical-center .centered{
 	vertical-align: middle;
 }
 .circle-big{
@@ -178,6 +178,7 @@ section{
 }
 .skills .skill-content .copy{
 	margin-right: 80px;
+	opacity: 0.85;
 }
 /* ---------------------------- */
 /* Current project */
@@ -616,13 +617,13 @@ section{
 	-ms-transform: rotate(45deg); /* IE 9 */
 	-webkit-transform: rotate(45deg);
 }
-.big-arrow.left:before{
+.big-arrow.left:before, .medium-arrow.left:before{
 	top: 0;
 	transform: rotate(45deg);
 	-ms-transform: rotate(45deg); /* IE 9 */
 	-webkit-transform: rotate(45deg);
 }
-.big-arrow.left:after{
+.big-arrow.left:after, .medium-arrow.left:after{
 	bottom: 0;
 	transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg); /* IE 9 */

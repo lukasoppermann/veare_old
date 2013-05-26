@@ -5,7 +5,7 @@ html, body{
 	font-weight: normal;
 	color: rgb(75,75,75);
 }
-.wf-active html, .wf-active body{ 
+html.wf-active, .wf-active body{ 
 	font-family: "Source Sans Pro"; 
 	font-weight: 400;
 }
@@ -78,6 +78,10 @@ html.menu-active, body.mobile.menu-active{
 .light-blue{ background: rgb(165,205,200); }
 .font-light-blue{ color: rgb(165,205,200); }
 .light-blue-pseudo:before, .light-blue-pseudo:after{ background: rgb(165,205,200); }
+/* green blue */
+.green-blue{ background: rgb(165,205,200); }
+.font-light-blue{ color: rgb(165,205,200); }
+.light-blue-pseudo:before, .light-blue-pseudo:after{ background: rgb(165,205,200); }
 /* blue */
 .blue{ background: rgb(70,155,180); }
 .font-blue{ color: rgb(70,155,180); }
@@ -92,9 +96,10 @@ html.menu-active, body.mobile.menu-active{
 .pink-pseudo:before, .pink-pseudo:after{ background: rgb(235,135,175);}
 /*------------------*/
 /* typography */
+h1, h2, h3, h4, h5{ font-weight: 600; }
 h1, .giant-headline{ font-size: 200px; line-height: 100%; }
 h2, .big-headline{ font-size: 100px; line-height: 120%; }
-h3, h4, .medium-headline{ font-size: 48px; line-height: 120%; }
+h3, h4, .medium-headline{ font-size: 48px; line-height: 120%; margin-bottom: 15px; }
 .small-headline{ font-size: 24px; line-height: 100%; margin-bottom: 10px; }
 .copy{ font-size: 18px; text-align: left; }
 .copy p{ margin: 0 0 10px 0; width: 100%; max-width: 550px; line-height: 120%; }
