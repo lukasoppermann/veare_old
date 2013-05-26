@@ -88,9 +88,15 @@ $(function(){
 	};
 	// -----------------------
 	// add retina detection
-	var pixelRatio = !!window.devicePixelRatio ? 'x1' : 'x2';
-	var pixelnotRatio = !!window.devicePixelRatio ? 'x2' : 'x1';
-	_body.addClass(pixelRatio);
+	var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : '1';
+	_body.addClass('x'+pixelRatio);
+	// set images depending on ratio
+	$('.img-optimized').each(function(){
+		var _this = $(this);
+		_this.attr('src',_this.data('src-x'+pixelRatio)).load(function(){
+			_this.width(_this.width()/pixelRatio);
+		});
+	});
 	// -----------------------
 	// query actions	
 	var query_actions = function( resolution )
@@ -104,21 +110,21 @@ $(function(){
 			context: 'mobile-portrait',
 			match: function() {
 				query_actions('mobile-portrait');
-				_body.addClass('mobile portrait '+pixelRatio).removeClass('hovers tablet-small tablet-medium landscape tablet screen wide-screen '+pixelnotRatio);
+				_body.addClass('mobile portrait '+pixelRatio).removeClass('hovers tablet-small tablet-medium landscape tablet screen wide-screen');
 			}
 		},
 		{
 			context: 'mobile-landscape',
 			match: function() {
 				query_actions('mobile-landscape');
-				_body.addClass('mobile landscape '+pixelRatio).removeClass('hovers tablet-small tablet-medium portrait tablet screen wide-screen '+pixelnotRatio);
+				_body.addClass('mobile landscape '+pixelRatio).removeClass('hovers tablet-small tablet-medium portrait tablet screen wide-screen');
 			}
 		},
 		{
 			context: 'tablet-small',
 			match: function() {
 				query_actions('tablet-small');
-				_body.addClass('tablet-small '+pixelRatio).removeClass('hovers tablet tablet-medium mobile screen wide-screen '+pixelnotRatio);
+				_body.addClass('tablet-small '+pixelRatio).removeClass('hovers tablet tablet-medium mobile screen wide-screen');
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -129,7 +135,7 @@ $(function(){
 			context: 'tablet-medium',
 			match: function() {
 				query_actions('tablet-medium');
-				_body.addClass('tablet-medium '+pixelRatio).removeClass('hovers tablet-small tablet mobile screen wide-screen '+pixelnotRatio);
+				_body.addClass('tablet-medium '+pixelRatio).removeClass('hovers tablet-small tablet mobile screen wide-screen');
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -140,7 +146,7 @@ $(function(){
 			context: 'tablet',
 			match: function() {
 				query_actions('tablet');
-				_body.addClass('tablet '+pixelRatio).removeClass('hovers tablet-small tablet-medium mobile screen wide-screen '+pixelnotRatio);
+				_body.addClass('tablet '+pixelRatio).removeClass('hovers tablet-small tablet-medium mobile screen wide-screen');
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -151,21 +157,21 @@ $(function(){
 			context: 'min-screen',
 			match: function() {
 				query_actions('min-screen');
-				_body.addClass('hovers min-screen '+pixelRatio).removeClass('tablet-small tablet-medium mobile tablet wide-screen '+pixelnotRatio);
+				_body.addClass('hovers min-screen '+pixelRatio).removeClass('tablet-small tablet-medium mobile tablet wide-screen');
 			}
 		},
 		{
 			context: 'screen',
 			match: function() {
 				query_actions('screen');
-				_body.addClass('hovers screen '+pixelRatio).removeClass('tablet-small tablet-medium mobile tablet wide-screen min-screen '+pixelnotRatio);
+				_body.addClass('hovers screen '+pixelRatio).removeClass('tablet-small tablet-medium mobile tablet wide-screen min-screen');
 			}
 		},
 		{
 			context: 'wide-screen',
 			match: function() {
 				query_actions('wide-screen '+pixelRatio);
-				_body.addClass('hovers screen wide-screen').removeClass('tablet-small tablet-medium mobile tablet min-screen '+pixelnotRatio);
+				_body.addClass('hovers screen wide-screen').removeClass('tablet-small tablet-medium mobile tablet min-screen');
 			}
  		}
 	];
