@@ -1,11 +1,11 @@
 /*------------------*/
 /* general */
-html, body{
+body{
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
 	font-weight: normal;
 	color: rgb(75,75,75);
 }
-html.wf-active, .wf-active body{ 
+.wf-active body{ 
 	font-family: "Source Sans Pro"; 
 	font-weight: 400;
 }

@@ -103,6 +103,7 @@ $(function(){
 	// query actions	
 	var query_actions = function( resolution )
 	{
+		console.log(resolution);
 	};
 	// -----------------------
 	// media queries	

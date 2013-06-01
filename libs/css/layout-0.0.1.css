@@ -180,6 +180,19 @@ section{
 	margin-right: 80px;
 	opacity: 0.85;
 }
+.skills .more.vcenter{ 
+	height: 100%;
+	width: 60px;
+	position: absolute; 
+	top: 0;
+}
+.skills .more.vcenter.right{ right: 0; }
+.skills .more.vcenter.left{ left: 0; }
+.skills .vcenter .medium-arrow{ top: 50%; margin-top: -45px; }
+.margin-left-60{ margin-left: 60px; }
+.margin-right-60{ margin-right: 60px; }
+/*.tablet-small .skills .margin-left-60, .mobile .skills .margin-left-60{ margin-left: 0px; }*/
+.tablet-small .skills .margin-right-60, .mobile .skills .margin-right-60{ margin-right: 0px; }
 /* ---------------------------- */
 /* Current project */
 .project-info{
@@ -567,10 +580,6 @@ section{
 .mobile .pins .pin:before{ display: none; }
 /* ---------------------------- */
 .more .big-arrow{ margin: 20px 0 0 20px; }
-.more.vcenter{ 
-	height: 100%; 
-}
-.vcenter .medium-arrow{ top: 50%; margin-top: -45px; }
 /* ---------------------------- */
 .big-arrow, .big-arrow .shadow{
 	height: 120px;
