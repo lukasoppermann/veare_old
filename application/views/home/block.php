@@ -1,4 +1,4 @@
-<section class="bold font-light-orange vertical-center no-flicker">
+<section class="bold font-light-orange vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">
 	<div class="section-content centered fixed">
 		<span class="hello giant-headline">Hello,</span><br />
 		<h2 class="big-headline">I design interfaces</h2><br />
@@ -16,7 +16,7 @@
 	</div>
 </section>
 
-<section class="veare-recent-portfolio bold light-gray vertical-center no-flicker">
+<section class="veare-recent-portfolio bold light-gray vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">
 	<div class="section-content centered fixed">
 		<h3 class="font-orange big-headline width-100">I recently worked on</h3>
 		<div class="columns">
@@ -48,7 +48,7 @@
 	</div>
 </section>
 
-<section class="skills light-blue font-white vertical-center no-flicker">
+<section class="skills light-blue font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">>
 	<div class="section-content centered fixed">
 		<h3 class="font-white width-100 big-headline headline-margin-40">This is what I do</h3>
 		<div class="columns">
@@ -60,10 +60,9 @@
 				<div class="skill-content centered">
 					<div class="copy font-black float-left margin-right-60">
 						<h2 class="bold font-white medium-headline">Interface design</h2>
-						<p>visionary design means to define a vision before the design process is started. This vision is an overall business &amp; strategy vision which you will keep for the coming years as a goal to achieve.
+						<p>When designing responsive website, Mac or iOS applications I focus on usability and user experience.
 						</p>
-						<p>The design we develop will be one step
-							towards fulfilling this vision.
+						<p>Using design thinking methods like personas I create user stories to find the most important features & potential problems to solve.
 						</p>
 					</div>
 					<a class="more vcenter right">
@@ -79,10 +78,9 @@
 					</a>
 					<div class="copy font-black float-left margin-left-60">
 						<h2 class="bold font-white medium-headline">Print design</h2>
-						<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
+						<p>Designing magazines and other print products I pay special attention to typographical details.
 						</p>
-						<p>The design we develop will be one step
-						towards fulfilling this vision.
+						<p>Readability and well structured information are my main focus in editorial design. 
 						</p>
 					</div>
 				</div>
@@ -98,10 +96,9 @@
 				<div class="skill-content centered">
 					<div class="copy font-black float-left margin-right-60">
 						<h2 class="bold font-white medium-headline">Infographics</h2>
-						<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
+						<p>
 						</p>
-						<p>The design we develop will be one step
-							towards fulfilling this vision.
+						<p>
 						</p>
 					</div>
 					<a class="more vcenter right">
@@ -117,10 +114,9 @@
 					</a>
 					<div class="copy font-black float-left margin-left-60">
 						<h2 class="bold font-white medium-headline">Modern branding</h2>
-						<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
+						<p>
 						</p>
-						<p>The design we develop will be one step
-							towards fulfilling this vision.
+						<p>
 						</p>
 					</div>
 				</div>
@@ -133,7 +129,7 @@
 	</div>
 </section> 
 
-<section class="about-veare yellow font-white vertical-center no-flicker">
+<section class="about-veare yellow font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">>
 	<div class="section-content centered fixed">
 		<div class="columns plus">
 			<div class="column tablet-half column-two">
@@ -169,7 +165,7 @@
 	</div>
 </section>
 
-<section class="light-red font-white vertical-center no-flicker">
+<section class="light-red font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">>
 	<div class="section-content centered fixed">
 		<h4 class="bold big-headline">I write about stuff …</h4>
 			<a href="#" class="column blog-link">

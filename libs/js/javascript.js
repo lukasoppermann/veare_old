@@ -8,9 +8,29 @@ $(function(){
 			_html = $('html'),
 			_logo = $('#logo'),
 			_menu_icon = $('#menu_icon'),
+			resolution = 'mobile',
 			i = 1;
 	// -----------------------
 	// define functions
+	// min padding
+	var minPadding = function(){
+		$('.min-padding').each(function(){
+			var _this 			= $(this),
+					padding 		= _this.data('minpadding'),
+					heightdiff	= _this.outerHeight() - _this.children().first().outerHeight();
+			// check for mobile
+			if( resolution == 'mobile' && _this.data('minpadding-mobile') != undefined )
+			{
+				padding = _this.data('minpadding-mobile');
+			}
+			// calc
+			if( heightdiff < padding*2 )
+			{
+				_this.css({'paddingTop':padding-(heightdiff/2), 'paddingBottom':padding-(heightdiff/2)});
+			}
+		});
+	};
+	// resize sections
 	var resize_sections = function( callback ){
 		// get screen dimensions
 		screen.height = win.height();
@@ -86,6 +106,7 @@ $(function(){
 		}
 
 	};
+
 	// -----------------------
 	// add retina detection
 	var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : '1';
@@ -101,9 +122,9 @@ $(function(){
 	});
 	// -----------------------
 	// query actions	
-	var query_actions = function( resolution )
+	var query_actions = function( res )
 	{
-		console.log(resolution);
+		resolution = res;
 	};
 	// -----------------------
 	// media queries	
@@ -111,14 +132,14 @@ $(function(){
 		{
 			context: 'mobile-portrait',
 			match: function() {
-				query_actions('mobile-portrait');
+				query_actions('mobile');
 				_body.addClass('mobile portrait').removeClass('hovers tablet-small tablet-medium landscape tablet screen wide-screen');
 			}
 		},
 		{
 			context: 'mobile-landscape',
 			match: function() {
-				query_actions('mobile-landscape');
+				query_actions('mobile');
 				_body.addClass('mobile landscape').removeClass('hovers tablet-small tablet-medium portrait tablet screen wide-screen');
 			}
 		},
@@ -183,6 +204,7 @@ $(function(){
 	$('section').fs_centered({callback:function(){
 		_body.delay(100).addClass('loaded');
 	},'content':'.section-content'});
+	minPadding();
 	// _body.delay(100).addClass('loaded');
 	// resize_sections(function(){
 	// 	_body.delay(100).addClass('loaded');

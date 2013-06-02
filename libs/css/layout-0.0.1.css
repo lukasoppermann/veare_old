@@ -120,29 +120,13 @@ section{
 .mobile .skills .columns, .tablet-small .skills .columns{ margin-bottom: 0px; }
 .hover-circle:before{
 	position: absolute;
-	top: 240px;
-	left: 240px;
-	height: 0px;
-	width: 0px;
 	display: block;
 	border-radius: 280px;
 	background: rgba(0,0,0,0.25);
-	transition: all .4s ease .1s;   
-	-webkit-transition: all .4s ease .1s;
-	-moz-transition: all .4s ease .1s;
-	-o-transition: all .4s ease .1s;
-	-ms-transition: all .4s ease .1s;
-}
-.hover-circle:before{
-	transition: all .4s ease .1s;   
-	-webkit-transition: all .4s ease .1s;
-	-moz-transition: all .4s ease .1s;
-	-o-transition: all .4s ease .1s;
-	-ms-transition: all .4s ease .1s;
 	height: 280px;
 	width: 280px;
-	top: 0px;
-	left: 0px;
+	top: 10px;
+	left: 10px;
 }
 .skill-content{
 	display: inline-block;
@@ -318,7 +302,7 @@ section{
 	margin: -175px -112px 100px 0;
 }
 .mobile.landscape #veare_businesscard{
-	height: 250px;
+	height: 220px;
 	width: 350px;
 	margin: -125px -175px 0 0;
 }
