@@ -37,8 +37,8 @@ html.menu-active, body.mobile.menu-active{
 	font-family: "Source Sans Pro";
 	font-weight: 600;
 }
-.align-left{ text-align: left !important; }
-.align-right{ text-align: right !important; }
+.align-left{ text-align: left; }
+.align-right{ text-align: right; }
 /*------------------*/
 /* colors */
 /* white */
@@ -113,9 +113,9 @@ h3, h4, .medium-headline{ font-size: 48px; line-height: 120%; margin-bottom: 15p
 .tablet-small h2, .tablet-small .big-headline{ font-size: 60px; line-height: 120%; }
 .tablet-small h3, .tablet-small h4, .tablet-small .medium-headline{ font-size: 30px; line-height: 120%; }
 
-.mobile h1, .mobile .giant-headline{ font-size: 110px; line-height: 120%; }
-.mobile h2, .mobile .big-headline{ font-size: 40px; line-height: 120%; }
-.mobile h3, .mobile h4, .mobile .medium-headline{ font-size: 28px; line-height: 120%; }
+.mobile h1, .mobile .giant-headline{ font-size: 110px; line-height: 100%; }
+.mobile h2, .mobile .big-headline{ font-size: 40px; line-height: 100%; }
+.mobile h3, .mobile h4, .mobile .medium-headline{ font-size: 28px; line-height: 100%; }
 .mobile .copy{ font-size: 20px; line-height: 115%; }
 .mobile .small-headline{ font-size: 24px; line-height: 150%; }
 

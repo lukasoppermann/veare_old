@@ -1,0 +1,78 @@
+/* ---------------------------- */
+/* Browser frame */
+.browser-frame{
+	margin: 0px auto;
+	border: 2px solid rgb(215,220,240);
+	background: transparent;
+	position: relative;
+	display: inline-block;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	overflow: hidden;
+	max-width: 100%;
+}
+.browser-frame .browser-top{
+	height: 50px;
+	border-bottom: 2px solid rgb(235,240,240);
+}
+.tablet .browser-frame .browser-top,
+.tablet-small .browser-frame .browser-top{ height: 40px; }
+.mobile .browser-frame .browser-top{ height: 30px; }
+.browser-frame .browser-body{ 
+	overflow: hidden;
+	padding: 2px; 
+	position: relative; 
+	float: left; 
+}
+.browser-frame .browser-body img{
+	width: 100%;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+.browser-frame .browser-top .circle-link{
+	cursor: pointer;
+	display: block;
+	float: left;
+	width: 40px;
+	height: 50px;
+}
+.browser-frame .browser-top .circle-link:last-child{ width: 50px; }
+.browser-frame .browser-top .circle{
+	background:  rgb(235,240,240);
+	border-radius: 20px;
+	height: 18px;
+	width: 18px;
+	margin: 16px 7px 16px 15px;
+}
+.mobile .browser-frame .browser-top .circle{
+	height: 14px;
+	width: 14px;
+	margin: 8px 0px 8px 7px;
+}
+.hovers .browser-frame .browser-top .circle-link:hover .circle{ border: 2px solid rgb(255,255,255); margin: 14px 7px 14px 13px; }
+.hovers.tablet .browser-frame .browser-top .circle-link:hover .circle, 
+.hovers.tablet-small .browser-frame .browser-top .circle-link:hover .circle{ 	margin: 9px 2px 9px 8px;  }
+.tablet-small .browser-frame .browser-top .circle-link,
+.tablet .browser-frame .browser-top .circle-link{ 
+	width: 30px;
+	height: 40px;
+}
+.mobile .browser-frame .browser-top .circle-link{
+	width: 20px;
+	height: 30px;
+}
+.tablet-small .browser-frame .browser-top .circle, .tablet .browser-frame .browser-top .circle{ margin: 11px 2px 11px 10px; }
+.hovers .browser-frame .browser-top .first:hover .circle{ background: rgb(245,130,105); }
+.hovers .browser-frame .browser-top .second:hover .circle{ background: rgb(245,230,85); }
+.hovers .browser-frame .browser-top .third:hover .circle{ background: rgb(105,195,160); }
+/* color schemes */
+.browser-frame.dark, .browser-frame.dark .browser-top{ border-color: rgb(215,220,220); }
+.browser-frame.dark .browser-top .circle{ background: rgb(215,220,220); }
+
+.browser-frame.white, .browser-frame.white .browser-top{ border-color: rgb(255,255,255); }
+.browser-frame.white .browser-top .circle{ background: rgb(255,255,255); }

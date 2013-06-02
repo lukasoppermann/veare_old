@@ -6,8 +6,8 @@
 	</div>
 </section>
 
-<section class="turquoise font-white bold vertical-center no-flicker">
-	<div class="section-content centered">
+<section class="turquoise font-white bold vertical-center no-flicker about-lukas-oppermann">
+	<div class="section-content centered fixed">
 		<figure class="image fixed coffee veare-illustrations">
 			<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="lukas oppermann designer at veare design studio" />
 		</figure>
@@ -16,7 +16,7 @@
 	</div>
 </section>
 
-<section class="about-lukas-oppermann bold light-gray vertical-center no-flicker">
+<section class="veare-recent-portfolio bold light-gray vertical-center no-flicker">
 	<div class="section-content centered fixed">
 		<h3 class="font-orange big-headline width-100">I recently worked on</h3>
 		<div class="columns">
