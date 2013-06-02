@@ -34,7 +34,7 @@ section{
 	box-sizing: border-box;
 }
 .mobile .section-content{
-	padding: 25px 5px;
+	padding: 25px 2.5%;
 }
 .vertical-center{ height: 100%; font-size: 0;}
 .vertical-center:before {
@@ -136,6 +136,11 @@ section{
 	line-height: 100%;
 	clear: left;
 }
+.mobile .veare-studio{
+	float: none;
+	text-align: center;
+	font-size: 20px;
+}
 .veare-claim{
 	display: block;
 	text-align: center;
@@ -177,22 +182,54 @@ section{
 	height: auto;
 }
 .skills .skill-content .copy{
-	margin-right: 80px;
+	display: block;
+}
+.skills .skill-content .copy p{
 	opacity: 0.85;
+}
+.skills .column{
+	display: block;
+	position: relative;
 }
 .skills .more.vcenter{ 
 	height: 100%;
 	width: 60px;
+	display: block;
 	position: absolute; 
 	top: 0;
 }
+.skills .vcenter .medium-arrow{ position: absolute; top: 50%; margin-top: -45px; }
+
 .skills .more.vcenter.right{ right: 0; }
 .skills .more.vcenter.left{ left: 0; }
-.skills .vcenter .medium-arrow{ top: 50%; margin-top: -45px; }
 .margin-left-60{ margin-left: 60px; }
 .margin-right-60{ margin-right: 60px; }
-/*.tablet-small .skills .margin-left-60, .mobile .skills .margin-left-60{ margin-left: 0px; }*/
+.tablet-small .skills .margin-left-60, .mobile .skills .margin-left-60{ margin-left: 0px; }
 .tablet-small .skills .margin-right-60, .mobile .skills .margin-right-60{ margin-right: 0px; }
+.tablet-small .skills .more, .mobile .skills .more{ display: none; }
+.skill-content .copy{
+	vertical-align: top;
+	display: inline-block;
+	padding: 0 0 0 30px;
+	width: 100%;
+	max-width: 460px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.skill-content .copy{ padding: 0 30px 50px 30px; }
+.mobile .skill-content .copy{ padding: 0 00px 50px 00px; }
+.mobile .skill-content, .tablet-small .skill-content{ 
+	padding-top: 300px;
+	position: relative;
+}
+.mobile .skills .column .image, .tablet-small .skills .column .image{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -150px;
+}
+.mobile .skill-content .medium-headline, .tablet-small .skill-content .medium-headline{ text-align: center; }
 /* ---------------------------- */
 /* Current project */
 .project-info{
