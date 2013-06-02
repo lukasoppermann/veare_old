@@ -46,56 +46,7 @@ section{
 	margin-left: -1px;
 	overflow: hidden;
 }
-.vertical-center .centered{
-	vertical-align: middle;
-}
-.circle-big{
-	position: relative;
-	display: inline-block;
-	width: 280px;
-	height: 280px;
-	border-radius: 280px;
-}
-.circle-headline{
-	position: relative;
-	text-align: left;
-	width: 100%;
-	margin: -50px 0 20px 0;
-	padding-left: 30px;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
-}
-.tablet-small .circle-headline{
-	margin: 0px 0 20px 0;
-	padding: 0;
-}
-.mobile .circle-headline, .mobile .circle-copy{ padding: 0 10px; }
-.mobile .circle-headline{ text-align: center; }
-.plus:after{
-	content: "+";
-	width: 100px;
-	height: 100px;
-	text-align: center;
-	font-size: 150px;
-	line-height: 70px;
-	display: block;
-	position: absolute;
-	font-weight: 600;
-	left: 50%;
-	top: 40%;
-	margin: -75px 0 0 -50px;
-}
-.circle-copy{
-	vertical-align: top;
-	display: inline-block;
-	padding: 0 0 0 30px;
-	width: 100%;
-	max-width: 400px;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
-}
+.vertical-center .centered{ vertical-align: middle; }
 /*.column-two{
 	position: relative;
 	float: left;
@@ -117,9 +68,6 @@ section{
 	margin: 0 0 0 0;
 	float: left;
 }*/
-.tablet-small .plus:after, .mobile .plus:after{ display: none; }
-.mobile .circle-copy{ margin: 0 0 0 0; }
-.mobile .circle-headline{ font-size: 60px; }
 /* ---------------------------- */
 /* First block */
 .hello{
@@ -219,7 +167,6 @@ section{
 	top: 0;
 }
 .skills .vcenter .medium-arrow{ position: absolute; top: 50%; margin-top: -45px; }
-
 .skills .more.vcenter.right{ right: 0; }
 .skills .more.vcenter.left{ left: 0; }
 .margin-left-60{ margin-left: 60px; }
@@ -237,7 +184,7 @@ section{
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.skill-content .copy{ padding: 0 30px 50px 30px; }
+.skill-content .copy{ padding: 0 30px 30px 30px; }
 .mobile .skill-content .copy{ padding: 0 00px 50px 00px; }
 .mobile .skill-content, .tablet-small .skill-content{ 
 	padding-top: 300px;
@@ -250,6 +197,61 @@ section{
 	margin-left: -150px;
 }
 .mobile .skill-content .medium-headline, .tablet-small .skill-content .medium-headline{ text-align: center; }
+/* ---------------------------- */
+/* About veare */
+.tablet-small .plus:after, .mobile .plus:after{ display: none; }
+.mobile .circle-copy{ margin: 0 0 0 0; }
+.mobile .circle-headline{ font-size: 60px; }
+.circle-big{
+	position: relative;
+	display: inline-block;
+	width: 280px;
+	height: 280px;
+	border-radius: 280px;
+}
+.circle-headline{
+	position: relative;
+	text-align: left;
+	width: 100%;
+	margin: -50px 0 20px 0;
+	padding-left: 30px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.tablet-small .circle-headline{
+	margin: 0px 0 20px 0;
+	padding: 0;
+}
+.mobile .circle-headline, .mobile .circle-copy{ padding: 0 10px; }
+.mobile .circle-headline{ text-align: center; }
+.plus:after{
+	content: "+";
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	font-size: 150px;
+	line-height: 70px;
+	display: block;
+	position: absolute;
+	font-weight: 600;
+	left: 50%;
+	top: 40%;
+	margin: -75px 0 0 -50px;
+}
+.circle-copy{
+	vertical-align: top;
+	display: inline-block;
+	padding: 0 0 0 30px;
+	width: 100%;
+	max-width: 400px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.mobile .circle-copy{
+	padding: 0;
+}
 /* ---------------------------- */
 /* Blog block */
 .blog-teaser{
