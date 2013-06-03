@@ -446,32 +446,35 @@ $(function(){
 		]
 	}
 	];
-	if( $('#veare_map').length > 0 )
-	{
-		// -----------------------
-		// Create GMaps object
-		map = new GMaps({
-			div: '#veare_map',
-			lat: lat, // lat: 52.546167, - neu:  52.5354,13.43315
-			lng: lng, // lng: 13.415201,
-			zoom: 12,
-			disableDefaultUI: true,
-			draggable: false,
-			scrollwheel: false,
-			tilesloaded: function(){
-				map.setZoom(14);
-				var _marker = $('.marker-wrapper');
-				if(_marker.css('opacity') == 0)
-				{
-					_marker.find('.veare-contact').show();
-					_marker.css({'marginTop':'-400px'}).delay(300).animate({'opacity':'1.0','marginTop':'-160px'}, 300, 'swing').animate({'marginTop':'-183px'}, 300);
+	win.load(function() {
+
+		if( $('#veare_map').length > 0)
+		{
+			// -----------------------
+			// Create GMaps object
+			map = new GMaps({
+				div: '#veare_map',
+				lat: lat, // lat: 52.546167, - neu:  52.5354,13.43315
+				lng: lng, // lng: 13.415201,
+				zoom: 12,
+				disableDefaultUI: true,
+				draggable: false,
+				scrollwheel: false,
+				tilesloaded: function(){
+					map.setZoom(14);
+					var _marker = $('.marker-wrapper');
+					if(_marker.css('opacity') == 0)
+					{
+						_marker.find('.veare-contact').show();
+						_marker.css({'marginTop':'-400px'}).delay(300).animate({'opacity':'1.0','marginTop':'-160px'}, 300, 'swing').animate({'marginTop':'-183px'}, 300);
+					}
 				}
-			}
-		});
-		// Add styling
-		map.setOptions({
-			styles: style
-		});
-	}
+			});
+			// Add styling
+			map.setOptions({
+				styles: style
+			});
+		}
+	});
 // close jquery ready
 });

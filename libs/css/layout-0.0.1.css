@@ -1,11 +1,11 @@
-.loaded section{ 
+/*.loaded section{ 
 	opacity: 1; 
 	transition: opacity .4s ease .3s;   
 	-webkit-transition: opacity .4s ease .3s;
 	-moz-transition: opacity .4s ease .3s;
 	-o-transition: opacity .4s ease .3s;
 	-ms-transition: opacity .4s ease .3s;
-}
+}*/
 .wrapper{
 	position: relative;
 }
@@ -15,7 +15,7 @@ section{
 	height: 100%;
 	position: relative;
 	text-align: center;
-	opacity: 0;
+/*	opacity: 0;*/
 	padding: 0;
 }
 .full{ display: inline-block; }

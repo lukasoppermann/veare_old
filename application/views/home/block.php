@@ -96,7 +96,7 @@
 				<div class="skill-content centered">
 					<div class="copy font-black float-left margin-right-60">
 						<h2 class="bold font-white medium-headline">Infographics</h2>
-						<p>
+						<p>Turing complex information & numbers into easy-to-understand visuals is the magic of designing good information graphics.
 						</p>
 						<p>
 						</p>
