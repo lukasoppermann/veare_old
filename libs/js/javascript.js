@@ -448,7 +448,7 @@ $(function(){
 	];
 	win.load(function() {
 
-		if( $('#veare_map').length > 0)
+		if( $('#veare_map').length > 0 && resolution != 'mobile')
 		{
 			// -----------------------
 			// Create GMaps object
