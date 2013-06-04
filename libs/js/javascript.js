@@ -474,6 +474,16 @@ $(function(){
 			map.setOptions({
 				styles: style
 			});
+			// Add map markers
+			map.drawOverlay({
+			  lat: 52.54050,
+			  lng: 13.40389,
+			  content: '<div class="overlay">Lima</div>'
+			});
+			
+			$.fs_resize(function(){
+				map.setCenter(lat, lng);
+			});
 		}
 	});
 // close jquery ready
