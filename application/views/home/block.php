@@ -200,7 +200,7 @@
 	</div>
 	<div class="pins">
 		<a class="github pin orange-pseudo" href="https://github.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
-		<a class="dribbble pin pink-pseudo" href="http://dribbble.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
+		<a id="dribbble" class="dribbble pin pink-pseudo" href="http://dribbble.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
 		<a class="twitter pin blue-pseudo" href="https://twitter.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
 		<a class="xing pin turquoise-pseudo" href="https://www.xing.com/profile/Lukas_Oppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
 		<a class="linkedin pin light-red-pseudo" href="http://de.linkedin.com/in/lukasoppermann/" target="_blank"><div class="veare-sprite icon-big"></div></a>

@@ -456,18 +456,11 @@ $(function(){
 				div: '#veare_map',
 				lat: lat, // lat: 52.546167, - neu:  52.5354,13.43315
 				lng: lng, // lng: 13.415201,
-				zoom: 12,
+				zoom: 14,
 				disableDefaultUI: true,
 				draggable: false,
 				scrollwheel: false,
 				tilesloaded: function(){
-					map.setZoom(14);
-					var _marker = $('.marker-wrapper');
-					if(_marker.css('opacity') == 0)
-					{
-						_marker.find('.veare-contact').show();
-						_marker.css({'marginTop':'-400px'}).delay(300).animate({'opacity':'1.0','marginTop':'-160px'}, 300, 'swing').animate({'marginTop':'-183px'}, 300);
-					}
 				}
 			});
 			// Add styling
@@ -475,10 +468,11 @@ $(function(){
 				styles: style
 			});
 			// Add map markers
+			console.log($('#dribbble'));
 			map.drawOverlay({
 			  lat: 52.54050,
 			  lng: 13.40389,
-			  content: '<div class="overlay">Lima</div>'
+			  content: $('<div />').replaceWith($('#dribbble'))
 			});
 			
 			$.fs_resize(function(){
