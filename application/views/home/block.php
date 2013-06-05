@@ -140,10 +140,9 @@
 				</div>
 				<div class="circle-copy copy font-black">
 					<h3 class="bold circle-headline font-white">visionary</h3>
-					<p><strong>visionary design</strong> means to define a vision before the design process is started. This vision is an overall <strong>business &amp; strategy vision</strong> which you will keep for the coming years as a goal to achieve.
+					<p><strong>visionary design</strong> means creating long lasting design approaches that grow with your company. Building on a content & business strategy that will lead towards your future.
 					</p>
-					<p>The design we develop will be one step
-						towards fulfilling this vision.
+					<p>
 					</p>
 				</div>
 			</div>
