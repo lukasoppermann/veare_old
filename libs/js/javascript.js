@@ -446,10 +446,18 @@ $(function(){
 		]
 	}
 	];
-	win.load(function() {
 
-		if( $('#veare_map').length > 0 && resolution != 'mobile')
-		{
+	if( $('#veare_map').length > 0 && resolution != 'mobile')
+	{
+		// hide pins
+		$('.pins').hide();
+		// once everything is loaded
+		win.load(function() {
+			// <a class="github pin orange-pseudo" href="https://github.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
+			// <a id="dribbble" class="dribbble pin pink-pseudo" href="http://dribbble.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
+			// <a class="twitter pin blue-pseudo" href="https://twitter.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
+			// <a class="xing pin turquoise-pseudo" href="https://www.xing.com/profile/Lukas_Oppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
+			// <a class="linkedin pin light-red-pseudo" href="http://de.linkedin.com/in/lukasoppermann/" target="_blank"><div class="veare-sprite icon-big"></div></a>
 			// -----------------------
 			// Create GMaps object
 			map = new GMaps({
@@ -467,18 +475,100 @@ $(function(){
 			map.setOptions({
 				styles: style
 			});
-			// Add map markers
-			console.log($('#dribbble'));
-			map.drawOverlay({
-			  lat: 52.54050,
-			  lng: 13.40389,
-			  content: $('<div />').replaceWith($('#dribbble'))
+			// social media pins
+			var socialMedia = {
+				'dribble': {
+					lat: 52.54090,
+					lng: 13.40389,
+					'wide-screen': {
+						lat: 52.53195,
+						lng: 13.40280,
+					},
+					content: '<a id="dribbble" class="dribbble in-map pin pink-pseudo" href="http://dribbble.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>'
+				},
+			  'twitter': {	
+					lat: 52.54666,
+			  	lng: 13.40574,
+			  	content: '<a class="twitter pin blue-pseudo" href="https://twitter.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>'
+				},
+				'github': {
+				  lat: 52.55630,
+				  lng: 13.38660,
+					'screen': {
+						lat: 52.55604,
+						lng: 13.37000
+					},
+					'wide-screen': {
+						lat: 52.54534,
+						lng: 13.37000
+					},
+				  content: '<a class="github pin orange-pseudo" href="https://github.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>'
+				},
+				'xing': {
+				  lat: 52.55490,
+				  lng: 13.40149,
+				  content: '<a class="xing pin turquoise-pseudo" href="https://www.xing.com/profile/Lukas_Oppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>'
+				},
+				'linkedin': {
+				  lat: 52.54049,
+				  lng: 13.39475,
+					'screen': {
+					  lat: 52.54049,
+					  lng: 13.38475,
+					},
+					'wide-screen': {
+						lat: 52.55831,
+						lng: 13.36568,
+					},
+				  content: '<a class="linkedin pin light-red-pseudo" href="http://de.linkedin.com/in/lukasoppermann/" target="_blank"><div class="veare-sprite icon-big"></div></a>'
+				}
+			};
+			// loop through social media obj
+			$.each(socialMedia, function(index, social) {
+				// check for resolution
+				if( resolution != undefined && social[resolution] != undefined)
+				{
+					social.lat = social[resolution].lat;
+					social.lng = social[resolution].lng;
+				}
+				// Add map markers
+				map.drawOverlay({
+				  lat: social.lat,
+				  lng: social.lng,
+					verticalAlign: 'top',
+				  content: social.content
+				});
 			});
+		
 			
-			$.fs_resize(function(){
-				map.setCenter(lat, lng);
+		$.fs_resize(function(){
+			map.setCenter(lat, lng);
+			// remove map markers
+			map.removeOverlays();
+			// add markers
+			$.each(socialMedia, function(index, social) {
+				// check for resolution
+				if( resolution != undefined && social[resolution] != undefined)
+				{
+					var lat = social[resolution].lat;
+					var lng = social[resolution].lng;
+				}
+				else
+				{
+					var lat = social.lat;
+					var lng = social.lng;
+				}
+				// Add map markers
+				map.drawOverlay({
+				  lat: lat,
+				  lng: lng,
+					verticalAlign: 'top',
+				  content: social.content
+				});
 			});
-		}
-	});
+		});
+		
+		});
+	}
 // close jquery ready
 });

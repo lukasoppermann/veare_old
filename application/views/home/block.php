@@ -98,7 +98,7 @@
 						<h2 class="bold font-white medium-headline">Infographics</h2>
 						<p>Turning complex information & numbers into easy-to-understand visuals is the magic of designing good information graphics.
 						</p>
-						<p>If you need to explain a product, a complex workflow or 
+						<p>If you need to explain a product or complex workflow, an infographic is just the right thing.
 						</p>
 					</div>
 					<a class="more vcenter right">
@@ -114,9 +114,9 @@
 					</a>
 					<div class="copy font-black float-left margin-left-60">
 						<h2 class="bold font-white medium-headline">Modern branding</h2>
-						<p>
+						<p>Todays brands need to compete mostly in digital media & advertising, a modern branding strategy needs to account for that.
 						</p>
-						<p>
+						<p>A modern brands corporate identity must be easy to remember and able to compete in the digital world.
 						</p>
 					</div>
 				</div>
