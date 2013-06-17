@@ -1,7 +1,7 @@
 	</div>
 </div>
 <!--+++++++++++++++++++++++++ sidebar +++++++++++++++++++++++++-->
-<div id="sidebar" class="<?=variable($sidebar_class)?> regular no-flicker">
+<div id="sidebar" class="<?=variable($sidebar_class)?> regular no-flicker dark-black">
 	<!-- logo -->
 	<a href="<?=base_url(TRUE)?>home" class="ajax-link" data-nav="#nav">
 		<div class="logo">

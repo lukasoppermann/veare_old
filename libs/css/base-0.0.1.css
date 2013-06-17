@@ -46,9 +46,12 @@ html.menu-active, body.mobile.menu-active{
 .font-white{ color: rgb(255,255,255); }
 .white-pseudo:before, .white-pseudo:after{ background: rgb(255,255,255); }
 /* black */
-.black{ background: rgb(50,50,50); border-color: rgb(50,50,50);}
-.font-black{ color: rgb(50,50,50); }
-.black-pseudo:before, .black-pseudo:after{ background: rgb(50,50,50);}
+.black{ background: rgb(50,47,44); border-color: rgb(50,47,44);}
+.font-black{ color: rgb(50,47,44); }
+.black-pseudo:before, .black-pseudo:after{ background: rgb(50,47,44);}
+/* black */
+.dark-black{ background: rgb(30,28,25); border-color: rgb(30,28,25);}
+.font-dark-black{ color: rgb(30,28,25); }
 /* gray */
 .gray{ background: rgb(215,220,220); }
 .font-gray{ color: rgb(215,220,220); }

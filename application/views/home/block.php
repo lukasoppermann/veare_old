@@ -140,7 +140,7 @@
 				</div>
 				<div class="circle-copy copy font-black">
 					<h3 class="bold circle-headline font-white">visionary</h3>
-					<p><strong>visionary design</strong> means creating long lasting design approaches that grow with your company. Building on a content & business strategy that will lead towards your future.
+					<p><strong>visionary design</strong> means creating a lasting design approache that grow with your company. Building on a content & business strategy that will lead towards your future.
 					</p>
 					<p>
 					</p>
@@ -153,10 +153,9 @@
 					</figure>
 				</div>
 				<div class="circle-copy copy font-black"><h3 class="bold circle-headline font-white">intelligent</h3>
-					<p><strong>intelligent design</strong> focuses on <strong>usability &amp; user experience</strong> with a strong information architecture. The visual design will be created to perfectly guide the user towards her goal.
+					<p><strong>intelligent design</strong> focuses on usability &amp; user experience with a strong information architecture. 
 					</p>
-					<p>An intelligent &amp; simple interface creates
-						satisfied users.
+					<p>
 					</p>
 				</div>
 			</div>

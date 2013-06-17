@@ -53,7 +53,7 @@
 	height: 240px;
 	width: 240px;
 }
-.veare-illustrations.eye img{ left: -330px; }
+.veare-illustrations.eye img{ left: -330px; top: -10px;}
 .veare-illustrations.brain img{ top: -10px; left: -630px; }
 
 .veare-illustrations.interface img{ top: -300px; left: 0px; }
