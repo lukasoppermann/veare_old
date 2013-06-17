@@ -67,6 +67,7 @@ class MY_Controller extends CI_Controller {
 			// --------------------------------------------------------------------
 			// add css & js files
 			css_add(array('reset','base','layout','animations','browser','icons','responsiveness','menu'));
+			css_add(array('portfolio'));
 			if( mobile() != true || ipad() == true )
 			{
 				js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true','gmaps'), 'default');
