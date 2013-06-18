@@ -204,6 +204,12 @@ $(function(){
 	$('section').fs_centered({callback:function(){
 		_body.delay(100).addClass('loaded');
 	},'content':'.section-content'});
+	
+	if( $('section').length == 0 )
+	{
+		_body.delay(100).addClass('loaded');
+	}
+	
 	minPadding();
 	// _body.delay(100).addClass('loaded');
 	// resize_sections(function(){

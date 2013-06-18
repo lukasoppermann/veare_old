@@ -41,7 +41,7 @@
 			<div class="column">
 				<a class="more">
 					<div class="label">more projects</div>
-					<div class="big-arrow gray-pseudo"></div>
+					<div class="big-arrow medium-gray-pseudo"></div>
 				</a>
 			</div>
 		</div>

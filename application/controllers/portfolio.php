@@ -10,15 +10,14 @@ class Portfolio extends MY_Controller {
 	
 	function index( $permalink = null )
 	{
-		$this->item( $permalink );
-		// if( $permalink != null && $permalink != '' && isset($permalink) )
-		// {
-		// 	$this->item( $permalink );
-		// }
-		// else
-		// {
-		// 	$this->overview();
-		// }
+		if( $permalink != null && $permalink != '' && isset($permalink) )
+		{
+			$this->item( $permalink );
+		}
+		else
+		{
+			$this->overview();
+		}
 	}
 	// ------------------------
 	// Overview
@@ -93,7 +92,7 @@ class Portfolio extends MY_Controller {
 	function item( $permalink = null )
 	{
 		// add assets
-		$this->data['body_class'] = 'white-logo';
+		$this->data['body_class'] = ' white-logo';
 		// load view
 		$this->view('portfolio/item', $this->data);
 	}

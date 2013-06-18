@@ -607,6 +607,7 @@ section{
 .mobile .column-four,
 .mobile [class*="column-four-three"],
 .mobile .column-five,
+.mobile .column-two-two-one,
 .mobile .column-half{
 	width: 96%;
 }
@@ -620,9 +621,10 @@ section{
 .tablet-small .column-four,
 .tablet-small [class*="column-four-three"],
 .tablet-small .column-five,
+.tablet-small .column-two-two-one,
 .tablet-small .column-half{ width: 95%; }
 /* tablet */
-.tablet .column, .tablet .column.tablet-one{
+.tablet .column, .tablet .column.tablet-one, .tablet .column-two-two-one{
 	width: 30%;
 	margin-right: 1.5%;
 	margin-left: 1.5%;

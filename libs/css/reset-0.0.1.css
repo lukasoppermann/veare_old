@@ -54,7 +54,7 @@ img{
 	border: 0;
 	position: relative;
 }
-a, span, a:hover, a:active, a:focus{
+a, span, .hovers a:hover, a:active, a:focus{
 	color: inherit;
 	display: inline-block;
 	outline: 0;
