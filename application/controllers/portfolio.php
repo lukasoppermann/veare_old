@@ -10,80 +10,88 @@ class Portfolio extends MY_Controller {
 	
 	function index( $permalink = null )
 	{
+		$items = db_select( 'client_entries', array('type' => 4, 'status' => 1), array('order' => 'date DESC', 'json' => 'data') );
+				
 		if( $permalink != null && $permalink != '' && isset($permalink) )
 		{
 			$this->item( $permalink );
 		}
 		else
 		{
-			$this->overview();
+			$this->overview( $items );
 		}
 	}
 	// ------------------------
 	// Overview
-	function overview()
+	function overview( $items )
 	{
-		// load assets
-		css_add('cards, portfolio', 'page');
-		js_add('jquery.fs_filter, portfolio', 'page');
-		// define variables
-		$tag_menu = array();
-		// get entries from database
-		$cards = db_select( 'client_entries', array('type' => 3, 'status' => 1), array('limit' => 50, 'order' => 'date DESC', 'json' => 'data') );
-		// grab all image ids
-		foreach($cards as $id => $card)
+		// // load assets
+		// css_add('cards, portfolio', 'page');
+		// js_add('jquery.fs_filter, portfolio', 'page');
+		// // define variables
+		// $tag_menu = array();
+		// // get entries from database
+		// $cards = db_select( 'client_entries', array('type' => 3, 'status' => 1), array('limit' => 50, 'order' => 'date DESC', 'json' => 'data') );
+		// // grab all image ids
+		// foreach($cards as $id => $card)
+		// {
+		// 	unset($card['css'],$card['css_file'],$cards[$id]['css'],$cards[$id]['css_file']);
+		// 	if( isset($card['card-image']) )
+		// 	{
+		// 		$images[$card['card-image']] = $card['card-image'];
+		// 	}
+		// }
+		// if( isset($images) && count($images) > 0 )
+		// {
+		// 	// retrieve images from db
+		// 	$images = db_select('files', array('status' => 1, 'id' => array($images)), array('json' => 'data', 'index' => 'id', 'index_single' => true) );
+		// }
+		// $empty_card = array();
+		// // loop through posts
+		// foreach($cards as $card)
+		// {
+		// 	// merge variables to outfox view cache
+		// 	$card = array_merge($empty_card, $card);
+		// 	// prep tags
+		// 	$card['tags'] = explode(',',$card['tags']);
+		// 	// add image
+		// 	if( isset($card['card-image']) && isset($images[$card['card-image']]) && is_array($images[$card['card-image']]) )
+		// 	{
+		// 		$card['images'] = $images[$card['card-image']];
+		// 	}
+		// 	// load into view
+		// 	unset($card['css'],$card['css_file']);
+		// 	$entries[] = $this->load->view('portfolio/card', $card, TRUE);
+		// 	// tags
+		// 	foreach( $card['tags'] as $tag )
+		// 	{
+		// 		// prepare tag
+		// 		$tag = trim($tag);
+		// 		// add tag to menu if not existing
+		// 		if( !array_key_exists($tag, $tag_menu) )
+		// 		{
+		// 			$tag_menu[$tag] = '<li class="filter-item" data-value="'.$tag.'">#'.$tag.'<span class="close">×</span></li>';
+		// 		}
+		// 	}
+		// 	// unset cards
+		// 	foreach($card as $key => $val)
+		// 	{
+		// 		$empty_card[$key] = ' ';
+		// 	}
+		// }
+		foreach( $items as $item )
 		{
-			unset($card['css'],$card['css_file'],$cards[$id]['css'],$cards[$id]['css_file']);
-			if( isset($card['card-image']) )
-			{
-				$images[$card['card-image']] = $card['card-image'];
-			}
+			$this->data['content'][] = $this->load->view('portfolio/card',$item, TRUE); 
 		}
-		if( isset($images) && count($images) > 0 )
-		{
-			// retrieve images from db
-			$images = db_select('files', array('status' => 1, 'id' => array($images)), array('json' => 'data', 'index' => 'id', 'index_single' => true) );
-		}
-		$empty_card = array();
-		// loop through posts
-		foreach($cards as $card)
-		{
-			// merge variables to outfox view cache
-			$card = array_merge($empty_card, $card);
-			// prep tags
-			$card['tags'] = explode(',',$card['tags']);
-			// add image
-			if( isset($card['card-image']) && isset($images[$card['card-image']]) && is_array($images[$card['card-image']]) )
-			{
-				$card['images'] = $images[$card['card-image']];
-			}
-			// load into view
-			unset($card['css'],$card['css_file']);
-			$entries[] = $this->load->view('portfolio/card', $card, TRUE);
-			// tags
-			foreach( $card['tags'] as $tag )
-			{
-				// prepare tag
-				$tag = trim($tag);
-				// add tag to menu if not existing
-				if( !array_key_exists($tag, $tag_menu) )
-				{
-					$tag_menu[$tag] = '<li class="filter-item" data-value="'.$tag.'">#'.$tag.'<span class="close">×</span></li>';
-				}
-			}
-			// unset cards
-			foreach($card as $key => $val)
-			{
-				$empty_card[$key] = ' ';
-			}
-		}
-		// tag menu
- 		$this->data['tag_menu'] = '<div class="filter-list">
-				<div class="group">
-					<ul id="tag_menu" data-filter="tag" class="filters tag">'.implode('',$tag_menu).'</ul>
-				</div></div>';
 		//
-		$this->data['content'] = implode('',$entries);
+		$this->data['content'] = implode('',$this->data['content']);
+		// tag menu
+ 		$this->data['tag_menu'] = '<div class="filters uppercase font-size-big font-medium-gray bold">
+		<div class="filter hover-font-orange" data="interface">interface</div>
+		<div class="filter hover-font-orange" data="print">print</div>
+		<div class="filter hover-font-orange" data="branding">branding</div>
+		<div class="filter hover-font-orange" data="infographics">infographics</div>
+		</div>';
 		// load view
 		$this->view('portfolio/index', $this->data, 'portfolio');
 	}

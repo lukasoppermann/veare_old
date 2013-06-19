@@ -19,6 +19,8 @@ class Home extends MY_Controller {
 		// //
 		// $this->data['meta_title'] = 'About the studio';
 		// // check for ajax
+		$this->data['body_id'] = 'homepage';
+		
 		$this->view('home/block', $this->data);
 	}
 	

@@ -60,6 +60,7 @@ div.max-width-1000{ max-width: 1000px; }
 }
 .align-left{ text-align: left; }
 .align-right{ text-align: right; }
+.uppercase{ text-transform: Uppercase; }
 /*------------------*/
 /* colors */
 /* white */
@@ -86,7 +87,7 @@ div.max-width-1000{ max-width: 1000px; }
 .font-light-gray{ color: rgb(235,240,240); }
 /* light orange */
 .orange{ background: rgb(245,150,0); border-color: rgb(245,150,0); }
-.font-orange{ color: rgb(245,150,0); }
+.font-orange, .hovers .hover-font-orange:hover{ color: rgb(245,150,0); }
 .orange-pseudo:before, .orange-pseudo:after{ background: rgb(245,150,0);}
 /* orange */
 .light-orange{ background: rgb(250,190,40); border-color: rgb(250,190,40); }
@@ -151,6 +152,8 @@ h3, h4, .medium-headline{ font-size: 48px; line-height: 120%; margin-bottom: 15p
 .mobile .small-headline{ font-size: 24px; line-height: 150%; }
 
 .headline-margin-40{ margin-bottom: 40px; }
+
+.font-size-big{ font-size: 48px; line-height: 120%; }
 /*------------------*/
 /* sprite */
 .veare-sprite{ background-image: url('../../layout/veare-icons.png'); }
@@ -208,6 +211,9 @@ img.loaded{
 	width: 100%;
 	height: 125px;
 	display: block;
+	float: left;
+}
+#homepage #header{
 	position: absolute;
 }
 .mobile #header{
