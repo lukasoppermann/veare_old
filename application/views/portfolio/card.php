@@ -1,4 +1,4 @@
-<div class="card height-small">
+<div class="card">
 	<div class="front">
 	</div>
 	<div class="back">

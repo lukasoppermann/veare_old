@@ -27,7 +27,7 @@ class Portfolio extends MY_Controller {
 	{
 		// // load assets
 		// css_add('cards, portfolio', 'page');
-		// js_add('jquery.fs_filter, portfolio', 'page');
+		js_add('jquery.grid-a-licious, portfolio');
 		// // define variables
 		// $tag_menu = array();
 		// // get entries from database
@@ -86,8 +86,7 @@ class Portfolio extends MY_Controller {
 		//
 		$this->data['content'] = implode('',$this->data['content']);
 		// tag menu
- 		$this->data['tag_menu'] = '<div class="filters uppercase font-size-big font-medium-gray bold">
-		<div class="filter hover-font-orange" data="interface">interface</div>
+ 		$this->data['tag_menu'] = '<div class="filters uppercase font-size-big font-medium-gray bold"><div class="filter hover-font-orange" data="interface">interface</div>
 		<div class="filter hover-font-orange" data="print">print</div>
 		<div class="filter hover-font-orange" data="branding">branding</div>
 		<div class="filter hover-font-orange" data="infographics">infographics</div>
