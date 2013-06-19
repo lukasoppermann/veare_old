@@ -9,4 +9,4 @@
 	url = https://github.com/lukasoppermann/Grid-A-Licious.git
 [submodule "libs/js/freetile"]
 	path = libs/js/freetile
-	url = https://github.com/yconst/Freetile.git
+	url = https://github.com/lukasoppermann/Freetile.git

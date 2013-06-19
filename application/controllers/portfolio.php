@@ -27,7 +27,7 @@ class Portfolio extends MY_Controller {
 	{
 		// // load assets
 		// css_add('cards, portfolio', 'page');
-		js_add('jquery.grid-a-licious, portfolio');
+		js_add('jquery.freetile, portfolio');
 		// // define variables
 		// $tag_menu = array();
 		// // get entries from database
