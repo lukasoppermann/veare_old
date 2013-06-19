@@ -55,7 +55,7 @@
 
 .portfolio .items{
 	width: 100%;
-	max-width: 1000px;
+	max-width: 800px;
 	text-align: center;
 	display: inline-block;
 	position: relative;
@@ -69,8 +69,8 @@
 	height: 250px;
 }
 .card{
-	margin-right: 20px;
-	width: 250px;
+/*	margin-right: 20px;
+	width: 250px;*/
 	background: red;
 	overflow: hidden;
 }
