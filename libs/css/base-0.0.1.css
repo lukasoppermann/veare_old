@@ -99,6 +99,9 @@ div.max-width-1000{ max-width: 1000px; }
 /* yellow */
 .yellow{ background: rgb(245,230,85); border-color: rgb(245,230,85); }
 .font-yellow{ color: rgb(245,230,85); }
+/* red */
+.red{ background: rgb(245,130,105); border-color: rgb(245,130,105); }
+.font-red{ color: rgb(245,130,105); }
 /* light red */
 .light-red{ background: rgb(235,120,95); }
 .font-light-red{ color: rgb(235,120,95); }
@@ -153,8 +156,14 @@ h3, h4, .medium-headline{ font-size: 48px; line-height: 120%; margin-bottom: 15p
 
 .headline-margin-40{ margin-bottom: 40px; }
 
-.font-size-big{ font-size: 41px; line-height: 120%; } 
-.wf-active .font-size-big{ font-size: 48px; line-height: 120%; } 
+.font-size-big{ font-size: 41px; line-height: 110%; } 
+.wf-active .font-size-big{ font-size: 48px; line-height: 110%; } 
+
+.tablet-small .font-size-big{ font-size: 28px; line-height: 110%; } 
+.tablet-small .wf-active .font-size-big{ font-size: 34px; line-height: 10%; }
+
+.mobile .font-size-big{ font-size: 24px; line-height: 110%; } 
+.mobile .wf-active .font-size-big{ font-size: 30px; line-height: 110%; }
 /*------------------*/
 /* sprite */
 .veare-sprite{ background-image: url('../../layout/veare-icons.png'); }
@@ -214,7 +223,7 @@ img.loaded{
 	display: block;
 	float: left;
 }
-#homepage #header{
+.header-absolute #header{
 	position: absolute;
 }
 .mobile #header{

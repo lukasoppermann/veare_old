@@ -99,7 +99,7 @@ class Portfolio extends MY_Controller {
 	function item( $permalink = null )
 	{
 		// add assets
-		$this->data['body_class'] = ' white-logo';
+		$this->data['body_class'] = ' white-logo header-absolute';
 		// load view
 		$this->view('portfolio/item', $this->data);
 	}
