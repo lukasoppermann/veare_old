@@ -65,7 +65,7 @@ div.max-width-1000{ max-width: 1000px; }
 /* colors */
 /* white */
 .white{ background: rgb(255,255,255); }
-.font-white{ color: rgb(255,255,255); }
+.font-white, .hovers .hover-font-white:hover{ color: rgb(255,255,255); }
 .white-pseudo:before, .white-pseudo:after{ background: rgb(255,255,255); }
 /* black */
 .black{ background: rgb(50,47,44); border-color: rgb(50,47,44);}
@@ -222,8 +222,6 @@ img.loaded{
 	height: 125px;
 	display: block;
 	float: left;
-}
-.header-absolute #header{
 	position: absolute;
 }
 .mobile #header{

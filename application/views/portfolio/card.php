@@ -1,8 +1,12 @@
-<a class="card <?=variable($color)?> <?=variable($card_class)?>" href="<?=current_url().$permalink?>">
-	<div class="front">
-	</div>
-	<div class="back">
-		<h2><?=$title?></h2>
-		<p><?=$excerpt?></p>
-	</div>
+<a class="card animate-flip <?=variable($card_class)?>" href="<?=current_url().$permalink?>">
+		<div class="front side <?=variable($color)?>">
+			<img class="image" src="<?=base_url(TRUE).'media/'.variable($images['filename']).'.'.variable($images['ext'])?>">
+			<?=variable($card)?>
+		</div>
+		<div class="back side align-left <?=variable($color)?>">
+			<div class="content">
+				<h2 class="bold headline"><?=$title?></h2>
+				<p class="copy"><?=$excerpt?></p>
+			</div>	
+		</div>
 </a>
