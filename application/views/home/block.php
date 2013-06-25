@@ -21,11 +21,11 @@
 		<h3 class="font-orange big-headline width-100">I recently worked on</h3>
 		<div class="columns">
 			<div class="column column-four-three">
-				<div class="browser-frame dark">
-					<div class="browser-top">
-						<a class="first circle-link"><div class="circle"></div></a>
-						<a class="second circle-link"><div class="circle"></div></a>
-						<a class="third circle-link"><div class="circle"></div></a>
+				<div class="browser-frame border-medium-gray">
+					<div class="browser-top border-medium-gray">
+						<a class="first circle-link"><div class="circle medium-gray border-medium-gray"></div></a>
+						<a class="second circle-link"><div class="circle medium-gray border-medium-gray"></div></a>
+						<a class="third circle-link"><div class="circle medium-gray border-medium-gray"></div></a>
 					</div>
 					<div class="browser-body">
 						<img class="bottom" src="<?=base_url()?>media/oximity.png" alt="" />
@@ -65,7 +65,7 @@
 						<p>Using design thinking methods like personas I create user stories to find the most important features & potential problems to solve.
 						</p>
 					</div>
-					<a class="more vcenter right">
+					<a class="more vcenter right" href="<?=base_url(TRUE)?>portfolio">
 						<div class="medium-arrow black-pseudo opacity-25"></div>
 					</a>
 				</div>
@@ -73,7 +73,7 @@
 			
 			<div class="column column-five">
 				<div class="skill-content centered">
-					<a class="more vcenter left">
+					<a class="more vcenter left" href="<?=base_url(TRUE)?>portfolio">
 						<div class="medium-arrow black-pseudo left opacity-25"></div>
 					</a>
 					<div class="copy font-black float-left margin-left-60">
@@ -101,7 +101,7 @@
 						<p>If you need to explain a product or complex workflow, an infographic is just the right thing.
 						</p>
 					</div>
-					<a class="more vcenter right">
+					<a class="more vcenter right" href="<?=base_url(TRUE)?>portfolio">
 						<div class="medium-arrow black-pseudo opacity-25"></div>
 					</a>
 				</div>
@@ -109,7 +109,7 @@
 
 			<div class="column column-five">
 				<div class="skill-content centered">
-					<a class="more vcenter left">
+					<a class="more vcenter left" href="<?=base_url(TRUE)?>portfolio">
 						<div class="medium-arrow black-pseudo left opacity-25"></div>
 					</a>
 					<div class="copy font-black float-left margin-left-60">
@@ -185,9 +185,9 @@
 <section class="light-blue last-block map no-flicker">
 	<div class="vcard-wrapper">
 		<div id="veare_businesscard" class="copy regular">
-		<div class="name top-line">Lukas<br />
+		<a name="contact" class="name top-line">Lukas<br />
 			Oppermann
-		</div>
+		</a>
 		<div class="contact-info top-line">
 			<div class="veare-type veare-sprite"></div>
 			<div class="visionary-design">visionary design</div>

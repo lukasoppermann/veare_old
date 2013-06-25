@@ -11,10 +11,12 @@ class Portfolio extends MY_Controller {
 	function index( $permalink = null )
 	{
 		$items = db_select( 'client_entries', array('type' => 4, 'status' => 1), array('order' => 'date DESC', 'json' => 'data') );
+		$items = index_array($items, 'permalink');
+	
 	
 		if( $permalink != null && $permalink != '' && isset($permalink) )
 		{
-			$this->item( $permalink );
+			$this->item( $permalink, $items );
 		}
 		else
 		{
@@ -75,10 +77,11 @@ class Portfolio extends MY_Controller {
 	}
 	// ------------------------
 	// Item
-	function item( $permalink = null )
+	function item( $permalink = null, $items )
 	{
+		$this->data = array_merge($items[$permalink], $this->data);
 		// add assets
-		$this->data['body_class'] = ' white-logo header-absolute';
+		$this->data['body_class'] = ' white-logo';
 		// load view
 		$this->view('portfolio/item', $this->data);
 	}

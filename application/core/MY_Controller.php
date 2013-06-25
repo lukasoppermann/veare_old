@@ -66,7 +66,7 @@ class MY_Controller extends CI_Controller {
 			$this->load->helpers(array('fs_metadata'));
 			// --------------------------------------------------------------------
 			// add css & js files
-			css_add(array('reset','base','layout','animations','browser','icons','responsiveness','menu'));
+			css_add(array('reset','base','colors','layout','animations','browser','icons','responsiveness','menu'));
 			css_add(array('portfolio'));
 			if( mobile() != true || ipad() == true )
 			{
