@@ -8,15 +8,33 @@ class Portfolio extends MY_Controller {
 		parent::__construct();
 	}
 	
-	function index( $permalink = null )
+	function index( $tag = null, $permalink = null )
 	{
 		$items = db_select( 'client_entries', array('type' => 4, 'status' => 1), array('order' => 'date DESC', 'json' => 'data') );
 		$items = index_array($items, 'permalink');
 	
-	
-		if( $permalink != null && $permalink != '' && isset($permalink) )
+		
+		if( $tag != null && $tag != '' && isset($tag) )
 		{
-			$this->item( $permalink, $items );
+			if( strpos($tag,':') !== false )
+			{
+				$tag = str_replace('tag:','',$tag);
+			}
+			else
+			{
+				$permalink = $tag;
+				unset($tag);
+			}
+			
+			
+			if($permalink != null)
+			{
+				$this->item( $permalink, $items, variable($tag) );
+			}
+			else
+			{
+				$this->overview( $items, $tag );
+			}	
 		}
 		else
 		{
@@ -77,11 +95,12 @@ class Portfolio extends MY_Controller {
 	}
 	// ------------------------
 	// Item
-	function item( $permalink = null, $items )
+	function item( $permalink = null, $items, $tag )
 	{
 		$this->data = array_merge($items[$permalink], $this->data);
 		// add assets
 		$this->data['body_class'] = ' white-logo';
+		$this->data['filter'] = $tag;
 		// load view
 		$this->view('portfolio/item', $this->data);
 	}

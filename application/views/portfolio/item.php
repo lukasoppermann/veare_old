@@ -62,7 +62,7 @@
 					echo "</div>";
 					// link
 					$preped_link = prep_url(variable($link));
-					echo variable($preped_link,'','<a class="link '.'hover-font-'.$color.'" rel="nofollow" target="_blank" href="','">').variable($link,'','','</a>');
+					echo variable($preped_link,'','<a class="project-link link '.'hover-font-'.$color.'" rel="nofollow" target="_blank" href="','">').variable($link,'','','</a>');
 					// tags
 					if( isset($tags) && $tags != null )
 					{
@@ -82,7 +82,7 @@
 					}
 				?>
 			</div>
-			<a class="button <?=variable($color)?> <?=variable($color,'','hover-border-')?> <?=variable($color,'','hover-font-')?> font-white float-left margin-top-tiny" href="<?=base_url(TRUE)?>portfolio">&larr; return to overview</a>
+			<a class="button <?=variable($color)?> <?=variable($color,'','hover-border-')?> <?=variable($color,'','hover-font-')?> font-white float-left margin-top-tiny" href="<?=base_url(TRUE)?>portfolio<?=variable($filter,'','/tag:')?>">&larr; return to overview</a>
 		</div>
 		<div class="column column-two">
 			<div class="copy"><?=$text?></div>
