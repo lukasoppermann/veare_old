@@ -29,7 +29,7 @@ $config['ip_lockout'] = 50; // should be >= attempts
 // attempts
 $config['retrieval_time'] = 7200; // 1 hour = 3600
 // 
-$config['short_url'] = TRUE; // activate short_url system
+$config['short_url'] = false; // activate short_url system
 $config['short_url_length'] = 30;
 /*
 |--------------------------------------------------------------------------

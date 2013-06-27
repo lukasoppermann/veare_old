@@ -4,7 +4,7 @@ $(function(){
 	var _items = $('.items'),
 			_item = _items.find('.card'),
 			itemMarg = parseInt(_item.css('marginLeft'))+parseInt(_item.css('marginRight')),
-			itemWidth = _item.outerWidth()+(itemMarg*2),
+			itemWidth = _item.outerWidth()+(itemMarg),
 			width,ratio;
 
 	_items.freetile({
@@ -18,6 +18,7 @@ $(function(){
 			ratio = Math.floor(itemsWith/itemWidth);
 			// calc width
 			width = itemWidth;
+			console.log(itemMarg);
 			// set with
 			_items.css({'width':ratio*itemWidth});
 		}
@@ -33,6 +34,10 @@ $(function(){
 			_items.removeClass('fade');
 		}
 	}, '.card');
+
+	$('.image.full-width').each(function(){
+		
+	});
 
 // close jquery
 });

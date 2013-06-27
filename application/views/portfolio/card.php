@@ -1,4 +1,4 @@
-<a class="card animate-flip <?=variable($card_class)?>" href="<?=current_url().$permalink?>">
+<a class="card animate-flip<?=variable($card_class,'',' ')?>" data-category="<?=variable($category)?>" href="<?=current_url().$permalink?>">
 		<div class="front side <?=variable($color)?>">
 			<img class="image" src="<?=base_url(TRUE).'media/'.variable($images['filename']).'.'.variable($images['ext'])?>">
 			<?=variable($card)?>

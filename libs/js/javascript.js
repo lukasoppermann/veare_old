@@ -9,9 +9,20 @@ $(function(){
 			_logo = $('#logo'),
 			_menu_icon = $('#menu_icon'),
 			resolution = 'mobile',
-			i = 1;
+			i = 1;	
 	// -----------------------
 	// define functions
+	// img padding
+	$.fn.imageLoad = function(fn){
+		this.load(fn);
+		this.each( function() 
+		{
+			if ( this.complete && this.naturalWidth !== 0 ) {
+				$(this).trigger('load');
+			}
+		});
+		return this;
+	}
 	// min padding
 	var minPadding = function(){
 		$('.min-padding').each(function(){
@@ -114,12 +125,12 @@ $(function(){
 	// set images depending on ratio
 	$('.img-optimized').each(function(){
 		var _this = $(this);
-		_this.addClass('loading').load(function(){
-			var width = this.width/pixelRatio;
-			var height = this.height/pixelRatio;
+		_this.addClass('loading').imageLoad(function(){
+			_this.css({'width':'auto','height':'auto'})
+			var width = this.naturalWidth/pixelRatio;
+			var height = this.naturalHeight/pixelRatio;
 			_this.css({'width':width,'height':height}).addClass('loaded').removeClass('loading');
-		});
-		_this.attr('src',_this.data('src-x'+pixelRatio));
+		}).attr('src',_this.data('src-x'+pixelRatio));
 	});
 	// -----------------------
 	// query actions	

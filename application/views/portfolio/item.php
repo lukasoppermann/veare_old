@@ -1,21 +1,13 @@
 <article class="portfolio-item">
 	
-	<div class="stage <?=variable($color)?> font-white padding-top-wide padding-bottom-medium padding-sides-small">
-		<div class="browser-frame border-white">
-			<div class="browser-top border-white">
-				<a class="first circle-link"><div class="circle white border-white"></div></a>
-				<a class="second circle-link"><div class="circle white border-white"></div></a>
-				<a class="third circle-link"><div class="circle white border-white"></div></a>
-			</div>
-			<div class="browser-body">
-				<img src="<?=base_url(TRUE)?>media/oximity.png" alt="" style="max-width: 900px; height: auto;"/>
-			</div>
-		</div>
+	<div class="stage <?=variable($color).' '.variable($stage['type'],'','type-')?> font-white<?=variable($stage['type']) != 'full' ? ' padding-top-wide padding-bottom-medium padding-sides-small' : '' ?>">
+		<?=variable($stage_content)?>
 	</div>
+	
 	
 	<div class="columns max-width-1000 padding-top-small padding-sides-small">
 		<div class="column column-two-two-one">
-			<h2 class="medium-headline align-left <?=variable($color,'','font-')?> uppercase"><?=$title?></h2>
+			<h2 class="medium-headline align-left <?=variable($color,'','font-')?> uppercase"><?=variable($title)?></h2>
 			<div class="copy-small font-gray aside">
 				<?
 				// prepare roles
@@ -52,7 +44,7 @@
 								}
 								else
 								{
-									$output .= ' <span class="partner">'.$partner['name'].$partner['name'].variable($partner['role'],'',' (',')').'</span>,';
+									$output .= ' <span class="partner">'.$partner['name'].variable($partner['role'],'',' (',')').'</span>,';
 								}
 							}
 							// output
@@ -68,7 +60,8 @@
 					{
 						$output = "<div class='tags'>";
 						// loop through tags
-						foreach(explode(',',$tags) as $tag)
+						$tags = array_filter(array_map('trim',explode(',',$tags)));
+						foreach($tags as $tag)
 						{
 							$tag = strtolower(trim($tag));
 							// check if tag = role
@@ -85,7 +78,7 @@
 			<a class="button <?=variable($color)?> <?=variable($color,'','hover-border-')?> <?=variable($color,'','hover-font-')?> font-white float-left margin-top-tiny" href="<?=base_url(TRUE)?>portfolio<?=variable($filter,'','/tag:')?>">&larr; return to overview</a>
 		</div>
 		<div class="column column-two">
-			<div class="copy"><?=$text?></div>
+			<div class="copy dark-gray"><?=variable($text)?></div>
 		</div>
 	</div>
 	

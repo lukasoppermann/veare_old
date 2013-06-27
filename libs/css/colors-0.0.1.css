@@ -37,8 +37,8 @@
 .border-turquoise, .hovers .hover-border-turquoise:hover{ border-color: rgb(105,195,160); }
 .turquoise-pseudo:before, .turquoise-pseudo:after{ background: rgb(105,195,160); }
 /* yellow */
-.yellow{ background: rgb(245,230,85); border-color: rgb(245,230,85); }
-.font-yellow{ color: rgb(245,230,85); }
+.yellow{ background: rgb(245,215,85); border-color: rgb(245,215,85); }
+.font-yellow{ color: rgb(245,215,85); }
 /* red */
 .red{ background: rgb(245,130,105); border-color: rgb(245,130,105); }
 .border-red, .hovers .hover-border-red:hover{ border-color: rgb(245,130,105); }
@@ -49,12 +49,8 @@
 .light-red-pseudo:before, .light-red-pseudo:after{ background: rgb(235,120,95); }
 /* light blue */
 .light-blue{ background: rgb(165,205,200); }
-.font-light-blue, .hovers .hover-font-light-blue:hover{ color: rgb(135,175,170); }
+.font-light-blue, .hovers .hover-font-light-blue:hover{ color: rgb(155,195,190); }
 .border-light-blue, .hovers .hover-border-light-blue:hover{ border-color: rgb(165,205,200); }
-.light-blue-pseudo:before, .light-blue-pseudo:after{ background: rgb(165,205,200); }
-/* green blue */
-.green-blue{ background: rgb(165,205,200); }
-.font-light-blue{ color: rgb(165,205,200); }
 .light-blue-pseudo:before, .light-blue-pseudo:after{ background: rgb(165,205,200); }
 /* blue */
 .blue{ background: rgb(70,155,180); }

@@ -10,7 +10,7 @@ class Portfolio extends MY_Controller {
 	
 	function index( $tag = null, $permalink = null )
 	{
-		$items = db_select( 'client_entries', array('type' => 4, 'status' => 1), array('order' => 'date DESC', 'json' => 'data') );
+		$items = db_select( 'client_entries', array('type' => 2, 'status' => 1), array('order' => 'date DESC', 'json' => 'data') );
 		$items = index_array($items, 'permalink');
 	
 		
@@ -98,6 +98,32 @@ class Portfolio extends MY_Controller {
 	function item( $permalink = null, $items, $tag )
 	{
 		$this->data = array_merge($items[$permalink], $this->data);
+		// grab all image ids
+		if( isset($this->data['images']) && count($this->data['images']) > 0 )
+		{
+			// retrieve images from db
+			$this->data['images'] = db_select('files', array('status' => 1, 'id' => array($this->data['images'])), array('json' => 'data', 'index' => 'id', 'index_single' => true) );
+		}
+		// prepare stage
+		if( isset($items[$permalink]['stage']) )
+		{
+			if( $items[$permalink]['stage']['type'] == 'browser' )
+			{
+				// preapre data
+				$browser['image'] = $this->data['images'][$items[$permalink]['stage']['image']]['filename'].'.'.$this->data['images'][$items[$permalink]['stage']['image']]['ext'];
+				$browser['browser_color'] = 'white';
+				// load view
+				$this->data['stage_content'] = $this->load->view('assets/browser-frame',$browser, TRUE);
+			}
+			elseif( $items[$permalink]['stage']['type'] == 'full' )
+			{
+				$this->data['stage_content'] = '<img class="full-width image" src="'.base_url(TRUE).'media/'.$this->data['images'][$items[$permalink]['stage']['image']]['filename'].'.'.$this->data['images'][$items[$permalink]['stage']['image']]['ext'].'" alt="'.$items[$permalink]['title'].'" />';
+			}
+			else
+			{
+				$this->data['stage_content'] = '<img class="centered image" src="'.base_url(TRUE).'media/'.$this->data['images'][$items[$permalink]['stage']['image']]['filename'].'.'.$this->data['images'][$items[$permalink]['stage']['image']]['ext'].'" alt="'.$items[$permalink]['title'].'" />';
+			}
+		}
 		// add assets
 		$this->data['body_class'] = ' white-logo';
 		$this->data['filter'] = $tag;
