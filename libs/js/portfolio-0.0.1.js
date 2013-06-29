@@ -18,10 +18,19 @@ $(function(){
 			ratio = Math.floor(itemsWith/itemWidth);
 			// calc width
 			width = itemWidth;
-			console.log(itemMarg);
 			// set with
 			_items.css({'width':ratio*itemWidth});
 		}
+	});
+
+	$(window).fs_resize(function(){
+		itemsWith = _items.width();
+		// calc ratio
+		ratio = Math.floor(itemsWith/itemWidth);
+		// calc width
+		width = itemWidth;
+		// set with
+		_items.css({'width':ratio*itemWidth});
 	});
 
 	_items.on({	
@@ -33,10 +42,6 @@ $(function(){
 			$(this).removeClass("hovered");
 			_items.removeClass('fade');
 		}
-	}, '.card');
-
-	$('.image.full-width').each(function(){
-		
 	});
 
 // close jquery

@@ -1,4 +1,4 @@
-<div class="no-flicker section portfolio">
+<div class="no-flicker section portfolio<?=variable($filtered, '',' ')?>">
 
 	<?=$tag_menu?>
 	

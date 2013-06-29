@@ -34,6 +34,18 @@ class MY_Controller extends CI_Controller {
 		$this->load->add_package_path(BASEPATH.'packages/fs_debug/');
 		$this->load->library('fs_debug');
 		//
+		$this->load->add_package_path(BASEPATH.'packages/fs_base_model/');
+		$this->load->model('fs_base_model');
+		$this->load->model('portfolio_model');
+
+		// $get = $this->portfolio_model->get(array('id' => array('0',12)));
+		// 
+		// echo'<pre>';print_r($get);echo'</pre>';
+		// foreach($get->result() as $g)
+		// {
+		// 	echo $g->title;
+		// }
+		//
 		// --------------------------------------------------------------------	
 		// load assets
 		// development !!!!!!!!
@@ -68,10 +80,6 @@ class MY_Controller extends CI_Controller {
 			// add css & js files
 			css_add(array('reset','base','colors','layout','animations','browser','icons','responsiveness','menu'));
 			css_add(array('portfolio'));
-			if( mobile() != true || ipad() == true )
-			{
-				js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true','gmaps'), 'default');
-			}
 			js_add('fs.centered');
 			js_add('fs.media_queries, fs.resize, fs.load, fs.history, jquery.fittext.js, base, javascript', 'default'); 
 			// js_add_lines("CI_BASE = '".base_url()."';var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-7074034-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();", 'default');

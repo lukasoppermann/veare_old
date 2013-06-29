@@ -10,9 +10,17 @@ class Portfolio extends MY_Controller {
 	
 	function index( $tag = null, $permalink = null )
 	{
-		$items = db_select( 'client_entries', array('type' => 2, 'status' => 1), array('order' => 'date DESC', 'json' => 'data') );
-		$items = index_array($items, 'permalink');
-	
+		$data = db_select( 'client_entries', array('type' => 2, 'status' => 1), array('order' => 'position ASC', 'json' => 'data') );
+		// sort items by position
+		$data = index_array($data, 'position');
+		foreach( $data as $key => $values )
+		{
+			if( $key != 'noindex' )
+			{
+				$items[$key] = $values;
+			}
+		}
+		$items = array_merge($items, $data['noindex']); 
 		
 		if( $tag != null && $tag != '' && isset($tag) )
 		{
@@ -43,7 +51,7 @@ class Portfolio extends MY_Controller {
 	}
 	// ------------------------
 	// Overview
-	function overview( $cards )
+	function overview( $cards, $tag = null)
 	{
 		// // load assets
 		css_add('card');
@@ -79,17 +87,40 @@ class Portfolio extends MY_Controller {
 			{
 				$card['images'] = $images[$card['card-image']];
 			}
+			// filter
+			$card['filter'] = $tag;			
 			//
 			$this->data['content'][] = $this->load->view('portfolio/card',$card, TRUE); 
 		}
+		// set filtered
+		if( isset($tag) && $tag != null )
+		{
+			$this->data['filtered'] = 'filtered';
+		}
+		else
+		{
+			$this->data['filtered'] = '';
+		}
+		// filter menu
+		$filters = array('interface','print','branding','infographics');
+		// begin
+		$this->data['tag_menu'] = '<div class="filters uppercase font-size-big font-medium-gray bold">';
+		// loop
+		foreach($filters as $filter)
+		{
+			if( $tag == $filter )
+			{
+				$this->data['tag_menu'] .= '<a class="filter hover-font-orange active-font-orange active" data="'.$filter.'" href="'.base_url(TRUE).'portfolio">'.$filter.'</a>';
+			}
+			else
+			{
+				$this->data['tag_menu'] .= '<a class="filter hover-font-orange active-font-orange" data="'.$filter.'" href="'.base_url(TRUE).'portfolio/tag:'.$filter.'">'.$filter.'</a>';
+			}
+		}
+		// end
+		$this->data['tag_menu'] .= '</div>';
 		//
 		$this->data['content'] = implode('',$this->data['content']);
-		// tag menu
- 		$this->data['tag_menu'] = '<div class="filters uppercase font-size-big font-medium-gray bold"><div class="filter hover-font-orange" data="interface">interface</div>
-		<div class="filter hover-font-orange" data="print">print</div>
-		<div class="filter hover-font-orange" data="branding">branding</div>
-		<div class="filter hover-font-orange" data="infographics">infographics</div>
-		</div>';
 		// load view
 		$this->view('portfolio/index', $this->data, 'portfolio');
 	}
@@ -97,6 +128,7 @@ class Portfolio extends MY_Controller {
 	// Item
 	function item( $permalink = null, $items, $tag )
 	{
+		$items = index_array($items, 'permalink');
 		$this->data = array_merge($items[$permalink], $this->data);
 		// grab all image ids
 		if( isset($this->data['images']) && count($this->data['images']) > 0 )

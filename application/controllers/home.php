@@ -10,7 +10,10 @@ class Home extends MY_Controller {
 	
 	function index( )
 	{
-		
+		if( mobile() != true || ipad() == true )
+		{
+			js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true','gmaps'), 'default');
+		}	
 		// font callback
 		// $this->data['fonts_callback'][] = "$('body').trigger('resize');";
 		// // add css and js files

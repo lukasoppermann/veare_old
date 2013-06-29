@@ -25,7 +25,7 @@
 .font-light-gray{ color: rgb(235,240,240); }
 /* light orange */
 .orange{ background: rgb(245,150,0); border-color: rgb(245,150,0); }
-.font-orange, .hovers .hover-font-orange:hover{ color: rgb(245,150,0); }
+.font-orange, .hovers .hover-font-orange:hover, .active.active-font-orange{ color: rgb(245,150,0); }
 .border-orange, .hovers .hover-border-orange:hover{ border-color: rgb(245,150,0); }
 .orange-pseudo:before, .orange-pseudo:after{ background: rgb(245,150,0);}
 /* orange */

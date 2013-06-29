@@ -65,7 +65,7 @@
 						<p>Using design thinking methods like personas I create user stories to find the most important features & potential problems to solve.
 						</p>
 					</div>
-					<a class="more vcenter right" href="<?=base_url(TRUE)?>portfolio">
+					<a class="more vcenter right" href="<?=base_url(TRUE)?>portfolio/tag:interface">
 						<div class="medium-arrow black-pseudo opacity-25"></div>
 					</a>
 				</div>
@@ -73,7 +73,7 @@
 			
 			<div class="column column-five">
 				<div class="skill-content centered">
-					<a class="more vcenter left" href="<?=base_url(TRUE)?>portfolio">
+					<a class="more vcenter left" href="<?=base_url(TRUE)?>portfolio/tag:print">
 						<div class="medium-arrow black-pseudo left opacity-25"></div>
 					</a>
 					<div class="copy font-black float-left margin-left-60">
@@ -101,7 +101,7 @@
 						<p>If you need to explain a product or complex workflow, an infographic is just the right thing.
 						</p>
 					</div>
-					<a class="more vcenter right" href="<?=base_url(TRUE)?>portfolio">
+					<a class="more vcenter right" href="<?=base_url(TRUE)?>portfolio/tag:infographics">
 						<div class="medium-arrow black-pseudo opacity-25"></div>
 					</a>
 				</div>
@@ -109,7 +109,7 @@
 
 			<div class="column column-five">
 				<div class="skill-content centered">
-					<a class="more vcenter left" href="<?=base_url(TRUE)?>portfolio">
+					<a class="more vcenter left" href="<?=base_url(TRUE)?>portfolio/tag:branding">
 						<div class="medium-arrow black-pseudo left opacity-25"></div>
 					</a>
 					<div class="copy font-black float-left margin-left-60">
