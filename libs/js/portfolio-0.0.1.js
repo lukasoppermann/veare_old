@@ -23,7 +23,8 @@ $(function(){
 		}
 	});
 
-	$(window).fs_resize(function(){
+	$.fs_resize(function()
+	{
 		itemsWith = _items.width();
 		// calc ratio
 		ratio = Math.floor(itemsWith/itemWidth);
