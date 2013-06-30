@@ -37,6 +37,8 @@
 .border-turquoise, .hovers .hover-border-turquoise:hover{ border-color: rgb(105,195,160); }
 .turquoise-pseudo:before, .turquoise-pseudo:after{ background: rgb(105,195,160); }
 /* yellow */
+.light-yellow{ background: rgb(245,235,85); border-color: rgb(245,235,85); }
+/* yellow */
 .yellow{ background: rgb(245,215,85); border-color: rgb(245,215,85); }
 .font-yellow{ color: rgb(245,215,85); }
 /* red */

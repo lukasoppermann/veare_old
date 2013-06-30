@@ -64,24 +64,20 @@
 						</p>
 						<p>Using design thinking methods like personas I create user stories to find the most important features & potential problems to solve.
 						</p>
+						<a class="more-link button float-left" href="<?=base_url(TRUE)?>portfolio/tag:interface">interface design</a>
 					</div>
-					<a class="more vcenter right" href="<?=base_url(TRUE)?>portfolio/tag:interface">
-						<div class="medium-arrow black-pseudo opacity-25"></div>
-					</a>
 				</div>
 			</div>
 			
 			<div class="column column-five">
 				<div class="skill-content centered">
-					<a class="more vcenter left" href="<?=base_url(TRUE)?>portfolio/tag:print">
-						<div class="medium-arrow black-pseudo left opacity-25"></div>
-					</a>
 					<div class="copy font-black float-left margin-left-60">
 						<h2 class="bold font-white medium-headline">Print design</h2>
 						<p>Designing magazines and other print products I pay special attention to typographical details.
 						</p>
 						<p>Readability and well structured information are my main focus in editorial design. 
 						</p>
+						<a class="more-link button font-white hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:print">print design</a>
 					</div>
 				</div>
 				<figure class="image fixed print veare-illustrations hover-circle centered">
@@ -96,28 +92,22 @@
 				<div class="skill-content centered">
 					<div class="copy font-black float-left margin-right-60">
 						<h2 class="bold font-white medium-headline">Infographics</h2>
-						<p>Turning complex information & numbers into easy-to-understand visuals is the magic of designing good information graphics.
+						<p>Turning complex information & numbers into easy-to-understand visuals is the magic of information graphics.
 						</p>
-						<p>If you need to explain a product or complex workflow, an infographic is just the right thing.
+						<p>If you need to explain a product or a complex workflow, an infographic is just the right thing.
 						</p>
+						<a class="more-link button font-black hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:infographics">infographic design</a>
 					</div>
-					<a class="more vcenter right" href="<?=base_url(TRUE)?>portfolio/tag:infographics">
-						<div class="medium-arrow black-pseudo opacity-25"></div>
-					</a>
 				</div>
 			</div>
 
 			<div class="column column-five">
 				<div class="skill-content centered">
-					<a class="more vcenter left" href="<?=base_url(TRUE)?>portfolio/tag:branding">
-						<div class="medium-arrow black-pseudo left opacity-25"></div>
-					</a>
 					<div class="copy font-black float-left margin-left-60">
 						<h2 class="bold font-white medium-headline">Modern branding</h2>
-						<p>Todays brands need to compete mostly in digital media & advertising, a modern branding strategy needs to account for that.
+						<p>Todays brand's need to compete mostly in digital media & advertising, a modern branding strategy accounts for that. A brand's corporate identity must be easy to remember and able to compete in the digital world.
 						</p>
-						<p>A modern brands corporate identity must be easy to remember and able to compete in the digital world.
-						</p>
+						<a class="more-link button font-white hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:branding">Branding</a>
 					</div>
 				</div>
 				<figure class="image fixed branding veare-illustrations hover-circle centered">
@@ -129,7 +119,7 @@
 	</div>
 </section> 
 
-<section class="about-veare yellow font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">>
+<section class="about-veare light-yellow font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">>
 	<div class="section-content centered fixed">
 		<div class="columns plus">
 			<div class="column tablet-half column-two">

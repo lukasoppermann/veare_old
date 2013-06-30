@@ -115,6 +115,21 @@ section{
 .mobile .project-info, .tablet .project-info, .tablet-small .project-info{ margin-top: 0px; }
 .mobile .project-info { text-align: center; }
 /* ---------------------------- */
+/* more link */
+.skills .more-link{
+	margin-top: 10px;
+	text-decoration: none;
+	display: block;
+	position: relative;
+	background: rgba(0,0,0,0.15);
+	color: rgba(255,255,255,0.75);
+}
+.skills .skill-content .copy .more-link:hover{
+	background: transparent;
+	border-color: rgba(0,0,0,0.15);
+	color: rgba(0,0,0,0.65);
+}
+/* ---------------------------- */
 /* Skills */
 .skills .columns{ margin-bottom: 30px; }
 .mobile .skills .columns, .tablet-small .skills .columns{ margin-bottom: 0px; }

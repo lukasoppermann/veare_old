@@ -38,6 +38,9 @@ class MY_Controller extends CI_Controller {
 		$this->load->model('fs_base_model');
 		$this->load->model('portfolio_model');
 
+		// echo'<pre>';print_r($this->portfolio_model->update(array("where"=>array('type'=>1),"title" => "Titel" ) ));echo'</pre>';
+
+		// echo'<pre>';print_r($this->db->last_query());echo'</pre>';
 		// $get = $this->portfolio_model->get(array('id' => array('0',12)));
 		// 
 		// echo'<pre>';print_r($get);echo'</pre>';
