@@ -34,9 +34,9 @@ class MY_Controller extends CI_Controller {
 		$this->load->add_package_path(BASEPATH.'packages/fs_debug/');
 		$this->load->library('fs_debug');
 		//
-		$this->load->add_package_path(BASEPATH.'packages/fs_base_model/');
-		$this->load->model('fs_base_model');
-		$this->load->model('portfolio_model');
+		// $this->load->add_package_path(BASEPATH.'packages/fs_base_model/');
+		// $this->load->model('fs_base_model');
+		// $this->load->model('portfolio_model');
 
 		// echo'<pre>';print_r($this->portfolio_model->update(array("where"=>array('type'=>1),"title" => "Titel" ) ));echo'</pre>';
 
