@@ -64,7 +64,7 @@
 						</p>
 						<p>Using design thinking methods like personas I create user stories to find the most important features & potential problems to solve.
 						</p>
-						<a class="more-link button float-left" href="<?=base_url(TRUE)?>portfolio/tag:interface">interface design</a>
+						<a class="more-link button float-left" href="<?=base_url(TRUE)?>portfolio/tag:interface">Portfolio</a>
 					</div>
 				</div>
 			</div>
@@ -77,7 +77,7 @@
 						</p>
 						<p>Readability and well structured information are my main focus in editorial design. 
 						</p>
-						<a class="more-link button font-white hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:print">print design</a>
+						<a class="more-link button font-white hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:print">Portfolio</a>
 					</div>
 				</div>
 				<figure class="image fixed print veare-illustrations hover-circle centered">
@@ -96,7 +96,7 @@
 						</p>
 						<p>If you need to explain a product or a complex workflow, an infographic is just the right thing.
 						</p>
-						<a class="more-link button font-black hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:infographics">infographic design</a>
+						<a class="more-link button font-black hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:infographics">Portfolio</a>
 					</div>
 				</div>
 			</div>
@@ -107,7 +107,7 @@
 						<h2 class="bold font-white medium-headline">Modern branding</h2>
 						<p>Todays brand's need to compete mostly in digital media & advertising, a modern branding strategy accounts for that. A brand's corporate identity must be easy to remember and able to compete in the digital world.
 						</p>
-						<a class="more-link button font-white hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:branding">Branding</a>
+						<a class="more-link button font-white hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:branding">Portfolio</a>
 					</div>
 				</div>
 				<figure class="image fixed branding veare-illustrations hover-circle centered">

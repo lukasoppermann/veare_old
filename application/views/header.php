@@ -4,7 +4,7 @@
 	<?
 	echo favicon('favicon');
 	echo meta();
-	echo css('default', false);
+	echo css('default', true);
 	echo css('page', false);
 	// title 
 	echo title('vea.re | '.variable($meta_title, 'welcome').' | visionary design', 'veare');
