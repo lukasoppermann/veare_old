@@ -38,6 +38,7 @@
 /*------------------*/
 /* sidebar */
 #sidebar{
+	position: relative;
 	display: none;
 	text-align: left;
 	color: rgb(175,175,175);
