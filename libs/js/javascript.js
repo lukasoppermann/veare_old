@@ -117,6 +117,10 @@ $(function(){
 		}
 
 	};
+	//
+	win.load(function(){
+		_body.removeClass('loading');
+	});
 
 	// -----------------------
 	// add retina detection
@@ -125,12 +129,30 @@ $(function(){
 	// set images depending on ratio
 	$('.img-optimized').each(function(){
 		var _this = $(this);
-		_this.addClass('loading').imageLoad(function(){
-			_this.css({'width':'auto','height':'auto'})
-			var width = this.naturalWidth/pixelRatio;
-			var height = this.naturalHeight/pixelRatio;
-			_this.css({'width':width,'height':height}).addClass('loaded').removeClass('loading');
-		}).attr('src',_this.data('src-x'+pixelRatio));
+		var src = _this.data('src-x'+pixelRatio);
+		var altSrc = _this.data('src');
+		
+		_this.addClass('loading').imageLoad(function()
+		{
+			if( src != undefined )
+			{
+				_this.css({'width':'auto','height':'auto'});
+				var width = this.naturalWidth/pixelRatio;
+				var height = this.naturalHeight/pixelRatio;
+				_this.css({'width':width,'height':height});
+			}
+		});
+		
+		
+		if( src != undefined )
+		{
+			_this.attr('src',src).addClass('loaded').removeClass('loading');
+		}
+		else if( altSrc != undefined )
+		{
+			_this.attr('src',altSrc).addClass('loaded').removeClass('loading');
+		}
+		
 	});
 	// -----------------------
 	// query actions	

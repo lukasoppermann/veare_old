@@ -1,9 +1,18 @@
 /*------------------*/
 /* general */
+html, body{
+	height: 100%;
+}
 body{
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
 	font-weight: normal;
 	color: rgb(70,67,65);
+	opacity: 1.0;
+	transition: opacity .4s ease;
+	-webkit-transition: opacity .4s ease;
+}
+body.loading{
+	opacity: 0;
 }
 .wf-active body{ 
 	font-family: "Source Sans Pro"; 

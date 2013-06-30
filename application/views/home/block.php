@@ -28,7 +28,7 @@
 						<a class="third circle-link"><div class="circle medium-gray border-medium-gray"></div></a>
 					</div>
 					<div class="browser-body">
-						<img class="bottom" src="<?=base_url()?>media/oximity.png" alt="" />
+						<img class="bottom img-optimized" data-src="<?=base_url()?>media/oximity.png" alt="" />
 					</div>
 				</div>
 			</div>
@@ -153,7 +153,7 @@
 	</div>
 </section>
 
-<section class="light-red font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">>
+<!-- <section class="light-red font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">>
 	<div class="section-content centered fixed">
 		<h4 class="bold big-headline">I write about stuff …</h4>
 			<a href="#" class="column blog-link">
@@ -170,7 +170,7 @@
 			</a>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <section class="light-blue last-block map no-flicker">
 	<div class="vcard-wrapper">

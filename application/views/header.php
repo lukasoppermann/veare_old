@@ -4,7 +4,7 @@
 	<?
 	echo favicon('favicon');
 	echo meta();
-	echo css('default', true);
+	echo css('default', FALSE);
 	echo css('page', false);
 	// title 
 	echo title('vea.re | '.variable($meta_title, 'welcome').' | visionary design', 'veare');
@@ -16,18 +16,18 @@
 <?
 	if( mobile() == true && ipad() != true)
 	{ 
-		$class = ' class="mobile portrait loaded-mobile'.variable($body_class).'"';
+		$class = ' class="loading mobile portrait loaded-mobile'.variable($body_class).'"';
 	}
 	elseif( ipad() == true )
 	{
-		$class = ' class="tablet loaded-tablet'.variable($body_class).'"';
+		$class = ' class="loading tablet loaded-tablet'.variable($body_class).'"';
 	}
 	else
 	{
-		$class = ' class="hovers screen'.variable($body_class).'"';
+		$class = ' class="loading hovers screen'.variable($body_class).'"';
 	}
 ?>
-<body<?=$class?> data-page_class="<?=$body_class?>" id="<?=variable($body_id)?>">
+<body<?=$class?> data-page_class="<?=$body_class?>" id="html_body">
 	<div id="menu_icon"><div class="veare-sprite"></div></div>
 	<div id="body">
 		<div id="header">
