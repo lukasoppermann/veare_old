@@ -26,8 +26,6 @@ class Portfolio extends MY_Controller {
 			$items = array_merge($items, $data['noindex']); 
 		}
 		
-		echo'<pre>';print_r($items);echo'</pre>';
-		
 		if( $tag != null && $tag != '' && isset($tag) )
 		{
 			if( strpos($tag,':') !== false )

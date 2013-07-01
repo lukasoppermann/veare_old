@@ -49,7 +49,7 @@ $route['(\w{2})home/?(.*)?'] = 'home/index/$2';
 $route['portfolio'] = 'portfolio/index';
 $route['portfolio/?(.*)?/?(.*)?'] = 'portfolio/index/$1/$2';
 $route['(\w{2})/portfolio'] = 'portfolio/index';
-$route['(\w{2})portfolio/?(.*)?'] = 'portfolio/index/$2';
+$route['(\w{2})portfolio/?(.*)?/?(.*)?'] = 'portfolio/index/$2/$3';
 // Default
 $route['(\w{2})/(.*)'] = $route['default_controller']."/index/$2";
 $route['(.*)'] = $route['default_controller']."/index/$1";
