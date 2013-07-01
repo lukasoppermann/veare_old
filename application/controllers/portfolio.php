@@ -10,6 +10,7 @@ class Portfolio extends MY_Controller {
 	
 	function index( $tag = null, $permalink = null )
 	{
+		echo 'test';
 		$data = db_select( 'client_entries', array('type' => 2, 'status' => 1), array('order' => 'position ASC', 'json' => 'data') );
 		// sort items by position
 		$data = index_array($data, 'position');
