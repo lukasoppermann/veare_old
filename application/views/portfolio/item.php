@@ -67,7 +67,8 @@
 							// check if tag = role
 							if( !is_array($role) || !in_array($tag, $role) )
 							{
-								$output .= '<a class="link tag" href="'.$tag.'"><span class="tag-marker">#</span>'.$tag.'</a>';
+								// '.$tag.'
+								$output .= '<span class="link tag" href=""><span class="tag-marker">#</span>'.$tag.'</span>';
 							}
 						}
 						// output
