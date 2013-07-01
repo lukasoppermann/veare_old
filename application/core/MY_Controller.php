@@ -35,7 +35,7 @@ class MY_Controller extends CI_Controller {
 		$this->load->add_package_path(BASEPATH.'packages/fs_debug/');
 		$this->load->library('fs_debug');
 		//
-		$this->load->library('cache', array('adapter' => 'apc', 'backup' => 'file'));
+		$this->load->library('Cache', array('adapter' => 'apc', 'backup' => 'file'));
 		// $this->load->add_package_path(BASEPATH.'packages/fs_base_model/');
 		// $this->load->model('fs_base_model');
 		// $this->load->model('portfolio_model');
