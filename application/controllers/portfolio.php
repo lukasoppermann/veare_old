@@ -10,21 +10,28 @@ class Portfolio extends MY_Controller {
 	
 	function index( $tag = null, $permalink = null )
 	{
-		echo 'test';
-		$data = db_select( 'client_entries', array('type' => 2, 'status' => 1), array('order' => 'position ASC', 'json' => 'data') );
-		// sort items by position
-		$data = index_array($data, 'position');
-		foreach( $data as $key => $values )
+		// --------------------------------------------------------------------
+		// get items
+		if ( ! $items = $this->cache->get('portfolio_items'))
 		{
-			if( $key != 'noindex' )
+			$this->data['menu']['main'] = $main_menu;
+			$data = db_select( 'client_entries', array('type' => 2, 'status' => 1), array('order' => 'position ASC', 'json' => 'data') );
+			// sort items by position
+			$data = index_array($data, 'position');
+			foreach( $data as $key => $values )
 			{
-				$items[$key] = $values;
+				if( $key != 'noindex' )
+				{
+					$items[$key] = $values;
+				}
 			}
-		}
-		if( isset($data['noindex']) && is_array($data['noindex']) )
-		{
-			$items = array_merge($items, $data['noindex']); 
-		}
+			if( isset($data['noindex']) && is_array($data['noindex']) )
+			{
+				$items = array_merge($items, $data['noindex']); 
+			}
+			// Save into the cache for 24h
+			$this->cache->save('portfolio_items', $items, 86400);
+		}	
 		
 		if( $tag != null && $tag != '' && isset($tag) )
 		{
@@ -60,10 +67,6 @@ class Portfolio extends MY_Controller {
 		// // load assets
 		css_add('card');
 		js_add('jquery.freetile, jquery.hirestext, portfolio', 'default');
-		// // define variables
-		// $tag_menu = array();
-		// // get entries from database
-		// $cards = db_select( 'client_entries', array('type' => 3, 'status' => 1), array('limit' => 50, 'order' => 'date DESC', 'json' => 'data') );
 		// grab all image ids
 		foreach($cards as $id => $card)
 		{
@@ -73,10 +76,18 @@ class Portfolio extends MY_Controller {
 				$images[$card['card-image']] = $card['card-image'];
 			}
 		}
+		
 		if( isset($images) && count($images) > 0 )
 		{
-			// retrieve images from db
-			$images = db_select('files', array('status' => 1, 'id' => array($images)), array('json' => 'data', 'index' => 'id', 'index_single' => true) );
+			if ( ! $overview_images = $this->cache->get('overview_images'))
+			{
+				// retrieve images from db
+				$overview_images = db_select('files', array('status' => 1, 'id' => array($images)), array('json' => 'data', 'index' => 'id', 'index_single' => true) );
+				// Save into the cache for 24h
+				$this->cache->save('overview_images', $overview_images, 86400);
+			}
+			
+			$images = $overview_images;
 		}
 		$empty_card = array();
 		// loop through posts
@@ -132,7 +143,7 @@ class Portfolio extends MY_Controller {
 	// Item
 	function item( $permalink = null, $items, $tag )
 	{
-		// $this->output->cache(360);
+
 		$items = index_array($items, 'permalink');
 		$this->data = array_merge($items[$permalink], $this->data);
 		// grab all image ids

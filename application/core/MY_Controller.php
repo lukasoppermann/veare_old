@@ -27,6 +27,7 @@ class MY_Controller extends CI_Controller {
 		Header("Pragma: no-cache" ); // HTTP/1.0
 		// --------------------------------------------------------------------	
 		// load assets
+		// $this->load->driver('Cache');
 		// load optimize
 		$this->load->add_package_path(BASEPATH.'packages/fs_optimize/');
 		$this->load->driver('Fs_optimize');
@@ -34,6 +35,7 @@ class MY_Controller extends CI_Controller {
 		$this->load->add_package_path(BASEPATH.'packages/fs_debug/');
 		$this->load->library('fs_debug');
 		//
+		$this->load->library('cache', array('adapter' => 'apc', 'backup' => 'file'));
 		// $this->load->add_package_path(BASEPATH.'packages/fs_base_model/');
 		// $this->load->model('fs_base_model');
 		// $this->load->model('portfolio_model');
@@ -49,14 +51,9 @@ class MY_Controller extends CI_Controller {
 		// 	echo $g->title;
 		// }
 		//
-		// $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 		// --------------------------------------------------------------------	
 		// load assets
 		// development !!!!!!!!
-		if (ENVIRONMENT == 'production')
-		{
-		    $this->db->save_queries = FALSE;
-		}
 		//////////////
 		$this->init( variable($_POST['ajax']) );
 	}
@@ -93,16 +90,25 @@ class MY_Controller extends CI_Controller {
 			// check for mobile
 			// --------------------------------------------------------------------
 			// Initialize Menus
-			$this->data['menu']['main'] = $this->fs_navigation->tree(array(
-				'menu' 							=> 1, 
-				'id' 								=> 'nav',
-				'item_class' 				=> 'item activatable',
-				'link_class' 				=> 'ajax-link',
-				'item_data'					=> 'data-connect="navigation"',
-				'active_lang' 			=> FALSE,
-				'item_before' 			=> '<span class="veare-sprite"></span><span class="text">',
-				'item_after' 				=> '</span>'
-			));
+			if ( ! $main_menu = $this->cache->get('menu'))
+			{
+				$main_menu = $this->fs_navigation->tree(array(
+					'menu' 							=> 1, 
+					'id' 								=> 'nav',
+					'item_class' 				=> 'item activatable',
+					'link_class' 				=> 'ajax-link',
+					'item_data'					=> 'data-connect="navigation"',
+					'active_lang' 			=> FALSE,
+					'item_before' 			=> '<span class="veare-sprite"></span><span class="text">',
+					'item_after' 				=> '</span>'
+				));
+				
+				// Save into the cache for 24h
+				$this->cache->save('menu', $main_menu, 86400);
+			}
+			
+			$this->data['menu']['main'] = $main_menu;
+			
 		}
 	}
 	// --------------------------------------------------------------------
