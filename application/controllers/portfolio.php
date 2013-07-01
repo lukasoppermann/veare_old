@@ -20,7 +20,10 @@ class Portfolio extends MY_Controller {
 				$items[$key] = $values;
 			}
 		}
-		$items = array_merge($items, $data['noindex']); 
+		if( isset($data['noindex']) && is_array($data['noindex']) )
+		{
+			$items = array_merge($items, $data['noindex']); 
+		}
 		
 		if( $tag != null && $tag != '' && isset($tag) )
 		{
