@@ -52,7 +52,6 @@ class MY_Controller extends CI_Controller {
 		// $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 		// --------------------------------------------------------------------	
 		// load assets
-		echo'<pre>';print_r(base_url());echo'</pre>';
 		// development !!!!!!!!
 		if (ENVIRONMENT == 'production')
 		{
