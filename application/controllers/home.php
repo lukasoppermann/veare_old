@@ -22,7 +22,7 @@ class Home extends MY_Controller {
 		// //
 		// $this->data['meta_title'] = 'About the studio';
 		// // check for ajax
-		$this->data['body_class'] = 'header-absolute';
+		$this->data['body_class'] = 'loading header-absolute';
 		
 		$this->view('home/block', $this->data);
 	}
