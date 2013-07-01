@@ -53,7 +53,6 @@ class Portfolio extends MY_Controller {
 	// Overview
 	function overview( $cards, $tag = null)
 	{
-		$this->output->cache(360);
 		// // load assets
 		css_add('card');
 		js_add('jquery.freetile, jquery.hirestext, portfolio', 'default');
@@ -130,7 +129,6 @@ class Portfolio extends MY_Controller {
 	function item( $permalink = null, $items, $tag )
 	{
 		$this->output->cache(360);
-		
 		$items = index_array($items, 'permalink');
 		$this->data = array_merge($items[$permalink], $this->data);
 		// grab all image ids

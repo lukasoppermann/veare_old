@@ -49,9 +49,14 @@ class MY_Controller extends CI_Controller {
 		// 	echo $g->title;
 		// }
 		//
+		// $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 		// --------------------------------------------------------------------	
 		// load assets
 		// development !!!!!!!!
+		if (ENVIRONMENT == 'production')
+		{
+		    $this->db->save_queries = FALSE;
+		}
 		//////////////
 		$this->init( variable($_POST['ajax']) );
 	}

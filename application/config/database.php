@@ -60,9 +60,9 @@ $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
 $db['online']['hostname'] = 'localhost';
-$db['online']['username'] = 'lukas_user';
+$db['online']['username'] = 'veare_user';
 $db['online']['password'] = 'gator&2404&host';
-$db['online']['database'] = 'lukas_veare';
+$db['online']['database'] = 'veare_portfolio';
 $db['online']['dbdriver'] = 'mysql';
 $db['online']['dbprefix'] = '';
 $db['online']['pconnect'] = TRUE;
