@@ -131,7 +131,7 @@ class Portfolio extends MY_Controller {
 	// Item
 	function item( $permalink = null, $items, $tag )
 	{
-		$this->output->cache(360);
+		// $this->output->cache(360);
 		$items = index_array($items, 'permalink');
 		$this->data = array_merge($items[$permalink], $this->data);
 		// grab all image ids
