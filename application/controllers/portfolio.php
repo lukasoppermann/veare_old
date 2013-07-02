@@ -137,7 +137,7 @@ class Portfolio extends MY_Controller {
 		//
 		$this->data['content'] = implode('',$this->data['content']);
 		// load view
-		$this->view('portfolio/index', $this->data, 'portfolio');
+		view('portfolio/index', $this->data, 'portfolio');
 	}
 	// ------------------------
 	// Item
@@ -176,7 +176,7 @@ class Portfolio extends MY_Controller {
 		$this->data['body_class'] = ' white-logo';
 		$this->data['filter'] = $tag;
 		// load view
-		$this->view('portfolio/item', $this->data);
+		view('portfolio/item', $this->data);
 	}
 // close class
 }

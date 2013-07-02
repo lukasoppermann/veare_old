@@ -36,7 +36,7 @@
 |  $autoload['packages'] = array(APPPATH.'third_party', '/usr/local/shared');
 |
 */
-$autoload['packages'] = array(BASEPATH.'packages/fs_utilities/',BASEPATH.'packages/fs_url/',BASEPATH.'packages/fs_log/',BASEPATH.'packages/fs_jsmin/');
+$autoload['packages'] = array(BASEPATH.'packages/fs_utilities/',BASEPATH.'packages/fs_url/',BASEPATH.'packages/fs_jsmin/');
 
 
 /*
@@ -51,7 +51,7 @@ $autoload['packages'] = array(BASEPATH.'packages/fs_utilities/',BASEPATH.'packag
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database','fs_url');
+$autoload['libraries'] = array('fs_url');
 
 
 /*
