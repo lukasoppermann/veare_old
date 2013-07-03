@@ -35,7 +35,7 @@ class MY_Controller extends CI_Controller {
 		$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 		// load model
 		$this->load->add_package_path(BASEPATH.'packages/fs_base_model/');
-		$this->load->model('fs_base_model');
+		$this->load->model('Fs_base_model');
 		// --------------------------------------------------------------------
 		// load google
 		$this->load->add_package_path(BASEPATH.'packages/fs_google/');
