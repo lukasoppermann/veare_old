@@ -153,7 +153,7 @@ img.loaded{
 .button{
 	text-decoration: none;
 	display: block;
-	padding: 5px 7px;
+	padding: 7px 10px;
 	border-radius: 3px;
 	cursor: pointer;
 	border-width: 2px;
@@ -166,6 +166,9 @@ img.loaded{
 	background: transparent;
 	transition: background .3s ease, border-color .3s ease, color .3s ease;
 	-webkit-transition: background .3s ease, border-color .3s ease, color .3s ease;
+}
+.mobile .button{
+	padding: 10px 14px;
 }
 /*------------------*/
 /* body */

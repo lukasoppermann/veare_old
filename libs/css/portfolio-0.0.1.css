@@ -178,13 +178,16 @@
 	top: 50%;
 	margin-top: -175px;
 }
-.filtered .card.faded .side, .hovers .filtered .fade .card.faded .side{
+.filtered .card.faded .side, .hovers .filtered .card.faded .side{
 	background: rgb(215,220,220);
 }
 .filtered .card.faded .side .image{
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);
+}
+.mobile .filtered .card.faded{
+	display: none;
 }
 /*---------------------------------*/
 /* Card animation */
@@ -206,7 +209,7 @@
 	display: block;
 	float: left;
 }
-.hovers .fade .card:hover{
+.hovers .items:hover .card:hover{
 	color: inherit;
 	opacity: 1.0;
 	padding: 50px;
@@ -224,13 +227,13 @@
 	transition: width .3s ease .2s, height .3s ease .2s, margin .3s ease .2s;
 	-webkit-transition: width .3s ease .2s, height .3s ease .2s, margin .3s ease .2s;
 }
-.hovers .fade .card:hover .front img{
+.hovers .card:hover .front img{
 	width: 350px;
 	height: 350px;
 	transition: width .3s ease .2s, height .3s ease .2s, margin .3s ease .2s;
 	-webkit-transition: width .3s ease .2s, height .3s ease .2s, margin .3s ease .2s;
 }
-.hovers .fade .card{
+.hovers .items:hover .card{
 	opacity: 0.75;
 	transition: opacity .3s ease .3s, padding .3s ease .2s, margin .3s ease .2s, z-index .5s ease .2s;
 	-webkit-transition:  opacity .3s ease .3s, padding .3s ease .2s, margin .3s ease .2s, z-index .5s ease .2s;

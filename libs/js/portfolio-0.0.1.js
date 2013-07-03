@@ -34,16 +34,5 @@ $(function(){
 		_items.css({'width':ratio*itemWidth});
 	});
 
-	_items.on({	
-		mouseenter: function(){
-			$(this).addClass("hovered");
-			_items.addClass('fade');
-		},
-		mouseleave: function(){
-			$(this).removeClass("hovered");
-			_items.removeClass('fade');
-		}
-	});
-
 // close jquery
 });

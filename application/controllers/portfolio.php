@@ -10,6 +10,11 @@ class Portfolio extends MY_Controller {
 	
 	function index( $tag = null, $permalink = null )
 	{
+		
+		if( $tag == 'cleancache' )
+		{
+			$this->cache->clean();
+		}
 		// --------------------------------------------------------------------
 		// get items
 		if ( ! $items = $this->cache->get('portfolio_items'))
@@ -142,7 +147,17 @@ class Portfolio extends MY_Controller {
 		if( isset($this->data['images']) && count($this->data['images']) > 0 )
 		{
 			// retrieve images from db
-			$this->data['images'] = db_select('files', array('status' => 1, 'id' => array($this->data['images'])), array('json' => 'data', 'index' => 'id', 'index_single' => true) );
+			if ( ! $imgs[$permalink] = $this->cache->get('images_'.$permalink))
+			{
+				// load menu model
+				$this->load->model('Portfolio_model','', TRUE);
+				// retrieve images from db
+				$imgs[$permalink] = $this->Portfolio_model->images( $this->data['images'] );
+				// Save into the cache for 24h
+				$this->cache->save('images_'.$permalink, $imgs[$permalink], 86400);
+			}
+			
+			$this->data['images'] = $imgs[$permalink];
 		}
 		// prepare stage
 		if( isset($items[$permalink]['stage']) )
