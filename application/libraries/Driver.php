@@ -18,319 +18,219 @@
  *
  * @package		CodeIgniter
  * @author		EllisLab Dev Team
- * @copyright	Copyright (c) 2006 - 2013, EllisLab, Inc. (http://ellislab.com/)
+ * @copyright	Copyright (c) 2008 - 2013, EllisLab, Inc. (http://ellislab.com/)
  * @license		http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * @link		http://codeigniter.com
- * @since		Version 1.0
+ * @since		Version 2.0
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * CodeIgniter Driver Library Class
- *
- * This class enables you to create "Driver" libraries that add runtime ability
- * to extend the capabilities of a class via additional driver objects
+ * CodeIgniter Caching Class
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
- * @category	Libraries
+ * @category	Core
  * @author		EllisLab Dev Team
  * @link
  */
-class CI_Driver_Library {
+class CI_Cache extends CI_Driver_Library {
 
 	/**
-	 * Array of drivers that are available to use with the driver class
+	 * Valid cache drivers
 	 *
 	 * @var array
 	 */
-	protected $valid_drivers = array();
+	protected $valid_drivers = array(
+		'apc',
+		'dummy',
+		'file',
+		'memcached',
+		'redis',
+		'wincache'
+	);
 
 	/**
-	 * Name of the current class - usually the driver class
+	 * Path of cache files (if file-based cache)
 	 *
 	 * @var string
 	 */
-	protected $lib_name;
+	protected $_cache_path = NULL;
 
 	/**
-	 * Get magic method
+	 * Reference to the driver
 	 *
-	 * The first time a child is used it won't exist, so we instantiate it
-	 * subsequents calls will go straight to the proper child.
-	 *
-	 * @param	string	Child class name
-	 * @return	object	Child class
+	 * @var mixed
 	 */
-	public function __get($child)
-	{
-		// Try to load the driver
-		return $this->load_driver($child);
-	}
+	protected $_adapter = 'dummy';
 
 	/**
-	 * Load driver
+	 * Fallback driver
 	 *
-	 * Separate load_driver call to support explicit driver load by library or user
-	 *
-	 * @param	string	Driver name (w/o parent prefix)
-	 * @return	object	Child class
+	 * @var string
 	 */
-	public function load_driver($child)
+	protected $_backup_driver = 'dummy';
+
+	/**
+	 * Cache key prefix
+	 *
+	 * @var	string
+	 */
+	public $key_prefix = '';
+
+	/**
+	 * Constructor
+	 *
+	 * Initialize class properties based on the configuration array.
+	 *
+	 * @param	array	$config = array()
+	 * @return	void
+	 */
+	public function __construct($config = array())
 	{
-		// Get CodeIgniter instance and subclass prefix
-		$prefix = config_item('subclass_prefix');
+		$default_config = array(
+			'adapter',
+			'memcached'
+		);
 
-		if ( ! isset($this->lib_name))
+		foreach ($default_config as $key)
 		{
-			// Get library name without any prefix
-			$this->lib_name = str_replace(array('CI_', $prefix), '', get_class($this));
-		}
-
-		// The child will be prefixed with the parent lib
-		$child_name = $this->lib_name.'_'.$child;
-
-		// See if requested child is a valid driver
-		if ( ! in_array($child, $this->valid_drivers))
-		{
-			// The requested driver isn't valid!
-			$msg = 'Invalid driver requested: '.$child_name;
-			log_message('error', $msg);
-			show_error($msg);
-		}
-
-		// Get package paths and filename case variations to search
-		$CI = get_instance();
-		$paths = $CI->load->get_package_paths(TRUE);
-
-		// Is there an extension?
-		$class_name = $prefix.$child_name;
-		$found = class_exists($class_name, FALSE);
-		if ( ! $found)
-		{
-			// Check for subclass file
-			foreach ($paths as $path)
+			if (isset($config[$key]))
 			{
-				// Does the file exist?
-				$file = $path.'libraries/'.$this->lib_name.'/drivers/'.$prefix.$child_name.'.php';
-				if (file_exists($file))
-				{
-					// Yes - require base class from BASEPATH
-					$basepath = BASEPATH.'libraries/'.$this->lib_name.'/drivers/'.$child_name.'.php';
-					if ( ! file_exists($basepath))
-					{
-						$msg = 'Unable to load the requested class: CI_'.$child_name;
-						log_message('error', $msg);
-						show_error($msg);
-					}
+				$param = '_'.$key;
 
-					// Include both sources and mark found
-					include_once($basepath);
-					include_once($file);
-					$found = TRUE;
-					break;
-				}
+				$this->{$param} = $config[$key];
 			}
 		}
 
-		// Do we need to search for the class?
-		if ( ! $found)
+		isset($config['key_prefix']) && $this->key_prefix = $config['key_prefix'];
+
+		if (isset($config['backup']) && in_array('cache_'.$config['backup'], $this->valid_drivers))
 		{
-			// Use standard class name
-			$class_name = 'CI_'.$child_name;
-			if ( ! class_exists($class_name, FALSE))
-			{
-				// Check package paths
-				foreach ($paths as $path)
-				{
-					// Does the file exist?
-					$file = $path.'libraries/'.$this->lib_name.'/drivers/'.$child_name.'.php';
-					if (file_exists($file))
-					{
-						// Include source
-						include_once($file);
-						break;
-					}
-				}
-			}
+			$this->_backup_driver = $config['backup'];
 		}
 
-		// Did we finally find the class?
-		if ( ! class_exists($class_name, FALSE))
+		// If the specified adapter isn't available, check the backup.
+		if ( ! $this->is_supported($this->_adapter))
 		{
-			if (class_exists($child_name, FALSE))
+			if ( ! $this->is_supported($this->_backup_driver))
 			{
-				$class_name = $child_name;
+				// Backup isn't supported either. Default to 'Dummy' driver.
+				log_message('error', 'Cache adapter "'.$this->_adapter.'" and backup "'.$this->_backup_driver.'" are both unavailable. Cache is now using "Dummy" adapter.');
+				$this->_adapter = 'dummy';
 			}
 			else
 			{
-				$msg = 'Unable to load the requested driver: '.$class_name;
-				log_message('error', $msg);
-				show_error($msg);
+				// Backup is supported. Set it to primary.
+				$this->_adapter = $this->_backup_driver;
 			}
 		}
+	}
 
-		// Instantiate, decorate and add child
-		$obj = new $class_name();
-		$obj->decorate($this);
-		$this->$child = $obj;
-		return $this->$child;
+	// ------------------------------------------------------------------------
+
+	/**
+	 * Get
+	 *
+	 * Look for a value in the cache. If it exists, return the data
+	 * if not, return FALSE
+	 *
+	 * @param	string	$id
+	 * @return	mixed	value matching $id or FALSE on failure
+	 */
+	public function get($id)
+	{
+		return $this->{$this->_adapter}->get($this->key_prefix.$id);
+	}
+
+	// ------------------------------------------------------------------------
+
+	/**
+	 * Cache Save
+	 *
+	 * @param	string	$id		Cache ID
+	 * @param	mixed	$data		Data to store
+	 * @param	int	$ttl = 60	Cache TTL (in seconds)
+	 * @return	bool	TRUE on success, FALSE on failure
+	 */
+	public function save($id, $data, $ttl = 60)
+	{
+		return $this->{$this->_adapter}->save($this->key_prefix.$id, $data, $ttl);
+	}
+
+	// ------------------------------------------------------------------------
+
+	/**
+	 * Delete from Cache
+	 *
+	 * @param	string	$id	Cache ID
+	 * @return	bool	TRUE on success, FALSE on failure
+	 */
+	public function delete($id)
+	{
+		return $this->{$this->_adapter}->delete($this->key_prefix.$id);
+	}
+
+	// ------------------------------------------------------------------------
+
+	/**
+	 * Clean the cache
+	 *
+	 * @return	bool	TRUE on success, FALSE on failure
+	 */
+	public function clean()
+	{
+		return $this->{$this->_adapter}->clean();
+	}
+
+	// ------------------------------------------------------------------------
+
+	/**
+	 * Cache Info
+	 *
+	 * @param	string	$type = 'user'	user/filehits
+	 * @return	mixed	array containing cache info on success OR FALSE on failure
+	 */
+	public function cache_info($type = 'user')
+	{
+		return $this->{$this->_adapter}->cache_info($type);
+	}
+
+	// ------------------------------------------------------------------------
+
+	/**
+	 * Get Cache Metadata
+	 *
+	 * @param	string	$id	key to get cache metadata on
+	 * @return	mixed	cache item metadata
+	 */
+	public function get_metadata($id)
+	{
+		return $this->{$this->_adapter}->get_metadata($this->key_prefix.$id);
+	}
+
+	// ------------------------------------------------------------------------
+
+	/**
+	 * Is the requested driver supported in this environment?
+	 *
+	 * @param	string	$driver	The driver to test
+	 * @return	array
+	 */
+	public function is_supported($driver)
+	{
+		static $support = array();
+
+		if ( ! isset($support[$driver]))
+		{
+			$support[$driver] = $this->{$driver}->is_supported();
+		}
+
+		return $support[$driver];
 	}
 
 }
 
-// --------------------------------------------------------------------------
-
-/**
- * CodeIgniter Driver Class
- *
- * This class enables you to create drivers for a Library based on the Driver Library.
- * It handles the drivers' access to the parent library
- *
- * @package		CodeIgniter
- * @subpackage	Libraries
- * @category	Libraries
- * @author		EllisLab Dev Team
- * @link
- */
-class CI_Driver {
-
-	/**
-	 * Instance of the parent class
-	 *
-	 * @var object
-	 */
-	protected $_parent;
-
-	/**
-	 * List of methods in the parent class
-	 *
-	 * @var array
-	 */
-	protected $_methods = array();
-
-	/**
-	 * List of properties in the parent class
-	 *
-	 * @var array
-	 */
-	protected $_properties = array();
-
-	/**
-	 * Array of methods and properties for the parent class(es)
-	 *
-	 * @static
-	 * @var	array
-	 */
-	protected static $_reflections = array();
-
-	/**
-	 * Decorate
-	 *
-	 * Decorates the child with the parent driver lib's methods and properties
-	 *
-	 * @param	object
-	 * @return	void
-	 */
-	public function decorate($parent)
-	{
-		$this->_parent = $parent;
-
-		// Lock down attributes to what is defined in the class
-		// and speed up references in magic methods
-
-		$class_name = get_class($parent);
-
-		if ( ! isset(self::$_reflections[$class_name]))
-		{
-			$r = new ReflectionObject($parent);
-
-			foreach ($r->getMethods() as $method)
-			{
-				if ($method->isPublic())
-				{
-					$this->_methods[] = $method->getName();
-				}
-			}
-
-			foreach ($r->getProperties() as $prop)
-			{
-				if ($prop->isPublic())
-				{
-					$this->_properties[] = $prop->getName();
-				}
-			}
-
-			self::$_reflections[$class_name] = array($this->_methods, $this->_properties);
-		}
-		else
-		{
-			list($this->_methods, $this->_properties) = self::$_reflections[$class_name];
-		}
-	}
-
-	// --------------------------------------------------------------------
-
-	/**
-	 * __call magic method
-	 *
-	 * Handles access to the parent driver library's methods
-	 *
-	 * @param	string
-	 * @param	array
-	 * @return	mixed
-	 */
-	public function __call($method, $args = array())
-	{
-		if (in_array($method, $this->_methods))
-		{
-			return call_user_func_array(array($this->_parent, $method), $args);
-		}
-
-		$trace = debug_backtrace();
-		_exception_handler(E_ERROR, "No such method '{$method}'", $trace[1]['file'], $trace[1]['line']);
-		exit(EXIT_UNKNOWN_METHOD);
-	}
-
-	// --------------------------------------------------------------------
-
-	/**
-	 * __get magic method
-	 *
-	 * Handles reading of the parent driver library's properties
-	 *
-	 * @param	string
-	 * @return	mixed
-	 */
-	public function __get($var)
-	{
-		if (in_array($var, $this->_properties))
-		{
-			return $this->_parent->$var;
-		}
-	}
-
-	// --------------------------------------------------------------------
-
-	/**
-	 * __set magic method
-	 *
-	 * Handles writing to the parent driver library's properties
-	 *
-	 * @param	string
-	 * @param	array
-	 * @return	mixed
-	 */
-	public function __set($var, $val)
-	{
-		if (in_array($var, $this->_properties))
-		{
-			$this->_parent->$var = $val;
-		}
-	}
-
-}
-
-/* End of file Driver.php */
-/* Location: ./system/libraries/Driver.php */
+/* End of file Cache.php */
+/* Location: ./system/libraries/Cache/Cache.php */
