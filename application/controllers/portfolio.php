@@ -14,20 +14,10 @@ class Portfolio extends MY_Controller {
 		// get items
 		if ( ! $items = $this->cache->get('portfolio_items'))
 		{
-			$data = db_select( 'client_entries', array('type' => 2, 'status' => 1), array('order' => 'position ASC', 'json' => 'data') );
-			// sort items by position
-			$data = index_array($data, 'position');
-			foreach( $data as $key => $values )
-			{
-				if( $key != 'noindex' )
-				{
-					$items[$key] = $values;
-				}
-			}
-			if( isset($data['noindex']) && is_array($data['noindex']) )
-			{
-				$items = array_merge($items, $data['noindex']); 
-			}
+			// load menu model
+			$this->load->model('Portfolio_model','', TRUE);
+			
+			$items = $this->Portfolio_model->items();
 			// Save into the cache for 24h
 			$this->cache->save('portfolio_items', $items, 86400);
 		}	
@@ -80,14 +70,17 @@ class Portfolio extends MY_Controller {
 		{
 			if ( ! $overview_images = $this->cache->get('overview_images'))
 			{
+				// load menu model
+				$this->load->model('Portfolio_model','', TRUE);
 				// retrieve images from db
-				$overview_images = db_select('files', array('status' => 1, 'id' => array($images)), array('json' => 'data', 'index' => 'id', 'index_single' => true) );
+				$overview_images = $this->Portfolio_model->images( $images );
 				// Save into the cache for 24h
 				$this->cache->save('overview_images', $overview_images, 86400);
 			}
 			
 			$images = $overview_images;
 		}
+
 		$empty_card = array();
 		// loop through posts
 		foreach($cards as $card)

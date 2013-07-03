@@ -4,7 +4,7 @@ class Menu_model extends fs_base_model {
 
 	var $primary_table = 'client_menu';
 	
-	var $load_database = TRUE;
+	var $load_database = FALSE;
 
 	function __construct()
 	{

@@ -25,14 +25,14 @@ class MY_Controller extends CI_Controller {
 		Header("Cache-Control: no-store, no-cache, must-revalidate"); // HTTP/1.1 
 		Header("Cache-Control: post-check=0, pre-check=0", FALSE); 
 		Header("Pragma: no-cache" ); // HTTP/1.0
-		$this->output->enable_profiler(TRUE);
+		// $this->output->enable_profiler(TRUE);
 		// --------------------------------------------------------------------	
 		// load optimize
 		$this->load->add_package_path(BASEPATH.'packages/fs_jsmin/');
 		$this->load->add_package_path(BASEPATH.'packages/fs_optimize/');
 		$this->load->driver('Fs_optimize');
 		//
-		$this->load->driver('cache', array('adapter' => 'file', 'backup' => 'file'));
+		$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 		// load model
 		$this->load->add_package_path(BASEPATH.'packages/fs_base_model/');
 		$this->load->model('fs_base_model');
@@ -53,7 +53,7 @@ class MY_Controller extends CI_Controller {
 		if ( ! $main_menu = $this->cache->get('menu') )
 		{
 			// load menu model
-			$this->load->model('Menu_model');
+			$this->load->model('Menu_model','', TRUE);
 			
 			// build menu
 			$main_menu = $this->Menu_model->main_menu();
