@@ -20,7 +20,7 @@ class Portfolio_model extends Fs_base_model {
 		$data = index_array($data, 'position');
 		foreach( $data as $key => $values )
 		{
-			if( $key != 'noindex' )
+			if( $key != 'noindex' && $key != '0' )
 			{
 				$items[$key] = $values;
 			}
