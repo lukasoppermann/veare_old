@@ -1,3 +1,3 @@
 <?=nl2br($this->load->view('header')); ?>
-<?=$page; ?>
+<?=$_output; ?>
 <?=nl2br($this->load->view('footer')); ?>

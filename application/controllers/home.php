@@ -10,14 +10,13 @@ class Home extends MY_Controller {
 	
 	function index( )
 	{
-		if( mobile() != true || ipad() == true )
-		{
-			js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true','gmaps'), 'default');
-		}	
+		// if( mobile() != true || ipad() == true )
+		// {
+		// 	js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true','gmaps'), 'default');
+		// }	
 		// check for ajax
 		$this->data['body_class'] = 'loading header-absolute';
-		
-		view('home/block', $this->data);
+		$this->view('home/block', $this->data);
 	}
 	
 // close class

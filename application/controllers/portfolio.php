@@ -14,7 +14,6 @@ class Portfolio extends MY_Controller {
 		// get items
 		if ( ! $items = $this->cache->get('portfolio_items'))
 		{
-			$this->data['menu']['main'] = $main_menu;
 			$data = db_select( 'client_entries', array('type' => 2, 'status' => 1), array('order' => 'position ASC', 'json' => 'data') );
 			// sort items by position
 			$data = index_array($data, 'position');
@@ -137,7 +136,7 @@ class Portfolio extends MY_Controller {
 		//
 		$this->data['content'] = implode('',$this->data['content']);
 		// load view
-		view('portfolio/index', $this->data, 'portfolio');
+		$this->view('portfolio/index', $this->data);
 	}
 	// ------------------------
 	// Item
@@ -176,7 +175,7 @@ class Portfolio extends MY_Controller {
 		$this->data['body_class'] = ' white-logo';
 		$this->data['filter'] = $tag;
 		// load view
-		view('portfolio/item', $this->data);
+		$this->view('portfolio/item', $this->data);
 	}
 // close class
 }

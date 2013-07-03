@@ -81,7 +81,6 @@ class MY_Loader extends CI_Loader {
 			{
 				continue;
 			}
-			
 			// Try to load the helper
 			foreach( $this->_ci_helper_paths as $path )
 			{
@@ -94,14 +93,15 @@ class MY_Loader extends CI_Loader {
 			if( isset($base_helper) )
 			{
 				$ext_helper = APPPATH.'helpers/'.config_item('subclass_prefix').$helper.'.php';
+	
 				// Is this a helper extension request?
 				if (file_exists($ext_helper))
 				{
 					include_once($ext_helper);
 					include_once($base_helper);
-
+	
 					unset($base_helper);
-
+	
 					$this->_ci_helpers[$helper] = TRUE;
 					log_message('debug', 'Helper loaded: '.$helper);
 					continue;

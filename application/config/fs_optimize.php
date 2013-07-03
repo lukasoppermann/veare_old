@@ -6,21 +6,21 @@
 |
 | HTML Compression
 */
-$config['html'] = array(
+$config['compression']['html'] = array(
 	'compression' => TRUE,
 	'gzip' => TRUE,
 	'expire' => 3600
 );
 
 // CSS Compression
-$config['css'] = array(
+$config['compression']['css'] = array(
 	'compression' => TRUE,
 	'gzip' => TRUE,
 	'expire' => 3600
 );
 
 // JS Compression
-$config['js'] = array(
+$config['compression']['js'] = array(
 	'compression' => TRUE,
 	'gzip' => TRUE,
 	'expire' => 3600,

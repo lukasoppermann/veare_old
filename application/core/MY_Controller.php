@@ -32,7 +32,7 @@ class MY_Controller extends CI_Controller {
 		$this->load->add_package_path(BASEPATH.'packages/fs_optimize/');
 		$this->load->driver('Fs_optimize');
 		//
-		$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+		$this->load->driver('cache', array('adapter' => 'file', 'backup' => 'file'));
 		// load model
 		$this->load->add_package_path(BASEPATH.'packages/fs_base_model/');
 		$this->load->model('fs_base_model');
@@ -41,29 +41,38 @@ class MY_Controller extends CI_Controller {
 		$this->load->add_package_path(BASEPATH.'packages/fs_google/');
 		$this->load->library('fs_google');
 		// load helpers
-		$this->load->helpers(array('fs_metadata'));
+		$this->load->helper(array('fs_metadata'));
 		// --------------------------------------------------------------------
 		// load assets
 		css_add(array('reset','base','colors','layout','animations','browser','icons','responsiveness','menu'));
 		css_add(array('portfolio'));
 		js_add('jsfirst, jquery, fs.centered');
 		js_add('fs.media_queries, fs.resize, fs.load, fs.history, jquery.fittext.js, base, javascript', 'default'); 
-
 		// --------------------------------------------------------------------
 		// init menu
 		if ( ! $main_menu = $this->cache->get('menu') )
 		{
 			// load menu model
-			$this->load->model('menu_model');
+			$this->load->model('Menu_model');
 			
 			// build menu
-			$main_menu = $this->menu_model->main_menu();
+			$main_menu = $this->Menu_model->main_menu();
 			
 			// Save into the cache for 24h
 			$this->cache->save('menu', $main_menu, 86400);
 		}
 		
 		$this->data['menu']['main'] = $main_menu;
+	}
+	
+	// small function to loads view into template
+	function view( $template, $data = null )
+	{
+		// get page
+		$data['_output'] = $this->load->view($template, $data, TRUE);
+		
+		// load into template
+		$this->load->view('template', $data);
 	}
 // close class
 }
