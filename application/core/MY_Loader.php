@@ -151,8 +151,8 @@ class MY_Loader extends CI_Loader {
 				require APPPATH.'libraries/Driver.php';
 			}
 			
-			// // Driver library extending implementation.
-			// // If there is a Driver library extending, we call this file.
+			// Driver library extending implementation.
+			// If there is a Driver library extending, we call this file.
 			// if (file_exists(APPPATH.'libraries/' . $prefix . 'Driver.php'))
 			// {
 			// 	require APPPATH.'libraries/' . $prefix . 'Driver.php';
