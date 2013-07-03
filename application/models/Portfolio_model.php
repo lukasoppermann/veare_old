@@ -1,5 +1,5 @@
 <?php
-class Portfolio_model extends fs_base_model {
+class Portfolio_model extends Fs_base_model {
 
 	var $primary_table = 'users';
 

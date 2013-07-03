@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Menu_model extends fs_base_model {
+class Menu_model extends Fs_base_model {
 
 	var $primary_table = 'client_menu';
 	
