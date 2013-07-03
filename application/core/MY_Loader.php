@@ -138,7 +138,7 @@ class MY_Loader extends CI_Loader {
 		// get prefix
 		$prefix = config_item('subclass_prefix');
 		// load driver lib and extension
-		if ( ! class_exists('CI_Driver_Library') || !class_exists($prefix.'Driver_Library'))
+		if ( ! class_exists('CI_Driver_Library') )
 		{
 			// if not replacement Drivers lib exists load default
 			if ( ! file_exists(APPPATH.'libraries/Driver.php'))
@@ -151,12 +151,12 @@ class MY_Loader extends CI_Loader {
 				require APPPATH.'libraries/Driver.php';
 			}
 			
-			// Driver library extending implementation.
-			// If there is a Driver library extending, we call this file.
-			if (file_exists(APPPATH.'libraries/' . $prefix . 'Driver.php'))
-			{
-				require APPPATH.'libraries/' . $prefix . 'Driver.php';
-			}
+			// // Driver library extending implementation.
+			// // If there is a Driver library extending, we call this file.
+			// if (file_exists(APPPATH.'libraries/' . $prefix . 'Driver.php'))
+			// {
+			// 	require APPPATH.'libraries/' . $prefix . 'Driver.php';
+			// }
 		}
 		// if library is not given
 		if ($library == '')

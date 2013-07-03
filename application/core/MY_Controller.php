@@ -15,8 +15,6 @@ class MY_Controller extends CI_Controller {
 	function __construct() 
  	{
 		parent::__construct();
-		// get config from db
-		// $this->config->set_config_from_db();
 		// set charset
 		Header("Content-type: text/html;charset=UTF-8");
 		// set header for browser to not cache stuff
@@ -25,13 +23,14 @@ class MY_Controller extends CI_Controller {
 		Header("Cache-Control: no-store, no-cache, must-revalidate"); // HTTP/1.1 
 		Header("Cache-Control: post-check=0, pre-check=0", FALSE); 
 		Header("Pragma: no-cache" ); // HTTP/1.0
-		$this->output->enable_profiler(TRUE);
+		// $this->output->enable_profiler(TRUE);
 		// --------------------------------------------------------------------	
 		// load optimize
+		$this->load->add_package_path(BASEPATH.'packages/fs_jsmin/');
 		$this->load->add_package_path(BASEPATH.'packages/fs_optimize/');
 		$this->load->driver('Fs_optimize');
 		//
-		$this->load->library('cache', array('adapter' => 'apc', 'backup' => 'file'));
+		$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 		// load model
 		$this->load->add_package_path(BASEPATH.'packages/fs_base_model/');
 		$this->load->model('fs_base_model');
@@ -47,20 +46,18 @@ class MY_Controller extends CI_Controller {
 		css_add(array('portfolio'));
 		js_add('jsfirst, jquery, fs.centered');
 		js_add('fs.media_queries, fs.resize, fs.load, fs.history, jquery.fittext.js, base, javascript', 'default'); 
-
 		// --------------------------------------------------------------------
 		// init menu
-		if ( ! $main_menu = $this->cache->get('menu') )
-		{
+		// if ( ! $main_menu = $this->cache->get('menu') )
+		// {
 			// load menu model
 			$this->load->model('menu_model');
-			
 			// build menu
 			$main_menu = $this->menu_model->main_menu();
 			
 			// Save into the cache for 24h
 			$this->cache->save('menu', $main_menu, 86400);
-		}
+		// }
 		
 		$this->data['menu']['main'] = $main_menu;
 	}

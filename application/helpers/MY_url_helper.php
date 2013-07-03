@@ -26,7 +26,7 @@ function base_url( $slash = TRUE )
 	}
 	else
 	{
-		return $CI->config->unslash_item('base_url');		
+		return rtrim($CI->config->item('base_url'), '/');
 	}
 }
 // ------------------------------------------------------------------------
@@ -93,11 +93,11 @@ function page_url($slash = TRUE)
 	
 	if($slash == TRUE)
 	{
-		return $CI->config->slash_item('base_url').variable($CI->config->unslash_item('url_parts')).$CI->fs_navigation->current('path').'/';
+		return $CI->config->slash_item('base_url').variable(rtrim($CI->config->item('url_parts'),'/')).$CI->fs_navigation->current('path').'/';
 	}
 	else
 	{
-		return $CI->config->slash_item('base_url').variable($CI->config->unslash_item('url_parts')).$CI->fs_navigation->current('path');
+		return $CI->config->slash_item('base_url').variable(rtrim($CI->config->item('url_parts'),'/')).$CI->fs_navigation->current('path');
 	}
 }
 // ------------------------------------------------------------------------
