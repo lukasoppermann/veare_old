@@ -176,6 +176,7 @@ img.loaded{
 	float: left;
 	width: 100%;
 	height: auto;
+	overflow-x: hidden;
 	position: relative;
 	z-index: 2;
 	background: rgb(255,255,255);

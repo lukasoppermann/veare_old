@@ -1,15 +1,16 @@
+var win, resolution, _body, _html;
 // jquery ready
 $(function(){
 	// -----------------------
 	// define variables
-	var win = $(window),
-			screen = {},
-			_body = $('body'),
-			_html = $('html'),
-			_logo = $('#logo'),
+		win = $(window);
+		_body = $('body');
+		_html = $('html');
+		resolution = 'mobile';
+		var	_logo = $('#logo'),
 			_menu_icon = $('#menu_icon'),
-			resolution = 'mobile',
-			i = 1;	
+			i = 1,
+			screen = {};
 	// -----------------------
 	// define functions
 	// img padding

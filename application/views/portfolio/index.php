@@ -2,8 +2,6 @@
 
 	<?=$tag_menu?>
 	
-	<div class="items font-white">
-		<?=$content?>
-	</div>
+	<div class="items font-white"><?=$content?></div>
 
 </div>

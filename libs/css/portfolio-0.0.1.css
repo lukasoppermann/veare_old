@@ -102,14 +102,17 @@
 .portfolio .items{
 	width: 100%;
 	max-width: 1200px;
-	text-align: center;
+	text-align: left;
 	display: inline-block;
 	position: relative;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
+.mobile .portfolio .items{ width: 270px; }
+.tablet-small .portfolio .items{ width: 540px; }
+.tablet .portfolio .items{ width: 780px; }
+.screen .portfolio .items, .wide-screen .portfolio .items{ width: 1080px; }
 .height-tall{
 	min-height: 400px;
 }
@@ -121,6 +124,21 @@
 }
 /*---------------*/
 /* card styling */
+.card {
+  display: inline-block;
+/*  width: 100px;
+  min-height: 100px; */
+  vertical-align: top; /*helps with variable length content*/
+/*	float: left;*/
+/*	display: block;*/
+	position: relative;
+	overflow: visible;
+	margin: 10px;
+	padding: 0px;
+	width: 250px;
+	text-decoration: none;
+}
+.tablet .card { margin: 10px 5px; }
 .card .back .headline{
 	text-align: left;
 	box-sizing: border-box;
@@ -192,11 +210,6 @@
 /*---------------------------------*/
 /* Card animation */
 .card{
-	margin: 10px;
-	padding: 0px;
-	width: 250px;
-	overflow: hidden;
-	text-decoration: none;
 	z-index: 5;
 	transition: opacity .3s ease .3s, padding .3s ease .2s, margin .3s ease .2s, z-index .5s ease .2s;
 	-webkit-transition:  opacity .3s ease .3s, padding .3s ease .2s, margin .3s ease .2s, z-index .5s ease .2s;
@@ -212,12 +225,24 @@
 .hovers .items:hover .card:hover{
 	color: inherit;
 	opacity: 1.0;
-	padding: 50px;
+/*	padding: 50px;
 	margin-top: -75px;
-	margin-left: -75px;
+	margin-left: -75px;*/
 	transition: opacity .3s ease .3s, padding .3s ease .2s, margin .3s ease .2s, z-index .5s ease .2s;
 	-webkit-transition:  opacity .3s ease .3s, padding .3s ease .2s, margin .3s ease .2s, z-index .5s ease .2s;
 	z-index: 99;
+}
+.hovers .items:hover .card:hover .side .content{
+	margin-top: -50px;
+	margin-left: -50px;
+	transition: margin .3s ease .2s;
+	-webkit-transition: margin .3s ease .2s;
+}
+.hovers .card .side .content{
+	margin-top: 0px;
+	margin-left: 0px;
+	transition: margin .3s ease .2s;
+	-webkit-transition: margin .3s ease .2s;
 }
 .hovers .card .front img{
 	margin: 0px;
@@ -250,27 +275,25 @@
 	-webkit-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
-.card {
-	text-decoration: none;
-	text-align: center;
-	float: left;
-	position: relative;
-	display: block;
-	z-index: 30;
-	overflow: visible;
-}
 .animate-flip .side{
 	/* transition */
-	-webkit-transition: -webkit-transform .3s ease .2s;
-	transition: transform .3s ease .2s;
+	-webkit-transition: -webkit-transform .3s ease .2s, padding .3s ease .2s, margin .3s ease .2s;
+	transition: transform .3s ease .2s, padding .3s ease .2s, margin .3s ease .2s;
 	/* backface hidden */
 	-webkit-backface-visibility: hidden;	
 	backface-visibility: hidden;
 	opacity: 0.99;
+	padding: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
 }
+
 .hovers .animate-flip:hover .side{
-	-webkit-transition: -webkit-transform .5s ease .3s;
-	transition: transform .5s ease .3s;
+	padding: 50px;
+	margin-top: -50px;
+	margin-left: -50px;
+	transition: padding .3s ease .2s, margin .3s ease .2s, transform .5s ease .3s;
+	-webkit-transition: padding .3s ease .2s, margin .3s ease .2s, -webkit-transform .5s ease .3s;
 }
 .animate-flip .back {
 	-webkit-transform: perspective(600px) rotateY( -180deg );
