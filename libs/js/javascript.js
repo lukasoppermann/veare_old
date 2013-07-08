@@ -160,6 +160,8 @@ $(function(){
 	var query_actions = function( res )
 	{
 		resolution = res;
+		
+		_body.trigger('resolutionChange', res);
 	};
 	// -----------------------
 	// media queries	
@@ -167,69 +169,51 @@ $(function(){
 		{
 			context: 'mobile-portrait',
 			match: function() {
-				query_actions('mobile');
 				_body.addClass('mobile portrait').removeClass('hovers tablet-small tablet-medium landscape tablet screen wide-screen');
+				query_actions('mobile');
 			}
 		},
 		{
 			context: 'mobile-landscape',
 			match: function() {
-				query_actions('mobile');
 				_body.addClass('mobile landscape').removeClass('hovers tablet-small tablet-medium portrait tablet screen wide-screen');
+				query_actions('mobile');
 			}
 		},
 		{
 			context: 'tablet-small',
 			match: function() {
-				query_actions('tablet-small');
 				_body.addClass('tablet-small').removeClass('hovers tablet tablet-medium mobile screen wide-screen');
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
 				}
-			}
-		},
-		{
-			context: 'tablet-medium',
-			match: function() {
-				query_actions('tablet-medium');
-				_body.addClass('tablet-medium').removeClass('hovers tablet-small tablet mobile screen wide-screen');
-				if( !_body.hasClass('loaded-tablet') )
-				{
-					_body.addClass('hovers');
-				}
+				query_actions('tablet-small');
 			}
 		},
 		{
 			context: 'tablet',
 			match: function() {
-				query_actions('tablet');
 				_body.addClass('tablet').removeClass('hovers tablet-small tablet-medium mobile screen wide-screen');
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
 				}
-			}
-		},
-		{
-			context: 'min-screen',
-			match: function() {
-				query_actions('min-screen');
-				_body.addClass('hovers min-screen').removeClass('tablet-small tablet-medium mobile tablet wide-screen');
+				query_actions('tablet');
 			}
 		},
 		{
 			context: 'screen',
 			match: function() {
-				query_actions('screen');
 				_body.addClass('hovers screen').removeClass('tablet-small tablet-medium mobile tablet wide-screen min-screen');
+				query_actions('screen');
 			}
 		},
 		{
 			context: 'wide-screen',
 			match: function() {
-				query_actions('wide-screen');
 				_body.addClass('hovers screen wide-screen').removeClass('tablet-small tablet-medium mobile tablet min-screen');
+				query_actions('wide-screen');
 			}
  		}
 	];
@@ -241,84 +225,7 @@ $(function(){
 	minPadding();
 	
 	_body.delay(100).addClass('loaded');
-	// resize_sections(function(){
-	// 	_body.delay(100).addClass('loaded');
-	// });
-	// _body.delay(100).addClass('loaded');
-	// -----------------------
-	
-	// $.fs_resize(function()
-	// {
-	// 	// resize sections
-	// 	// resize_sections();
-	// 	
-	// 	$('.adjust').each(function()
-	// 	{
-	// 		var _this 						= $(this),
-	// 				_section_content	= _this.find('.section-content'),
-	// 				_children 				= _section_content.children(),
-	// 				max_width 				= 0;
-	// 		//
-	// 		_section_content.width('');
-	// 		//
-	// 		_children.each(function()
-	// 		{
-	// 			var _this = $(this);
-	// 			if( _this.hasClass('fixed-width') )
-	// 			{
-	// 				var width = _this.width();
-	// 			}
-	// 			else
-	// 			{
-	// 				var width = _this.css({'display':'inline','width':'auto'}).width();
-	// 				// _this.css({'display':'block','width':''});
-	// 			}
-	// 			
-	// 			if( width > max_width )
-	// 			{
-	// 				max_width	= width;
-	// 			}
-	// 		});
-	// 		_section_content.width(max_width);
-	// 		//
-	// 		_this.height(_section_content.outerHeight());
-	// 	});
-	// 	
-	// }, 100);
-	// 
-	// 
-	// $('.adjust').each(function()
-	// {
-	// 	var _this 						= $(this),
-	// 			_section_content	= _this.find('.section-content'),
-	// 			_children 				= _section_content.children(),
-	// 			max_width 				= 0;
-	// 	//
-	// 	_children.each(function()
-	// 	{
-	// 		var _this = $(this);
-	// 		if( _this.hasClass('fixed-width') )
-	// 		{
-	// 			var width = _this.width();
-	// 		}
-	// 		else
-	// 		{
-	// 			var width = _this.css('display','inline').width();
-	// 			_this.css('display','block');
-	// 		}
-	// 
-	// 		if( width > max_width )
-	// 		{
-	// 			max_width	= width;
-	// 		}
-	// 	});
-	// 	_section_content.find('.full').width('100%');
-	// 	_section_content.width(max_width);
-	// 	//
-	// 	_this.height(_section_content.outerHeight());
-	// });
-	
-	
+
 	
 	$(document).on('click', '#menu_icon', function(e)
 	{

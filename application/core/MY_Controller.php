@@ -46,8 +46,8 @@ class MY_Controller extends CI_Controller {
 		// load assets
 		css_add(array('reset','base','colors','layout','animations','browser','icons','responsiveness','menu'));
 		css_add(array('portfolio'));
-		js_add('jsfirst, jquery, fs.centered');
-		js_add('fs.media_queries, fs.resize, fs.load, fs.history, jquery.fittext.js, base, javascript', 'default'); 
+		js_add('jquery, fs.centered, fs.tiles');
+		js_add('fs.media_queries, fs.resize, base, javascript', 'default'); 
 		// --------------------------------------------------------------------
 		// init menu
 		if ( ! $main_menu = $this->cache->get('menu') )

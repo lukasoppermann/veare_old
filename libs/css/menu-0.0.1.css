@@ -185,22 +185,22 @@
 	top: 20px;
 	left: 20px;
 	border-radius: 60px;
-	transition: all .3s ease .1s;   
-	-webkit-transition: all .3s ease .1s;
-	-moz-transition: all .3s ease .1s;
-	-o-transition: all .3s ease .1s;
-	-ms-transition: all .3s ease .1s;
+	transition: all .2s ease .1s;   
+	-webkit-transition: all .2s ease .1s;
+	-moz-transition: all .2s ease .1s;
+	-o-transition: all .2s ease .1s;
+	-ms-transition: all .2s ease .1s;
 }
 .hovers #follow_nav .item:hover .circle{ 
 	height: 40px; 
 	width: 40px; 
 	top: 0px;
 	left: 0px;
-	transition: all .3s ease .2s;   
-	-webkit-transition: all .3s ease .2s;
-	-moz-transition: all .3s ease .2s;
-	-o-transition: all .3s ease .2s;
-	-ms-transition: all .3s ease .2s;
+	transition: all .3s ease .1s;   
+	-webkit-transition: all .3s ease .1s;
+	-moz-transition: all .3s ease .1s;
+	-o-transition: all .3s ease .1s;
+	-ms-transition: all .3s ease .1s;
 }
 /*------------------*/
 /* icons */

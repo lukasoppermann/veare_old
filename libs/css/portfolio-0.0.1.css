@@ -111,7 +111,7 @@
 }
 .mobile .portfolio .items{ width: 270px; }
 .tablet-small .portfolio .items{ width: 540px; }
-.tablet .portfolio .items{ width: 780px; }
+.tablet .portfolio .items{ width: 810px; }
 .screen .portfolio .items, .wide-screen .portfolio .items{ width: 1080px; }
 .height-tall{
 	min-height: 400px;
@@ -125,20 +125,16 @@
 /*---------------*/
 /* card styling */
 .card {
-  display: inline-block;
-/*  width: 100px;
-  min-height: 100px; */
-  vertical-align: top; /*helps with variable length content*/
-/*	float: left;*/
-/*	display: block;*/
+	display: inline-block;
+	vertical-align: top; /*helps with variable length content*/
 	position: relative;
 	overflow: visible;
-	margin: 10px;
 	padding: 0px;
 	width: 250px;
 	text-decoration: none;
+	margin: 10px; 
 }
-.tablet .card { margin: 10px 5px; }
+.tablet .card{ margin: 5px; }
 .card .back .headline{
 	text-align: left;
 	box-sizing: border-box;
@@ -182,20 +178,27 @@
 .card .front{ overflow: hidden; }
 .card .front .image{ 
 	position: absolute;
-	left: 0;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+.card.img-top .front .image{ 
+	bottom: auto;
+	top: 0;
 }
 .card.img-bottom .front .image{ 
 	bottom: 0;
-	left: 0;
+	top: auto;
 }
-.card.img-middle .front .image{ 
+/*.card.img-middle .front .image{ 
 	top: 50%;
 	margin-top: -125px;
 }
 .hovers .card.img-middle:hover .front .image{ 
 	top: 50%;
 	margin-top: -175px;
-}
+}*/
 .filtered .card.faded .side, .hovers .filtered .card.faded .side{
 	background: rgb(215,220,220);
 }
@@ -211,8 +214,8 @@
 /* Card animation */
 .card{
 	z-index: 5;
-	transition: opacity .3s ease .3s, padding .3s ease .2s, margin .3s ease .2s, z-index .5s ease .2s;
-	-webkit-transition:  opacity .3s ease .3s, padding .3s ease .2s, margin .3s ease .2s, z-index .5s ease .2s;
+	transition: opacity .3s ease .3s, padding .3s ease .2s, z-index .5s ease .2s;
+	-webkit-transition:  opacity .3s ease .3s, padding .3s ease .2s, z-index .5s ease .2s;
 	opacity: 1.0;
 }
 .card-content{
@@ -225,9 +228,6 @@
 .hovers .items:hover .card:hover{
 	color: inherit;
 	opacity: 1.0;
-/*	padding: 50px;
-	margin-top: -75px;
-	margin-left: -75px;*/
 	transition: opacity .3s ease .3s, padding .3s ease .2s, margin .3s ease .2s, z-index .5s ease .2s;
 	-webkit-transition:  opacity .3s ease .3s, padding .3s ease .2s, margin .3s ease .2s, z-index .5s ease .2s;
 	z-index: 99;

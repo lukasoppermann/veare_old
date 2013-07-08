@@ -29,12 +29,12 @@
 				</a>
 			</li>
 			<li class="item">
-				<a class="hover-button phone" href="https://twitter.com/#!/lukasoppermann" target="_blank">
+				<a class="hover-button phone" href="tel:+491631626947">
 					<span class="veare-sprite phone"></span><div class="circle light-orange"></div>
 				</a>
 			</li>
 			<li class="item">
-				<a class="hover-button mail" href="https://twitter.com/#!/lukasoppermann" target="_blank">
+				<a class="hover-button mail" href="mailto:lukas@vea.re" target="_blank">
 					<span class="mail veare-sprite"></span><div class="circle light-orange"></div>
 				</a>
 			</li>
