@@ -122,11 +122,11 @@ class Portfolio extends MY_Controller {
 		{
 			if( $tag == $filter )
 			{
-				$this->data['tag_menu'] .= '<a class="filter hover-font-orange active-font-orange active" data="'.$filter.'" href="'.base_url(TRUE).'portfolio">'.$filter.'</a>';
+				$this->data['tag_menu'] .= '<a class="filter hover-font-orange active-font-orange active" data-category="'.$filter.'" href="'.base_url(TRUE).'portfolio">'.$filter.'</a>';
 			}
 			else
 			{
-				$this->data['tag_menu'] .= '<a class="filter hover-font-orange active-font-orange" data="'.$filter.'" href="'.base_url(TRUE).'portfolio/tag:'.$filter.'">'.$filter.'</a>';
+				$this->data['tag_menu'] .= '<a class="filter hover-font-orange active-font-orange" data-category="'.$filter.'" href="'.base_url(TRUE).'portfolio/tag:'.$filter.'">'.$filter.'</a>';
 			}
 		}
 		// end

@@ -7,6 +7,8 @@ $(function(){
 			
 	_items.fs_tiles();
 	
+	$('.filters').fs_filter();
+	
 	// if( resolution != 'mobile' )
 	// {
 	// 	if( resolution == 'tablet-small' )
