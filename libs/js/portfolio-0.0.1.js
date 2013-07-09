@@ -52,7 +52,7 @@ $(function(){
 	// 
 	// 	});
 	// }
-	// 
+
 	_body.on('resolutionChange', function( resolution ){
 		_items.fs_tiles('stop', 'arrange');
 	});
