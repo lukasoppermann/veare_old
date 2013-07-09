@@ -7,6 +7,6 @@
 		<div class="content">
 			<h2 class="bold headline"><?=$title?></h2>
 			<p class="copy"><?=$excerpt?></p>
-		</div>	
+		</div>
 	</div>
 </a>
