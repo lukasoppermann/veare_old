@@ -1,14 +1,17 @@
-<?php echo `git pull origin master --force && git submodule update --init --recursive 2>&1`;
+<?php echo shell_exec("git pull --force && git submodule update --init --recursive 2>&1");
 // fetch payload data
 $payload = json_decode($_REQUEST['payload']);
 // ----------------------
 // find last commit 
-foreach($payload->commits as $commits)
+if( isset($payload) )
 {
-	if( $commits->id == $payload->after )
+	foreach($payload->commits as $commits)
 	{
-		// get message
-		$commit = $commits->message;
+		if( $commits->id == $payload->after )
+		{
+			// get message
+			$commit = $commits->message;
+		}
 	}
 }
 // ----------------------

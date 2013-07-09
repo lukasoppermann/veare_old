@@ -1,4 +1,4 @@
-<a class="card animate-flip<?=variable($card_class,'',' ')?><?=(!in_array($filter, explode(' ',$category)) ? ' faded' : '')?>" data-category="<?=variable($category)?>" href="<?=current_url().$permalink?>">
+<a class="card animate-flip<?=variable($card_class,'',' ')?><?=(isset($filter) && !in_array($filter, explode(' ',$category)) ? ' faded' : '')?>" data-category="<?=variable($category)?>" href="<?=current_url().$permalink?>">
 	<div class="front side <?=variable($color)?>">
 		<img class="image" src="<?=base_url(TRUE).'media/'.variable($images['filename']).'.'.variable($images['ext'])?>">
 		<?=variable($card)?>
