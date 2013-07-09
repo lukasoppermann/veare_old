@@ -196,7 +196,7 @@
 .card.faded .side, .hovers .card.faded .side{
 	background: rgb(215,220,220);
 }
-.filtered .card.faded .side .image{
+.card.faded .side .image{
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);
