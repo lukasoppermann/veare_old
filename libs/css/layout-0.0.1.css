@@ -678,12 +678,16 @@ section{
 	margin-right: 1%;
 	margin-left: 1%;
 }
+
+.column-five-fill-one{ display: none; }
+
 .wide-screen .column-two, .wide-screen [class*="column-two"]{ width: 38%; }
 .wide-screen .column-half{ width: 48%; }
 .wide-screen .column-three, .wide-screen [class*="column-three"]{ width: 58%; }
 .wide-screen .column-four, .wide-screen [class*="column-four"]{ width: 78%; }
 .wide-screen .column-five{ width: 98%; }
 .wide-screen .column-hide-four{ display: block; }
+.wide-screen .column-five-fill-one{ display: block; }
 /* -------------------- */
 /* map */
 #veare_map{
