@@ -606,6 +606,12 @@ section{
 	position: relative;	
 	margin: 1% 0;
 }
+.no-pad{
+	margin: 0 !important;
+}
+.no-pad.column-five{
+	width: 100% !important;
+}
 .column-two,
 .column-three,
 .column-four,

@@ -30,8 +30,8 @@ body{
 html.menu-active, body.mobile.menu-active{
 	overflow: hidden !important;
 }
-.float-left{ float: left; position: relative; }
-.float-right{ float: right; sposition: relative; }
+.float-left{ float: left !important; position: relative; }
+.float-right{ float: right !important; position: relative; }
 .opacity-50{ opacity: 0.5; }
 .opacity-25{ opacity: 0.25; }
 
@@ -77,10 +77,10 @@ h1, .giant-headline{ font-size: 200px; line-height: 100%; }
 h2, .big-headline{ font-size: 100px; line-height: 120%; }
 h3, h4, .medium-headline{ font-size: 48px; line-height: 120%; margin-bottom: 15px; }
 .small-headline{ font-size: 24px; line-height: 100%; margin-bottom: 10px; }
-.copy{ font-size: 20px; text-align: left; line-height: 120%; }
-.copy p{ margin: 0 0 10px 0; width: 100%; max-width: 550px; line-height: 120%; }
+.copy{ font-size: 22px; text-align: left; line-height: 130%; }
+.copy p{ margin: 0 0 10px 0; width: 100%; max-width: 550px; line-height: inherit; }
 .copy strong{ font-weight: 600; }
-.copy-small{ font-size: 16px; text-align: left; }
+.copy-small{ font-size: 18px; text-align: left; line-height: 130%; }
 
 .wide-screen .copy{ font-size: 22px; }
 
@@ -96,6 +96,7 @@ h3, h4, .medium-headline{ font-size: 48px; line-height: 120%; margin-bottom: 15p
 .mobile h2, .mobile .big-headline{ font-size: 40px; line-height: 100%; }
 .mobile h3, .mobile h4, .mobile .medium-headline{ font-size: 28px; line-height: 100%; }
 .mobile .small-headline{ font-size: 24px; line-height: 150%; }
+.mobile .copy-small{ font-size: 18px; }
 
 .headline-margin-40{ margin-bottom: 40px; }
 
@@ -141,6 +142,11 @@ only screen and (                min-resolution: 2dppx) {
 	padding: 0;
 	position: relative;
 	display: block;
+}
+.image-width-100{
+	width: 100%;
+	max-width: 100%;
+	height: auto;
 }
 img.loading{ opacity: 0; }
 img.loaded{ 

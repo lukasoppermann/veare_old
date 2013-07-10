@@ -46,7 +46,11 @@ class MY_Controller extends CI_Controller {
 		$this->load->driver('Fs_optimize');
 		//
 		$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
-		// load model
+		if( ENVIRONMENT == 'development' )
+		{
+			$this->cache->clean();
+		}
+				// load model
 		$this->load->add_package_path(BASEPATH.'packages/fs_base_model/');
 		$this->load->model('Fs_base_model');
 		// --------------------------------------------------------------------

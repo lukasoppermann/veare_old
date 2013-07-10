@@ -79,6 +79,21 @@
 .portfolio-item .columns{
 	width: auto;
 }
+.portfolio-item .column-two:nth-child(2n):after{
+	clear: both;
+}
+.aside{
+	margin-bottom: 20px;
+}
+.portfolio-item .image-description{
+	margin: 7px 0;
+	position: relative;
+}
+.portfolio-item .image-description.align-right p{
+	float: right;
+	text-align: right;
+}
+
 .filters{
 	width: 100%;
 	margin-top: 20px;
@@ -113,7 +128,7 @@
 }
 .mobile .portfolio .items{ width: 270px; }
 .tablet-small .portfolio .items{ width: 540px; }
-.tablet .portfolio .items{ width: 810px; }
+.tablet .portfolio .items{ width: 780px; }
 .screen .portfolio .items, .wide-screen .portfolio .items{ width: 1080px; }
 .height-tall{
 	min-height: 400px;

@@ -76,11 +76,24 @@
 					}
 				?>
 			</div>
-			<a class="button <?=variable($color)?> <?=variable($color,'','hover-border-')?> <?=variable($color,'','hover-font-')?> font-white float-left margin-top-tiny" href="<?=base_url(TRUE)?>portfolio<?=variable($filter,'','/tag:')?>">&larr; return to overview</a>
 		</div>
-		<div class="column column-two">
-			<div class="copy dark-gray"><?=variable($text)?></div>
+		<?
+		if( !preg_match("/<[^<]+>/",$text,$m) != 0 )
+		{?>
+			<div class="column column-two">
+				<p class="copy dark-gray"><?=variable($text)?></p>
+			</div>
+		<?}
+		else
+		{
+			echo str_replace('[media]', base_url(TRUE).$this->config->item('dir_media'),variable($text));
+		}
+		?>
+
+		<div class="column column-five">
+			<a class="button copy-small <?=variable($color)?> <?=variable($color,'','hover-border-')?> <?=variable($color,'','hover-font-')?> font-white float-left margin-top-tiny" href="<?=base_url(TRUE)?>portfolio<?=variable($filter,'','/tag:')?>">&larr; return to overview</a>
 		</div>
+					
 	</div>
 	
 </article>

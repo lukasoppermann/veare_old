@@ -9,7 +9,7 @@
 |
 */
 $config['dir_layout']	= 'layout/';
-$config['dir_images']	= 'images/';
+$config['dir_media']	= 'media/';
 // libs
 $config['dir_libs']		= 'libs/';
 // css
