@@ -21,6 +21,7 @@
 			_this = $(this);
 			// get items
 			methods.settings.items = $(methods.settings.item);
+			methods.settings.history = !!(window.history && history.pushState);
 			// add fn
 			_this.on('click', '.filter', function(e){
 			
@@ -31,12 +32,14 @@
 				{
 					filter.removeClass('active');
 					methods.filter(false);
+					methods.pushHistory(false);
 				}
 				else
 				{
 					_this.find('.filter').removeClass('active');
 					methods.filter(filter.data('category'));
 					filter.addClass('active');
+					methods.pushHistory(filter.data('category'));
 				}
 				
 				return false;
@@ -59,6 +62,25 @@
 				}
 				
 			});
+		},
+		pushHistory: function( filter )
+		{
+			if( methods.settings.history === true )
+			{
+				link_filter = '';
+				if( filter != undefined && filter != false )
+				{
+					link_filter = 'tag:'+filter+'/';
+				}
+			
+				// urls change
+				methods.settings.items.each(function(){
+					$(this).attr('href', methods.settings.url+link_filter+$(this).data('permalink'));
+				});
+				// push history
+				history.pushState('', methods.settings.title+filter, methods.settings.url+link_filter);
+				
+			}
 		}
 	};
 	

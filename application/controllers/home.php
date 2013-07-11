@@ -14,6 +14,8 @@ class Home extends MY_Controller {
 		{
 			js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true','gmaps'), 'first');
 		}	
+		
+		$this->data['meta_title'] = "interface design, print design, branding & information graphics";
 		// check for ajax
 		$this->data['body_class'] = 'loading header-absolute';
 		$this->view('home/block', $this->data);

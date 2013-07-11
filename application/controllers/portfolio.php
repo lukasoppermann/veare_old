@@ -27,6 +27,8 @@ class Portfolio extends MY_Controller {
 			$this->cache->save('portfolio_items', $items, 86400);
 		}	
 		
+		$this->data['meta_title'] = "design portfolio – interface design, print design, branding & information graphics";
+		
 		if( $tag != null && $tag != '' && isset($tag) )
 		{
 			if( strpos($tag,':') !== false )

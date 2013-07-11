@@ -7,7 +7,10 @@ $(function(){
 			
 	_items.fs_tiles();
 	
-	$('.filters').fs_filter();
+	$('.filters').fs_filter({
+		url: "http://www/veare/portfolio/",
+		title: "vea.re – visionary design | portfolio: "
+	});
 	
 	// if( resolution != 'mobile' )
 	// {
