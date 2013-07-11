@@ -35,14 +35,13 @@
 			methods.settings.first = methods.settings.items.first();
 			// get columns
 			column = Math.floor(_this.width()/methods.settings.first.outerWidth(true));
-			console.log(column);
 			// only if more than 1 column is present, the object need to be recalculated
 			if( column > 1 )
 			{
 				methods.settings.column = column;
 				// get margin
 				methods.settings.margin = methods.settings.items.eq(1+methods.settings.column).position().top-(methods.settings.first.position().top+methods.settings.first.outerHeight(false));
-
+			console.log(methods.settings.margin);
 				// arrange items
 				methods.settings.items.each( function( index, item )
 				{
