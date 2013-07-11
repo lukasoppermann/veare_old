@@ -16,35 +16,27 @@
 	</div>
 </section>
 
-<section class="veare-recent-portfolio bold light-gray vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">
-	<div class="section-content centered fixed">
-		<h3 class="font-orange big-headline width-100">I recently worked on</h3>
-		<div class="columns">
-			<div class="column column-four-three">
-				<div class="browser-frame border-medium-gray">
-					<div class="browser-top border-medium-gray">
-						<a class="first circle-link"><div class="circle medium-gray border-medium-gray"></div></a>
-						<a class="second circle-link"><div class="circle medium-gray border-medium-gray"></div></a>
-						<a class="third circle-link"><div class="circle medium-gray border-medium-gray"></div></a>
-					</div>
-					<div class="browser-body">
-						<img class="bottom img-optimized" data-src="<?=base_url()?>media/oximity.png" alt="" />
-					</div>
-				</div>
-			</div>
-			<div class="column copy align-left">
-				<div class="project-info">
-					<h3 class="small-headline">Project Name</h3>
-					<p class="regular">An online news source based on community involvement and closeness to the event.</p>
-				</div>
-			</div>
-			<div class="column">
-				<a class="more">
-					<div class="label">more projects</div>
-					<div class="big-arrow medium-gray-pseudo"></div>
-				</a>
+<section class="veare-recent-portfolio bold blue vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">
+	<div class="section-content centered fixed width-100">
+		<h3 class="font-white big-headline width-100">I recently worked on</h3>
+		
+		<div class="column copy align-left">
+			<div class="project-info font-white">
+				<h3 class="small-headline">Project Name</h3>
+				<p class="regular">An online news source based on community involvement and closeness to the event.</p>
 			</div>
 		</div>
+		<div class="column">
+			<a class="more">
+				<div class="label">more projects</div>
+				<div class="big-arrow white-pseudo"></div>
+			</a>
+		</div>
+		
+		<div class="float-left column column-four-three" style="margin-left: -50px;">
+			<img class="image-width-100 img-optimized" data-src="<?=base_url()?>media/open-everything-print-design-cover.png" alt="" />
+		</div>
+		
 	</div>
 </section>
 

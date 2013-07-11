@@ -79,6 +79,7 @@ h3, h4, .medium-headline{ font-size: 48px; line-height: 120%; margin-bottom: 15p
 .small-headline{ font-size: 24px; line-height: 100%; margin-bottom: 10px; }
 .copy{ font-size: 22px; text-align: left; line-height: 130%; }
 .copy p{ margin: 0 0 10px 0; width: 100%; max-width: 550px; line-height: inherit; }
+ p.copy{ margin: 0 0 10px 0; }
 .copy strong{ font-weight: 600; }
 .copy-small{ font-size: 18px; text-align: left; line-height: 130%; }
 
