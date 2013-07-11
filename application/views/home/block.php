@@ -16,7 +16,7 @@
 	</div>
 </section>
 
-<section class="veare-recent-portfolio bold blue vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">
+<!-- <section class="veare-recent-portfolio bold blue vertical-center no-flicker no-pad">
 	<div class="section-content centered fixed width-100">
 		<h3 class="font-white big-headline width-100">I recently worked on</h3>
 		
@@ -33,12 +33,12 @@
 			</a>
 		</div>
 		
-		<div class="float-left column column-four-three" style="margin-left: -50px;">
-			<img class="image-width-100 img-optimized" data-src="<?=base_url()?>media/open-everything-print-design-cover.png" alt="" />
+		<div id="magazine" class="width-100 float-left">
+			<img class="image-width-100" src="<?=base_url()?>media/open-everything-print-design-cover.png" alt="" />
 		</div>
 		
 	</div>
-</section>
+</section> -->
 
 <section class="skills light-blue font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">>
 	<div class="section-content centered fixed">
