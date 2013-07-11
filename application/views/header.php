@@ -26,7 +26,7 @@
 		$class = ' class="hovers screen'.variable($body_class).'"';
 	}
 ?>
-<body<?=$class?> data-page_class="<?=$body_class?>" id="html_body">
+<body<?=$class?> data-page_class="<?=$body_class?>" id="html_body" data-url="<?=base_url();?>">
 	<div id="menu_icon"><div class="veare-sprite"></div></div>
 	<div id="body">
 		<div id="header">

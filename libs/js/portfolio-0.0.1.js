@@ -8,7 +8,7 @@ $(function(){
 	_items.fs_tiles();
 	
 	$('.filters').fs_filter({
-		url: "http://www/veare/portfolio/",
+		url: $('body').data('url'),
 		title: "vea.re – visionary design | portfolio: "
 	});
 	
