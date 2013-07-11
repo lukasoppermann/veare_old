@@ -26,7 +26,6 @@
 			methods.settings.items = _this.find(methods.settings.item);
 			// run arrange method
 			methods.arrange();
-			console.log('Zes');
 		},
 		// arrange
 		arrange: function( )
@@ -36,7 +35,7 @@
 			methods.settings.first = methods.settings.items.first();
 			// get columns
 			column = Math.floor(_this.width()/methods.settings.first.outerWidth(true));
-
+			console.log(column);
 			// only if more than 1 column is present, the object need to be recalculated
 			if( column > 1 )
 			{
