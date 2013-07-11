@@ -25,8 +25,8 @@
 			// get items
 			methods.settings.items = _this.find(methods.settings.item);
 			// run arrange method
-			console.log('Zes');
 			methods.arrange();
+			console.log('Zes');
 		},
 		// arrange
 		arrange: function( )
