@@ -40,8 +40,9 @@
 			{
 				methods.settings.column = column;
 				// get margin
-				methods.settings.margin = methods.settings.items.eq(1+methods.settings.column).position().top-(methods.settings.first.position().top+methods.settings.first.outerHeight(false));
-			console.log(methods.settings.margin);
+				methods.settings.margin = methods.settings.items.eq(1+methods.settings.column).position().top-(methods.settings.first().position().top+methods.settings.first().outerHeight(false));
+			console.log(methods.settings.items.eq(1+methods.settings.column));
+					console.log(methods.settings.first().position().top);
 				// arrange items
 				methods.settings.items.each( function( index, item )
 				{
