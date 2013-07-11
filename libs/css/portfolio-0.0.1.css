@@ -203,10 +203,14 @@
 .card.img-top .front .image{ 
 	bottom: auto;
 	top: 0;
+	transform: translate(-50%, 0%);
+	-webkit-transform: translate(-50%, 0%);
 }
 .card.img-bottom .front .image{ 
 	bottom: 0;
 	top: auto;
+	transform: translate(-50%, 0%);
+	-webkit-transform: translate(-50%, 0%);
 }
 .card.faded .side, .hovers .card.faded .side{
 	background: rgb(215,220,220);
