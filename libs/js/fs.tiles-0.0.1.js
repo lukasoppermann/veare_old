@@ -31,7 +31,7 @@
 		arrange: function( )
 		{
 			arrange_done = false;
-			// cache first element
+			// get first item
 			methods.settings.first = methods.settings.items.first();
 			// get columns
 			column = Math.floor(_this.width()/methods.settings.first.outerWidth(true));
@@ -39,11 +39,23 @@
 			if( column > 1 )
 			{
 				methods.settings.column = column;
+				
+				// find biggest item in first row
+				var tmp_height = 0;
+				var index = 0;
+				methods.settings.items.slice(0,methods.settings.column-1).each(function(i, item)
+				{
+					var height = $(this).outerHeight(false);
+				
+					if( height > tmp_height )
+					{
+						tmp_height = height;
+						index = i;
+					}
+				});
+
 				// get margin
-				methods.settings.margin = methods.settings.items.eq(1+methods.settings.column).position().top-(methods.settings.first.position().top+methods.settings.first.outerHeight(false));
-			console.log(methods.settings.items.eq(1+methods.settings.column));
-			console.log(methods.settings.first);
-					console.log(methods.settings.first.position().top);
+				methods.settings.margin = methods.settings.items.eq(index+methods.settings.column).position().top-(methods.settings.items.eq(index).position().top+methods.settings.items.eq(index).outerHeight(false));
 				// arrange items
 				methods.settings.items.each( function( index, item )
 				{
