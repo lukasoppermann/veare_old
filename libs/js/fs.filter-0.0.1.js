@@ -23,28 +23,31 @@
 			methods.settings.items = $(methods.settings.item);
 			methods.settings.history = !!(window.history && history.pushState);
 			// add fn
-			_this.on('click', '.filter', function(e){
+			if( methods.settings.history === true )
+			{
+				_this.on('click', '.filter', function(e){
+		
+					e.stopPropagation();
+					var filter = $(this);
 			
-				e.stopPropagation();
-				var filter = $(this);
-				
-				if( filter.hasClass('active') )
-				{
-					filter.removeClass('active');
-					methods.filter(false);
-					methods.pushHistory(false);
-				}
-				else
-				{
-					_this.find('.filter').removeClass('active');
-					methods.filter(filter.data('category'));
-					filter.addClass('active');
-					methods.pushHistory(filter.data('category'));
-				}
-				
-				return false;
-				
-			});
+					if( filter.hasClass('active') )
+					{
+						filter.removeClass('active');
+						methods.filter(false);
+						methods.pushHistory(false);
+					}
+					else
+					{
+						_this.find('.filter').removeClass('active');
+						methods.filter(filter.data('category'));
+						filter.addClass('active');
+						methods.pushHistory(filter.data('category'));
+					}
+			
+					return false;
+			
+				});
+			}
 			
 		},
 		// filter
@@ -54,9 +57,10 @@
 
 			methods.settings.items.each(function()
 			{
-				var _item = $(this);
+				var _item = $(this),
+						category = _item.data('category');
 				
-				if( filter != undefined && filter != false && _item.data('category').indexOf(filter) == -1 )
+				if( filter != undefined && filter != false && category != undefined && category.indexOf(filter) == -1 )
 				{
 					_item.addClass('faded');
 				}
@@ -74,7 +78,7 @@
 				}
 			
 				// urls change
-				methods.settings.items.each(function(){
+				$('.card-link').each(function(){
 					$(this).attr('href', methods.settings.url+link_filter+$(this).data('permalink'));
 				});
 				// push history

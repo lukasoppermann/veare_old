@@ -102,10 +102,12 @@ class Portfolio extends MY_Controller {
 				$card['images'] = $images[$card['card-image']];
 			}
 			// filter
-			$card['filter'] = $tag;			
+			$card['filter'] = $tag;
 			//
 			$this->data['content'][] = $this->load->view('portfolio/card',$card, TRUE); 
 		}
+		// add dribble card
+		$this->data['content'][] = $this->load->view('portfolio/dribble_card','', TRUE); 
 		// set filtered
 		if( isset($tag) && $tag != null )
 		{
