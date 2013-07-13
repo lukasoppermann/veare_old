@@ -35,7 +35,8 @@
 						// patner
 						if( isset($team) && $team != null )
 						{
-							$output = "<div class='team'>with";
+							!isset($team_with) ? $team_with = "with" : '';
+							$output = "<div class='team'>".$team_with;
 							foreach($team as $partner)
 							{
 								if( isset($partner['link']) )
