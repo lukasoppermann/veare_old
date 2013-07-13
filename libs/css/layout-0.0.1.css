@@ -401,15 +401,15 @@ section{
 	background: transparent;
 }
 .pin .icon-big{
+	position: absolute;
+	display: block;
+	z-index: 15;
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 }
-.pin:after{
+.pin:before, .pin-body{
 	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 10;
 	display: block;
 	width: 50px;
 	height: 50px;
@@ -418,21 +418,16 @@ section{
 	border-bottom-right-radius: 50px;
 	border-bottom-left-radius: 0px;
 }
-/*.hovers .pin:after{
-	transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-}*/
+.pin-body{
+	z-index: 12;
+	transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+}
 .pin:before{
-	position: absolute;
+	left: 3px;
+	top: 1px;
 	z-index: 1;
-	display: block;
-	width: 50px;
-	height: 50px;
-	border-top-right-radius: 50px;
-	border-top-left-radius: 50px;
-	border-bottom-right-radius: 50px;
-	border-bottom-left-radius: 0px;
 	background-color: rgba(0,0,0,0.15);
 	background-image: -moz-linear-gradient(left, rgba(0,0,0,0.1), rgba(0,0,0,0.0));
 	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.1), rgba(0,0,0,0.0));
@@ -440,8 +435,8 @@ section{
 	background-image: -ms-linear-gradient(left, rgba(0,0,0,0.1), rgba(0,0,0,0.0));
 	background-image: linear-gradient(left, rgba(0,0,0,0.1), rgba(0,0,0,0.0));
 }
-
 .hovers .pin:before{
+	top: auto;
 	transform: rotate(15deg) rotateX(-35deg);
 	-webkit-transform: rotate(15deg) rotateX(-35deg);
 	-moz-transform: rotate(15deg) rotateX(-35deg);
@@ -450,10 +445,10 @@ section{
 }
 .hovers .pin:hover{
 	cursor: pointer;
-  -webkit-animation: pin-levitation 2.8s steps(7) infinite; /* Safari 4+ */
-  -moz-animation:    pin-levitation 2.8s steps(7) infinite; /* Fx 5+ */
-  -o-animation:      pin-levitation 2.8s steps(7) infinite; /* Opera 12+ */
-  animation:         pin-levitation 2.8s steps(7) infinite; /* IE 10+ */
+	-webkit-animation: pin-levitation 2.8s steps(7) infinite; /* Safari 4+ */
+	-moz-animation:    pin-levitation 2.8s steps(7) infinite; /* Fx 5+ */
+	-o-animation:      pin-levitation 2.8s steps(7) infinite; /* Opera 12+ */
+	animation:         pin-levitation 2.8s steps(7) infinite; /* IE 10+ */
 }
 /* Pin animation */
 @-webkit-keyframes pin-levitation {

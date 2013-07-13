@@ -19,7 +19,7 @@
 	}
 	elseif( ipad() == true )
 	{
-		$class = ' class="tablet loaded-tablet'.variable($body_class).'"';
+		$class = ' class="tablet loaded-tablet '.variable($body_class).'"';
 	}
 	else
 	{

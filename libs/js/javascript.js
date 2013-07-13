@@ -194,7 +194,7 @@ $(function(){
 		{
 			context: 'tablet',
 			match: function() {
-				_body.addClass('tablet').removeClass('hovers tablet-small tablet-medium mobile screen wide-screen');
+				_body.addClass('tablet').removeClass('hovers tablet-small mobile screen wide-screen');
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -395,11 +395,6 @@ $(function(){
 		$('.pins').hide();
 		// once everything is loaded
 		win.load(function() {
-			// <a class="github pin orange-pseudo" href="https://github.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
-			// <a id="dribbble" class="dribbble pin pink-pseudo" href="http://dribbble.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
-			// <a class="twitter pin blue-pseudo" href="https://twitter.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
-			// <a class="xing pin turquoise-pseudo" href="https://www.xing.com/profile/Lukas_Oppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>
-			// <a class="linkedin pin light-red-pseudo" href="http://de.linkedin.com/in/lukasoppermann/" target="_blank"><div class="veare-sprite icon-big"></div></a>
 			// -----------------------
 			// Create GMaps object
 			map = new GMaps({
@@ -426,12 +421,12 @@ $(function(){
 						lat: 52.53195,
 						lng: 13.40280,
 					},
-					content: '<a id="dribbble" class="dribbble in-map pin pink-pseudo" href="http://dribbble.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>'
+					content: '<a id="dribbble" class="dribbble pin in-map" href="http://dribbble.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div><div class="pin-body pink"></div></a>'
 				},
 			  'twitter': {	
 					lat: 52.54666,
 			  	lng: 13.40574,
-			  	content: '<a class="twitter pin blue-pseudo" href="https://twitter.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>'
+			  	content: '<a class="twitter pin blue-pseudo" href="https://twitter.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div><div class="pin-body blue"></div></a>'
 				},
 				'github': {
 				  lat: 52.55630,
@@ -444,12 +439,12 @@ $(function(){
 						lat: 52.54534,
 						lng: 13.37000
 					},
-				  content: '<a class="github pin orange-pseudo" href="https://github.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>'
+				  content: '<a class="github pin" href="https://github.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div><div class="pin-body orange"></div></a>'
 				},
 				'xing': {
 				  lat: 52.55490,
 				  lng: 13.40149,
-				  content: '<a class="xing pin turquoise-pseudo" href="https://www.xing.com/profile/Lukas_Oppermann" target="_blank"><div class="veare-sprite icon-big"></div></a>'
+				  content: '<a class="xing pin" href="https://www.xing.com/profile/Lukas_Oppermann" target="_blank"><div class="veare-sprite icon-big"></div><div class="pin-body turquoise"></div></a>'
 				},
 				'linkedin': {
 				  lat: 52.54049,
@@ -462,7 +457,7 @@ $(function(){
 						lat: 52.55831,
 						lng: 13.36568,
 					},
-				  content: '<a class="linkedin pin light-red-pseudo" href="http://de.linkedin.com/in/lukasoppermann/" target="_blank"><div class="veare-sprite icon-big"></div></a>'
+				  content: '<a class="linkedin pin" href="http://de.linkedin.com/in/lukasoppermann/" target="_blank"><div class="veare-sprite icon-big"></div><div class="pin-body light-red"></div></a>'
 				}
 			};
 			// loop through social media obj
