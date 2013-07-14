@@ -37,7 +37,7 @@ class MY_Controller extends CI_Controller {
 		}
 		else
 		{
-			$this->config->set_item('base_url', 'http://new.vea.re/');
+			$this->config->set_item('base_url', 'http://vea.re/');
 		}
 		// --------------------------------------------------------------------	
 		// load optimize
