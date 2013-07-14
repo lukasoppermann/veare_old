@@ -1,4 +1,4 @@
-<?php echo shell_exec("git pull --force && git submodule update --init --recursive 2>&1");
+<?php `git pull --force && git submodule update --init --recursive 2>&1`;
 // fetch payload data
 $payload = json_decode($_REQUEST['payload']);
 // ----------------------
