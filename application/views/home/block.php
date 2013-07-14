@@ -52,9 +52,9 @@
 				<div class="skill-content centered">
 					<div class="copy font-black float-left margin-right-60">
 						<h2 class="bold font-white medium-headline">Interface design</h2>
-						<p>When designing responsive website, Mac or iOS applications I focus on usability and user experience.
+						<p>When designing responsive websites, Mac or iOS applications I focus on usability and user experience.
 						</p>
-						<p>Using design thinking methods like personas I create user stories to find the most important features & potential problems to solve.
+						<p>Using design thinking methods, I create user stories to find the most important features & potential problems to solve.
 						</p>
 						<a class="more-link button float-left" href="<?=base_url(TRUE)?>portfolio/tag:interface">Portfolio</a>
 					</div>
@@ -97,7 +97,7 @@
 				<div class="skill-content centered">
 					<div class="copy font-black float-left margin-left-60">
 						<h2 class="bold font-white medium-headline">Modern branding</h2>
-						<p>Todays brand's need to compete mostly in digital media & advertising, a modern branding strategy accounts for that. A brand's corporate identity must be easy to remember and able to compete in the digital world.
+						<p>Todays brands need to compete mostly in digital media & advertising, a modern branding strategy accounts for that. A brand's corporate identity must be easy to remember and able to compete in the digital world.
 						</p>
 						<a class="more-link button font-white hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:branding">Portfolio</a>
 					</div>
