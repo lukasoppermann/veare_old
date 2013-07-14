@@ -3,16 +3,14 @@
 html, body{
 	height: 100%;
 }
-body{
-	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
-	font-weight: normal;
-	color: rgb(70,67,65);
-}
 .wf-active body{ 
 	font-family: "Source Sans Pro"; 
 	font-weight: 400;
 }
 body{
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	font-weight: normal;
+	color: rgb(70,67,65);
 	background: rgb(255,255,255);
 	overflow-y: scroll;
 	overflow-x: hidden;
