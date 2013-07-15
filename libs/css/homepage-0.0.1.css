@@ -1,0 +1,466 @@
+.headline-margin-40{ margin-bottom: 40px; }
+/* ---------------------------- */
+/* About Me block */
+.about-lukas-oppermann .coffee{
+	margin-bottom: 50px;
+}
+.mobile .about-lukas-oppermann .big-headline{ 
+	text-align: center;
+	margin-bottom: 10px;
+}
+.mobile .about-lukas-oppermann .medium-headline{
+	text-align: center;
+}
+/* ---------------------------- */
+/* more link */
+.skills .more-link{
+	margin-top: 10px;
+	text-decoration: none;
+	display: block;
+	position: relative;
+	background: rgba(0,0,0,0.15);
+	color: rgba(255,255,255,0.75);
+}
+.skills .skill-content .copy .more-link:hover{
+	background: transparent;
+	border-color: rgba(0,0,0,0.15);
+	color: rgba(0,0,0,0.65);
+}
+/* ---------------------------- */
+/* Skills */
+.skills .columns{ margin-bottom: 30px; }
+.mobile .skills .columns, .tablet-small .skills .columns{ margin-bottom: 0px; }
+
+
+.skill-columns{
+	width: 750px;
+	display: inline-block;
+}
+
+.hover-circle:before{
+	position: absolute;
+	display: block;
+	border-radius: 280px;
+	background: rgba(0,0,0,0.25);
+	height: 280px;
+	width: 280px;
+	top: 10px;
+	left: 10px;
+}
+.skill-content{
+	display: inline-block;
+	position: relative;
+	text-align: left;
+	height: auto;
+}
+.skills .skill-content .copy{
+	display: block;
+}
+.skills .skill-content .copy p{
+	opacity: 0.85;
+}
+.skills .column{
+	display: block;
+	position: relative;
+}
+/*.skills .more.vcenter{ 
+	height: 100%;
+	width: 60px;
+	display: block;
+	position: absolute; 
+	top: 0;
+}
+
+.skills .more.vcenter.right{ right: 0; }
+.skills .more.vcenter.left{ left: 0; }*/
+.margin-left-60{ margin-left: 60px; }
+.margin-right-60{ margin-right: 60px; }
+.tablet-small .skills .margin-left-60, .mobile .skills .margin-left-60{ margin-left: 0px; }
+.tablet-small .skills .margin-right-60, .mobile .skills .margin-right-60{ margin-right: 0px; }
+.tablet-small .skills .more, .mobile .skills .more{ display: none; }
+.skill-content .copy{
+	vertical-align: top;
+	display: inline-block;
+	padding: 0 0 0 30px;
+	width: 100%;
+	max-width: 460px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.skill-content .copy{ padding: 0 30px 30px 30px; }
+.mobile .skill-content .copy{ padding: 0 00px 50px 00px; }
+.mobile .skill-content, .tablet-small .skill-content{ 
+	padding-top: 300px;
+	position: relative;
+}
+.mobile .skills .column .image, .tablet-small .skills .column .image{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -150px;
+}
+.mobile .skill-content .medium-headline, .tablet-small .skill-content .medium-headline{ text-align: center; }
+/* ---------------------------- */
+/* About veare */
+.tablet-small .plus:after, .mobile .plus:after{ display: none; }
+.mobile .circle-copy{ margin: 0 0 0 0; }
+.mobile .circle-headline{ font-size: 60px; }
+.circle-big{
+	position: relative;
+	display: inline-block;
+	width: 280px;
+	height: 280px;
+	border-radius: 280px;
+}
+.circle-headline{
+	position: relative;
+	text-align: left;
+	width: 100%;
+	margin: -50px 0 20px 0;
+	padding-left: 30px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.tablet-small .circle-headline{
+	margin: 0px 0 20px 0;
+	padding: 0;
+}
+.mobile .circle-headline, .mobile .circle-copy{ padding: 0 10px; }
+.mobile .circle-headline{ text-align: center; }
+.plus:after{
+	content: "+";
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	font-size: 150px;
+	line-height: 70px;
+	display: block;
+	position: absolute;
+	font-weight: 600;
+	left: 50%;
+	top: 40%;
+	margin: -75px 0 0 -50px;
+}
+.circle-copy{
+	vertical-align: top;
+	display: inline-block;
+	padding: 0 0 0 30px;
+	width: 100%;
+	max-width: 400px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.mobile .circle-copy{
+	padding: 0;
+}
+/* ---------------------------- */
+/* Blog block */
+.blog-teaser{
+	position: relative;
+	display: inline-block;
+	max-width: 550px;
+}
+.blog-teaser .blog-headline{
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+.blog-link{
+	width: 300px;
+	position: relative;
+	text-align: center;
+	display: inline-block;
+}
+.blog-link img{ display: inline-block; }
+/* ---------------------------- */
+/* Portfolio */
+#veare_businesscard{
+	display: block;
+	text-align: left;
+	position: absolute;
+	top: 50%;
+	right: 20%;
+	margin: -175px 0 0 0;
+	z-index: 900;
+	width: 225px;
+	height: 350px;
+	background: rgb(255,255,255);
+	border: 1px solid rgba(245,150,0,.25);
+	border-top: 0;
+	border-bottom: 0; /* 3px solid rgb(245,150,0) */
+	box-shadow: 0px 2px 0px 0px rgb(245,150,0), 0px 0px 2px 0px rgba(100,100,100,0.1);
+	-webkit-box-shadow: 0px 2px 0px 0px rgb(245,150,0), 0px 0px 2px 0px rgba(100,100,100,0.1);
+	-moz-box-shadow: 0px 2px 0px 0px rgb(245,150,0), 0px 0px 2px 0px rgba(100,100,100,0.1);
+}
+.mobile #veare_businesscard{
+	top: 50%;
+	right: 50%;
+	margin: -175px -112px 100px 0;
+}
+.mobile.landscape #veare_businesscard{
+	height: 220px;
+	width: 350px;
+	margin: -125px -175px 0 0;
+}
+#veare_businesscard .name{
+	text-transform: uppercase;
+	color: rgb(50,50,50);
+	top: 20px;
+	left: 15px;
+}
+#veare_businesscard .contact-info{
+	width: 100%;
+	bottom: 20px;
+	padding: 0 0 0 15px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	color: rgb(100,100,100);
+	font-size: 90%;
+}
+#veare_businesscard .contact-info .contact-item{
+	width: 100%;
+	position: relative;
+	padding: 0;
+	float: left;
+}
+#veare_businesscard .contact-info .contact-link{
+	float: left;
+	width: 100%;
+	display: block;
+	text-decoration: none;
+	padding: 8px 0 0 15px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	transition: color .2s ease .1s;   
+	-webkit-transition: color .2s ease .1s;
+	-moz-transition: color .2s ease .1s;
+	-o-transition: color .2s ease .1s;
+	-ms-transition: color .2s ease .1s;
+}
+#veare_businesscard .contact-info .label{
+	font-size: 80%;
+	width: 15px;
+	position: absolute;
+	bottom: 0;
+}
+.mobile #veare_businesscard .contact-info .contact-link, 
+.tablet #veare_businesscard .contact-info .contact-link, 
+.tablet-small #veare_businesscard .contact-info .contact-link{
+	padding: 5px 0 5px 15px;
+}
+.tablet #veare_businesscard .contact-info .label,
+.tablet-small #veare_businesscard .contact-info .label,
+.mobile #veare_businesscard .contact-info .label{
+	bottom: 5px;
+}
+.hovers #veare_businesscard .contact-info .contact-link:hover{ color: rgb(245,150,0); }
+.top-line{ position: absolute; }
+#veare_businesscard .veare-type{
+	height: 23px;
+	width: 90px;
+	display: block;
+	position: relative;
+}
+.visionary-design{
+	font-size: 80%;
+	padding: 2px 0 5px 0;
+}
+#veare_businesscard .top-line:before{
+	content: "";
+	display: block;
+	height: 2px;
+	background: rgb(245,150,0);
+	width: 12px;
+	position: absolute;
+	top: -6px;
+}
+/* ---------------------------- */
+/* Pins */
+.pin{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	z-index: 10;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin-top: 0;
+	background: transparent;
+}
+.pin .icon-big{
+	position: absolute;
+	display: block;
+	z-index: 15;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+}
+.pin:before, .pin-body{
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-top-right-radius: 50px;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 0px;
+}
+.pin-body{
+	z-index: 12;
+	transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+}
+.pin:before{
+	left: 3px;
+	top: 1px;
+	z-index: 1;
+	background-color: rgba(0,0,0,0.15);
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0.1), rgba(0,0,0,0.0));
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.1), rgba(0,0,0,0.0));
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0.1), rgba(0,0,0,0.0));
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,0.1), rgba(0,0,0,0.0));
+	background-image: linear-gradient(left, rgba(0,0,0,0.1), rgba(0,0,0,0.0));
+}
+.hovers .pin:before{
+	top: auto;
+	transform: rotate(15deg) rotateX(-35deg);
+	-webkit-transform: rotate(15deg) rotateX(-35deg);
+	-moz-transform: rotate(15deg) rotateX(-35deg);
+	bottom: -11px;
+	left: 5px;
+}
+.hovers .pin:hover{
+	cursor: pointer;
+	-webkit-animation: pin-levitation 2.8s steps(7) infinite; /* Safari 4+ */
+	-moz-animation:    pin-levitation 2.8s steps(7) infinite; /* Fx 5+ */
+	-o-animation:      pin-levitation 2.8s steps(7) infinite; /* Opera 12+ */
+	animation:         pin-levitation 2.8s steps(7) infinite; /* IE 10+ */
+}
+/* Pin animation */
+@-webkit-keyframes pin-levitation {
+  0%   	{ margin-top: 0px; }
+  50% 	{ margin-top: -7px; }
+  100% 	{ margin-top: 0px; }
+}
+@-moz-keyframes pin-levitation {
+  0%   { margin-top: 0; }
+  50% { margin-top: -10px; }
+  100% { margin-top: 0px; }
+
+}
+@-o-keyframes pin-levitation {
+  0%   { margin-top: 0; }
+  50% { margin-top: -10px; }
+  100% { margin-top: 0px; }
+
+}
+@keyframes pin-levitation {
+  0%   { margin-top: 0; }
+  50% { margin-top: -10px; }
+  100% { margin-top: 0px; }
+
+}
+.pin .icon-big{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.pin.dribbble{
+	left: 50%;
+	top: 30%;
+}
+.pin.twitter{
+	left: 30%;
+	top: 50%;
+}
+.pin.linkedin{
+	left: 40%;
+	top: 70%;
+}
+.pin.xing{
+	left: 20%;
+	top: 60%;
+}
+.mobile .pins{
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	height: 80px;
+	position: absolute;
+	bottom: -100px;
+	background: rgb(235,240,240);
+}
+.mobile .pins .pin{
+	position: relative;
+	float: left;
+	top: auto;
+	left: auto;
+	width: 18%;
+	margin: 15px 1%;
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+}
+.mobile .pins .icon-big{
+	left: 50%;
+	margin-left: -15px;
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+}
+.mobile .pins .pin:before{ display: none; }
+.mobile .pin-body{
+	left: 50%;
+	margin-left: -25px;
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+}
+/* -------------------- */
+/* map */
+#veare_map{
+	height: 100%;
+	width: 100%;
+}
+#veare_map:before{
+	display: block;
+	height: 3px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(0,0,0,0.15);
+	z-index: 999;
+}
+.mobile #veare_map{ display: none; }
+.vcard-wrapper{ background: transparent; }
+.mobile .vcard-wrapper{
+	display: block;
+	float: left;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 100px;
+	background: rgb(165,205,200);
+}
+.tablet .tablet-align-left, .tablet-small .tablet-align-left, .mobile .tablet-align-left{ text-align: left; }
+.tablet .tablet-align-center, .tablet-small .tablet-align-center, .mobile .tablet-align-center{ text-align: center !important; }
+.blog-link-tablet{ display: none; }
+.tablet .blog-link-tablet, .tablet-small .blog-link-tablet, .mobile .blog-link-tablet{ 
+	width: 100% !important;
+	display: block; 
+	text-align: center;
+}
+.tablet .blog-link-tablet .big-arrow, .tablet-small .blog-link-tablet .big-arrow, .mobile .blog-link-tablet .big-arrow{ display: inline-block; }
+.tablet .blog-link, .tablet-small .blog-link, .mobile .blog-link{ display: none; }
+.tablet .blog-text{ float: left; }

@@ -74,6 +74,7 @@
 	clear: both;
 }
 .aside{
+	text-align: left; 
 	margin-bottom: 20px;
 }
 .portfolio-item .image-description{
@@ -84,7 +85,6 @@
 	float: right;
 	text-align: right;
 }
-
 .filters{
 	width: 100%;
 	margin-top: 20px;

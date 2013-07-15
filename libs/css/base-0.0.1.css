@@ -1,8 +1,6 @@
 /*------------------*/
 /* general */
-html, body{
-	height: 100%;
-}
+html, body{ height: 100%; position: relative; }
 .wf-active body{ 
 	font-family: "Source Sans Pro"; 
 	font-weight: 400;
@@ -19,9 +17,25 @@ body{
 	min-width: 280px;
 	width: 100%;
 }
-html.menu-active, body.mobile.menu-active{
-	overflow: hidden !important;
+html.menu-active, body.mobile.menu-active{ overflow: hidden !important; }
+/*------------------*/
+/* fonts */
+.regular{ font-family: "Helvetica Neue"; }
+.bold{ 
+	font-family: "Helvetica Neue"; 
+	font-weight: bold; 
 }
+.wf-active .regular{
+	font-family: "Source Sans Pro";
+	font-weight: 400;
+}
+.wf-active .bold{
+	font-family: "Source Sans Pro";
+	font-weight: 600;
+}
+.wf-active strong{ font-weight: 600; }
+/*------------------*/
+/* Utilities */
 .float-left{ float: left !important; position: relative; }
 .float-right{ float: right !important; position: relative; }
 .opacity-50{ opacity: 0.5; }
@@ -42,65 +56,13 @@ div.max-width-1000{ max-width: 1000px; }
 
 .padding-sides-small{ padding-left: 25px; padding-right: 25px; }
 .mobile .padding-sides-small{ padding-left: 10px; padding-right: 10px; }
-
 /*------------------*/
 /* margin */
+p{ margin: 0 0 10px 0; text-align: left; }
+.copy p{ width: 100%; max-width: 550px; line-height: inherit; }
+
 .margin-top-tiny{ margin-top: 25px; }
 .mobile .margin-top-tiny{ margin-top: 10px; }
-/*------------------*/
-/* fonts */
-.regular{ font-family: "Helvetica Neue"; }
-.bold{ font-family: "Helvetica Neue"; font-weight: bold; }
-.wf-active .regular{
-	font-family: "Source Sans Pro";
-	font-weight: 400;
-}
-.wf-active .bold{
-	font-family: "Source Sans Pro";
-	font-weight: 600;
-}
-.align-left{ text-align: left; }
-.align-right{ text-align: right; }
-.uppercase{ text-transform: Uppercase; }
-/*------------------*/
-/* typography */
-h1, h2, h3, h4, h5{ font-weight: 600; }
-h1, .giant-headline{ font-size: 200px; line-height: 100%; }
-h2, .big-headline{ font-size: 100px; line-height: 120%; }
-h3, h4, .medium-headline{ font-size: 48px; line-height: 120%; margin-bottom: 15px; }
-.small-headline{ font-size: 24px; line-height: 100%; margin-bottom: 10px; }
-.copy{ font-size: 22px; text-align: left; line-height: 130%; }
-.copy p{ margin: 0 0 10px 0; width: 100%; max-width: 550px; line-height: inherit; }
- p.copy{ margin: 0 0 10px 0; }
-.copy strong{ font-weight: 600; }
-.copy-small{ font-size: 18px; text-align: left; line-height: 130%; }
-
-.wide-screen .copy{ font-size: 22px; }
-
-.tablet h1, .tablet .giant-headline{ font-size: 180px; line-height: 120%; }
-.tablet h2, .tablet .big-headline{ font-size: 80px; line-height: 120%; }
-.tablet h3, .tablet h4, .tablet .medium-headline{ font-size: 36px; line-height: 120%; }
-
-.tablet-small h1, .tablet-small .giant-headline{ font-size: 140px; line-height: 100%; }
-.tablet-small h2, .tablet-small .big-headline{ font-size: 60px; line-height: 120%; }
-.tablet-small h3, .tablet-small h4, .tablet-small .medium-headline{ font-size: 30px; line-height: 120%; }
-
-.mobile h1, .mobile .giant-headline{ font-size: 110px; line-height: 100%; }
-.mobile h2, .mobile .big-headline{ font-size: 40px; line-height: 100%; }
-.mobile h3, .mobile h4, .mobile .medium-headline{ font-size: 28px; line-height: 100%; }
-.mobile .small-headline{ font-size: 24px; line-height: 150%; }
-.mobile .copy-small{ font-size: 18px; }
-
-.headline-margin-40{ margin-bottom: 40px; }
-
-.font-size-big{ font-size: 41px; line-height: 110%; } 
-.wf-active .font-size-big{ font-size: 48px; line-height: 110%; } 
-
-.tablet-small .font-size-big{ font-size: 28px; line-height: 110%; } 
-.tablet-small .wf-active .font-size-big{ font-size: 34px; line-height: 10%; }
-
-.mobile .font-size-big{ font-size: 24px; line-height: 110%; } 
-.mobile .wf-active .font-size-big{ font-size: 30px; line-height: 110%; }
 /*------------------*/
 /* sprite */
 .veare-sprite{ background-image: url('../../layout/veare-icons.png'); }
@@ -148,35 +110,12 @@ img.loaded{
 	-webkit-transition: opacity .4s ease;
 }
 /*------------------*/
-/* gui */
-.button{
-	text-decoration: none;
-	display: block;
-	padding: 7px 10px;
-	border-radius: 3px;
-	cursor: pointer;
-	border-width: 2px;
-	border-style: solid;
-	border-color: transparent;
-	transition: background .3s ease, border-color .3s ease, color .3s ease;
-	-webkit-transition: background .3s ease, border-color .3s ease, color .3s ease;
-}
-.hovers .button:hover{
-	background: transparent;
-	transition: background .3s ease, border-color .3s ease, color .3s ease;
-	-webkit-transition: background .3s ease, border-color .3s ease, color .3s ease;
-}
-.mobile .button{
-	padding: 10px 14px;
-}
-/*------------------*/
 /* body */
 #body{
 	float: left;
 	width: 100%;
-	height: auto;
+	height: 100%;
 	min-height: 100%;
-	overflow-x: hidden;
 	position: relative;
 	z-index: 2;
 	background: rgb(255,255,255);
@@ -221,26 +160,19 @@ img.loaded{
 	-o-transition: opacity .8s ease .3s;
 	-ms-transition: opacity .8s ease .3s;
 }
-.loaded #logo{
-	opacity: 1;
-}
+.loaded #logo{ opacity: 1; }
 #logo img{
 	position: absolute;
 	top: 0;
 	left: 0;
 	margin: 0;
 }
-.white-logo #logo img{
-	top: -210px;
-}
+.white-logo #logo img{ top: -210px; }
 .mobile #logo{
 	width: 50px;
 	height: 40px;
 }
-.mobile #logo img{
-	top: -120px;
-	left: 0;
-}
+.mobile #logo img{ top: -120px; }
 .mobile.white-logo #logo img{
 	top: -150px;
 	left: -90px;

@@ -1,11 +1,7 @@
 /* ---------------------------------------------------------------- */
 /* responsiveness */
-body.mobile, body.tablet-small{
-	font-size: 120%;
-}
-body.mobile, body.tablet{
-	font-size: 110%;
-}
+body.mobile, body.tablet-small{ font-size: 120%; }
+body.tablet{ font-size: 110%; }
 body{ font-family: 'Helvetica Neue', 'Helvetica', Arial, Sans-serif; }
 html { font-family: 'mobile-portrait'; }
 @media screen and (max-width: 320px) and (orientation:portrait) { 

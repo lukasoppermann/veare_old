@@ -15,8 +15,6 @@ class MY_Controller extends CI_Controller {
 	function __construct() 
  	{
 		parent::__construct();
-		// get config from db
-		// $this->config->set_config_from_db();
 		// set charset
 		Header("Content-type: text/html;charset=UTF-8");
 		// set header for browser to not cache stuff
@@ -44,25 +42,28 @@ class MY_Controller extends CI_Controller {
 		$this->load->add_package_path(BASEPATH.'packages/fs_jsmin/');
 		$this->load->add_package_path(BASEPATH.'packages/fs_optimize/');
 		$this->load->driver('Fs_optimize');
-		//
+		// --------------------------------------------------------------------	
+		// load cache
 		$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 		if( ENVIRONMENT == 'development' )
 		{
 			$this->cache->clean();
 		}
-				// load model
+		// --------------------------------------------------------------------	
+		// load model
 		$this->load->add_package_path(BASEPATH.'packages/fs_base_model/');
 		$this->load->model('Fs_base_model');
 		// --------------------------------------------------------------------
 		// load google
 		$this->load->add_package_path(BASEPATH.'packages/fs_google/');
 		$this->load->library('fs_google');
+		// --------------------------------------------------------------------
 		// load helpers
 		$this->load->helper(array('fs_metadata'));
 		// --------------------------------------------------------------------
 		// load assets
-		css_add(array('reset','base','colors','layout','animations','browser','icons','responsiveness','menu'));
-		css_add(array('portfolio'));
+		css_add(array('reset','gui','typography','base','colors','layout','animations','browser','icons','responsiveness','menu'));
+		css_add(array('homepage','portfolio'));
 		js_add('jquery, fs.centered, fs.tiles, fs.filter');
 		js_add('fs.media_queries, fs.resize, base, javascript', 'default'); 
 		// --------------------------------------------------------------------
