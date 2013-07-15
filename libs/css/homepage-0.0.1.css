@@ -28,13 +28,47 @@
 }
 /* ---------------------------- */
 /* Skills */
-.skills .columns{ margin-bottom: 30px; }
-.mobile .skills .columns, .tablet-small .skills .columns{ margin-bottom: 0px; }
+.skills .skill-wrapper{ margin-bottom: 30px; }
+.mobile .skills .skill-wrapper, .tablet-small .skills .skill-wrapper{ margin-bottom: 0px; }
 
 
-.skill-columns{
+.skill-wrapper{
 	width: 750px;
 	display: inline-block;
+}
+.tablet-small .skill-wrapper, .mobile .skill-wrapper{ width: 100%; }
+
+.skill{ 
+	position: relative;
+	margin-bottom: 60px;
+}
+
+.skill .content{
+	width: calc(100% - 305px);
+	width: -webkit-calc(100% - 305px);
+	min-width: 300px;
+	display: inline-block;
+	position: relative;
+	text-align: left;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.tablet-small .skill .content{ width: 500px; }
+.mobile .skill .content{ width: 100%; }
+
+.skill .content.left{ padding-left: 30px; }
+.skill .content.right{ padding-right: 30px; }
+.tablet .skill .content.left, .mobile .skill .content.left{ padding-left: 0px; }
+.tablet .skill .content.right, .mobile .skill .content.right{ padding-right: 0px; }
+
+.mobile .skill .content, .tablet-small .skill .content{ 
+	padding-top: 300px;
+}
+.mobile .skill .image, .tablet-small .skill .image{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -150px;
 }
 
 .hover-circle:before{
@@ -47,60 +81,10 @@
 	top: 10px;
 	left: 10px;
 }
-.skill-content{
-	display: inline-block;
-	position: relative;
-	text-align: left;
-	height: auto;
-}
-.skills .skill-content .copy{
-	display: block;
-}
-.skills .skill-content .copy p{
-	opacity: 0.85;
-}
-.skills .column{
-	display: block;
-	position: relative;
-}
-/*.skills .more.vcenter{ 
-	height: 100%;
-	width: 60px;
-	display: block;
-	position: absolute; 
-	top: 0;
-}
 
-.skills .more.vcenter.right{ right: 0; }
-.skills .more.vcenter.left{ left: 0; }*/
-.margin-left-60{ margin-left: 60px; }
-.margin-right-60{ margin-right: 60px; }
-.tablet-small .skills .margin-left-60, .mobile .skills .margin-left-60{ margin-left: 0px; }
-.tablet-small .skills .margin-right-60, .mobile .skills .margin-right-60{ margin-right: 0px; }
-.tablet-small .skills .more, .mobile .skills .more{ display: none; }
-.skill-content .copy{
-	vertical-align: top;
-	display: inline-block;
-	padding: 0 0 0 30px;
-	width: 100%;
-	max-width: 460px;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.skill-content .copy{ padding: 0 30px 30px 30px; }
-.mobile .skill-content .copy{ padding: 0 00px 50px 00px; }
-.mobile .skill-content, .tablet-small .skill-content{ 
-	padding-top: 300px;
-	position: relative;
-}
-.mobile .skills .column .image, .tablet-small .skills .column .image{
-	position: absolute;
-	top: 0;
-	left: 50%;
-	margin-left: -150px;
-}
-.mobile .skill-content .medium-headline, .tablet-small .skill-content .medium-headline{ text-align: center; }
+.skills .content p{ opacity: 0.85; }
+
+.mobile .content .medium-headline, .tablet-small .content .medium-headline{ text-align: center; }
 /* ---------------------------- */
 /* About veare */
 .tablet-small .plus:after, .mobile .plus:after{ display: none; }

@@ -22,7 +22,7 @@
 	}
 	else
 	{
-		$class = ' class="hovers screen'.variable($body_class).'"';
+		$class = ' class="hovers screen '.variable($body_class).'"';
 	}
 ?>
 <body<?=$class?> data-page_class="<?=$body_class?>" id="html_body" data-url="<?=base_url();?>">

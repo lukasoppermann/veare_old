@@ -21,66 +21,68 @@
 <section class="skills light-blue font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">
 	<div class="section-content centered fixed">
 		<h3 class="font-white width-100 big-headline headline-margin-40">This is what I do</h3>
-		<div class="skill-columns">
+		<div class="skill-wrapper">
 		
-			<div class="column column-five">
-				<figure class="image fixed interface veare-illustrations hover-circle centered">
+			<div class="skill"><figure class="image interface veare-illustrations hover-circle">
 					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="interface design, web design, iOS design, responsive design" />
 				</figure>
-				<div class="skill-content centered">
-					<div class="copy font-black float-left margin-right-60">
-						<h2 class="bold font-white medium-headline">Interface design</h2>
-						<p>When designing responsive websites, Mac or iOS applications I focus on usability and user experience.
-						</p>
-						<p>Using design thinking methods, I create user stories to find the most important features & potential problems to solve.
-						</p>
+				
+				<div class="content left copy font-black">
+					<div class="float-left">
+						<h2 class="font-white medium-headline">Interface design</h2>
+						<p>When designing responsive websites, Mac or iOS applications I focus on usability and user experience.</p>
+						<p>Using design thinking methods, I create user stories to find the most important features & potential problems to solve.</p>
 						<a class="more-link button float-left" href="<?=base_url(TRUE)?>portfolio/tag:interface">Portfolio</a>
 					</div>
 				</div>
+				
 			</div>
 			
-			<div class="column column-five">
-				<div class="skill-content centered">
-					<div class="copy font-black float-left margin-left-60">
-						<h2 class="bold font-white medium-headline">Print design</h2>
-						<p>Designing magazines and other print products I pay special attention to typographical details.
-						</p>
-						<p>Readability and well structured information are my main focus in editorial design. 
-						</p>
+			
+			
+			<div class="skill"><div class="content copy font-black right">
+					<div class="float-left">
+						<h2 class="font-white medium-headline">Print design</h2>
+						<p>Designing magazines and other print products I pay special attention to typographical details.</p>
+						<p>Readability and well structured information are my main focus in editorial design.</p>
 						<a class="more-link button font-white hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:print">Portfolio</a>
 					</div>
 				</div>
-				<figure class="image fixed print veare-illustrations hover-circle centered">
+				
+				<figure class="image print veare-illustrations hover-circle">
 					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="print design, magazines, posters, graphic design" />
 				</figure>
+				
 			</div>
 
-			<div class="column column-five">
-				<figure class="image fixed infographics veare-illustrations hover-circle centered">
+
+
+			<div class="skill"><figure class="image infographics veare-illustrations hover-circle">
 					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="Infographics, information design, information architecture" />
 				</figure>
-				<div class="skill-content centered">
-					<div class="copy font-black float-left margin-right-60">
-						<h2 class="bold font-white medium-headline">Infographics</h2>
-						<p>Turning complex information & numbers into easy-to-understand visuals is the magic of information graphics.
-						</p>
-						<p>If you need to explain a product or a complex workflow, an infographic is just the right thing.
-						</p>
+				
+				<div class="content copy font-black left">
+					<div class="float-left">
+						<h2 class="font-white medium-headline">Infographics</h2>
+						<p>Turning complex information & numbers into easy-to-understand visuals is the magic of information graphics.</p>
+						<p>If you need to explain a product or a complex workflow, an infographic is just the right thing.</p>
 						<a class="more-link button font-black hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:infographics">Portfolio</a>
 					</div>
 				</div>
+				
 			</div>
 
-			<div class="column column-five">
-				<div class="skill-content centered">
-					<div class="copy font-black float-left margin-left-60">
-						<h2 class="bold font-white medium-headline">Modern branding</h2>
-						<p>Todays brands need to compete mostly in digital media & advertising, a modern branding strategy accounts for that. A brand's corporate identity must be easy to remember and able to compete in the digital world.
-						</p>
+
+
+			<div class="skill"><div class="content right copy font-black">
+					<div class="float-left">
+						<h2 class="font-white medium-headline">Modern branding</h2>
+						<p>Todays brands need to compete mostly in digital media & advertising, a modern branding strategy accounts for that. A brand's corporate identity must be easy to remember and able to compete in the digital world.</p>
 						<a class="more-link button font-white hover-font-white float-left" href="<?=base_url(TRUE)?>portfolio/tag:branding">Portfolio</a>
 					</div>
 				</div>
-				<figure class="image fixed branding veare-illustrations hover-circle centered">
+				
+				<figure class="image branding veare-illustrations hover-circle">
 					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="corporate design, modern branding, logo design, corporate identity" />
 				</figure>
 			</div>
