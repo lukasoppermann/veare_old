@@ -29,17 +29,6 @@ section{
 .mobile .section-content{ padding: 25px 2.5%; }
 /* ---------------------------- */
 /* vertical center */
-/*.vertical-center{ font-size: 0; }
-.vertical-center:before {
-	content: "";
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-	width: 1px;
-	background: red;
-	margin-left: -1px;
-	overflow: hidden;
-}*/
 .vertical-center{
 	display: table;
 	align: center;

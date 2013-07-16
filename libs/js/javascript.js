@@ -220,7 +220,6 @@ $(function(){
 	// Go!
 	MQ.init(queries);	
 	// run initial resize fn
-	// $('section').fs_centered({'content':'.section-content'});
 	
 	minPadding();
 	
