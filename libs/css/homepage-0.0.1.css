@@ -4,15 +4,8 @@
 .about-lukas-oppermann .coffee{
 	margin-bottom: 50px;
 }
-.mobile .about-lukas-oppermann .big-headline{ 
-	text-align: center;
-	margin-bottom: 10px;
-}
-.mobile .about-lukas-oppermann .medium-headline{
-	text-align: center;
-}
 /* ---------------------------- */
-/* more link */
+/* Skills */
 .skills .more-link{
 	margin-top: 10px;
 	text-decoration: none;
@@ -21,28 +14,15 @@
 	background: rgba(0,0,0,0.15);
 	color: rgba(255,255,255,0.75);
 }
-.skills .skill-content .copy .more-link:hover{
-	background: transparent;
-	border-color: rgba(0,0,0,0.15);
-	color: rgba(0,0,0,0.65);
-}
-/* ---------------------------- */
-/* Skills */
-.skills .skill-wrapper{ margin-bottom: 30px; }
-.mobile .skills .skill-wrapper, .tablet-small .skills .skill-wrapper{ margin-bottom: 0px; }
-
-
-.skill-wrapper{
+.skills .skill-wrapper{ 
 	width: 750px;
 	display: inline-block;
 }
-.tablet-small .skill-wrapper, .mobile .skill-wrapper{ width: 100%; }
-
+.mobile .skills .skill-wrapper, .tablet-small .skills .skill-wrapper{ width: 100%; }
 .skill{ 
 	position: relative;
 	margin-bottom: 60px;
 }
-
 .skill .content{
 	width: calc(100% - 305px);
 	width: -webkit-calc(100% - 305px);
@@ -55,22 +35,17 @@
 }
 .tablet-small .skill .content{ width: 500px; }
 .mobile .skill .content{ width: 100%; }
-
 .skill .content.left{ padding-left: 30px; }
 .skill .content.right{ padding-right: 30px; }
 .tablet .skill .content.left, .mobile .skill .content.left{ padding-left: 0px; }
 .tablet .skill .content.right, .mobile .skill .content.right{ padding-right: 0px; }
-
-.mobile .skill .content, .tablet-small .skill .content{ 
-	padding-top: 300px;
-}
+.mobile .skill .content, .tablet-small .skill .content{ padding-top: 300px; }
 .mobile .skill .image, .tablet-small .skill .image{
 	position: absolute;
 	top: 0;
 	left: 50%;
 	margin-left: -150px;
 }
-
 .hover-circle:before{
 	position: absolute;
 	display: block;
@@ -81,9 +56,7 @@
 	top: 10px;
 	left: 10px;
 }
-
 .skills .content p{ opacity: 0.85; }
-
 .mobile .content .medium-headline, .tablet-small .content .medium-headline{ text-align: center; }
 /* ---------------------------- */
 /* About veare */
@@ -137,29 +110,9 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
 }
-.mobile .circle-copy{
-	padding: 0;
-}
+.mobile .circle-copy{ padding: 0; }
 /* ---------------------------- */
-/* Blog block */
-.blog-teaser{
-	position: relative;
-	display: inline-block;
-	max-width: 550px;
-}
-.blog-teaser .blog-headline{
-	font-size: 30px;
-	margin-bottom: 15px;
-}
-.blog-link{
-	width: 300px;
-	position: relative;
-	text-align: center;
-	display: inline-block;
-}
-.blog-link img{ display: inline-block; }
-/* ---------------------------- */
-/* Portfolio */
+/* Contact */
 #veare_businesscard{
 	display: block;
 	text-align: left;
@@ -437,14 +390,3 @@
 	padding-bottom: 100px;
 	background: rgb(165,205,200);
 }
-.tablet .tablet-align-left, .tablet-small .tablet-align-left, .mobile .tablet-align-left{ text-align: left; }
-.tablet .tablet-align-center, .tablet-small .tablet-align-center, .mobile .tablet-align-center{ text-align: center !important; }
-.blog-link-tablet{ display: none; }
-.tablet .blog-link-tablet, .tablet-small .blog-link-tablet, .mobile .blog-link-tablet{ 
-	width: 100% !important;
-	display: block; 
-	text-align: center;
-}
-.tablet .blog-link-tablet .big-arrow, .tablet-small .blog-link-tablet .big-arrow, .mobile .blog-link-tablet .big-arrow{ display: inline-block; }
-.tablet .blog-link, .tablet-small .blog-link, .mobile .blog-link{ display: none; }
-.tablet .blog-text{ float: left; }
