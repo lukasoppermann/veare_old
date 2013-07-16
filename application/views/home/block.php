@@ -1,9 +1,9 @@
 <section class="bold font-light-orange vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">
 	
-	<div class="section-content centered fixed">
+	<div class="section-content centered introduction">
 		<span class="hello giant-headline">Hello,</span><br />
 		<h2 class="big-headline">I design interfaces</h2><br />
-		<h1 class="veare-studio medium-headline float-right">&amp; veare is my design studio.</h1><br />
+		<h1 class="veare-studio medium-headline">&amp; veare is my design studio.</h1><br />
 	</div>
 	
 </section>
@@ -13,8 +13,8 @@
 		<figure class="image fixed coffee veare-illustrations">
 			<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="lukas oppermann designer at veare design studio" />
 		</figure>
-		<h2 class="big-headline ">I think first, design second</h2>
-		<span class="medium-headline float-right align-left">&amp; drink quite some coffee while I do that.</span>
+		<h2 class="big-headline">I think first, design second</h2>
+		<span class="medium-headline">&amp; drink quite some coffee while I do that.</span>
 	</div>
 </section>
 

@@ -64,7 +64,7 @@ class MY_Controller extends CI_Controller {
 		// load assets
 		css_add(array('reset','gui','typography','base','colors','layout','animations','browser','icons','responsiveness','menu'));
 		css_add(array('homepage','portfolio'));
-		js_add('fs.media_queries, jsfirst', 'first')
+		js_add('fs.media_queries, jsfirst', 'first');
 		js_add('jquery, fs.centered, fs.tiles, fs.filter');
 		js_add('fs.resize, base, javascript', 'default'); 
 		// --------------------------------------------------------------------

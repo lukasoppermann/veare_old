@@ -380,7 +380,7 @@
 	box-sizing: border-box;	
 	height: 80px;
 	position: absolute;
-	bottom: -100px;
+	bottom: -80px;
 	background: rgb(235,240,240);
 }
 .mobile .pins .pin{
