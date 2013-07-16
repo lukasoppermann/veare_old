@@ -13,6 +13,11 @@
 	position: relative;
 	background: rgba(0,0,0,0.15);
 	color: rgba(255,255,255,0.75);
+	border-width: 3px;
+}
+.hovers .skills .more-link:hover{
+	border-color: rgba(0,0,0,0.15);
+	color: rgba(50,50,47,0.5);
 }
 .skills .skill-wrapper{ 
 	width: 750px;

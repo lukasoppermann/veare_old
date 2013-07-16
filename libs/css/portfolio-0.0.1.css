@@ -23,8 +23,6 @@
 /* item */
 .roles{
 	margin-bottom: 10px;
-}
-.roles{
 	padding: 3px 0;
 }
 .tag-marker{
@@ -32,26 +30,18 @@
 	font-size: 90%;
 	padding-bottom: 3px;
 }
-.created{
-	margin: 0 0 10px 4px;	
-}
-.team{
-	display: inline-block;
-}
+.created{ margin: 0 0 10px 4px; }
+.team{ display: inline-block; }
 .tags{
 	position: relative;
 	margin-top: 25px;
 }
-.tag{
-	padding: 0 5px 0 0;
-}
+.tag{ padding: 0 5px 0 0; }
 .project-link{
 	text-decoration: none;
 	margin-left: 4px;
 }
-.hovers .link:hover{
-	text-decoration: underline;
-}
+.hovers .link:hover{ text-decoration: underline; }
 /* ---------------------------- */
 /* overview */
 .portfolio-item{
@@ -59,18 +49,8 @@
 	background: rgb(255,255,255);
 	padding-bottom: 50px;
 }
-.portfolio-item .big-headline{
-	margin-bottom: 50px;
-}
-.portfolio-item .portfolio-item-headline{
-	font-size: 50px;
-}
-.portfolio-item .columns{
-	width: auto;
-}
-.portfolio-item .column-two:nth-child(2n):after{
-	clear: both;
-}
+.portfolio-item .columns{ width: auto; }
+.portfolio-item .column-two:nth-child(2n):after{ clear: both; }
 .aside{
 	text-align: left; 
 	margin-bottom: 20px;
