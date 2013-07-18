@@ -5,7 +5,7 @@
 	<!-- logo -->
 	<a href="<?=base_url(TRUE)?>home" class="ajax-link" data-nav="#nav">
 		<div class="logo">
-			<img class="logo-img img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-icons@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-icons.png" src="" alt="veare design studio - visionary design" />
+			<img class="logo-img async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-icons@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-icons.png" src="" alt="veare design studio - visionary design" />
 		</div>
 	</a>
 	<!-- main menu -->
@@ -45,6 +45,6 @@
 	$this->fs_google->fonts(array('Source Sans Pro:400,600'));
 ?>
 <? echo js('first', FALSE); ?>
-<? echo js('default', TRUE); ?>
+<? echo js('default', FALSE); ?>
 </body>
 </html>

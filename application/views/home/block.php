@@ -11,7 +11,7 @@
 <section class="turquoise font-white bold vertical-center no-flicker about-lukas-oppermann min-padding" data-minpadding="50" data-minpadding-mobile="30">
 	<div class="section-content centered fixed">
 		<figure class="image fixed coffee veare-illustrations">
-			<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="lukas oppermann designer at veare design studio" />
+			<img class="async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="lukas oppermann designer at veare design studio" />
 		</figure>
 		<h2 class="big-headline">I think first, design second</h2>
 		<span class="medium-headline">&amp; drink quite some coffee while I do that.</span>
@@ -24,7 +24,7 @@
 		<div class="skill-wrapper">
 		
 			<div class="skill"><figure class="image interface veare-illustrations hover-circle">
-					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="interface design, web design, iOS design, responsive design" />
+					<img class="async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="interface design, web design, iOS design, responsive design" />
 				</figure>
 				
 				<div class="content left copy font-black">
@@ -50,7 +50,7 @@
 				</div>
 				
 				<figure class="image print veare-illustrations hover-circle">
-					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="print design, magazines, posters, graphic design" />
+					<img class="async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="print design, magazines, posters, graphic design" />
 				</figure>
 				
 			</div>
@@ -58,7 +58,7 @@
 
 
 			<div class="skill"><figure class="image infographics veare-illustrations hover-circle">
-					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="Infographics, information design, information architecture" />
+					<img class="async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="Infographics, information design, information architecture" />
 				</figure>
 				
 				<div class="content copy font-black left">
@@ -83,7 +83,7 @@
 				</div>
 				
 				<figure class="image branding veare-illustrations hover-circle">
-					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="corporate design, modern branding, logo design, corporate identity" />
+					<img class="async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="corporate design, modern branding, logo design, corporate identity" />
 				</figure>
 			</div>
 			
@@ -97,7 +97,7 @@
 			<div class="column tablet-half column-two">
 				<div class="circle-big light-blue">
 					<figure class="image eye veare-illustrations">
-					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="veare visionary design, design & content strategy" />
+					<img class="async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="veare visionary design, design & content strategy" />
 					</figure>
 				</div>
 				<div class="circle-copy copy font-black">
@@ -111,7 +111,7 @@
 			<div class="column tablet-half column-two">
 				<div class="circle-big light-blue">
 					<figure class="image brain veare-illustrations">
-					<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="intelligent design, usability, user experience, information architecture, storytelling" />
+					<img class="async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="intelligent design, usability, user experience, information architecture, storytelling" />
 					</figure>
 				</div>
 				<div class="circle-copy copy font-black"><h3 class="bold circle-headline font-white">intelligent</h3>

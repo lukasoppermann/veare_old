@@ -1,5 +1,6 @@
-var win, resolution, _body, _html;
-// jquery ready
+var win, resolution, _body, _html,
+		pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : '1'; // get Pixel Ratio
+		// jquery ready
 $(function(){
 	// -----------------------
 	// define variables
@@ -12,8 +13,12 @@ $(function(){
 			i = 1,
 			screen = {};
 	// -----------------------
+	// add Pixel Ratio to body
+	_body.addClass('x'+pixelRatio);
+	// -----------------------
 	// define functions
-	// img padding
+	// -----------------------
+	// img loading
 	$.fn.imageLoad = function(fn){
 		this.load(fn);
 		this.each( function() 
@@ -24,6 +29,7 @@ $(function(){
 		});
 		return this;
 	}
+	// -------------------------------------------------------------------------------------------------------------
 	// min padding
 	var minPadding = function(){
 		$('.min-padding').each(function(){
@@ -42,15 +48,12 @@ $(function(){
 			}
 		});
 	};
-	// -----------------------
-	// add retina detection
-	var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : '1';
-	_body.addClass('x'+pixelRatio);
-	// set images depending on ratio
-	$('.img-optimized').each(function(){
-		var _this = $(this);
-		var src = _this.data('src-x'+pixelRatio);
-		var altSrc = _this.data('src');
+	// -------------------------------------------------------------------------------------------------------------
+	// load images depending on ratio
+	$('.async-img').each(function(){
+		var _this 	= $(this),
+				src 		= _this.data('src-x'+pixelRatio),
+				alt_src = _this.data('src');
 		
 		_this.addClass('loading').imageLoad(function()
 		{
@@ -68,9 +71,9 @@ $(function(){
 		{
 			_this.attr('src',src).addClass('loaded').removeClass('loading');
 		}
-		else if( altSrc != undefined )
+		else if( alt_src != undefined )
 		{
-			_this.attr('src',altSrc).addClass('loaded').removeClass('loading');
+			_this.attr('src',alt_src).addClass('loaded').removeClass('loading');
 		}
 		
 	});
@@ -170,12 +173,7 @@ $(function(){
 	var lat = 52.546167,
 			lng = 13.4145,
 		 	zoom = 14,
-			dragevent;
-	// draw map  
-	var dragfn = function(){
-		map.setCenter(lat, lng);
-		map.setZoom(zoom);	
-	};
+			map;
 	// -----------------------
 	// Define styles	
 	var style = [
@@ -309,7 +307,7 @@ $(function(){
 
 	if( _map.length > 0 && resolution != 'mobile')
 	{
-		_map.height(_map.parent().css('height'));
+				_map.height(_map.parent().css('height'));
 		// hide pins
 		$('.pins').hide();
 		// once everything is loaded

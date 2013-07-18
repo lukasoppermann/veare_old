@@ -176,11 +176,11 @@ class Portfolio extends MY_Controller {
 			}
 			elseif( $items[$permalink]['stage']['type'] == 'full' )
 			{
-				$this->data['stage_content'] = '<img class="full-width image" src="'.base_url(TRUE).'media/'.$this->data['images'][$items[$permalink]['stage']['image']]['filename'].'.'.$this->data['images'][$items[$permalink]['stage']['image']]['ext'].'" alt="'.$items[$permalink]['title'].'" />';
+				$this->data['stage_content'] = '<img class="full-width image async-img" src="'.base_url(TRUE).'media/'.$this->data['images'][$items[$permalink]['stage']['image']]['filename'].'.'.$this->data['images'][$items[$permalink]['stage']['image']]['ext'].'" alt="'.$items[$permalink]['title'].'" />';
 			}
 			else
 			{
-				$this->data['stage_content'] = '<img class="centered image" src="'.base_url(TRUE).'media/'.$this->data['images'][$items[$permalink]['stage']['image']]['filename'].'.'.$this->data['images'][$items[$permalink]['stage']['image']]['ext'].'" alt="'.$items[$permalink]['title'].'" />';
+				$this->data['stage_content'] = '<img class="centered image async-img" src="'.base_url(TRUE).'media/'.$this->data['images'][$items[$permalink]['stage']['image']]['filename'].'.'.$this->data['images'][$items[$permalink]['stage']['image']]['ext'].'" alt="'.$items[$permalink]['title'].'" />';
 			}
 		}
 		// add assets

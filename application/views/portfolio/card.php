@@ -1,6 +1,6 @@
 <a class="card card-link animate-flip<?=variable($card_class,'',' ')?><?=(isset($filter) && !in_array($filter, explode(' ',$category)) ? ' faded' : '')?>" data-category="<?=variable($category)?>" data-permalink="<?=$permalink?>" href="<?=current_url().$permalink?>">
 	<div class="front side <?=variable($color)?>">
-		<img class="image" src="<?=base_url(TRUE).'media/'.variable($images['filename']).'.'.variable($images['ext'])?>">
+		<img class="image async-img" data-src="<?=base_url(TRUE).'media/'.variable($images['filename']).'.'.variable($images['ext'])?>">
 		<?=variable($card)?>
 	</div>
 	<div class="back side align-left <?=variable($color)?>">
