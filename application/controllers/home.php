@@ -12,7 +12,7 @@ class Home extends MY_Controller {
 	{
 		if( mobile() != true || ipad() == true )
 		{
-			js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true'), 'first');
+			js_add(array('http://maps.googleapis.com/maps/api/js?sensor=true, gmaps'), 'first');
 		}	
 		
 		$this->data['meta_title'] = "interface design, print design, branding & information graphics";
