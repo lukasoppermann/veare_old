@@ -42,87 +42,6 @@ $(function(){
 			}
 		});
 	};
-	// resize sections
-	var resize_sections = function( callback ){
-		// get screen dimensions
-		screen.height = win.height();
-		screen.width 	= win.width();
-		// resize body to screen dimensions
-		_body.width(screen.width).height(screen.height);
-		// check and resize sections
-		var _sections = $('section');
-		var i = _sections.length;
-		// check if i > 0
-		if( i > 0 )
-		{
-			// loop through sections
-			_sections.each(function(){
-				// cache variables
-				var _this 					= $(this),
-						screen_height 	= screen.height-15,
-						section_content = _this.find('.section-content');
-				// check if section content is fixed
-				if( !section_content.hasClass('fixed') )
-				{
-					var section_content_height = section_content.css('height','auto').outerHeight();
-				}
-				else
-				{
-					var section_content_height = section_content.outerHeight();
-				}
-				// remove height auto -> back to 100%
-				section_content.css('height','');
-				// decrease i
-				--i;
-				// resize sections
-				if( screen_height >= _this.height() )
-				{
-					if( section_content_height == null || section_content_height <= screen_height )
-					{
-						_this.height( screen_height );
-					}
-					else
-					{
-						_this.height( section_content_height );
-					}
-				}
-				else
-				{
-					if( section_content_height == null || section_content_height <= screen_height )
-					{
-						_this.height( screen_height );
-					}
-					else
-					{
-						_this.height( section_content_height );
-					}
-				
-				}
-				// check if loop is done
-				if( i == 0 || typeof(i) == undefined )
-				{
-					if( typeof(callback) != "undefined" )
-					{
-						// run callback
-						callback();
-					}
-				}
-				// close loop
-			});
-		}
-		// run callback if no section
-		else if( typeof(callback) != "undefined" )
-		{
-			// run callback
-			callback();
-		}
-
-	};
-	//
-	win.load(function(){
-		_body.removeClass('loading');
-	});
-
 	// -----------------------
 	// add retina detection
 	var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : '1';
@@ -160,7 +79,6 @@ $(function(){
 	var query_actions = function( res )
 	{
 		resolution = res;
-		
 		_body.trigger('resolutionChange', res);
 	};
 	// -----------------------
@@ -219,13 +137,11 @@ $(function(){
 	];
 	// Go!
 	MQ.init(queries);	
-	// run initial resize fn
-	
+	// -----------------------
+	// run min padding
 	minPadding();
-	
-	_body.delay(100).addClass('loaded');
-
-	
+	// -----------------------
+	// open sidebar
 	$(document).on('click', '#menu_icon', function(e)
 	{
 		e.stopPropagation();
@@ -388,8 +304,11 @@ $(function(){
 	}
 	];
 
-	if( $('#veare_map').length > 0 && resolution != 'mobile')
+	var _map = $('#veare_map');
+
+	if( _map.length > 0 && resolution != 'mobile')
 	{
+		_map.height(_map.parent().css('height'));
 		// hide pins
 		$('.pins').hide();
 		// once everything is loaded
@@ -403,9 +322,9 @@ $(function(){
 				zoom: 14,
 				disableDefaultUI: true,
 				draggable: false,
-				scrollwheel: false,
-				tilesloaded: function(){
-				}
+				scrollwheel: false
+				// tilesloaded: function(){
+				// }
 			});
 			// Add styling
 			map.setOptions({

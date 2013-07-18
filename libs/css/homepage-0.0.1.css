@@ -373,7 +373,10 @@
 /* map */
 #veare_map{
 	height: 100%;
+	min-height: 100%;
 	width: 100%;
+	display: block; 
+	float: left;
 }
 #veare_map:before{
 	display: block;

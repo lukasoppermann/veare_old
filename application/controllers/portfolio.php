@@ -136,7 +136,6 @@ class Portfolio extends MY_Controller {
 		// end
 		$this->data['tag_menu'] .= '</div>';
 		//
-		$this->data['body_class'] = ' loading';
 		$this->data['content'] = implode('',$this->data['content']);
 		// load view
 		$this->view('portfolio/index', $this->data);
@@ -185,7 +184,7 @@ class Portfolio extends MY_Controller {
 			}
 		}
 		// add assets
-		$this->data['body_class'] = ' loading white-logo';
+		$this->data['body_class'] = ' white-logo';
 		$this->data['filter'] = $tag;
 		// load view
 		$this->view('portfolio/item', $this->data);
