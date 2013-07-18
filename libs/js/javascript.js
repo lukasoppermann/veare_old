@@ -79,6 +79,7 @@ $(function(){
 	var query_actions = function( res )
 	{
 		resolution = res;
+		minPadding();
 		_body.trigger('resolutionChange', res);
 	};
 	// -----------------------
@@ -397,6 +398,7 @@ $(function(){
 		
 			
 		$.fs_resize(function(){
+			_map.height(_map.parent().css('height'));
 			map.setCenter(lat, lng);
 			// remove map markers
 			map.removeOverlays();

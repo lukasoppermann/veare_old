@@ -8,7 +8,7 @@
 	
 </section>
 
-<section class="turquoise font-white bold vertical-center no-flicker about-lukas-oppermann">
+<section class="turquoise font-white bold vertical-center no-flicker about-lukas-oppermann min-padding" data-minpadding="50" data-minpadding-mobile="30">
 	<div class="section-content centered fixed">
 		<figure class="image fixed coffee veare-illustrations">
 			<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="lukas oppermann designer at veare design studio" />
