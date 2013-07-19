@@ -16,8 +16,8 @@ if( isset($payload) )
 }
 // ----------------------
 // check for cache handle
-if( stristr($commit,'-cache') != FALSE )
-{
+// if( stristr($commit,'-cache') != FALSE )
+// {
 	// remove chached files
 	// ----------------------
 	// get css all file names
@@ -31,4 +31,4 @@ if( stristr($commit,'-cache') != FALSE )
 			unlink($file); // delete file
 		}
 	}
-}
+// }
