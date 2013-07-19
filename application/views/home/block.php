@@ -3,7 +3,7 @@
 	<div class="section-content centered introduction">
 		<span class="giant-headline">Hello,</span><br />
 		<h2 class="big-headline">I design interfaces</h2>
-		<h1 class="veare-studio medium-headline">&amp; veare is my design studio.</h1><br />
+		<h1 class="veare-studio medium-headline">&amp; veare is my design studio.</h1>
 	</div>
 	
 </section>
