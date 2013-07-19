@@ -31,7 +31,7 @@ class MY_Controller extends CI_Controller {
 		// $this->output->enable_profiler(TRUE);
 		if( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1' || substr($_SERVER['REMOTE_ADDR'], 0, 3) == '10.' || substr($_SERVER['REMOTE_ADDR'], 0, 7) == '192.168' )
 		{
-            echo 'test';
+
 		}
 		else
 		{
