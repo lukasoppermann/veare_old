@@ -1,4 +1,4 @@
-<section class="bold font-light-orange vertical-center no-flicker min-padding veare-start" data-minpadding="50" data-minpadding-mobile="30">
+<section class="bold font-light-orange vertical-center no-flicker 2min-padding veare-start" data-minpadding="50" data-minpadding-mobile="30">
 	
 	<div class="section-content centered introduction">
 		<span class="giant-headline">Hello,</span><br />
