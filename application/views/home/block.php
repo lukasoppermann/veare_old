@@ -124,7 +124,7 @@
 	</div>
 </section>
 
-<section class="light-blue last-block map no-flicker">
+<section class="light-blue last-block map no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">
 	<div class="vcard-wrapper">
 		<div id="veare_businesscard" class="copy regular">
 		<a name="contact" class="name top-line">Lukas<br />
