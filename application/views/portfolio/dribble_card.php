@@ -1,6 +1,6 @@
 <a class="card animate-flip height-small" target="_blank" href="http://dribbble.com/lukasoppermann">
 	<div class="front side pink">
-		<img class="image async-img" src="<?=base_url(TRUE).'media/'?>dribbble.png">
+		<img class="image async-img" data-src="<?=base_url(TRUE).'media/'?>dribbble.png">
 		<?=variable($card)?>
 	</div>
 	<div class="back side align-left pink">
