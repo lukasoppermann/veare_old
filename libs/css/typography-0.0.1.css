@@ -17,14 +17,14 @@ h4, .small-headline{ font-size: 24px; line-height: 120%; }
 .tablet h3, .tablet .medium-headline{ font-size: 36px; line-height: 120%; }
 .tablet h4, .tablet .small-hadline{ font-size: 24px; line-height: 120%; }
 
-.tablet-small h1, .tablet-small .giant-headline{ font-size: 140px; line-height: 100%; }
+.tablet-small h1, .tablet-small .giant-headline{ font-size: 120px; line-height: 100%; }
 .tablet-small h2, .tablet-small .big-headline{ font-size: 60px; line-height: 120%; }
 .tablet-small h3, .tablet-small .medium-headline{ font-size: 30px; line-height: 120%; }
 .tablet-small h4, .tablet .small-hadline{ font-size: 24px; line-height: 120%; }
 
-.mobile h1, .mobile .giant-headline{ font-size: 110px; line-height: 100%; }
+.mobile h1, .mobile .giant-headline{ font-size: 80px; line-height: 100%; }
 .mobile h2, .mobile .big-headline{ font-size: 36px; line-height: 100%; }
-.mobile h3, .mobile .medium-headline{ font-size: 28px; line-height: 120%; }
+.mobile h3, .mobile .medium-headline{ font-size: 26px; line-height: 120%; }
 .mobile h4, .mobile .small-hadline{ font-size: 24px; line-height: 120%; }
 /*------------------*/
 /* copy */
