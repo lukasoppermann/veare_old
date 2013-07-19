@@ -1,5 +1,25 @@
 .headline-margin-40{ margin-bottom: 40px; }
 /* ---------------------------- */
+/* Hello block */
+.veare-start .giant-headline{
+	-webkit-animation: slide-up-fade-in .6s .6s 1 ease both;
+	-moz-animation:    slide-up-fade-in .6s .6s 1 ease both;
+	-o-animation:      slide-up-fade-in .6s .6s 1 ease both;
+	animation:         slide-up-fade-in .6s .6s 1 ease both;
+}
+.veare-start .big-headline{
+	-webkit-animation: slide-up-fade-in .6s .8s 1 ease both;
+	-moz-animation:    slide-up-fade-in .6s .8s 1 ease both;
+	-o-animation:      slide-up-fade-in .6s .8s 1 ease both;
+	animation:         slide-up-fade-in .6s .8s 1 ease both;
+}
+.veare-start .medium-headline{
+	-webkit-animation: slide-up-fade-in .6s 1s 1 ease both;
+	-moz-animation:    slide-up-fade-in .6s 1s 1 ease both;
+	-o-animation:      slide-up-fade-in .6s 1s 1 ease both;
+	animation:         slide-up-fade-in .6s 1s 1 ease both;
+}
+/* ---------------------------- */
 /* About Me block */
 .about-lukas-oppermann .coffee{
 	margin-bottom: 50px;
@@ -308,7 +328,6 @@
   0%   { margin-top: 0; }
   50% { margin-top: -10px; }
   100% { margin-top: 0px; }
-
 }
 .pin .icon-big{
 	position: absolute;

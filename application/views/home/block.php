@@ -1,7 +1,7 @@
-<section class="bold font-light-orange vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">
+<section class="bold font-light-orange vertical-center no-flicker min-padding veare-start" data-minpadding="50" data-minpadding-mobile="30">
 	
 	<div class="section-content centered introduction">
-		<span class="hello giant-headline">Hello,</span><br />
+		<span class="giant-headline">Hello,</span><br />
 		<h2 class="big-headline">I design interfaces</h2><br />
 		<h1 class="veare-studio medium-headline">&amp; veare is my design studio.</h1><br />
 	</div>
