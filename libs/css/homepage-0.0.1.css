@@ -181,7 +181,7 @@
 	box-sizing: border-box;	
 	color: rgb(100,100,100);
 	font-size: 16px;
-	line-height: 130%;
+	line-height: 120%;
 }
 #veare_businesscard .contact-info .contact-item{
 	width: 100%;
@@ -206,6 +206,7 @@
 }
 #veare_businesscard .contact-info .label{
 	font-size: 80%;
+	line-height: 100%;
 	width: 15px;
 	position: absolute;
 	bottom: 0;
@@ -218,7 +219,7 @@
 .tablet #veare_businesscard .contact-info .label,
 .tablet-small #veare_businesscard .contact-info .label,
 .mobile #veare_businesscard .contact-info .label{
-	bottom: 5px;
+	bottom: 4px;
 }
 .hovers #veare_businesscard .contact-info .contact-link:hover{ color: rgb(245,150,0); }
 .top-line{ position: absolute; }
