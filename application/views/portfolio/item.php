@@ -5,7 +5,7 @@
 	</div>
 	
 	
-	<div class="columns max-width-1000 padding-top-small padding-sides-small">
+	<div class="grid inline-block max-width-1000 padding-top-small padding-sides-small">
 		<div class="column column-two-two-one">
 			<h2 class="medium-headline align-left <?=variable($color,'','font-')?> uppercase"><?=variable($title)?></h2>
 			<div class="copy-small font-gray aside">

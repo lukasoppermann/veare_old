@@ -41,6 +41,8 @@ html.menu-active, body.mobile.menu-active{ overflow: hidden !important; }
 .opacity-50{ opacity: 0.5; }
 .opacity-25{ opacity: 0.25; }
 
+.inline-block{ display: inline-block; }
+
 div.max-width-1000{ max-width: 1000px; }
 /*------------------*/
 /* paddings */
