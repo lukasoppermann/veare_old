@@ -4,3 +4,6 @@
 [submodule "libs/js/gmaps"]
 	path = libs/js/gmaps
 	url = https://github.com/HPNeo/gmaps.git
+[submodule "libs/css/gridified"]
+	path = libs/css/gridified
+	url = https://github.com/lukasoppermann/gridified.git
