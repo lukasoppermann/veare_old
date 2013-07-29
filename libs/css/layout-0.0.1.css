@@ -76,17 +76,17 @@ section{
 	width: 96%;
 }
 /* tablet small */
-.tablet-small .column{
+.tablet.small .column{
 	width: 45%;
 	margin: 2% 2.5%;
 }
-.tablet-small .column-two,
-.tablet-small .column-three,
-.tablet-small .column-four,
-.tablet-small [class*="column-four-three"],
-.tablet-small .column-five,
-.tablet-small .column-two-two-one,
-.tablet-small .column-half{ width: 95%; }
+.tablet.small .column-two,
+.tablet.small .column-three,
+.tablet.small .column-four,
+.tablet.small [class*="column-four-three"],
+.tablet.small .column-five,
+.tablet.small .column-two-two-one,
+.tablet.small .column-half{ width: 95%; }
 /* tablet */
 .tablet .column, .tablet .column.tablet-one, .tablet .column-two-two-one{
 	width: 30%;
