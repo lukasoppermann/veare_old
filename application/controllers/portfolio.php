@@ -10,7 +10,10 @@ class Portfolio extends MY_Controller {
 	
 	function index( $tag = null, $permalink = null )
 	{
-		
+		// // load assets
+		css_add('card');
+		js_add('jquery.freetile, portfolio', 'default');
+        
 		if( $tag == 'cleancache' )
 		{
 			$this->cache->clean();
@@ -60,9 +63,6 @@ class Portfolio extends MY_Controller {
 	// Overview
 	function overview( $cards, $tag = null)
 	{
-		// // load assets
-		css_add('card');
-		js_add('jquery.freetile, jquery.hirestext, portfolio', 'default');
 		// grab all image ids
 		foreach($cards as $id => $card)
 		{

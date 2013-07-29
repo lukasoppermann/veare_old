@@ -5,8 +5,7 @@
 	</div>
 	
 	
-	<div class="grid inline-block max-width-1000 padding-top-small padding-sides-small">
-		<div class="column column-two-two-one">
+	<div class="grid inline-block max-width-1000 padding-top-small padding-sides-small"><div class="span-4 mobile-span-12 tablet-small-span-8">
 			<h2 class="medium-headline align-left <?=variable($color,'','font-')?> uppercase"><?=variable($title)?></h2>
 			<div class="copy-small font-gray aside">
 				<?
@@ -81,8 +80,7 @@
 		<?
 		if( !preg_match("/<[^<]+>/",$text,$m) != 0 )
 		{?>
-			<div class="column column-two">
-				<p class="copy dark-gray"><?=variable($text)?></p>
+			<div class="span-8 mobile-span-12"><p class="copy dark-gray"><?=variable($text)?></p>
 			</div>
 		<?}
 		else
@@ -91,7 +89,7 @@
 		}
 		?>
 
-		<div class="column column-five">
+		<div>
 			<a class="button copy-small <?=variable($color)?> <?=variable($color,'','hover-border-')?> <?=variable($color,'','hover-font-')?> font-white float-left margin-top-tiny" href="<?=base_url(TRUE)?>portfolio<?=variable($filter,'','/tag:')?>">&larr; return to overview</a>
 		</div>
 					

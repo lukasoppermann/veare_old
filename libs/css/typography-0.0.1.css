@@ -3,6 +3,7 @@
 /* Alignment & settings */
 .align-left{ text-align: left; }
 .align-right{ text-align: right; }
+.align-center{ text-align: center !important; }
 .uppercase{ text-transform: Uppercase; }
 /*------------------*/
 /* Headlines */

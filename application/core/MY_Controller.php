@@ -24,19 +24,6 @@ class MY_Controller extends CI_Controller {
 		Header("Cache-Control: post-check=0, pre-check=0", FALSE); 
 		Header("Pragma: no-cache" ); // HTTP/1.0
 		
-		
-		// --------------------------------------------------------------------	
-		// DEV !!!!!!!!!
-		
-		// $this->output->enable_profiler(TRUE);
-		if( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1' || substr($_SERVER['REMOTE_ADDR'], 0, 3) == '10.' || substr($_SERVER['REMOTE_ADDR'], 0, 7) == '192.168' )
-		{
-
-		}
-		else
-		{
-			$this->config->set_item('base_url', 'http://vea.re/');
-		}
 		// --------------------------------------------------------------------	
 		// load optimize
 		$this->load->add_package_path(BASEPATH.'packages/fs_jsmin/');
@@ -49,6 +36,19 @@ class MY_Controller extends CI_Controller {
 		{
 			$this->cache->clean();
 		}
+		// --------------------------------------------------------------------	
+		// DEV !!!!!!!!!
+		
+		// $this->output->enable_profiler(TRUE);
+		if( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1' || substr($_SERVER['REMOTE_ADDR'], 0, 3) == '10.' || substr($_SERVER['REMOTE_ADDR'], 0, 7) == '192.168' )
+		{
+            $this->cache->clean();
+		}
+		else
+		{
+			$this->config->set_item('base_url', 'http://vea.re/');
+		}
+
 		// --------------------------------------------------------------------	
 		// load model
 		$this->load->add_package_path(BASEPATH.'packages/fs_base_model/');

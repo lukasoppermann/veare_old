@@ -43,7 +43,7 @@ html.menu-active, body.mobile.menu-active{ overflow: hidden !important; }
 
 .inline-block{ display: inline-block; }
 
-div.max-width-1000{ max-width: 1000px; }
+.max-width-1000{ max-width: 1000px; width: 100%; }
 /*------------------*/
 /* paddings */
 .padding-top-wide{ padding-top: 200px; }
@@ -57,10 +57,12 @@ div.max-width-1000{ max-width: 1000px; }
 .mobile .padding-bottom-medium{ padding-bottom: 50px; }
 
 .padding-sides-small{ padding-left: 25px; padding-right: 25px; }
+.margin-sides-small{ margin-left: 25px; margin-right: 25px; }
 .mobile .padding-sides-small{ padding-left: 10px; padding-right: 10px; }
+.mobile .margin-sides-small{ margin-left: 10px; margin-right: 10px; }
 /*------------------*/
 /* margin */
-p{ margin: 0 0 10px 0; text-align: left; }
+p{ margin: 0 0 10px 0; text-align: inherit; }
 .copy p{ width: 100%; max-width: 550px; line-height: inherit; }
 
 .margin-top-tiny{ margin-top: 25px; }
@@ -111,6 +113,15 @@ img.loaded{
 	opacity: 1.0; 
 	transition: opacity .4s ease;   
 	-webkit-transition: opacity .4s ease;
+}
+/*------------------*/
+/* devider */
+hr{
+	border: 0;
+	border-bottom: 1px solid rgb(235,240,240);
+}
+hr.strong{
+	border-width: 0 0 3px 0;
 }
 /*------------------*/
 /* body */
