@@ -70,7 +70,7 @@
 	position: relative;
 }
 .mobile .portfolio .items{ width: 270px; }
-.tablet-small .portfolio .items{ width: 540px; }
+.tablet.small .portfolio .items{ width: 540px; }
 .tablet .portfolio .items{ width: 780px; }
 .screen .portfolio .items, .wide-screen .portfolio .items{ width: 1080px; }
 /*---------------*/

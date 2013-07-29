@@ -43,7 +43,7 @@
 	width: 750px;
 	display: inline-block;
 }
-.mobile .skills .skill-wrapper, .tablet-small .skills .skill-wrapper{ width: 100%; }
+.mobile .skills .skill-wrapper, .tablet.small .skills .skill-wrapper{ width: 100%; }
 .skill{ 
 	position: relative;
 	margin-bottom: 60px;
@@ -58,14 +58,14 @@
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
-.tablet-small .skill .content{ width: 500px; }
+.tablet.small .skill .content{ width: 500px; }
 .mobile .skill .content{ width: 100%; }
 .skill .content.left{ padding-left: 30px; }
 .skill .content.right{ padding-right: 30px; }
 .tablet .skill .content.left, .mobile .skill .content.left{ padding-left: 0px; }
 .tablet .skill .content.right, .mobile .skill .content.right{ padding-right: 0px; }
-.mobile .skill .content, .tablet-small .skill .content{ padding-top: 300px; }
-.mobile .skill .image, .tablet-small .skill .image{
+.mobile .skill .content, .tablet.small .skill .content{ padding-top: 300px; }
+.mobile .skill .image, .tablet.small .skill .image{
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -82,10 +82,10 @@
 	left: 10px;
 }
 .skills .content p{ opacity: 0.85; }
-.mobile .content .medium-headline, .tablet-small .content .medium-headline{ text-align: center; }
+.mobile .content .medium-headline, .tablet.small .content .medium-headline{ text-align: center; }
 /* ---------------------------- */
 /* About veare */
-.tablet-small .plus:after, .mobile .plus:after{ display: none; }
+.tablet.small .plus:after, .mobile .plus:after{ display: none; }
 .mobile .circle-copy{ margin: 0 0 0 0; }
 .mobile .circle-headline{ font-size: 60px; }
 .circle-big{
@@ -105,7 +105,7 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
 }
-.tablet-small .circle-headline{
+.tablet.small .circle-headline{
 	margin: 0px 0 20px 0;
 	padding: 0;
 }
@@ -213,11 +213,11 @@
 }
 .mobile #veare_businesscard .contact-info .contact-link, 
 .tablet #veare_businesscard .contact-info .contact-link, 
-.tablet-small #veare_businesscard .contact-info .contact-link{
+.tablet.small #veare_businesscard .contact-info .contact-link{
 	padding: 2px 0 2px 15px;
 }
 .tablet #veare_businesscard .contact-info .label,
-.tablet-small #veare_businesscard .contact-info .label,
+.tablet.small #veare_businesscard .contact-info .label,
 .mobile #veare_businesscard .contact-info .label{
 	bottom: 4px;
 }

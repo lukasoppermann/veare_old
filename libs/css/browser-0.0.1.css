@@ -20,7 +20,7 @@
 	border-width: 0 0 2px 0;
 }
 .tablet .browser-frame .browser-top,
-.tablet-small .browser-frame .browser-top{ height: 40px; }
+.tablet.small .browser-frame .browser-top{ height: 40px; }
 .mobile .browser-frame .browser-top{ height: 30px; }
 .browser-frame .browser-body{ 
 	overflow: hidden;
@@ -50,7 +50,7 @@
 	width: 18px;
 	margin: 16px 7px 16px 15px;
 }
-.tablet .browser-frame .browser-top .circle, .tablet-small .browser-frame .browser-top .circle{
+.tablet .browser-frame .browser-top .circle, .tablet.small .browser-frame .browser-top .circle{
 	height: 16px;
 	width: 16px;
 	margin: 18px 7px 18px 15px;
@@ -64,10 +64,10 @@
 .hovers .browser-frame .browser-top .circle-link:hover .circle{ margin: 14px 7px 14px 13px; }
 
 .hovers.tablet .browser-frame .browser-top .circle-link .circle, 
-.hovers.tablet-small .browser-frame .browser-top .circle-link .circle,
+.hovers.tablet.small .browser-frame .browser-top .circle-link .circle,
 .hovers.tablet .browser-frame .browser-top .circle-link:hover .circle, 
-.hovers.tablet-small .browser-frame .browser-top .circle-link:hover .circle{ 	margin: 10px 2px 10px 8px;  }
-.tablet-small .browser-frame .browser-top .circle-link,
+.hovers.tablet.small .browser-frame .browser-top .circle-link:hover .circle{ 	margin: 10px 2px 10px 8px;  }
+.tablet.small .browser-frame .browser-top .circle-link,
 .tablet .browser-frame .browser-top .circle-link{ 
 	width: 30px;
 	height: 40px;
@@ -76,7 +76,7 @@
 	width: 20px;
 	height: 30px;
 }
-.tablet-small .browser-frame .browser-top .circle, .tablet .browser-frame .browser-top .circle{ margin: 11px 2px 11px 10px; }
+.tablet.small .browser-frame .browser-top .circle, .tablet .browser-frame .browser-top .circle{ margin: 11px 2px 11px 10px; }
 .hovers .browser-frame .browser-top .first:hover .circle{ background: rgb(245,130,105); }
 .hovers .browser-frame .browser-top .second:hover .circle{ background: rgb(245,230,85); }
 .hovers .browser-frame .browser-top .third:hover .circle{ background: rgb(105,195,160); }

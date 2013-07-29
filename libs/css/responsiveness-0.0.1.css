@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------- */
 /* responsiveness */
-body.mobile, body.tablet-small{ font-size: 120%; }
+body.mobile, body.tablet.small{ font-size: 120%; }
 body.tablet{ font-size: 110%; }
 body{ font-family: 'Helvetica Neue', 'Helvetica', Arial, Sans-serif; }
 html { font-family: 'mobile-portrait'; }
