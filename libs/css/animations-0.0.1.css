@@ -12,6 +12,8 @@
 #menu_icon{
 	transform: translate3d(0px, 0px, 100px);
 	-webkit-transform: translate3d(0px, 0px, 100px);
+	transition: transform .4s ease;   
+	-webkit-transition: -webkit-transform .4s ease;
 }
 .menu-active #menu_icon{
 	transform: translate3d(-250px, 0px, 100px);
