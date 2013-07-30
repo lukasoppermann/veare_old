@@ -85,9 +85,10 @@
 .mobile .content .medium-headline, .tablet.small .content .medium-headline{ text-align: center; }
 /* ---------------------------- */
 /* About veare */
-.tablet.small .plus:after, .mobile .plus:after{ display: none; }
-.mobile .circle-copy{ margin: 0 0 0 0; }
-.mobile .circle-headline{ font-size: 60px; }
+.tablet.small .circle-headline, .mobile .circle-headline{ 
+	font-size: 60px; 
+	text-align: center;
+}
 .circle-big{
 	position: relative;
 	display: inline-block;
@@ -105,13 +106,26 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;	
 }
-.tablet.small .circle-headline{
-	margin: 0px 0 20px 0;
-	padding: 0;
-}
+.tablet .circle-headline{ padding-left: 20px; }
+
 .mobile .circle-headline, .mobile .circle-copy{ padding: 0 10px; }
-.mobile .circle-headline{ text-align: center; }
-.plus:after{
+.circle-copy{
+	text-align: left;
+	vertical-align: top;
+	display: inline-block;
+	padding: 0 15px 0 15px;
+	width: 100%;
+	max-width: 450px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.mobile .circle-copy{ 
+	padding: 0; 
+	margin: 0 0 0 0; 
+}
+.tablet .column, .mobile .column{ margin-bottom: 60px; }
+.plus:before{
 	content: "+";
 	width: 100px;
 	height: 100px;
@@ -125,17 +139,7 @@
 	top: 40%;
 	margin: -75px 0 0 -50px;
 }
-.circle-copy{
-	vertical-align: top;
-	display: inline-block;
-	padding: 0 0 0 30px;
-	width: 100%;
-	max-width: 400px;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
-}
-.mobile .circle-copy{ padding: 0; }
+.tablet.small .plus:before, .mobile .plus:before{ display: none; }
 /* ---------------------------- */
 /* Contact */
 #veare_businesscard{

@@ -94,7 +94,7 @@
 <section class="about-veare light-yellow font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">
 	<div class="section-content centered fixed">
 		<div class="grid plus inline-block max-width-1200">
-			<div class="span-5 tablet-span-6">
+			<div class="column span-5 tablet-small-span-12 mobile-span-12 align-center">
 				<div class="circle-big light-blue">
 					<figure class="image eye veare-illustrations">
 					<img class="async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="veare visionary design, design & content strategy" />
@@ -108,7 +108,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="span-5 prepend-2 tablet-span-6">
+			<div class="column span-5 desktop-prepend-2 widescreen-prepend-2 tablet-prepend-2 tablet-small-span-12 mobile-span-12 align-center">
 				<div class="circle-big light-blue">
 					<figure class="image brain veare-illustrations">
 					<img class="async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="intelligent design, usability, user experience, information architecture, storytelling" />
@@ -118,8 +118,7 @@
 					<p><strong>intelligent design</strong> focuses on usability and user experience.</p>
 					<p>Any design process starts with a need for information architecture. By structuring and connecting information intelligently I create designs that support the user in consuming and understand what you want them to know.
 					</p>
-				</div>
-			</div>
+                </div></div>
 		</div>
 	</div>
 </section>
