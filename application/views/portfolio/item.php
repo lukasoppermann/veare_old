@@ -6,7 +6,7 @@
 	
 	
 	<div class="grid inline-block max-width-1000 padding-top-small padding-sides-small"><div class="span-4 mobile-span-12 tablet-small-span-8">
-			<h2 class="medium-headline align-left <?=variable($color,'','font-')?> uppercase"><?=variable($title)?></h2>
+			<h2 class="text-size medium-headline align-left <?=variable($color,'','font-')?> uppercase"><?=variable($title)?></h2>
 			<div class="copy-small font-gray aside">
 				<?
 				// prepare roles

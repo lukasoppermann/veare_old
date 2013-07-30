@@ -65,7 +65,7 @@ class MY_Controller extends CI_Controller {
 		css_add(array('reset','gui','typography','base','colors','layout','gridified','animations','browser','icons','responsiveness','menu'));
 		css_add(array('homepage','portfolio'));
 		js_add('jquery, fs.media_queries, fs.tiles, fs.filter', 'default');
-		js_add('fs.resize, javascript', 'default'); 
+		js_add('fs.resize, fs.textSize, javascript', 'default'); 
 		// --------------------------------------------------------------------
 		// init menu
 		if ( ! $main_menu = $this->cache->get('menu') )

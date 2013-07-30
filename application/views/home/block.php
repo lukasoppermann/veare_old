@@ -93,8 +93,8 @@
 
 <section class="about-veare light-yellow font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">
 	<div class="section-content centered fixed">
-		<div class="columns plus">
-			<div class="column tablet-half column-two">
+		<div class="grid plus inline-block max-width-1200">
+			<div class="span-5 tablet-span-6">
 				<div class="circle-big light-blue">
 					<figure class="image eye veare-illustrations">
 					<img class="async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="veare visionary design, design & content strategy" />
@@ -108,7 +108,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="column tablet-half column-two">
+			<div class="span-5 prepend-2 tablet-span-6">
 				<div class="circle-big light-blue">
 					<figure class="image brain veare-illustrations">
 					<img class="async-img" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="intelligent design, usability, user experience, information architecture, storytelling" />

@@ -39,21 +39,18 @@
 			if( column > 1 )
 			{
 				methods.settings.column = column;
-				
 				// find biggest item in first row
 				var tmp_height = 0;
 				var index = 0;
-				methods.settings.items.slice(0,methods.settings.column-1).each(function(i, item)
+				methods.settings.items.slice(0,methods.settings.column).each(function(i, item)
 				{
 					var height = $(this).outerHeight(false);
-				
 					if( height > tmp_height )
 					{
 						tmp_height = height;
 						index = i;
 					}
 				});
-
 				// get margin
 				methods.settings.margin = methods.settings.items.eq(index+methods.settings.column).position().top-(methods.settings.items.eq(index).position().top+methods.settings.items.eq(index).outerHeight(false));
 				// arrange items

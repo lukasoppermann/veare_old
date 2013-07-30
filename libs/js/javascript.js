@@ -105,7 +105,7 @@ $(function(){
 		{
 			context: 'tablet-small',
 			match: function() {
-				_body.addClass('tablet small').removeClass('hovers tablet mobile screen wide-screen');
+				_body.addClass('tablet small').removeClass('portrait landscape hovers mobile screen wide-screen');
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -116,7 +116,7 @@ $(function(){
 		{
 			context: 'tablet',
 			match: function() {
-				_body.addClass('tablet').removeClass('hovers small mobile screen wide-screen');
+				_body.addClass('tablet').removeClass('portrait landscape hovers small mobile screen wide-screen');
 				if( !_body.hasClass('loaded-tablet') )
 				{
 					_body.addClass('hovers');
@@ -127,14 +127,14 @@ $(function(){
 		{
 			context: 'screen',
 			match: function() {
-				_body.addClass('hovers screen').removeClass('tablet small mobile wide-screen min-screen');
+				_body.addClass('hovers screen').removeClass('portrait landscape tablet small mobile wide-screen min-screen');
 				query_actions('screen');
 			}
 		},
 		{
 			context: 'wide-screen',
 			match: function() {
-				_body.addClass('hovers screen wide-screen').removeClass('tablet small mobile min-screen');
+				_body.addClass('hovers screen wide-screen').removeClass('portrait landscape tablet small mobile min-screen');
 				query_actions('wide-screen');
 			}
  		}

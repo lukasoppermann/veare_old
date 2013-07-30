@@ -44,6 +44,7 @@ html.menu-active, body.mobile.menu-active{ overflow: hidden !important; }
 .inline-block{ display: inline-block; }
 
 .max-width-1000{ max-width: 1000px; width: 100%; }
+.max-width-1200{ max-width: 1200px; width: 100%; }
 /*------------------*/
 /* paddings */
 .padding-top-wide{ padding-top: 200px; }

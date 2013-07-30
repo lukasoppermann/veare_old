@@ -9,7 +9,7 @@ $(function(){
 	_body.on('resolutionChange', function( resolution ){
 		_items.fs_tiles('stop', 'arrange');
 	});
-
+	
 	// filters
 	$('.filters').fs_filter({
 		url: $('body').data('url')+'portfolio/',
