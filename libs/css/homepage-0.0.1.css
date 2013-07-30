@@ -107,7 +107,6 @@
 	box-sizing: border-box;	
 }
 .tablet .circle-headline{ padding-left: 20px; }
-
 .mobile .circle-headline, .mobile .circle-copy{ padding: 0 10px; }
 .circle-copy{
 	text-align: left;
