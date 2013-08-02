@@ -44,7 +44,7 @@
 <?
 	$this->fs_google->fonts(array('Source Sans Pro:400,600'));
 ?>
-<? echo js('first', FALSE); ?>
-<? echo js('default', FALSE); ?>
+<? echo js('first', TRUE); ?>
+<? echo js('default', TRUE); ?>
 </body>
 </html>
