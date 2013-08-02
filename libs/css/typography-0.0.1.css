@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5{ font-weight: 600; word-wrap: break-word; }
 h1, .giant-headline{ font-size: 200px; line-height: 100%; }
 h2, .big-headline{ font-size: 100px; line-height: 120%; }
 h3, .medium-headline{ font-size: 40px; line-height: 120%; margin-bottom: 15px; }
-h4, .small-headline{ font-size: 24px; line-height: 120%; }
+h4, .small-headline{ font-size: 24px; line-height: 120%; margin: 5px 0 10px; }
 
 .tablet h1, .tablet .giant-headline{ font-size: 180px; line-height: 120%; }
 .tablet h2, .tablet .big-headline{ font-size: 80px; line-height: 120%; }

@@ -61,6 +61,8 @@ html.menu-active, body.mobile.menu-active{ overflow: hidden !important; }
 
 .padding-bottom-medium{ padding-bottom: 100px; }
 .mobile .padding-bottom-medium{ padding-bottom: 50px; }
+.padding-bottom-small{ padding-bottom: 50px; }
+.mobile .padding-bottom-small{ padding-bottom: 25px; }
 
 .padding-sides-small{ padding-left: 25px; padding-right: 25px; }
 .margin-sides-small{ margin-left: 25px; margin-right: 25px; }
