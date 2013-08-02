@@ -127,6 +127,7 @@ img.loaded{
 hr{
 	border: 0;
 	border-bottom: 1px solid rgb(235,240,240);
+	margin: 10px 0;
 }
 hr.strong{
 	border-width: 0 0 3px 0;
