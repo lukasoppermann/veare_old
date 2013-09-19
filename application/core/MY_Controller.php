@@ -65,7 +65,7 @@ class MY_Controller extends CI_Controller {
 		css_add(array('reset','gui','typography','base','colors','layout','gridified','animations','browser','icons','responsiveness','menu'));
 		css_add(array('homepage','portfolio'));
 		js_add('jquery, fs.media_queries, fs.tiles, fs.filter', 'default');
-		js_add('fs.resize, fs.textSize, javascript', 'default'); 
+		js_add('fs.resize, fs.textSize, jquery.color, javascript', 'default'); 
         // google analytics
         js_add_lines("var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-7074034-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();");
         

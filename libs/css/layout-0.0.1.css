@@ -9,6 +9,7 @@ section{
 	position: relative;
 	text-align: center;
 	z-index: 10;
+    background: none;
 }
 .section-wrapper{ height: 100%; display: block; background: ; }
 .width-100{ 
