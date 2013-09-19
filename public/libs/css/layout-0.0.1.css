@@ -1,0 +1,41 @@
+.wrapper{ 
+	position: relative; 
+	height: 100%;
+}
+section{
+	display: block;
+	width: 100%;
+	height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	position: relative;
+	text-align: left;
+    background: none;
+}
+.section-wrapper{ height: 100%; display: block; background: ; }
+.width-100{ 
+	width: 100%; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.section-content{
+	position: relative;
+	display: inline-block;
+	padding: 0 25px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.no-pad .section-content, .mobile .no-pad .section-content{ padding: 0; }
+.mobile .section-content{ padding: 25px 2.5%; }
+/* ---------------------------- */
+/* vertical center */
+.vertical-center{
+	display: table;
+	text-align: center;
+}
+.vertical-center .centered{ 
+  display: table-cell;
+  vertical-align: middle; 
+}
