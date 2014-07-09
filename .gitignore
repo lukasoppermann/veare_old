@@ -1,21 +1,35 @@
 # Project Files #
 #################
-*.tmproj
+.tm_properties
 *.psd
 *.ai
 *.orig
+_*.*
 _*/
 logs/
 log-
 0*_*/
-*cache*/
+*cache*/*.php
+sessions/
+storage/
 images/
+media/
 movies/
 files/
 
-# Excludes for this project #
-######################
-libs/js/jquery-1.8.0.js
+# Grunt #
+############
+node_modules/
+
+# db files #
+############
+database.php
+
+# laravel #
+############
+vendor/
+artisan
+composer.lock
 
 # Packages #
 ############
@@ -42,4 +56,4 @@ libs/js/jquery-1.8.0.js
 ehthumbs.db
 Icon?
 Thumbs.db
-error_log
+.secrets
