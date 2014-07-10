@@ -1,6 +1,0 @@
-[submodule "libs/js/fs-meadia-queries"]
-	path = libs/js/fs-meadia-queries
-	url = https://github.com/lukasoppermann/fs-media-queries.git
-[submodule "libs/js/gmaps"]
-	path = libs/js/gmaps
-	url = https://github.com/HPNeo/gmaps.git
