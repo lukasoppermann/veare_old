@@ -110,11 +110,13 @@
 	</div>
 </section>
 
-<section class="light-blue last-block no-flicker">
-	<figure class="image fixed coffee veare-illustrations">
-		<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="lukas oppermann designer at veare design studio" />
-	</figure>
-	<div class="vcard-wrapper">
+<section class="turquoise last-block no-flicker flexbox">
+	<div class="flex-column">
+		<figure class="image coffee veare-illustrations">
+			<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="lukas oppermann designer at veare design studio" />
+		</figure>
+	</div>
+	<div class="vcard-wrapper flex-column">
 		<div id="veare_businesscard" class="copy regular">
 		<a name="contact" class="name top-line">Lukas<br />
 			Oppermann

@@ -739,3 +739,10 @@ section{
 .tablet .blog-text{
 	float: left;
 }
+.flexbox{
+	display: flex;
+	align-items: center;
+}
+.flex-column{
+	flex: 0 0 50%;
+}
