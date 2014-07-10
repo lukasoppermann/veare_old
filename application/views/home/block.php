@@ -6,40 +6,6 @@
 	</div>
 </section>
 
-<section class="turquoise font-white bold vertical-center no-flicker about-lukas-oppermann">
-	<div class="section-content centered fixed">
-		<figure class="image fixed coffee veare-illustrations">
-			<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="lukas oppermann designer at veare design studio" />
-		</figure>
-		<h2 class="big-headline align-left">I think first, design second</h2>
-		<span class="medium-headline float-right align-left">&amp; drink quite some coffee while I do that.</span>
-	</div>
-</section>
-
-<!-- <section class="veare-recent-portfolio bold blue vertical-center no-flicker no-pad">
-	<div class="section-content centered fixed width-100">
-		<h3 class="font-white big-headline width-100">I recently worked on</h3>
-		
-		<div class="column copy align-left">
-			<div class="project-info font-white">
-				<h3 class="small-headline">Project Name</h3>
-				<p class="regular">An online news source based on community involvement and closeness to the event.</p>
-			</div>
-		</div>
-		<div class="column">
-			<a class="more">
-				<div class="label">more projects</div>
-				<div class="big-arrow white-pseudo"></div>
-			</a>
-		</div>
-		
-		<div id="magazine" class="width-100 float-left">
-			<img class="image-width-100" src="<?=base_url()?>media/open-everything-print-design-cover.png" alt="" />
-		</div>
-		
-	</div>
-</section> -->
-
 <section class="skills light-blue font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">>
 	<div class="section-content centered fixed">
 		<h3 class="font-white width-100 big-headline headline-margin-40">This is what I do</h3>
@@ -144,26 +110,10 @@
 	</div>
 </section>
 
-<!-- <section class="light-red font-white vertical-center no-flicker min-padding" data-minpadding="50" data-minpadding-mobile="30">>
-	<div class="section-content centered fixed">
-		<h4 class="bold big-headline">I write about stuff …</h4>
-			<a href="#" class="column blog-link">
-				<div class="big-arrow left shadow white-pseudo"><div class="shadow black-pseudo"></div></div>
-			</a>
-			<div class="column column-three">
-				<h3 class="small-headline bold align-left tablet-align-center">Why do we write</h3>
-				<div class="copy regular tablet-align-center"><p style="text-align: left;">Yet another design blog, but why. Why do so many people write blogs? One or two would probably be enough to cover all the topics, since most people write about the same stuff anyway.</p>
-					<p style="text-align: left;">Let's face it, most people and that includes industry leaders, write stuff they just learned not only to share it with the world but also to archive it as some kind of "public knowledge diary".
-					</p>
-			</div>
-			<a href="#" class="column blog-link-tablet">
-				<div class="big-arrow left white-pseudo"><div class="shadow black-pseudo"></div></div>
-			</a>
-		</div>
-	</div>
-</section> -->
-
-<section class="light-blue last-block map no-flicker">
+<section class="light-blue last-block no-flicker">
+	<figure class="image fixed coffee veare-illustrations">
+		<img class="img-optimized" data-src-x2="<?=base_url(TRUE)?>layout/veare-illustrations@2x.png" data-src-x1="<?=base_url(TRUE)?>layout/veare-illustrations.png" alt="lukas oppermann designer at veare design studio" />
+	</figure>
 	<div class="vcard-wrapper">
 		<div id="veare_businesscard" class="copy regular">
 		<a name="contact" class="name top-line">Lukas<br />
@@ -177,12 +127,5 @@
 		</div>
 	</div>
 	</div>
-	<div class="pins">
-		<a class="github pin" href="https://github.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div><div class="pin-body orange"></div></a>
-		<a id="dribbble" class="dribbble pin pink-pseudo" href="http://dribbble.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div><div class="pin-body pink"></div></a>
-		<a class="twitter pin blue-pseudo" href="https://twitter.com/lukasoppermann" target="_blank"><div class="veare-sprite icon-big"></div><div class="pin-body blue"></div></a>
-		<a class="xing pin turquoise-pseudo" href="https://www.xing.com/profile/Lukas_Oppermann" target="_blank"><div class="veare-sprite icon-big"></div><div class="pin-body turquoise"></div></a>
-		<a class="linkedin pin light-red-pseudo" href="http://de.linkedin.com/in/lukasoppermann/" target="_blank"><div class="veare-sprite icon-big"></div><div class="pin-body light-red"></div></a>
-	</div>
-	<div id="veare_map"></div>
+	
 </section>
